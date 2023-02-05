@@ -1,0 +1,1757 @@
+{
+  "_declaration": {
+    "_attributes": {
+      "version": "1.0",
+      "encoding": "UTF-8"
+    }
+  },
+  "_comment": "\n Copyright (C) 2020 Alexander Waite Mitchell\n \n This program is free software; you can redistribute it and/or\n modify it under the terms of the GNU General Public License\n as published by the Free Software Foundation; either version 2\n of the License, or (at your option) any later version.\n\n This program is distributed in the hope that it will be useful,\n but WITHOUT ANY WARRANTY; without even the implied warranty of\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n GNU General Public License for more details.\n\n You should have received a copy of the GNU General Public License\n along with this program; if not, write to the Free Software\n Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n ",
+  "language": {
+    "_attributes": {
+      "id": "sfz",
+      "name": "SFZ",
+      "version": "2.0",
+      "_section": "other"
+    },
+    "metadata": {
+      "property": [
+        {
+          "_attributes": {
+            "name": "mimetypes"
+          },
+          "_text": "text/plain"
+        },
+        {
+          "_attributes": {
+            "name": "globs"
+          },
+          "_text": "*.sfz"
+        },
+        {
+          "_attributes": {
+            "name": "line-comment-start"
+          },
+          "_text": "//"
+        },
+        {
+          "_attributes": {
+            "name": "block-comment-start"
+          },
+          "_text": "/*"
+        },
+        {
+          "_attributes": {
+            "name": "block-comment-end"
+          },
+          "_text": "*/"
+        }
+      ]
+    },
+    "styles": {
+      "style": [
+        {
+          "_attributes": {
+            "id": "header-region",
+            "name": "SFZ Region Header",
+            "map-to": "def:special-char"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "headers-other",
+            "name": "SFZ Other Header",
+            "map-to": "def:type"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "opcode",
+            "name": "SFZ Opcode",
+            "map-to": "def:keyword"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "comment",
+            "name": "Comment",
+            "map-to": "def:comment"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "decimal",
+            "name": "Decimal number",
+            "map-to": "def:decimal"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "floating-point",
+            "name": "Floating point number",
+            "map-to": "def:floating-point"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "included-file",
+            "name": "Included File",
+            "map-to": "def:string"
+          }
+        },
+        {
+          "_attributes": {
+            "id": "preprocessor",
+            "name": "Preprocessor",
+            "map-to": "def:preprocessor"
+          }
+        }
+      ]
+    },
+    "definitions": {
+      "define-regex": [
+        {
+          "_attributes": {
+            "id": "preproc-start"
+          },
+          "_text": "^\\s*#\\s*"
+        },
+        {
+          "_attributes": {
+            "id": "N"
+          },
+          "_text": "[0-9]{1,3}"
+        },
+        {
+          "_attributes": {
+            "id": "eqN"
+          },
+          "_text": "[0-3]{1}"
+        }
+      ],
+      "context": [
+        {
+          "_attributes": {
+            "id": "decimal",
+            "style-ref": "decimal"
+          },
+          "match": {
+            "_attributes": {
+              "extended": "true"
+            },
+            "_text": "\n        (?<![\\w\\.])\n        (0|[1-9][0-9]*)[uUlL]*\n        (?![\\w\\.])\n      "
+          }
+        },
+        {
+          "_attributes": {
+            "id": "float",
+            "style-ref": "floating-point"
+          },
+          "match": {
+            "_attributes": {
+              "extended": "true"
+            },
+            "_text": "\n        (?<![\\w\\.])\n        ((\\.[0-9]+ | [0-9]+\\.[0-9]*) ([Ee][+-]?[0-9]*)? |\n        ([0-9]+[Ee][+-]?[0-9]*))\n        [fFlL]?\n        (?![\\w\\.])\n      "
+          }
+        },
+        {
+          "_attributes": {
+            "id": "headers-others",
+            "style-ref": "headers-other"
+          },
+          "prefix": {
+            "_text": "<"
+          },
+          "suffix": {
+            "_text": ">"
+          },
+          "keyword": [
+            {
+              "_text": "region"
+            },
+            {
+              "_text": "group"
+            },
+            {
+              "_text": "control"
+            },
+            {
+              "_text": "global"
+            },
+            {
+              "_text": "curve"
+            },
+            {
+              "_text": "effect"
+            },
+            {
+              "_text": "master"
+            },
+            {
+              "_text": "midi"
+            },
+            {
+              "_text": "sample"
+            }
+          ]
+        },
+        {
+          "_attributes": {
+            "id": "headers-region",
+            "style-ref": "header-region"
+          },
+          "prefix": {
+            "_text": "<"
+          },
+          "suffix": {
+            "_text": ">"
+          },
+          "keyword": [
+            {
+              "_text": "region"
+            },
+            {
+              "_text": "="
+            }
+          ]
+        },
+        {
+          "_attributes": {
+            "id": "opcodes",
+            "style-ref": "opcode"
+          },
+          "keyword": [
+            {
+              "_text": "amp_keycenter"
+            },
+            {
+              "_text": "amp_keytrack"
+            },
+            {
+              "_text": "amp_random"
+            },
+            {
+              "_text": "amp_velcurve_"
+            },
+            {
+              "_text": "amp_veltrack"
+            },
+            {
+              "_text": "ampeg_attack"
+            },
+            {
+              "_text": "ampeg_attack_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_attack_shape"
+            },
+            {
+              "_text": "ampeg_attackcc\\%{N}"
+            },
+            {
+              "_text": "ampeg_decay"
+            },
+            {
+              "_text": "ampeg_decay_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_decay_shape"
+            },
+            {
+              "_text": "ampeg_decay_zero"
+            },
+            {
+              "_text": "ampeg_decaycc\\%{N}"
+            },
+            {
+              "_text": "ampeg_delay"
+            },
+            {
+              "_text": "ampeg_delay_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_delaycc\\%{N}"
+            },
+            {
+              "_text": "ampeg_dynamic"
+            },
+            {
+              "_text": "ampeg_hold"
+            },
+            {
+              "_text": "ampeg_hold_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_holdcc\\%{N}"
+            },
+            {
+              "_text": "ampeg_release"
+            },
+            {
+              "_text": "ampeg_release_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_release_shape"
+            },
+            {
+              "_text": "ampeg_release_zero"
+            },
+            {
+              "_text": "ampeg_releasecc\\%{N}"
+            },
+            {
+              "_text": "ampeg_start"
+            },
+            {
+              "_text": "ampeg_start_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_startcc\\%{N}"
+            },
+            {
+              "_text": "ampeg_sustain"
+            },
+            {
+              "_text": "ampeg_sustain_oncc\\%{N}"
+            },
+            {
+              "_text": "ampeg_sustaincc\\%{N}"
+            },
+            {
+              "_text": "ampeg_vel2attack"
+            },
+            {
+              "_text": "ampeg_vel2decay"
+            },
+            {
+              "_text": "ampeg_vel2delay"
+            },
+            {
+              "_text": "ampeg_vel2hold"
+            },
+            {
+              "_text": "ampeg_vel2release"
+            },
+            {
+              "_text": "ampeg_vel2sustain"
+            },
+            {
+              "_text": "amplfo_delay"
+            },
+            {
+              "_text": "amplfo_depth"
+            },
+            {
+              "_text": "amplfo_depthcc\\%{N}"
+            },
+            {
+              "_text": "amplfo_depthchanaft"
+            },
+            {
+              "_text": "amplfo_depthpolyaft"
+            },
+            {
+              "_text": "amplfo_fade"
+            },
+            {
+              "_text": "amplfo_freq"
+            },
+            {
+              "_text": "amplfo_freqcc\\%{N}"
+            },
+            {
+              "_text": "amplfo_freqchanaft"
+            },
+            {
+              "_text": "amplfo_freqpolyaft"
+            },
+            {
+              "_text": "amplitude"
+            },
+            {
+              "_text": "amplitude_cc\\%{N}"
+            },
+            {
+              "_text": "amplitude_curvecc\\%{N}"
+            },
+            {
+              "_text": "amplitude_mod"
+            },
+            {
+              "_text": "amplitude_oncc\\%{N}"
+            },
+            {
+              "_text": "amplitude_smoothcc\\%{N}"
+            },
+            {
+              "_text": "bend_down"
+            },
+            {
+              "_text": "bend_smooth"
+            },
+            {
+              "_text": "bend_step"
+            },
+            {
+              "_text": "bend_stepdown"
+            },
+            {
+              "_text": "bend_stepup"
+            },
+            {
+              "_text": "bend_up"
+            },
+            {
+              "_text": "benddown"
+            },
+            {
+              "_text": "bendstep"
+            },
+            {
+              "_text": "bendup"
+            },
+            {
+              "_text": "count"
+            },
+            {
+              "_text": "curve_index"
+            },
+            {
+              "_text": "cutoff"
+            },
+            {
+              "_text": "cutoff2"
+            },
+            {
+              "_text": "cutoff2_curvecc\\%{N}"
+            },
+            {
+              "_text": "cutoff2_mod"
+            },
+            {
+              "_text": "cutoff2_oncc\\%{N}"
+            },
+            {
+              "_text": "cutoff2_smoothcc\\%{N}"
+            },
+            {
+              "_text": "cutoff2_stepcc\\%{N}"
+            },
+            {
+              "_text": "cutoff_cc\\%{N}"
+            },
+            {
+              "_text": "cutoff_chanaft"
+            },
+            {
+              "_text": "cutoff_curvecc\\%{N}"
+            },
+            {
+              "_text": "cutoff_mod"
+            },
+            {
+              "_text": "cutoff_oncc\\%{N}"
+            },
+            {
+              "_text": "cutoff_polyaft"
+            },
+            {
+              "_text": "cutoff_smoothcc\\%{N}"
+            },
+            {
+              "_text": "cutoff_stepcc\\%{N}"
+            },
+            {
+              "_text": "default_path"
+            },
+            {
+              "_text": "delay"
+            },
+            {
+              "_text": "delay_beats"
+            },
+            {
+              "_text": "delay_beats_mod"
+            },
+            {
+              "_text": "delay_cc\\%{N}"
+            },
+            {
+              "_text": "delay_mod"
+            },
+            {
+              "_text": "delay_random"
+            },
+            {
+              "_text": "delay_samples"
+            },
+            {
+              "_text": "delay_samples_oncc\\%{N}"
+            },
+            {
+              "_text": "direction"
+            },
+            {
+              "_text": "directives"
+            },
+            {
+              "_text": "effect1"
+            },
+            {
+              "_text": "effect2"
+            },
+            {
+              "_text": "eg\\%{N}_amplitude\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_amplitude\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_curve\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_cutoff"
+            },
+            {
+              "_text": "eg\\%{N}_cutoff2"
+            },
+            {
+              "_text": "eg\\%{N}_cutoff2_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_cutoff_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_depth_lfo\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_depthadd_lfo\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_eq\\%{eqN}bw"
+            },
+            {
+              "_text": "eg\\%{N}_eq\\%{eqN}bw_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_eq\\%{eqN}freq"
+            },
+            {
+              "_text": "eg\\%{N}_eq\\%{eqN}freq_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_eq\\%{eqN}gain"
+            },
+            {
+              "_text": "eg\\%{N}_eq\\%{eqN}gain_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_freq_lfo\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_level\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_level\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_loop"
+            },
+            {
+              "_text": "eg\\%{N}_loop_count"
+            },
+            {
+              "_text": "eg\\%{N}_pan\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pan\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pan_curve"
+            },
+            {
+              "_text": "eg\\%{N}_pan_curvecc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pitch"
+            },
+            {
+              "_text": "eg\\%{N}_pitch_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pitch_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_points"
+            },
+            {
+              "_text": "eg\\%{N}_resonance"
+            },
+            {
+              "_text": "eg\\%{N}_resonance2"
+            },
+            {
+              "_text": "eg\\%{N}_resonance2_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_resonance_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_shape"
+            },
+            {
+              "_text": "eg\\%{N}_shape\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_sustain"
+            },
+            {
+              "_text": "eg\\%{N}_time\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_time\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_volume\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_volume\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_width\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_width\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "end"
+            },
+            {
+              "_text": "eq\\%{eqN}_bw"
+            },
+            {
+              "_text": "eq\\%{eqN}_bwcc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{eqN}_bw_oncc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{eqN}_dynamic"
+            },
+            {
+              "_text": "eq\\%{eqN}_freq"
+            },
+            {
+              "_text": "eq\\%{eqN}_freqcc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{eqN}_freq_oncc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{eqN}_gain"
+            },
+            {
+              "_text": "eq\\%{eqN}_gaincc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{eqN}_gain_oncc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{eqN}_type"
+            },
+            {
+              "_text": "eq\\%{eqN}_vel2freq"
+            },
+            {
+              "_text": "eq\\%{eqN}_vel2gain"
+            },
+            {
+              "_text": "fil2_gain"
+            },
+            {
+              "_text": "fil2_type"
+            },
+            {
+              "_text": "fil_gain"
+            },
+            {
+              "_text": "fil_keycenter"
+            },
+            {
+              "_text": "fil_keytrack"
+            },
+            {
+              "_text": "fil_random"
+            },
+            {
+              "_text": "fil_type"
+            },
+            {
+              "_text": "fil_veltrack"
+            },
+            {
+              "_text": "fileg_attack"
+            },
+            {
+              "_text": "fileg_attack_oncc\\%{N}"
+            },
+            {
+              "_text": "fileg_attackcc\\%{N}"
+            },
+            {
+              "_text": "fileg_decay"
+            },
+            {
+              "_text": "fileg_decay_oncc\\%{N}"
+            },
+            {
+              "_text": "fileg_decaycc\\%{N}"
+            },
+            {
+              "_text": "fileg_delay"
+            },
+            {
+              "_text": "fileg_depth"
+            },
+            {
+              "_text": "fileg_depth_oncc\\%{N}"
+            },
+            {
+              "_text": "fileg_depthcc\\%{N}"
+            },
+            {
+              "_text": "fileg_dynamic"
+            },
+            {
+              "_text": "fileg_hold"
+            },
+            {
+              "_text": "fileg_release"
+            },
+            {
+              "_text": "fileg_start"
+            },
+            {
+              "_text": "fileg_sustain"
+            },
+            {
+              "_text": "fileg_vel2attack"
+            },
+            {
+              "_text": "fileg_vel2decay"
+            },
+            {
+              "_text": "fileg_vel2delay"
+            },
+            {
+              "_text": "fileg_vel2depth"
+            },
+            {
+              "_text": "fileg_vel2hold"
+            },
+            {
+              "_text": "fileg_vel2release"
+            },
+            {
+              "_text": "fileg_vel2sustain"
+            },
+            {
+              "_text": "fillfo_delay"
+            },
+            {
+              "_text": "fillfo_depth"
+            },
+            {
+              "_text": "fillfo_depthcc\\%{N}"
+            },
+            {
+              "_text": "fillfo_depthchanaft"
+            },
+            {
+              "_text": "fillfo_depthpolyaft"
+            },
+            {
+              "_text": "fillfo_fade"
+            },
+            {
+              "_text": "fillfo_freq"
+            },
+            {
+              "_text": "fillfo_freqcc\\%{N}"
+            },
+            {
+              "_text": "fillfo_freqchanaft"
+            },
+            {
+              "_text": "fillfo_freqpolyaft"
+            },
+            {
+              "_text": "filtype"
+            },
+            {
+              "_text": "gain_cc\\%{N}"
+            },
+            {
+              "_text": "gain_oncc\\%{N}"
+            },
+            {
+              "_text": "global_amplitude"
+            },
+            {
+              "_text": "global_volume"
+            },
+            {
+              "_text": "group"
+            },
+            {
+              "_text": "group_amplitude"
+            },
+            {
+              "_text": "group_volume"
+            },
+            {
+              "_text": "hibend"
+            },
+            {
+              "_text": "hibpm"
+            },
+            {
+              "_text": "hicc\\%{N}"
+            },
+            {
+              "_text": "hichan"
+            },
+            {
+              "_text": "hichanaft"
+            },
+            {
+              "_text": "hihdcc\\%{N}"
+            },
+            {
+              "_text": "hikey"
+            },
+            {
+              "_text": "hint_([a-z]*)"
+            },
+            {
+              "_text": "hipolyaft"
+            },
+            {
+              "_text": "hiprog"
+            },
+            {
+              "_text": "hirand"
+            },
+            {
+              "_text": "hitimer"
+            },
+            {
+              "_text": "hivel"
+            },
+            {
+              "_text": "key"
+            },
+            {
+              "_text": "label_cc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_amplitude"
+            },
+            {
+              "_text": "lfo\\%{N}_amplitude_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_amplitude_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_amplitude_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_count"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff2"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff2_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff2_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff2_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_cutoff_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_delay"
+            },
+            {
+              "_text": "lfo\\%{N}_delay_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_depth_lfo\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_depthadd_lfo\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}bw"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}bw_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}bw_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}bw_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}freq"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}freq_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}freq_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}freq_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}gain"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}gain_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}gain_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{eqN}gain_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_fade"
+            },
+            {
+              "_text": "lfo\\%{N}_fade_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_lfo\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_lfo\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_offset"
+            },
+            {
+              "_text": "lfo\\%{N}_offset([2-8]{1})"
+            },
+            {
+              "_text": "lfo\\%{N}_pan"
+            },
+            {
+              "_text": "lfo\\%{N}_pan_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pan_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pan_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_phase"
+            },
+            {
+              "_text": "lfo\\%{N}_phase_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_ratio"
+            },
+            {
+              "_text": "lfo\\%{N}_ratio([2-8]{1})"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance2"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance2_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance2_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance2_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_scale"
+            },
+            {
+              "_text": "lfo\\%{N}_scale([2-8]{1})"
+            },
+            {
+              "_text": "lfo\\%{N}_smooth"
+            },
+            {
+              "_text": "lfo\\%{N}_smooth_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_step\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_steps"
+            },
+            {
+              "_text": "lfo\\%{N}_volume"
+            },
+            {
+              "_text": "lfo\\%{N}_volume_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_volume_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_volume_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_wave"
+            },
+            {
+              "_text": "lfo\\%{N}_wave([2-8]{1})"
+            },
+            {
+              "_text": "lfo\\%{N}_wave_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_width"
+            },
+            {
+              "_text": "lfo\\%{N}_width_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_width_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_width_stepcc\\%{N}"
+            },
+            {
+              "_text": "lobend"
+            },
+            {
+              "_text": "lobpm"
+            },
+            {
+              "_text": "locc\\%{N}"
+            },
+            {
+              "_text": "lochan"
+            },
+            {
+              "_text": "lochanaft"
+            },
+            {
+              "_text": "lohdcc\\%{N}"
+            },
+            {
+              "_text": "lokey"
+            },
+            {
+              "_text": "loop_count"
+            },
+            {
+              "_text": "loop_crossfade"
+            },
+            {
+              "_text": "loop_end"
+            },
+            {
+              "_text": "loop_mode"
+            },
+            {
+              "_text": "loop_start"
+            },
+            {
+              "_text": "loop_type"
+            },
+            {
+              "_text": "loopend"
+            },
+            {
+              "_text": "loopmode"
+            },
+            {
+              "_text": "loopstart"
+            },
+            {
+              "_text": "lopolyaft"
+            },
+            {
+              "_text": "loprog"
+            },
+            {
+              "_text": "lorand"
+            },
+            {
+              "_text": "lotimer"
+            },
+            {
+              "_text": "lovel"
+            },
+            {
+              "_text": "master_amplitude"
+            },
+            {
+              "_text": "master_volume"
+            },
+            {
+              "_text": "md5"
+            },
+            {
+              "_text": "note_offset"
+            },
+            {
+              "_text": "note_polyphony"
+            },
+            {
+              "_text": "note_selfmask"
+            },
+            {
+              "_text": "octave_offset"
+            },
+            {
+              "_text": "off_by"
+            },
+            {
+              "_text": "off_curve"
+            },
+            {
+              "_text": "off_mode"
+            },
+            {
+              "_text": "off_shape"
+            },
+            {
+              "_text": "off_time"
+            },
+            {
+              "_text": "offset"
+            },
+            {
+              "_text": "offset_cc\\%{N}"
+            },
+            {
+              "_text": "offset_mod"
+            },
+            {
+              "_text": "offset_random"
+            },
+            {
+              "_text": "on_hicc\\%{N}"
+            },
+            {
+              "_text": "on_locc\\%{N}"
+            },
+            {
+              "_text": "output"
+            },
+            {
+              "_text": "pan"
+            },
+            {
+              "_text": "pan_oncc\\%{N}"
+            },
+            {
+              "_text": "pan_cc\\%{N}"
+            },
+            {
+              "_text": "pan_curvecc\\%{N}"
+            },
+            {
+              "_text": "pan_law"
+            },
+            {
+              "_text": "pan_mod"
+            },
+            {
+              "_text": "pan_oncc\\%{N}"
+            },
+            {
+              "_text": "pan_smoothcc\\%{N}"
+            },
+            {
+              "_text": "pan_stepcc\\%{N}"
+            },
+            {
+              "_text": "param_offset"
+            },
+            {
+              "_text": "phase"
+            },
+            {
+              "_text": "pitch_curvecc\\%{N}"
+            },
+            {
+              "_text": "pitch_keycenter"
+            },
+            {
+              "_text": "pitch_keytrack"
+            },
+            {
+              "_text": "pitch_mod"
+            },
+            {
+              "_text": "pitch_oncc\\%{N}"
+            },
+            {
+              "_text": "pitch_random"
+            },
+            {
+              "_text": "pitch_smoothcc\\%{N}"
+            },
+            {
+              "_text": "pitch_stepcc\\%{N}"
+            },
+            {
+              "_text": "pitch_veltrack"
+            },
+            {
+              "_text": "pitcheg_attack"
+            },
+            {
+              "_text": "pitcheg_decay"
+            },
+            {
+              "_text": "pitcheg_decay_oncc\\%{N}"
+            },
+            {
+              "_text": "pitcheg_decay_shape"
+            },
+            {
+              "_text": "pitcheg_delay"
+            },
+            {
+              "_text": "pitcheg_delay_oncc\\%{N}"
+            },
+            {
+              "_text": "pitcheg_depth"
+            },
+            {
+              "_text": "pitcheg_depth_oncc\\%{N}"
+            },
+            {
+              "_text": "pitcheg_dynamic"
+            },
+            {
+              "_text": "pitcheg_hold"
+            },
+            {
+              "_text": "pitcheg_release"
+            },
+            {
+              "_text": "pitcheg_start"
+            },
+            {
+              "_text": "pitcheg_sustain"
+            },
+            {
+              "_text": "pitcheg_vel2attack"
+            },
+            {
+              "_text": "pitcheg_vel2decay"
+            },
+            {
+              "_text": "pitcheg_vel2delay"
+            },
+            {
+              "_text": "pitcheg_vel2depth"
+            },
+            {
+              "_text": "pitcheg_vel2hold"
+            },
+            {
+              "_text": "pitcheg_vel2release"
+            },
+            {
+              "_text": "pitchlfo_delay"
+            },
+            {
+              "_text": "pitchlfo_depth"
+            },
+            {
+              "_text": "pitchlfo_depth_oncc\\%{N}"
+            },
+            {
+              "_text": "pitchlfo_depthcc\\%{N}"
+            },
+            {
+              "_text": "pitchlfo_depthchanaft"
+            },
+            {
+              "_text": "pitchlfo_depthpolyaft"
+            },
+            {
+              "_text": "pitchlfo_fade"
+            },
+            {
+              "_text": "pitchlfo_freq"
+            },
+            {
+              "_text": "pitchlfo_freqcc\\%{N}"
+            },
+            {
+              "_text": "pitchlfo_freqchanaft"
+            },
+            {
+              "_text": "pitchlfo_freqpolyaft"
+            },
+            {
+              "_text": "polyphony"
+            },
+            {
+              "_text": "polyphony_group"
+            },
+            {
+              "_text": "position"
+            },
+            {
+              "_text": "position_mod"
+            },
+            {
+              "_text": "resonance"
+            },
+            {
+              "_text": "resonance2"
+            },
+            {
+              "_text": "resonance2_cc\\%{N}"
+            },
+            {
+              "_text": "resonance2_curvecc\\%{N}"
+            },
+            {
+              "_text": "resonance2_mod"
+            },
+            {
+              "_text": "resonance2_oncc\\%{N}"
+            },
+            {
+              "_text": "resonance2_smoothcc\\%{N}"
+            },
+            {
+              "_text": "resonance2_stepcc\\%{N}"
+            },
+            {
+              "_text": "resonance_cc\\%{N}"
+            },
+            {
+              "_text": "resonance_curvecc\\%{N}"
+            },
+            {
+              "_text": "resonance_mod"
+            },
+            {
+              "_text": "resonance_oncc\\%{N}"
+            },
+            {
+              "_text": "resonance_smoothcc\\%{N}"
+            },
+            {
+              "_text": "resonance_stepcc\\%{N}"
+            },
+            {
+              "_text": "reverse_hicc\\%{N}"
+            },
+            {
+              "_text": "reverse_locc\\%{N}"
+            },
+            {
+              "_text": "rt_dead"
+            },
+            {
+              "_text": "rt_decay"
+            },
+            {
+              "_text": "sample"
+            },
+            {
+              "_text": "seq_length"
+            },
+            {
+              "_text": "seq_position"
+            },
+            {
+              "_text": "set_cc\\%{N}"
+            },
+            {
+              "_text": "set_hdcc\\%{N}"
+            },
+            {
+              "_text": "sostenuto_cc\\%{N}"
+            },
+            {
+              "_text": "sostenuto_lo"
+            },
+            {
+              "_text": "sostenuto_sw"
+            },
+            {
+              "_text": "start_hicc\\%{N}"
+            },
+            {
+              "_text": "start_locc\\%{N}"
+            },
+            {
+              "_text": "stop_beats"
+            },
+            {
+              "_text": "stop_beats_mod"
+            },
+            {
+              "_text": "stop_hicc\\%{N}"
+            },
+            {
+              "_text": "stop_locc\\%{N}"
+            },
+            {
+              "_text": "sustain_cc\\%{N}"
+            },
+            {
+              "_text": "sustain_lo"
+            },
+            {
+              "_text": "sustain_sw"
+            },
+            {
+              "_text": "sw_default"
+            },
+            {
+              "_text": "sw_down"
+            },
+            {
+              "_text": "sw_hikey"
+            },
+            {
+              "_text": "sw_hilast"
+            },
+            {
+              "_text": "sw_label"
+            },
+            {
+              "_text": "sw_last"
+            },
+            {
+              "_text": "sw_lokey"
+            },
+            {
+              "_text": "sw_lolast"
+            },
+            {
+              "_text": "sw_note_offset"
+            },
+            {
+              "_text": "sw_octave_offset"
+            },
+            {
+              "_text": "sw_previous"
+            },
+            {
+              "_text": "sw_up"
+            },
+            {
+              "_text": "sw_vel"
+            },
+            {
+              "_text": "sync_beats"
+            },
+            {
+              "_text": "sync_offset"
+            },
+            {
+              "_text": "transpose"
+            },
+            {
+              "_text": "trigger"
+            },
+            {
+              "_text": "tune"
+            },
+            {
+              "_text": "tune_cc\\%{N}"
+            },
+            {
+              "_text": "tune_mod"
+            },
+            {
+              "_text": "tune_oncc\\%{N}"
+            },
+            {
+              "_text": "type"
+            },
+            {
+              "_text": "v\\%{N}"
+            },
+            {
+              "_text": "var\\%{N}_amplitude"
+            },
+            {
+              "_text": "var\\%{N}_curvecc\\%{N}"
+            },
+            {
+              "_text": "var\\%{N}_cutoff"
+            },
+            {
+              "_text": "var\\%{N}_cutoff2"
+            },
+            {
+              "_text": "var\\%{N}_eq\\%{eqN}bw"
+            },
+            {
+              "_text": "var\\%{N}_eq\\%{eqN}freq"
+            },
+            {
+              "_text": "var\\%{N}_eq\\%{eqN}gain"
+            },
+            {
+              "_text": "var\\%{N}_mod"
+            },
+            {
+              "_text": "var\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "var\\%{N}_pan"
+            },
+            {
+              "_text": "var\\%{N}_pitch"
+            },
+            {
+              "_text": "var\\%{N}_resonance"
+            },
+            {
+              "_text": "var\\%{N}_resonance2"
+            },
+            {
+              "_text": "var\\%{N}_volume"
+            },
+            {
+              "_text": "var\\%{N}_width"
+            },
+            {
+              "_text": "vendor_specific"
+            },
+            {
+              "_text": "volume"
+            },
+            {
+              "_text": "volume_curvecc\\%{N}"
+            },
+            {
+              "_text": "volume_mod"
+            },
+            {
+              "_text": "volume_oncc\\%{N}"
+            },
+            {
+              "_text": "volume_smoothcc\\%{N}"
+            },
+            {
+              "_text": "volume_stepcc\\%{N}"
+            },
+            {
+              "_text": "waveguide"
+            },
+            {
+              "_text": "width"
+            },
+            {
+              "_text": "width_mod"
+            },
+            {
+              "_text": "width_oncc\\%{N}"
+            },
+            {
+              "_text": "xf_cccurve"
+            },
+            {
+              "_text": "xf_keycurve"
+            },
+            {
+              "_text": "xf_velcurve"
+            },
+            {
+              "_text": "xfin_hicc\\%{N}"
+            },
+            {
+              "_text": "xfin_hikey"
+            },
+            {
+              "_text": "xfin_hivel"
+            },
+            {
+              "_text": "xfin_locc\\%{N}"
+            },
+            {
+              "_text": "xfin_lokey"
+            },
+            {
+              "_text": "xfin_lovel"
+            },
+            {
+              "_text": "xfout_hicc\\%{N}"
+            },
+            {
+              "_text": "xfout_hikey"
+            },
+            {
+              "_text": "xfout_hivel"
+            },
+            {
+              "_text": "xfout_locc\\%{N}"
+            },
+            {
+              "_text": "xfout_lokey"
+            },
+            {
+              "_text": "xfout_lovel"
+            }
+          ]
+        },
+        {
+          "_attributes": {
+            "id": "preprocessors",
+            "style-ref": "preprocessor"
+          },
+          "match": {
+            "_attributes": {
+              "extended": "true"
+            },
+            "_text": "\n        \\%{preproc-start}\n        (include|import)\\s*\n        (\".*?\")\n      "
+          },
+          "include": {
+            "context": {
+              "_attributes": {
+                "id": "included-file",
+                "sub-pattern": "2",
+                "style-ref": "included-file",
+                "class": "path"
+              }
+            }
+          }
+        },
+        {
+          "_attributes": {
+            "id": "sfz",
+            "class": "no-spell-check"
+          },
+          "include": {
+            "context": [
+              {
+                "_attributes": {
+                  "ref": "gtk-doc:inline-docs-section"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "def:c-like-comment",
+                  "style-ref": "comment"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "def:c-like-comment-multiline",
+                  "style-ref": "comment"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "def:c-like-close-comment-outside-comment",
+                  "style-ref": "comment"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "headers-region"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "headers-others"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "opcodes"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "preprocessors"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "float"
+                }
+              },
+              {
+                "_attributes": {
+                  "ref": "decimal"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "_comment": [
+        " http://www.lysator.liu.se/c/ANSI-C-grammar-l.html ",
+        "Main context"
+      ]
+    }
+  }
+}
