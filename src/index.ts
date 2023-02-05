@@ -27,7 +27,6 @@ async function init() {
 
   // Get gedit template and update values
   const geditTemplate: GeditFile = await fileLoadJson('./src/templates/gedit.json');
-  console.log(geditTemplate);
   geditTemplate.language.definitions.context.forEach((contextItem: GeditContext) => {
     if (contextItem._attributes.id === 'headers-others') {
       contextItem.keyword = syntaxFile.headers.map((header: SyntaxHeader) => ({ _text: header.name }));
