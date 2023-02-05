@@ -2,7 +2,8 @@ interface SyntaxCategory {
   name: string;
   id: string;
   url: string;
-  opcodes: SyntaxOpcode[];
+  opcodes?: SyntaxOpcode[];
+  types?: SyntaxType[];
 }
 
 interface SyntaxFile {
@@ -23,6 +24,26 @@ interface SyntaxOpcode {
   version: string;
   short_description: string;
   value: SyntaxValue;
+  modulation: SyntaxModulation;
+}
+
+interface SyntaxModulation {
+  midi_cc: SyntaxModulationValue[];
+  velocity: SyntaxModulationValue[];
+}
+
+interface SyntaxModulationValue {
+  name: string;
+  alias?: SyntaxModulationValue[];
+  short_description: string;
+  value: string;
+  version: string;
+}
+
+interface SyntaxType {
+  name: string;
+  id: string;
+  opcodes: SyntaxOpcode[];
 }
 
 interface SyntaxValue {
@@ -42,4 +63,14 @@ enum SyntaxVersion {
   sfizz = 'sfizz',
 }
 
-export { SyntaxCategory, SyntaxFile, SyntaxHeader, SyntaxOpcode, SyntaxValue, SyntaxVersion };
+export {
+  SyntaxCategory,
+  SyntaxFile,
+  SyntaxHeader,
+  SyntaxOpcode,
+  SyntaxModulation,
+  SyntaxModulationValue,
+  SyntaxType,
+  SyntaxValue,
+  SyntaxVersion,
+};
