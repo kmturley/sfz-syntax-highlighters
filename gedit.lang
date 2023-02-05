@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2020 Alexander Waite Mitchell
+ 
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ -->
+<language id="sfz" name="SFZ" version="2.0" _section="other">
+  <metadata>
+    <property name="mimetypes">text/plain</property>
+    <property name="globs">*.sfz</property>
+    <property name="line-comment-start">//</property>
+    <property name="block-comment-start">/*</property>
+    <property name="block-comment-end">*/</property>
+  </metadata>
+
+  <styles>
+    <style id="header-region"  name="SFZ Region Header"     map-to="def:special-char"/>
+    <style id="headers-other"  name="SFZ Other Header"      map-to="def:type"/>
+    <style id="opcode"         name="SFZ Opcode"            map-to="def:keyword"/>
+    <style id="comment"        name="Comment"               map-to="def:comment"/>
+    <style id="decimal"        name="Decimal number"        map-to="def:decimal"/>
+    <style id="floating-point" name="Floating point number" map-to="def:floating-point"/>
+    <style id="included-file"  name="Included File"         map-to="def:string"/>
+    <style id="preprocessor"   name="Preprocessor"          map-to="def:preprocessor"/>
+  </styles>
+
+  <definitions>
+
+    <define-regex id="preproc-start">^\s*#\s*</define-regex>
+    
+    <define-regex id="N">[0-9]{1,3}</define-regex>    
+    <define-regex id="eqN">[0-3]{1}</define-regex>
+
+    <context id="decimal" style-ref="decimal">
+      <match extended="true">
+        (?&lt;![\w\.])
+        (0|[1-9][0-9]*)[uUlL]*
+        (?![\w\.])
+      </match>
+    </context>
+
+    <!-- http://www.lysator.liu.se/c/ANSI-C-grammar-l.html -->
+    <context id="float" style-ref="floating-point">
+      <match extended="true">
+        (?&lt;![\w\.])
+        ((\.[0-9]+ | [0-9]+\.[0-9]*) ([Ee][+-]?[0-9]*)? |
+        ([0-9]+[Ee][+-]?[0-9]*))
+        [fFlL]?
+        (?![\w\.])
+      </match>
+    </context>
+
+    <context id="headers-others" style-ref="headers-other">
+      <prefix>&lt;</prefix>
+      <suffix>&gt;</suffix>
+      <keyword>control</keyword>
+      <keyword>curve</keyword>
+      <keyword>effect</keyword>
+      <keyword>global</keyword>
+      <keyword>group</keyword>
+      <keyword>master</keyword>
+      <keyword>midi</keyword>
+    </context>
+
+    <context id="headers-region" style-ref="header-region">
+      <prefix>&lt;</prefix>
+      <suffix>&gt;</suffix>
+      <keyword>region</keyword>
+      <keyword>=</keyword>
+    </context>
+
+    <context id="opcodes" style-ref="opcode">
+      <keyword>amp_keycenter</keyword>
+      <keyword>amp_keytrack</keyword>
+      <keyword>amp_random</keyword>
+      <keyword>amp_velcurve_</keyword>
+      <keyword>amp_veltrack</keyword>
+      <keyword>ampeg_attack</keyword>
+      <keyword>ampeg_attack_oncc\%{N}</keyword>
+      <keyword>ampeg_attack_shape</keyword>
+      <keyword>ampeg_attackcc\%{N}</keyword>
+      <keyword>ampeg_decay</keyword>
+      <keyword>ampeg_decay_oncc\%{N}</keyword>
+      <keyword>ampeg_decay_shape</keyword>
+      <keyword>ampeg_decay_zero</keyword>
+      <keyword>ampeg_decaycc\%{N}</keyword>
+      <keyword>ampeg_delay</keyword>
+      <keyword>ampeg_delay_oncc\%{N}</keyword>
+      <keyword>ampeg_delaycc\%{N}</keyword>
+      <keyword>ampeg_dynamic</keyword>
+      <keyword>ampeg_hold</keyword>
+      <keyword>ampeg_hold_oncc\%{N}</keyword>
+      <keyword>ampeg_holdcc\%{N}</keyword>
+      <keyword>ampeg_release</keyword>
+      <keyword>ampeg_release_oncc\%{N}</keyword>
+      <keyword>ampeg_release_shape</keyword>
+      <keyword>ampeg_release_zero</keyword>
+      <keyword>ampeg_releasecc\%{N}</keyword>
+      <keyword>ampeg_start</keyword>
+      <keyword>ampeg_start_oncc\%{N}</keyword>
+      <keyword>ampeg_startcc\%{N}</keyword>
+      <keyword>ampeg_sustain</keyword>
+      <keyword>ampeg_sustain_oncc\%{N}</keyword>
+      <keyword>ampeg_sustaincc\%{N}</keyword>
+      <keyword>ampeg_vel2attack</keyword>
+      <keyword>ampeg_vel2decay</keyword>
+      <keyword>ampeg_vel2delay</keyword>
+      <keyword>ampeg_vel2hold</keyword>
+      <keyword>ampeg_vel2release</keyword>
+      <keyword>ampeg_vel2sustain</keyword>
+      <keyword>amplfo_delay</keyword>
+      <keyword>amplfo_depth</keyword>
+      <keyword>amplfo_depthcc\%{N}</keyword>
+      <keyword>amplfo_depthchanaft</keyword>
+      <keyword>amplfo_depthpolyaft</keyword>
+      <keyword>amplfo_fade</keyword>
+      <keyword>amplfo_freq</keyword>
+      <keyword>amplfo_freqcc\%{N}</keyword>
+      <keyword>amplfo_freqchanaft</keyword>
+      <keyword>amplfo_freqpolyaft</keyword>
+      <keyword>amplitude</keyword>
+      <keyword>amplitude_cc\%{N}</keyword>
+      <keyword>amplitude_curvecc\%{N}</keyword>
+      <keyword>amplitude_mod</keyword>
+      <keyword>amplitude_oncc\%{N}</keyword>
+      <keyword>amplitude_smoothcc\%{N}</keyword>
+      <keyword>bend_down</keyword>
+      <keyword>bend_smooth</keyword>
+      <keyword>bend_step</keyword>
+      <keyword>bend_stepdown</keyword>
+      <keyword>bend_stepup</keyword>
+      <keyword>bend_up</keyword>
+      <keyword>benddown</keyword>
+      <keyword>bendstep</keyword>
+      <keyword>bendup</keyword>
+      <keyword>count</keyword>
+      <keyword>curve_index</keyword>
+      <keyword>cutoff</keyword>
+      <keyword>cutoff2</keyword>
+      <keyword>cutoff2_curvecc\%{N}</keyword>
+      <keyword>cutoff2_mod</keyword>
+      <keyword>cutoff2_oncc\%{N}</keyword>
+      <keyword>cutoff2_smoothcc\%{N}</keyword>
+      <keyword>cutoff2_stepcc\%{N}</keyword>
+      <keyword>cutoff_cc\%{N}</keyword>
+      <keyword>cutoff_chanaft</keyword>
+      <keyword>cutoff_curvecc\%{N}</keyword>
+      <keyword>cutoff_mod</keyword>
+      <keyword>cutoff_oncc\%{N}</keyword>
+      <keyword>cutoff_polyaft</keyword>
+      <keyword>cutoff_smoothcc\%{N}</keyword>
+      <keyword>cutoff_stepcc\%{N}</keyword>
+      <keyword>default_path</keyword>
+      <keyword>delay</keyword>
+      <keyword>delay_beats</keyword>
+      <keyword>delay_beats_mod</keyword>
+      <keyword>delay_cc\%{N}</keyword>
+      <keyword>delay_mod</keyword>
+      <keyword>delay_random</keyword>
+      <keyword>delay_samples</keyword>
+      <keyword>delay_samples_oncc\%{N}</keyword>
+      <keyword>direction</keyword>
+      <keyword>directives</keyword>
+      <keyword>effect1</keyword>
+      <keyword>effect2</keyword>
+      <keyword>eg\%{N}_amplitude\%{N}</keyword>
+      <keyword>eg\%{N}_amplitude\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_curve\%{N}</keyword>
+      <keyword>eg\%{N}_cutoff</keyword>
+      <keyword>eg\%{N}_cutoff2</keyword>
+      <keyword>eg\%{N}_cutoff2_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_cutoff_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_depth_lfo\%{N}</keyword>
+      <keyword>eg\%{N}_depthadd_lfo\%{N}</keyword>
+      <keyword>eg\%{N}_eq\%{eqN}bw</keyword>
+      <keyword>eg\%{N}_eq\%{eqN}bw_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_eq\%{eqN}freq</keyword>
+      <keyword>eg\%{N}_eq\%{eqN}freq_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_eq\%{eqN}gain</keyword>
+      <keyword>eg\%{N}_eq\%{eqN}gain_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_freq_lfo\%{N}</keyword>
+      <keyword>eg\%{N}_level\%{N}</keyword>
+      <keyword>eg\%{N}_level\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_loop</keyword>
+      <keyword>eg\%{N}_loop_count</keyword>
+      <keyword>eg\%{N}_pan\%{N}</keyword>
+      <keyword>eg\%{N}_pan\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_pan_curve</keyword>
+      <keyword>eg\%{N}_pan_curvecc\%{N}</keyword>
+      <keyword>eg\%{N}_pitch</keyword>
+      <keyword>eg\%{N}_pitch_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_pitch_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_points</keyword>
+      <keyword>eg\%{N}_resonance</keyword>
+      <keyword>eg\%{N}_resonance2</keyword>
+      <keyword>eg\%{N}_resonance2_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_resonance_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_shape</keyword>
+      <keyword>eg\%{N}_shape\%{N}</keyword>
+      <keyword>eg\%{N}_sustain</keyword>
+      <keyword>eg\%{N}_time\%{N}</keyword>
+      <keyword>eg\%{N}_time\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_volume\%{N}</keyword>
+      <keyword>eg\%{N}_volume\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_width\%{N}</keyword>
+      <keyword>eg\%{N}_width\%{N}_oncc\%{N}</keyword>
+      <keyword>end</keyword>
+      <keyword>eq\%{eqN}_bw</keyword>
+      <keyword>eq\%{eqN}_bwcc\%{N}</keyword>
+      <keyword>eq\%{eqN}_bw_oncc\%{N}</keyword>
+      <keyword>eq\%{eqN}_dynamic</keyword>
+      <keyword>eq\%{eqN}_freq</keyword>
+      <keyword>eq\%{eqN}_freqcc\%{N}</keyword>
+      <keyword>eq\%{eqN}_freq_oncc\%{N}</keyword>
+      <keyword>eq\%{eqN}_gain</keyword>
+      <keyword>eq\%{eqN}_gaincc\%{N}</keyword>
+      <keyword>eq\%{eqN}_gain_oncc\%{N}</keyword>
+      <keyword>eq\%{eqN}_type</keyword>
+      <keyword>eq\%{eqN}_vel2freq</keyword>
+      <keyword>eq\%{eqN}_vel2gain</keyword>
+      <keyword>fil2_gain</keyword>
+      <keyword>fil2_type</keyword>
+      <keyword>fil_gain</keyword>
+      <keyword>fil_keycenter</keyword>
+      <keyword>fil_keytrack</keyword>
+      <keyword>fil_random</keyword>
+      <keyword>fil_type</keyword>
+      <keyword>fil_veltrack</keyword>
+      <keyword>fileg_attack</keyword>
+      <keyword>fileg_attack_oncc\%{N}</keyword>
+      <keyword>fileg_attackcc\%{N}</keyword>
+      <keyword>fileg_decay</keyword>
+      <keyword>fileg_decay_oncc\%{N}</keyword>
+      <keyword>fileg_decaycc\%{N}</keyword>
+      <keyword>fileg_delay</keyword>
+      <keyword>fileg_depth</keyword>
+      <keyword>fileg_depth_oncc\%{N}</keyword>
+      <keyword>fileg_depthcc\%{N}</keyword>
+      <keyword>fileg_dynamic</keyword>
+      <keyword>fileg_hold</keyword>
+      <keyword>fileg_release</keyword>
+      <keyword>fileg_start</keyword>
+      <keyword>fileg_sustain</keyword>
+      <keyword>fileg_vel2attack</keyword>
+      <keyword>fileg_vel2decay</keyword>
+      <keyword>fileg_vel2delay</keyword>
+      <keyword>fileg_vel2depth</keyword>
+      <keyword>fileg_vel2hold</keyword>
+      <keyword>fileg_vel2release</keyword>
+      <keyword>fileg_vel2sustain</keyword>
+      <keyword>fillfo_delay</keyword>
+      <keyword>fillfo_depth</keyword>
+      <keyword>fillfo_depthcc\%{N}</keyword>
+      <keyword>fillfo_depthchanaft</keyword>
+      <keyword>fillfo_depthpolyaft</keyword>
+      <keyword>fillfo_fade</keyword>
+      <keyword>fillfo_freq</keyword>
+      <keyword>fillfo_freqcc\%{N}</keyword>
+      <keyword>fillfo_freqchanaft</keyword>
+      <keyword>fillfo_freqpolyaft</keyword>
+      <keyword>filtype</keyword>
+      <keyword>gain_cc\%{N}</keyword>
+      <keyword>gain_oncc\%{N}</keyword>
+      <keyword>global_amplitude</keyword>
+      <keyword>global_volume</keyword>
+      <keyword>group</keyword>
+      <keyword>group_amplitude</keyword>
+      <keyword>group_volume</keyword>
+      <keyword>hibend</keyword>
+      <keyword>hibpm</keyword>
+      <keyword>hicc\%{N}</keyword>
+      <keyword>hichan</keyword>
+      <keyword>hichanaft</keyword>
+      <keyword>hihdcc\%{N}</keyword>
+      <keyword>hikey</keyword>
+      <keyword>hint_([a-z]*)</keyword>
+      <keyword>hipolyaft</keyword>
+      <keyword>hiprog</keyword>
+      <keyword>hirand</keyword>
+      <keyword>hitimer</keyword>
+      <keyword>hivel</keyword>
+      <keyword>key</keyword>
+      <keyword>label_cc\%{N}</keyword>
+      <keyword>lfo\%{N}_amplitude</keyword>
+      <keyword>lfo\%{N}_amplitude_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_amplitude_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_amplitude_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_count</keyword>
+      <keyword>lfo\%{N}_cutoff</keyword>
+      <keyword>lfo\%{N}_cutoff2</keyword>
+      <keyword>lfo\%{N}_cutoff2_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff2_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff2_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_delay</keyword>
+      <keyword>lfo\%{N}_delay_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_depth_lfo\%{N}</keyword>
+      <keyword>lfo\%{N}_depthadd_lfo\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}bw</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}bw_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}bw_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}bw_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}freq</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}freq_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}freq_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}freq_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}gain</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}gain_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}gain_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{eqN}gain_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_fade</keyword>
+      <keyword>lfo\%{N}_fade_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq</keyword>
+      <keyword>lfo\%{N}_freq_lfo\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_lfo\%{N}_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_offset</keyword>
+      <keyword>lfo\%{N}_offset([2-8]{1})</keyword>
+      <keyword>lfo\%{N}_pan</keyword>
+      <keyword>lfo\%{N}_pan_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_pan_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_pan_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_phase</keyword>
+      <keyword>lfo\%{N}_phase_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch</keyword>
+      <keyword>lfo\%{N}_pitch_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_ratio</keyword>
+      <keyword>lfo\%{N}_ratio([2-8]{1})</keyword>
+      <keyword>lfo\%{N}_resonance</keyword>
+      <keyword>lfo\%{N}_resonance2</keyword>
+      <keyword>lfo\%{N}_resonance2_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance2_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance2_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_scale</keyword>
+      <keyword>lfo\%{N}_scale([2-8]{1})</keyword>
+      <keyword>lfo\%{N}_smooth</keyword>
+      <keyword>lfo\%{N}_smooth_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_step\%{N}</keyword>
+      <keyword>lfo\%{N}_steps</keyword>
+      <keyword>lfo\%{N}_volume</keyword>
+      <keyword>lfo\%{N}_volume_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_volume_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_volume_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_wave</keyword>
+      <keyword>lfo\%{N}_wave([2-8]{1})</keyword>
+      <keyword>lfo\%{N}_wave_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_width</keyword>
+      <keyword>lfo\%{N}_width_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_width_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_width_stepcc\%{N}</keyword>
+      <keyword>lobend</keyword>
+      <keyword>lobpm</keyword>
+      <keyword>locc\%{N}</keyword>
+      <keyword>lochan</keyword>
+      <keyword>lochanaft</keyword>
+      <keyword>lohdcc\%{N}</keyword>
+      <keyword>lokey</keyword>
+      <keyword>loop_count</keyword>
+      <keyword>loop_crossfade</keyword>
+      <keyword>loop_end</keyword>
+      <keyword>loop_mode</keyword>
+      <keyword>loop_start</keyword>
+      <keyword>loop_type</keyword>
+      <keyword>loopend</keyword>
+      <keyword>loopmode</keyword>
+      <keyword>loopstart</keyword>
+      <keyword>lopolyaft</keyword>
+      <keyword>loprog</keyword>
+      <keyword>lorand</keyword>
+      <keyword>lotimer</keyword>
+      <keyword>lovel</keyword>
+      <keyword>master_amplitude</keyword>
+      <keyword>master_volume</keyword>
+      <keyword>md5</keyword>
+      <keyword>note_offset</keyword>
+      <keyword>note_polyphony</keyword>
+      <keyword>note_selfmask</keyword>
+      <keyword>octave_offset</keyword>
+      <keyword>off_by</keyword>
+      <keyword>off_curve</keyword>
+      <keyword>off_mode</keyword>
+      <keyword>off_shape</keyword>
+      <keyword>off_time</keyword>
+      <keyword>offset</keyword>
+      <keyword>offset_cc\%{N}</keyword>
+      <keyword>offset_mod</keyword>
+      <keyword>offset_random</keyword>
+      <keyword>on_hicc\%{N}</keyword>
+      <keyword>on_locc\%{N}</keyword>
+      <keyword>output</keyword>
+      <keyword>pan</keyword>
+      <keyword>pan_oncc\%{N}</keyword>
+      <keyword>pan_cc\%{N}</keyword>
+      <keyword>pan_curvecc\%{N}</keyword>
+      <keyword>pan_law</keyword>
+      <keyword>pan_mod</keyword>
+      <keyword>pan_oncc\%{N}</keyword>
+      <keyword>pan_smoothcc\%{N}</keyword>
+      <keyword>pan_stepcc\%{N}</keyword>
+      <keyword>param_offset</keyword>
+      <keyword>phase</keyword>
+      <keyword>pitch_curvecc\%{N}</keyword>
+      <keyword>pitch_keycenter</keyword>
+      <keyword>pitch_keytrack</keyword>
+      <keyword>pitch_mod</keyword>
+      <keyword>pitch_oncc\%{N}</keyword>
+      <keyword>pitch_random</keyword>
+      <keyword>pitch_smoothcc\%{N}</keyword>
+      <keyword>pitch_stepcc\%{N}</keyword>
+      <keyword>pitch_veltrack</keyword>
+      <keyword>pitcheg_attack</keyword>
+      <keyword>pitcheg_decay</keyword>
+      <keyword>pitcheg_decay_oncc\%{N}</keyword>
+      <keyword>pitcheg_decay_shape</keyword>
+      <keyword>pitcheg_delay</keyword>
+      <keyword>pitcheg_delay_oncc\%{N}</keyword>
+      <keyword>pitcheg_depth</keyword>
+      <keyword>pitcheg_depth_oncc\%{N}</keyword>
+      <keyword>pitcheg_dynamic</keyword>
+      <keyword>pitcheg_hold</keyword>
+      <keyword>pitcheg_release</keyword>
+      <keyword>pitcheg_start</keyword>
+      <keyword>pitcheg_sustain</keyword>
+      <keyword>pitcheg_vel2attack</keyword>
+      <keyword>pitcheg_vel2decay</keyword>
+      <keyword>pitcheg_vel2delay</keyword>
+      <keyword>pitcheg_vel2depth</keyword>
+      <keyword>pitcheg_vel2hold</keyword>
+      <keyword>pitcheg_vel2release</keyword>
+      <keyword>pitchlfo_delay</keyword>
+      <keyword>pitchlfo_depth</keyword>
+      <keyword>pitchlfo_depth_oncc\%{N}</keyword>
+      <keyword>pitchlfo_depthcc\%{N}</keyword>
+      <keyword>pitchlfo_depthchanaft</keyword>
+      <keyword>pitchlfo_depthpolyaft</keyword>
+      <keyword>pitchlfo_fade</keyword>
+      <keyword>pitchlfo_freq</keyword>
+      <keyword>pitchlfo_freqcc\%{N}</keyword>
+      <keyword>pitchlfo_freqchanaft</keyword>
+      <keyword>pitchlfo_freqpolyaft</keyword>
+      <keyword>polyphony</keyword>
+      <keyword>polyphony_group</keyword>
+      <keyword>position</keyword>
+      <keyword>position_mod</keyword>
+      <keyword>resonance</keyword>
+      <keyword>resonance2</keyword>
+      <keyword>resonance2_cc\%{N}</keyword>
+      <keyword>resonance2_curvecc\%{N}</keyword>
+      <keyword>resonance2_mod</keyword>
+      <keyword>resonance2_oncc\%{N}</keyword>
+      <keyword>resonance2_smoothcc\%{N}</keyword>
+      <keyword>resonance2_stepcc\%{N}</keyword>
+      <keyword>resonance_cc\%{N}</keyword>
+      <keyword>resonance_curvecc\%{N}</keyword>
+      <keyword>resonance_mod</keyword>
+      <keyword>resonance_oncc\%{N}</keyword>
+      <keyword>resonance_smoothcc\%{N}</keyword>
+      <keyword>resonance_stepcc\%{N}</keyword>
+      <keyword>reverse_hicc\%{N}</keyword>
+      <keyword>reverse_locc\%{N}</keyword>
+      <keyword>rt_dead</keyword>
+      <keyword>rt_decay</keyword>
+      <keyword>sample</keyword>
+      <keyword>seq_length</keyword>
+      <keyword>seq_position</keyword>
+      <keyword>set_cc\%{N}</keyword>
+      <keyword>set_hdcc\%{N}</keyword>
+      <keyword>sostenuto_cc\%{N}</keyword>
+      <keyword>sostenuto_lo</keyword>
+      <keyword>sostenuto_sw</keyword>
+      <keyword>start_hicc\%{N}</keyword>
+      <keyword>start_locc\%{N}</keyword>
+      <keyword>stop_beats</keyword>
+      <keyword>stop_beats_mod</keyword>
+      <keyword>stop_hicc\%{N}</keyword>
+      <keyword>stop_locc\%{N}</keyword>
+      <keyword>sustain_cc\%{N}</keyword>
+      <keyword>sustain_lo</keyword>
+      <keyword>sustain_sw</keyword>
+      <keyword>sw_default</keyword>
+      <keyword>sw_down</keyword>
+      <keyword>sw_hikey</keyword>
+      <keyword>sw_hilast</keyword>
+      <keyword>sw_label</keyword>
+      <keyword>sw_last</keyword>
+      <keyword>sw_lokey</keyword>
+      <keyword>sw_lolast</keyword>
+      <keyword>sw_note_offset</keyword>
+      <keyword>sw_octave_offset</keyword>
+      <keyword>sw_previous</keyword>
+      <keyword>sw_up</keyword>
+      <keyword>sw_vel</keyword>
+      <keyword>sync_beats</keyword>
+      <keyword>sync_offset</keyword>
+      <keyword>transpose</keyword>
+      <keyword>trigger</keyword>
+      <keyword>tune</keyword>
+      <keyword>tune_cc\%{N}</keyword>
+      <keyword>tune_mod</keyword>
+      <keyword>tune_oncc\%{N}</keyword>
+      <keyword>type</keyword>
+      <keyword>v\%{N}</keyword>
+      <keyword>var\%{N}_amplitude</keyword>
+      <keyword>var\%{N}_curvecc\%{N}</keyword>
+      <keyword>var\%{N}_cutoff</keyword>
+      <keyword>var\%{N}_cutoff2</keyword>
+      <keyword>var\%{N}_eq\%{eqN}bw</keyword>
+      <keyword>var\%{N}_eq\%{eqN}freq</keyword>
+      <keyword>var\%{N}_eq\%{eqN}gain</keyword>
+      <keyword>var\%{N}_mod</keyword>
+      <keyword>var\%{N}_oncc\%{N}</keyword>
+      <keyword>var\%{N}_pan</keyword>
+      <keyword>var\%{N}_pitch</keyword>
+      <keyword>var\%{N}_resonance</keyword>
+      <keyword>var\%{N}_resonance2</keyword>
+      <keyword>var\%{N}_volume</keyword>
+      <keyword>var\%{N}_width</keyword>
+      <keyword>vendor_specific</keyword>
+      <keyword>volume</keyword>
+      <keyword>volume_curvecc\%{N}</keyword>
+      <keyword>volume_mod</keyword>
+      <keyword>volume_oncc\%{N}</keyword>
+      <keyword>volume_smoothcc\%{N}</keyword>
+      <keyword>volume_stepcc\%{N}</keyword>
+      <keyword>waveguide</keyword>
+      <keyword>width</keyword>
+      <keyword>width_mod</keyword>
+      <keyword>width_oncc\%{N}</keyword>
+      <keyword>xf_cccurve</keyword>
+      <keyword>xf_keycurve</keyword>
+      <keyword>xf_velcurve</keyword>
+      <keyword>xfin_hicc\%{N}</keyword>
+      <keyword>xfin_hikey</keyword>
+      <keyword>xfin_hivel</keyword>
+      <keyword>xfin_locc\%{N}</keyword>
+      <keyword>xfin_lokey</keyword>
+      <keyword>xfin_lovel</keyword>
+      <keyword>xfout_hicc\%{N}</keyword>
+      <keyword>xfout_hikey</keyword>
+      <keyword>xfout_hivel</keyword>
+      <keyword>xfout_locc\%{N}</keyword>
+      <keyword>xfout_lokey</keyword>
+      <keyword>xfout_lovel</keyword>
+    </context>
+
+    <context id="preprocessors" style-ref="preprocessor">
+      <match extended="true">
+        \%{preproc-start}
+        (include|import)\s*
+        (".*?")
+      </match>
+      <include>
+        <context id="included-file" sub-pattern="2" style-ref="included-file" class="path"/>
+      </include>
+    </context>
+
+    <!--Main context-->
+    <context id="sfz" class="no-spell-check">
+      <include>
+        <context ref="gtk-doc:inline-docs-section"/>
+        <context ref="def:c-like-comment" style-ref="comment"/>
+        <context ref="def:c-like-comment-multiline" style-ref="comment"/>
+        <context ref="def:c-like-close-comment-outside-comment" style-ref="comment"/>
+        <context ref="headers-region"/>
+        <context ref="headers-others"/>
+        <context ref="opcodes"/>
+        <context ref="preprocessors"/>
+        <context ref="float"/>
+        <context ref="decimal"/>
+      </include>
+    </context>
+  </definitions>
+</language>
