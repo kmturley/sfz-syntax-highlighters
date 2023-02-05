@@ -9,6 +9,11 @@ async function fileLoad(url: string): Promise<string> {
   return fetch(url).then((res: any) => res.text());
 }
 
+async function fileLoadJson(url: string): Promise<any> {
+  console.log('⤓', url);
+  return fetch(url).then((res: any) => res.json());
+}
+
 function fileSave(dir: string, filename: string, data: string) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(`${dir}/${filename}`, data);
@@ -22,4 +27,4 @@ function yamlConvert(file: string): any {
   return yaml.load(file);
 }
 
-export { fileLoad, fileSave, xmlConvert, yamlConvert };
+export { fileLoad, fileLoadJson, fileSave, xmlConvert, yamlConvert };
