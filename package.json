@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "node-fetch": "^2.6.9"
+    "node-fetch": "^2.6.9",
+    "xml-js": "^1.6.11"
   }
 }
