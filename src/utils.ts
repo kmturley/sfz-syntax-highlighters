@@ -2,29 +2,43 @@ import * as convert from 'xml-js';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 import * as yaml from 'js-yaml';
-import { SyntaxFile } from './types';
 
-async function fileLoad(url: string): Promise<string> {
+async function fileGet(url: string): Promise<string> {
   console.log('⤓', url);
   return fetch(url).then((res: any) => res.text());
 }
 
-async function fileLoadJson(url: string): Promise<any> {
+async function fileGetJson(url: string): Promise<any> {
   console.log('⤓', url);
   return fetch(url).then((res: any) => res.json());
 }
 
+function fileLoadJson(filePath: string): any {
+  if (fs.existsSync(filePath)) {
+    console.log('⎋', filePath);
+    return JSON.parse(fs.readFileSync(filePath).toString());
+  }
+  return false;
+}
 function fileSave(dir: string, filename: string, data: string) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(`${dir}/${filename}`, data);
 }
 
-function xmlConvert(file: string): any {
+function jsToXml(file: any): any {
+  return convert.js2xml(file, { compact: true, spaces: 2 });
+}
+
+function jsToYaml(file: any): any {
+  return yaml.dump(file);
+}
+
+function xmlToJs(file: string): any {
   return convert.xml2js(file, { compact: true });
 }
 
-function yamlConvert(file: string): any {
+function yamlToJs(file: string): any {
   return yaml.load(file);
 }
 
-export { fileLoad, fileLoadJson, fileSave, xmlConvert, yamlConvert };
+export { fileGet, fileGetJson, fileLoadJson, fileSave, jsToXml, jsToYaml, xmlToJs, yamlToJs };
