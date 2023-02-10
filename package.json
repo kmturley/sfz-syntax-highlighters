@@ -1,6 +1,6 @@
 {
   "name": "sfz-syntax-highlighters",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Auto-generation of sfz syntax highlighters for code editors",
   "main": "dist/index.js",
   "scripts": {
