@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc && npm run copy",
-    "copy": "copyfiles -u 1 ./src/templates/* ./dist",
+    "copy": "copyfiles -u 1 ./src/templates/* ./dist && copyfiles -u 2 ./src/html/**/* ./out",
     "dev": "ts-node src/index.ts",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "tslint -p tsconfig.json",
