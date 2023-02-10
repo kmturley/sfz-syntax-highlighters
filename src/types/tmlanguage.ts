@@ -169,10 +169,10 @@ export interface HeadersPattern {
 }
 
 export interface Int {
-  patterns: Int01024_Pattern[];
+  patterns: Int01024Pattern[];
 }
 
-export interface Int01024_Pattern {
+export interface Int01024Pattern {
   match: string;
   name: string;
 }
