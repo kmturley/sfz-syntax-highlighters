@@ -2,8 +2,7 @@ import * as convert from 'xml-js';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 import * as yaml from 'js-yaml';
-import { Category, CategoryOpcode, Syntax } from './types/syntax';
-import slugify from 'slugify';
+import { CategoryOpcode } from './types/syntax';
 
 async function fileGet(url: string): Promise<string> {
   console.log('⤓', url);
@@ -15,6 +14,14 @@ async function fileGetJson(url: string): Promise<any> {
   return fetch(url).then((res: any) => res.json());
 }
 
+function fileLoad(filePath: string): any {
+  if (fs.existsSync(filePath)) {
+    console.log('⎋', filePath);
+    return fs.readFileSync(filePath).toString();
+  }
+  return false;
+}
+
 function fileLoadJson(filePath: string): any {
   if (fs.existsSync(filePath)) {
     console.log('⎋', filePath);
@@ -24,6 +31,7 @@ function fileLoadJson(filePath: string): any {
 }
 
 function fileSave(dir: string, filename: string, data: string) {
+  console.log('+', `${dir}/${filename}`);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(`${dir}/${filename}`, data);
 }
@@ -62,4 +70,4 @@ function yamlToJs(file: string): any {
   return yaml.load(file);
 }
 
-export { fileGet, fileGetJson, fileLoadJson, fileSave, findOpcodes, jsToXml, jsToYaml, xmlToJs, yamlToJs };
+export { fileGet, fileGetJson, fileLoad, fileLoadJson, fileSave, findOpcodes, jsToXml, jsToYaml, xmlToJs, yamlToJs };
