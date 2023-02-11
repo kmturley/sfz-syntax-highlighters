@@ -37,6 +37,8 @@ async function init() {
 
   // Get gedit template and update values
   const geditTemplate: Gedit = await fileLoadJson('./src/templates/gedit.json');
+  fileSave(OUT_DIR, 'gedit-original.json', JSON.stringify(geditTemplate, null, 2));
+  fileSave(OUT_DIR, 'gedit-original.lang', jsToXml(geditTemplate));
   geditTemplate.language.definitions.context.forEach((contextItem: DefinitionsContext) => {
     if (contextItem._attributes.id === 'headers-others') {
       contextItem.keyword = headers.map((header: string) => ({ _text: header }));
@@ -44,11 +46,13 @@ async function init() {
       contextItem.keyword = opcodes.map((opcode: CategoryOpcode) => ({ _text: opcode.name }));
     }
   });
-  fileSave(OUT_DIR, 'sfz.gedit.modified.json', JSON.stringify(geditTemplate, null, 2));
-  fileSave(OUT_DIR, 'sfz.gedit.modified.lang', jsToXml(geditTemplate));
+  fileSave(OUT_DIR, 'gedit-modified.json', JSON.stringify(geditTemplate, null, 2));
+  fileSave(OUT_DIR, 'gedit-modified.lang', jsToXml(geditTemplate));
 
   // Get tmLanguage template and update header values
   const tmLanguageTemplate: TmLanguage = await fileLoadJson('./src/templates/tmLanguage.json');
+  fileSave(OUT_DIR, 'tmLanguage-original.json', JSON.stringify(tmLanguageTemplate, null, 2));
+  fileSave(OUT_DIR, 'tmLanguage-original.tmLanguage', jsToXml(tmLanguageTemplate));
   // Remove template patterns
   Object.keys(tmLanguageTemplate.repository).map((key: string) => {
     if (key === 'comment') return;
@@ -80,7 +84,6 @@ async function init() {
       match: `<.*(?!(${headers.join('|')}))>`,
     },
   ];
-
   // Loop through opcode categories and update
   syntaxFile.categories.forEach((category: Category) => {
     const categoryOpcodes: CategoryOpcode[] = findOpcodes(category);
@@ -124,8 +127,8 @@ async function init() {
       tmLanguageTemplate.repository[opcodeMapId].patterns.push(pattern as any);
     });
   });
-  fileSave(OUT_DIR, 'sfz.modified.tmLanguage.json', JSON.stringify(tmLanguageTemplate, null, 2));
-  fileSave(OUT_DIR, 'sfz.modified.tmLanguage', jsToXml(tmLanguageTemplate));
+  fileSave(OUT_DIR, 'tmLanguage-modified.json', JSON.stringify(tmLanguageTemplate, null, 2));
+  fileSave(OUT_DIR, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
 }
 
 init();
