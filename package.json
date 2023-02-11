@@ -36,6 +36,7 @@
   "dependencies": {
     "js-yaml": "^4.1.0",
     "node-fetch": "^2.6.9",
+    "slugify": "^1.6.5",
     "xml-js": "^1.6.11"
   }
 }
