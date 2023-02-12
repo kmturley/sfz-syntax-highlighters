@@ -122,7 +122,7 @@
   </headers>
   <sfz1_sound-source>
     <patterns>
-      <comment>opcodes: (count): (0 to 4294967296 loops)</comment>
+      <comment>opcodes: (count): (0 to 4294967296 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(count)\b</begin>
       <beginCaptures>
@@ -248,7 +248,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sample): (undefined to undefined loops)</comment>
+      <comment>opcodes: (sample): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sample)\b</begin>
       <beginCaptures>
@@ -257,9 +257,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (sync_beats): (0 to 32 beats)</comment>
@@ -292,7 +289,7 @@
   </sfz1_sound-source>
   <sfz1_instrument-settings>
     <patterns>
-      <comment>opcodes: (group): (-2147483648 to 2147483647 loops)</comment>
+      <comment>opcodes: (group): (-2147483648 to 2147483647 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(group)\b</begin>
       <beginCaptures>
@@ -306,7 +303,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_by): (-2147483648 to 2147483647 loops)</comment>
+      <comment>opcodes: (off_by): (-2147483648 to 2147483647 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_by)\b</begin>
       <beginCaptures>
@@ -334,7 +331,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (output): (0 to 1024 loops)</comment>
+      <comment>opcodes: (output): (0 to 1024 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(output)\b</begin>
       <beginCaptures>
@@ -350,7 +347,7 @@
   </sfz1_instrument-settings>
   <sfz1_region-logic>
     <patterns>
-      <comment>opcodes: (hibend): (-8192 to 8192 loops)</comment>
+      <comment>opcodes: (hibend): (-8192 to 8192 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hibend)\b</begin>
       <beginCaptures>
@@ -378,7 +375,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (hiccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hiccN)\b</begin>
       <beginCaptures>
@@ -392,7 +389,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hichan): (1 to 16 loops)</comment>
+      <comment>opcodes: (hichan): (1 to 16 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hichan)\b</begin>
       <beginCaptures>
@@ -406,7 +403,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hichanaft): (0 to 127 loops)</comment>
+      <comment>opcodes: (hichanaft): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hichanaft)\b</begin>
       <beginCaptures>
@@ -420,7 +417,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hikey): (0 to 127 loops)</comment>
+      <comment>opcodes: (hikey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hikey)\b</begin>
       <beginCaptures>
@@ -434,7 +431,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hipolyaft): (0 to 127 loops)</comment>
+      <comment>opcodes: (hipolyaft): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hipolyaft)\b</begin>
       <beginCaptures>
@@ -448,7 +445,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hirand): (0 to 1 loops)</comment>
+      <comment>opcodes: (hirand): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hirand)\b</begin>
       <beginCaptures>
@@ -462,7 +459,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hivel): (1 to 127 loops)</comment>
+      <comment>opcodes: (hivel): (1 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hivel)\b</begin>
       <beginCaptures>
@@ -476,7 +473,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (key): (0 to 127 loops)</comment>
+      <comment>opcodes: (key): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(key)\b</begin>
       <beginCaptures>
@@ -490,7 +487,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lobend): (-8192 to 8192 loops)</comment>
+      <comment>opcodes: (lobend): (-8192 to 8192 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lobend)\b</begin>
       <beginCaptures>
@@ -518,7 +515,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (loccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (loccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loccN)\b</begin>
       <beginCaptures>
@@ -532,7 +529,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lochan): (1 to 16 loops)</comment>
+      <comment>opcodes: (lochan): (1 to 16 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lochan)\b</begin>
       <beginCaptures>
@@ -546,7 +543,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lochanaft): (0 to 127 loops)</comment>
+      <comment>opcodes: (lochanaft): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lochanaft)\b</begin>
       <beginCaptures>
@@ -560,7 +557,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lokey): (0 to 127 loops)</comment>
+      <comment>opcodes: (lokey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lokey)\b</begin>
       <beginCaptures>
@@ -574,7 +571,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lopolyaft): (0 to 127 loops)</comment>
+      <comment>opcodes: (lopolyaft): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lopolyaft)\b</begin>
       <beginCaptures>
@@ -588,7 +585,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lorand): (0 to 1 loops)</comment>
+      <comment>opcodes: (lorand): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lorand)\b</begin>
       <beginCaptures>
@@ -602,7 +599,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lovel): (1 to 127 loops)</comment>
+      <comment>opcodes: (lovel): (1 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lovel)\b</begin>
       <beginCaptures>
@@ -616,7 +613,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (on_hiccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_hiccN)\b</begin>
       <beginCaptures>
@@ -630,7 +627,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_loccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (on_loccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_loccN)\b</begin>
       <beginCaptures>
@@ -644,7 +641,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (seq_length): (1 to 100 loops)</comment>
+      <comment>opcodes: (seq_length): (1 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(seq_length)\b</begin>
       <beginCaptures>
@@ -658,7 +655,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (seq_position): (1 to 100 loops)</comment>
+      <comment>opcodes: (seq_position): (1 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(seq_position)\b</begin>
       <beginCaptures>
@@ -672,7 +669,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_down): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_down): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_down)\b</begin>
       <beginCaptures>
@@ -686,7 +683,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_hikey): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_hikey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_hikey)\b</begin>
       <beginCaptures>
@@ -700,7 +697,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_last): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_last): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_last)\b</begin>
       <beginCaptures>
@@ -714,7 +711,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_lokey): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_lokey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_lokey)\b</begin>
       <beginCaptures>
@@ -728,7 +725,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_previous): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_previous): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_previous)\b</begin>
       <beginCaptures>
@@ -742,7 +739,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_up): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_up): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_up)\b</begin>
       <beginCaptures>
@@ -786,7 +783,7 @@
   </sfz1_region-logic>
   <sfz1_performance-parameters>
     <patterns>
-      <comment>opcodes: (amp_keycenter): (0 to 127 loops)</comment>
+      <comment>opcodes: (amp_keycenter): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(amp_keycenter)\b</begin>
       <beginCaptures>
@@ -828,7 +825,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (amp_velcurve_N): (0 to 1 loops)</comment>
+      <comment>opcodes: (amp_velcurve_N): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(amp_velcurve_N)\b</begin>
       <beginCaptures>
@@ -954,7 +951,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fil_keycenter): (0 to 127 loops)</comment>
+      <comment>opcodes: (fil_keycenter): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fil_keycenter)\b</begin>
       <beginCaptures>
@@ -1038,7 +1035,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitch_keycenter): (0 to 127 loops)</comment>
+      <comment>opcodes: (pitch_keycenter): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitch_keycenter)\b</begin>
       <beginCaptures>
@@ -1052,7 +1049,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitch_keytrack): (-1200 to 1200 loops)</comment>
+      <comment>opcodes: (pitch_keytrack): (-1200 to 1200 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitch_keytrack)\b</begin>
       <beginCaptures>
@@ -1136,7 +1133,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (transpose): (-127 to 127 loops)</comment>
+      <comment>opcodes: (transpose): (-127 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(transpose)\b</begin>
       <beginCaptures>
@@ -1234,7 +1231,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfin_hiccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_hiccN)\b</begin>
       <beginCaptures>
@@ -1248,7 +1245,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_hikey): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfin_hikey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_hikey)\b</begin>
       <beginCaptures>
@@ -1262,7 +1259,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_hivel): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfin_hivel): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_hivel)\b</begin>
       <beginCaptures>
@@ -1276,7 +1273,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_loccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfin_loccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_loccN)\b</begin>
       <beginCaptures>
@@ -1290,7 +1287,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_lokey): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfin_lokey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_lokey)\b</begin>
       <beginCaptures>
@@ -1304,7 +1301,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_lovel): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfin_lovel): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_lovel)\b</begin>
       <beginCaptures>
@@ -1318,7 +1315,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfout_hiccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_hiccN)\b</begin>
       <beginCaptures>
@@ -1332,7 +1329,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_hikey): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfout_hikey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_hikey)\b</begin>
       <beginCaptures>
@@ -1346,7 +1343,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_hivel): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfout_hivel): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_hivel)\b</begin>
       <beginCaptures>
@@ -1360,7 +1357,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_loccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfout_loccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_loccN)\b</begin>
       <beginCaptures>
@@ -1374,7 +1371,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_lokey): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfout_lokey): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_lokey)\b</begin>
       <beginCaptures>
@@ -1388,7 +1385,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_lovel): (0 to 127 loops)</comment>
+      <comment>opcodes: (xfout_lovel): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_lovel)\b</begin>
       <beginCaptures>
@@ -1928,7 +1925,7 @@
   </sfz2_directives>
   <sfz2_sound-source>
     <patterns>
-      <comment>opcodes: (delay_beats): (undefined to undefined beats)</comment>
+      <comment>opcodes: (delay_beats): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_beats)\b</begin>
       <beginCaptures>
@@ -1937,12 +1934,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_samples): (undefined to undefined sample units)</comment>
+      <comment>opcodes: (delay_samples): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_samples)\b</begin>
       <beginCaptures>
@@ -1951,9 +1945,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (direction): (forward|reverse)</comment>
@@ -1970,7 +1961,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (loop_count): (undefined to undefined loops)</comment>
+      <comment>opcodes: (loop_count): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loop_count)\b</begin>
       <beginCaptures>
@@ -1979,12 +1970,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (loop_crossfade): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (loop_crossfade): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loop_crossfade)\b</begin>
       <beginCaptures>
@@ -1993,9 +1981,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (loop_type): (forward|backward|alternate)</comment>
@@ -2012,7 +1997,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (md5): (undefined to undefined loops)</comment>
+      <comment>opcodes: (md5): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(md5)\b</begin>
       <beginCaptures>
@@ -2021,12 +2006,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverse_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (reverse_hiccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverse_hiccN)\b</begin>
       <beginCaptures>
@@ -2040,7 +2022,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverse_loccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (reverse_loccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverse_loccN)\b</begin>
       <beginCaptures>
@@ -2054,7 +2036,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_beats): (undefined to undefined beats)</comment>
+      <comment>opcodes: (stop_beats): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_beats)\b</begin>
       <beginCaptures>
@@ -2063,9 +2045,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (waveguide): (on|off)</comment>
@@ -2084,7 +2063,7 @@
   </sfz2_sound-source>
   <sfz2_instrument-settings>
     <patterns>
-      <comment>opcodes: (#define): (undefined to undefined loops)</comment>
+      <comment>opcodes: (#define): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(#define)\b</begin>
       <beginCaptures>
@@ -2093,12 +2072,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (default_path): (undefined to undefined loops)</comment>
+      <comment>opcodes: (default_path): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(default_path)\b</begin>
       <beginCaptures>
@@ -2107,12 +2083,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (note_offset): (undefined to undefined loops)</comment>
+      <comment>opcodes: (note_offset): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(note_offset)\b</begin>
       <beginCaptures>
@@ -2121,12 +2094,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (note_polyphony): (undefined to undefined loops)</comment>
+      <comment>opcodes: (note_polyphony): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(note_polyphony)\b</begin>
       <beginCaptures>
@@ -2135,9 +2105,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (note_selfmask): (on|off)</comment>
@@ -2154,7 +2121,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (octave_offset): (undefined to undefined loops)</comment>
+      <comment>opcodes: (octave_offset): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(octave_offset)\b</begin>
       <beginCaptures>
@@ -2163,12 +2130,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (polyphony): (undefined to undefined loops)</comment>
+      <comment>opcodes: (polyphony): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(polyphony)\b</begin>
       <beginCaptures>
@@ -2177,9 +2141,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (rt_dead): (on|off)</comment>
@@ -2196,7 +2157,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (set_ccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (set_ccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(set_ccN)\b</begin>
       <beginCaptures>
@@ -2212,7 +2173,7 @@
   </sfz2_instrument-settings>
   <sfz2_region-logic>
     <patterns>
-      <comment>opcodes: (hiprog): (0 to 127 loops)</comment>
+      <comment>opcodes: (hiprog): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hiprog)\b</begin>
       <beginCaptures>
@@ -2226,7 +2187,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hitimer): (undefined to undefined loops)</comment>
+      <comment>opcodes: (hitimer): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hitimer)\b</begin>
       <beginCaptures>
@@ -2235,12 +2196,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (loprog): (0 to 127 loops)</comment>
+      <comment>opcodes: (loprog): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loprog)\b</begin>
       <beginCaptures>
@@ -2254,7 +2212,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lotimer): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lotimer): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lotimer)\b</begin>
       <beginCaptures>
@@ -2263,9 +2221,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (sostenuto_sw): (on|off)</comment>
@@ -2282,7 +2237,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (stop_hiccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_hiccN)\b</begin>
       <beginCaptures>
@@ -2296,7 +2251,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_loccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (stop_loccN): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_loccN)\b</begin>
       <beginCaptures>
@@ -2324,7 +2279,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_default): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_default): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_default)\b</begin>
       <beginCaptures>
@@ -2396,7 +2351,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pan_keycenter): (0 to 127 loops)</comment>
+      <comment>opcodes: (pan_keycenter): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pan_keycenter)\b</begin>
       <beginCaptures>
@@ -2454,7 +2409,7 @@
   </sfz2_performance-parameters>
   <sfz2_modulation>
     <patterns>
-      <comment>opcodes: (egN_amplitude): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_amplitude): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_amplitude)\b</begin>
       <beginCaptures>
@@ -2463,12 +2418,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_curveX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_curveX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_curveX)\b</begin>
       <beginCaptures>
@@ -2477,12 +2429,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_cutoff): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_cutoff): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_cutoff)\b</begin>
       <beginCaptures>
@@ -2491,12 +2440,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_cutoff2): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_cutoff2): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_cutoff2)\b</begin>
       <beginCaptures>
@@ -2505,12 +2451,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_depth_lfoX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_depth_lfoX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_depth_lfoX)\b</begin>
       <beginCaptures>
@@ -2519,12 +2462,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_depthadd_lfoX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_depthadd_lfoX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_depthadd_lfoX)\b</begin>
       <beginCaptures>
@@ -2533,12 +2473,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXbw): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_eqXbw): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_eqXbw)\b</begin>
       <beginCaptures>
@@ -2547,12 +2484,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXfreq): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_eqXfreq): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_eqXfreq)\b</begin>
       <beginCaptures>
@@ -2561,12 +2495,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXgain): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_eqXgain): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_eqXgain)\b</begin>
       <beginCaptures>
@@ -2575,12 +2506,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_freq_lfoX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_freq_lfoX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_freq_lfoX)\b</begin>
       <beginCaptures>
@@ -2589,12 +2517,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_levelX): (-1 to 1 loops)</comment>
+      <comment>opcodes: (egN_levelX): (-1 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_levelX)\b</begin>
       <beginCaptures>
@@ -2608,7 +2533,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_loop): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_loop): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_loop)\b</begin>
       <beginCaptures>
@@ -2617,12 +2542,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_loop_count): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_loop_count): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_loop_count)\b</begin>
       <beginCaptures>
@@ -2631,12 +2553,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pan): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_pan): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_pan)\b</begin>
       <beginCaptures>
@@ -2645,12 +2564,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pan_curve): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_pan_curve): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_pan_curve)\b</begin>
       <beginCaptures>
@@ -2659,12 +2575,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pitch): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_pitch): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_pitch)\b</begin>
       <beginCaptures>
@@ -2673,12 +2586,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_points): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_points): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_points)\b</begin>
       <beginCaptures>
@@ -2687,12 +2597,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_resonance): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_resonance): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_resonance)\b</begin>
       <beginCaptures>
@@ -2701,12 +2608,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_resonance2): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_resonance2): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_resonance2)\b</begin>
       <beginCaptures>
@@ -2715,12 +2619,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_shapeX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_shapeX): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_shapeX)\b</begin>
       <beginCaptures>
@@ -2729,12 +2630,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_sustain): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_sustain): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_sustain)\b</begin>
       <beginCaptures>
@@ -2743,12 +2641,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_timeX): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (egN_timeX): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_timeX)\b</begin>
       <beginCaptures>
@@ -2757,12 +2652,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_volume): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_volume): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_volume)\b</begin>
       <beginCaptures>
@@ -2771,12 +2663,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_width): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_width): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_width)\b</begin>
       <beginCaptures>
@@ -2785,12 +2674,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_amplitude): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_amplitude): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_amplitude)\b</begin>
       <beginCaptures>
@@ -2799,12 +2685,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_count): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_count): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_count)\b</begin>
       <beginCaptures>
@@ -2813,12 +2696,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_cutoff): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_cutoff): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_cutoff)\b</begin>
       <beginCaptures>
@@ -2827,12 +2707,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_delay): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (lfoN_delay): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_delay)\b</begin>
       <beginCaptures>
@@ -2841,12 +2718,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_depth_lfoX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_depth_lfoX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_depth_lfoX)\b</begin>
       <beginCaptures>
@@ -2855,12 +2729,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_depthadd_lfoX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_depthadd_lfoX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_depthadd_lfoX)\b</begin>
       <beginCaptures>
@@ -2869,12 +2740,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXbw): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_eqXbw): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_eqXbw)\b</begin>
       <beginCaptures>
@@ -2883,12 +2751,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXfreq): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_eqXfreq): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_eqXfreq)\b</begin>
       <beginCaptures>
@@ -2897,12 +2762,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXgain): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_eqXgain): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_eqXgain)\b</begin>
       <beginCaptures>
@@ -2911,12 +2773,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_fade): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_fade): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_fade)\b</begin>
       <beginCaptures>
@@ -2925,12 +2784,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_freq): (undefined to undefined Hz)</comment>
+      <comment>opcodes: (lfoN_freq): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_freq)\b</begin>
       <beginCaptures>
@@ -2939,12 +2795,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_freq_lfoX): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_freq_lfoX): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_freq_lfoX)\b</begin>
       <beginCaptures>
@@ -2953,12 +2806,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_pan): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_pan): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_pan)\b</begin>
       <beginCaptures>
@@ -2967,12 +2817,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_phase): (0 to 1 loops)</comment>
+      <comment>opcodes: (lfoN_phase): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_phase)\b</begin>
       <beginCaptures>
@@ -2986,7 +2833,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_pitch): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_pitch): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_pitch)\b</begin>
       <beginCaptures>
@@ -2995,12 +2842,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_resonance): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_resonance): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_resonance)\b</begin>
       <beginCaptures>
@@ -3009,12 +2853,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_smooth): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_smooth): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_smooth)\b</begin>
       <beginCaptures>
@@ -3023,12 +2864,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_steps): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_steps): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_steps)\b</begin>
       <beginCaptures>
@@ -3037,9 +2875,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (lfoN_stepX): (-100 to 100 percent)</comment>
@@ -3056,7 +2891,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_volume): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_volume): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_volume)\b</begin>
       <beginCaptures>
@@ -3065,12 +2900,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_wave): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_wave): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_wave)\b</begin>
       <beginCaptures>
@@ -3079,12 +2911,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_width): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_width): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_width)\b</begin>
       <beginCaptures>
@@ -3093,14 +2922,11 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
   </sfz2_modulation>
   <sfz2_curves>
     <patterns>
-      <comment>opcodes: (vN): (-1 to 1 loops)</comment>
+      <comment>opcodes: (vN): (-1 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(vN)\b</begin>
       <beginCaptures>
@@ -3130,7 +2956,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (#include): (undefined to undefined loops)</comment>
+      <comment>opcodes: (#include): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(#include)\b</begin>
       <beginCaptures>
@@ -3139,12 +2965,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (global_label): (undefined to undefined loops)</comment>
+      <comment>opcodes: (global_label): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(global_label)\b</begin>
       <beginCaptures>
@@ -3153,12 +2976,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (group_label): (undefined to undefined loops)</comment>
+      <comment>opcodes: (group_label): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(group_label)\b</begin>
       <beginCaptures>
@@ -3167,12 +2987,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hint_*): (undefined to undefined loops)</comment>
+      <comment>opcodes: (hint_*): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hint_*)\b</begin>
       <beginCaptures>
@@ -3181,12 +2998,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (label_ccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (label_ccN): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(label_ccN)\b</begin>
       <beginCaptures>
@@ -3195,12 +3009,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (master_label): (undefined to undefined loops)</comment>
+      <comment>opcodes: (master_label): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(master_label)\b</begin>
       <beginCaptures>
@@ -3209,12 +3020,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_curve): (-2|-1|0|1|2|10)</comment>
+      <comment>opcodes: (off_curve): (-2 to 10 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_curve)\b</begin>
       <beginCaptures>
@@ -3224,11 +3032,11 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_off_curve</include>
+        <include>#integer_-2-10</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (off_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_shape)\b</begin>
       <beginCaptures>
@@ -3237,12 +3045,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_time): (undefined to undefined loops)</comment>
+      <comment>opcodes: (off_time): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_time)\b</begin>
       <beginCaptures>
@@ -3251,12 +3056,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (polyphony_stealing): (undefined to undefined loops)</comment>
+      <comment>opcodes: (polyphony_stealing): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(polyphony_stealing)\b</begin>
       <beginCaptures>
@@ -3265,12 +3067,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (region_label): (undefined to undefined loops)</comment>
+      <comment>opcodes: (region_label): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(region_label)\b</begin>
       <beginCaptures>
@@ -3279,12 +3078,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (set_hdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (set_hdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(set_hdccN)\b</begin>
       <beginCaptures>
@@ -3298,7 +3094,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_note_offset): (undefined to undefined loops)</comment>
+      <comment>opcodes: (sw_note_offset): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_note_offset)\b</begin>
       <beginCaptures>
@@ -3307,12 +3103,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_octave_offset): (undefined to undefined loops)</comment>
+      <comment>opcodes: (sw_octave_offset): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_octave_offset)\b</begin>
       <beginCaptures>
@@ -3321,14 +3114,11 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
   </aria_instrument-settings>
   <aria_region-logic>
     <patterns>
-      <comment>opcodes: (hihdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (hihdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hihdccN)\b</begin>
       <beginCaptures>
@@ -3342,7 +3132,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lohdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (lohdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lohdccN)\b</begin>
       <beginCaptures>
@@ -3356,7 +3146,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_hihdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (on_hihdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_hihdccN)\b</begin>
       <beginCaptures>
@@ -3370,7 +3160,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_lohdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (on_lohdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_lohdccN)\b</begin>
       <beginCaptures>
@@ -3384,7 +3174,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sostenuto_cc): (0 to 127 loops)</comment>
+      <comment>opcodes: (sostenuto_cc): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sostenuto_cc)\b</begin>
       <beginCaptures>
@@ -3398,7 +3188,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sostenuto_lo): (0 to 127 loops)</comment>
+      <comment>opcodes: (sostenuto_lo): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sostenuto_lo)\b</begin>
       <beginCaptures>
@@ -3412,7 +3202,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_hihdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (stop_hihdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_hihdccN)\b</begin>
       <beginCaptures>
@@ -3426,7 +3216,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_lohdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (stop_lohdccN): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_lohdccN)\b</begin>
       <beginCaptures>
@@ -3440,7 +3230,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sustain_cc): (0 to 127 loops)</comment>
+      <comment>opcodes: (sustain_cc): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sustain_cc)\b</begin>
       <beginCaptures>
@@ -3454,7 +3244,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sustain_lo): (0 to 127 loops)</comment>
+      <comment>opcodes: (sustain_lo): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sustain_lo)\b</begin>
       <beginCaptures>
@@ -3468,7 +3258,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_hilast): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_hilast): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_hilast)\b</begin>
       <beginCaptures>
@@ -3482,7 +3272,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_label): (undefined to undefined loops)</comment>
+      <comment>opcodes: (sw_label): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_label)\b</begin>
       <beginCaptures>
@@ -3491,12 +3281,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_lolast): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_lolast): (0 to 127 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_lolast)\b</begin>
       <beginCaptures>
@@ -3510,7 +3297,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (varNN_*): (undefined to undefined loops)</comment>
+      <comment>opcodes: (varNN_*): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(varNN_*)\b</begin>
       <beginCaptures>
@@ -3519,9 +3306,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (varNN_mod): (mult|add)</comment>
@@ -3540,7 +3324,7 @@
   </aria_region-logic>
   <aria_performance-parameters>
     <patterns>
-      <comment>opcodes: (amp_veltrack_random): (undefined to undefined loops)</comment>
+      <comment>opcodes: (amp_veltrack_random): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(amp_veltrack_random)\b</begin>
       <beginCaptures>
@@ -3549,9 +3333,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (amplitude): (0 to 100 %)</comment>
@@ -3568,7 +3349,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eqN_dynamic): (0 to 1 loops)</comment>
+      <comment>opcodes: (eqN_dynamic): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eqN_dynamic)\b</begin>
       <beginCaptures>
@@ -3582,7 +3363,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fil_gain): (undefined to undefined dB)</comment>
+      <comment>opcodes: (fil_gain): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fil_gain)\b</begin>
       <beginCaptures>
@@ -3591,9 +3372,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (global_amplitude): (0 to 100 %)</comment>
@@ -3750,7 +3528,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_keycenter): (undefined to undefined loops)</comment>
+      <comment>opcodes: (position_keycenter): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_keycenter)\b</begin>
       <beginCaptures>
@@ -3759,12 +3537,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_keytrack): (undefined to undefined loops)</comment>
+      <comment>opcodes: (position_keytrack): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_keytrack)\b</begin>
       <beginCaptures>
@@ -3773,9 +3548,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (position_random): (-100 to 100 %)</comment>
@@ -3792,7 +3564,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_veltrack): (undefined to undefined loops)</comment>
+      <comment>opcodes: (position_veltrack): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_veltrack)\b</begin>
       <beginCaptures>
@@ -3801,9 +3573,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (resonance_random): (0 to 40 dB)</comment>
@@ -3822,7 +3591,7 @@
   </aria_performance-parameters>
   <aria_modulation>
     <patterns>
-      <comment>opcodes: (ampeg_attack_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (ampeg_attack_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_attack_shape)\b</begin>
       <beginCaptures>
@@ -3831,12 +3600,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_decay_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (ampeg_decay_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_decay_shape)\b</begin>
       <beginCaptures>
@@ -3845,12 +3611,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_decay_zero): (0 to 1 loops)</comment>
+      <comment>opcodes: (ampeg_decay_zero): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_decay_zero)\b</begin>
       <beginCaptures>
@@ -3864,7 +3627,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_dynamic): (0 to 1 loops)</comment>
+      <comment>opcodes: (ampeg_dynamic): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_dynamic)\b</begin>
       <beginCaptures>
@@ -3878,7 +3641,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_release_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (ampeg_release_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_release_shape)\b</begin>
       <beginCaptures>
@@ -3887,12 +3650,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_release_zero): (0 to 1 loops)</comment>
+      <comment>opcodes: (ampeg_release_zero): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_release_zero)\b</begin>
       <beginCaptures>
@@ -3906,7 +3666,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_ampeg): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_ampeg): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_ampeg)\b</begin>
       <beginCaptures>
@@ -3915,12 +3675,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_attack_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (fileg_attack_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_attack_shape)\b</begin>
       <beginCaptures>
@@ -3929,12 +3686,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_decay_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (fileg_decay_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_decay_shape)\b</begin>
       <beginCaptures>
@@ -3943,12 +3697,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_decay_zero): (0 to 1 loops)</comment>
+      <comment>opcodes: (fileg_decay_zero): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_decay_zero)\b</begin>
       <beginCaptures>
@@ -3962,7 +3713,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_dynamic): (0 to 1 loops)</comment>
+      <comment>opcodes: (fileg_dynamic): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_dynamic)\b</begin>
       <beginCaptures>
@@ -3976,7 +3727,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_release_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (fileg_release_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_release_shape)\b</begin>
       <beginCaptures>
@@ -3985,12 +3736,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_release_zero): (0 to 1 loops)</comment>
+      <comment>opcodes: (fileg_release_zero): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_release_zero)\b</begin>
       <beginCaptures>
@@ -4004,7 +3752,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_offset): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_offset): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_offset)\b</begin>
       <beginCaptures>
@@ -4013,12 +3761,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_ratio): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_ratio): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_ratio)\b</begin>
       <beginCaptures>
@@ -4027,12 +3772,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_scale): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_scale): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_scale)\b</begin>
       <beginCaptures>
@@ -4041,12 +3783,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_attack_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (pitcheg_attack_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_attack_shape)\b</begin>
       <beginCaptures>
@@ -4055,12 +3794,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_decay_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (pitcheg_decay_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_decay_shape)\b</begin>
       <beginCaptures>
@@ -4069,12 +3805,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_decay_zero): (0 to 1 loops)</comment>
+      <comment>opcodes: (pitcheg_decay_zero): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_decay_zero)\b</begin>
       <beginCaptures>
@@ -4088,7 +3821,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_dynamic): (0 to 1 loops)</comment>
+      <comment>opcodes: (pitcheg_dynamic): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_dynamic)\b</begin>
       <beginCaptures>
@@ -4102,7 +3835,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_release_shape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (pitcheg_release_shape): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_release_shape)\b</begin>
       <beginCaptures>
@@ -4111,12 +3844,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_release_zero): (0 to 1 loops)</comment>
+      <comment>opcodes: (pitcheg_release_zero): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_release_zero)\b</begin>
       <beginCaptures>
@@ -4132,7 +3862,7 @@
   </aria_modulation>
   <aria_curves>
     <patterns>
-      <comment>opcodes: (curve_index): (0 to 255 loops)</comment>
+      <comment>opcodes: (curve_index): (0 to 255 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(curve_index)\b</begin>
       <beginCaptures>
@@ -4148,7 +3878,7 @@
   </aria_curves>
   <aria_effects>
     <patterns>
-      <comment>opcodes: (param_offset): (undefined to undefined loops)</comment>
+      <comment>opcodes: (param_offset): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(param_offset)\b</begin>
       <beginCaptures>
@@ -4157,12 +3887,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (vendor_specific): (undefined to undefined loops)</comment>
+      <comment>opcodes: (vendor_specific): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(vendor_specific)\b</begin>
       <beginCaptures>
@@ -4171,9 +3898,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
   </aria_effects>
   <float_neg30000-30000>
@@ -4292,7 +4016,7 @@
   </string_any_continuous>
   <linuxsampler_real-time-instrument-script>
     <patterns>
-      <comment>opcodes: (script): (undefined to undefined loops)</comment>
+      <comment>opcodes: (script): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(script)\b</begin>
       <beginCaptures>
@@ -4301,14 +4025,11 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
   </linuxsampler_real-time-instrument-script>
   <aria_sound-source>
     <patterns>
-      <comment>opcodes: (delay_beats_random): (undefined to undefined beats)</comment>
+      <comment>opcodes: (delay_beats_random): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_beats_random)\b</begin>
       <beginCaptures>
@@ -4317,14 +4038,11 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
   </aria_sound-source>
   <cakewalk_sound-source>
     <patterns>
-      <comment>opcodes: (loop_tune): (undefined to undefined cents)</comment>
+      <comment>opcodes: (loop_tune): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loop_tune)\b</begin>
       <beginCaptures>
@@ -4333,12 +4051,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sample_fadeout): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (sample_fadeout): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sample_fadeout)\b</begin>
       <beginCaptures>
@@ -4347,14 +4062,11 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
   </cakewalk_sound-source>
   <sfizz_instrument-settings>
     <patterns>
-      <comment>opcodes: (label_keyN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (label_keyN): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(label_keyN)\b</begin>
       <beginCaptures>
@@ -4363,9 +4075,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
   </sfizz_instrument-settings>
   <cakewalk_performance-parameters>
@@ -4398,7 +4107,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (noise_step): (0 to 100 loops)</comment>
+      <comment>opcodes: (noise_step): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_step)\b</begin>
       <beginCaptures>
@@ -4426,7 +4135,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (noise_tone): (0 to 100 loops)</comment>
+      <comment>opcodes: (noise_tone): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_tone)\b</begin>
       <beginCaptures>
@@ -4442,7 +4151,7 @@
   </cakewalk_performance-parameters>
   <cakewalk_modulation>
     <patterns>
-      <comment>opcodes: (egN_bitred): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_bitred): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_bitred)\b</begin>
       <beginCaptures>
@@ -4451,12 +4160,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_decim): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_decim): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_decim)\b</begin>
       <beginCaptures>
@@ -4465,12 +4171,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_driveshape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_driveshape): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_driveshape)\b</begin>
       <beginCaptures>
@@ -4479,12 +4182,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_noiselevel): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_noiselevel): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_noiselevel)\b</begin>
       <beginCaptures>
@@ -4493,12 +4193,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_noisestep): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_noisestep): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_noisestep)\b</begin>
       <beginCaptures>
@@ -4507,12 +4204,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_noisetone): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_noisetone): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_noisetone)\b</begin>
       <beginCaptures>
@@ -4521,12 +4215,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_rectify): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_rectify): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_rectify)\b</begin>
       <beginCaptures>
@@ -4535,12 +4226,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_ringmod): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_ringmod): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_ringmod)\b</begin>
       <beginCaptures>
@@ -4549,12 +4237,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_bitred): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_bitred): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_bitred)\b</begin>
       <beginCaptures>
@@ -4563,12 +4248,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_decim): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_decim): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_decim)\b</begin>
       <beginCaptures>
@@ -4577,12 +4259,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_drive): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_drive): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_drive)\b</begin>
       <beginCaptures>
@@ -4591,12 +4270,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_noiselevel): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_noiselevel): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noiselevel)\b</begin>
       <beginCaptures>
@@ -4605,12 +4281,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_noisestep): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_noisestep): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noisestep)\b</begin>
       <beginCaptures>
@@ -4619,12 +4292,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_noisetone): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_noisetone): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noisetone)\b</begin>
       <beginCaptures>
@@ -4633,14 +4303,11 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
   </cakewalk_modulation>
   <cakewalk_effects>
     <patterns>
-      <comment>opcodes: (apan_depth): (0 to 100 loops)</comment>
+      <comment>opcodes: (apan_depth): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_depth)\b</begin>
       <beginCaptures>
@@ -4654,7 +4321,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_dry): (0 to 100 loops)</comment>
+      <comment>opcodes: (apan_dry): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_dry)\b</begin>
       <beginCaptures>
@@ -4668,7 +4335,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_freq): (undefined to undefined Hz)</comment>
+      <comment>opcodes: (apan_freq): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_freq)\b</begin>
       <beginCaptures>
@@ -4677,9 +4344,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (apan_phase): (0 to 180 °)</comment>
@@ -4696,7 +4360,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_waveform): (undefined to undefined loops)</comment>
+      <comment>opcodes: (apan_waveform): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_waveform)\b</begin>
       <beginCaptures>
@@ -4705,12 +4369,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_wet): (0 to 100 loops)</comment>
+      <comment>opcodes: (apan_wet): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_wet)\b</begin>
       <beginCaptures>
@@ -4724,7 +4385,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (bitred): (0 to 100 loops)</comment>
+      <comment>opcodes: (bitred): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(bitred)\b</begin>
       <beginCaptures>
@@ -4738,7 +4399,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (bypass_onccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (bypass_onccN): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(bypass_onccN)\b</begin>
       <beginCaptures>
@@ -4747,12 +4408,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_attack): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (comp_attack): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_attack)\b</begin>
       <beginCaptures>
@@ -4761,12 +4419,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_gain): (undefined to undefined loops)</comment>
+      <comment>opcodes: (comp_gain): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_gain)\b</begin>
       <beginCaptures>
@@ -4775,12 +4430,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_ratio): (0 to 100 loops)</comment>
+      <comment>opcodes: (comp_ratio): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_ratio)\b</begin>
       <beginCaptures>
@@ -4794,7 +4446,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_release): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (comp_release): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_release)\b</begin>
       <beginCaptures>
@@ -4803,9 +4455,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (comp_stlink): (on|off)</comment>
@@ -4822,7 +4471,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_threshold): (undefined to undefined dB)</comment>
+      <comment>opcodes: (comp_threshold): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_threshold)\b</begin>
       <beginCaptures>
@@ -4831,12 +4480,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (decim): (0 to 100 loops)</comment>
+      <comment>opcodes: (decim): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(decim)\b</begin>
       <beginCaptures>
@@ -4850,7 +4496,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_cutoff): (undefined to undefined Hz)</comment>
+      <comment>opcodes: (delay_cutoff): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_cutoff)\b</begin>
       <beginCaptures>
@@ -4859,12 +4505,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_damphi): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_damphi): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_damphi)\b</begin>
       <beginCaptures>
@@ -4878,7 +4521,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_damplo): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_damplo): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_damplo)\b</begin>
       <beginCaptures>
@@ -4892,7 +4535,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_dry): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_dry): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_dry)\b</begin>
       <beginCaptures>
@@ -4906,7 +4549,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_feedback): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_feedback): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_feedback)\b</begin>
       <beginCaptures>
@@ -4920,7 +4563,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_filter): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_filter): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_filter)\b</begin>
       <beginCaptures>
@@ -4929,12 +4572,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_input): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_input): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_input)\b</begin>
       <beginCaptures>
@@ -4948,7 +4588,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_levelc): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_levelc): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_levelc)\b</begin>
       <beginCaptures>
@@ -4962,7 +4602,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_levell): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_levell): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_levell)\b</begin>
       <beginCaptures>
@@ -4976,7 +4616,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_levelr): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_levelr): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_levelr)\b</begin>
       <beginCaptures>
@@ -4990,7 +4630,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_lfofreq): (undefined to undefined Hz)</comment>
+      <comment>opcodes: (delay_lfofreq): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_lfofreq)\b</begin>
       <beginCaptures>
@@ -4999,12 +4639,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_moddepth): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_moddepth): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_moddepth)\b</begin>
       <beginCaptures>
@@ -5032,7 +4669,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_panc): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_panc): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_panc)\b</begin>
       <beginCaptures>
@@ -5046,7 +4683,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_panl): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_panl): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_panl)\b</begin>
       <beginCaptures>
@@ -5060,7 +4697,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_panr): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_panr): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_panr)\b</begin>
       <beginCaptures>
@@ -5074,7 +4711,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_resonance): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_resonance): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_resonance)\b</begin>
       <beginCaptures>
@@ -5083,12 +4720,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_spread): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_spread): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_spread)\b</begin>
       <beginCaptures>
@@ -5102,7 +4736,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_syncc_onccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_syncc_onccN): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_syncc_onccN)\b</begin>
       <beginCaptures>
@@ -5111,12 +4745,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_syncl_onccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_syncl_onccN): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_syncl_onccN)\b</begin>
       <beginCaptures>
@@ -5125,12 +4756,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_syncr_onccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_syncr_onccN): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_syncr_onccN)\b</begin>
       <beginCaptures>
@@ -5139,12 +4767,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_time_tap): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_time_tap): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_time_tap)\b</begin>
       <beginCaptures>
@@ -5153,12 +4778,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_timec): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_timec): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_timec)\b</begin>
       <beginCaptures>
@@ -5167,12 +4789,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_timel): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_timel): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_timel)\b</begin>
       <beginCaptures>
@@ -5181,12 +4800,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_timer): (undefined to undefined loops)</comment>
+      <comment>opcodes: (delay_timer): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_timer)\b</begin>
       <beginCaptures>
@@ -5195,12 +4811,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_wet): (0 to 100 loops)</comment>
+      <comment>opcodes: (delay_wet): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_wet)\b</begin>
       <beginCaptures>
@@ -5228,7 +4841,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_depth): (0 to 100 loops)</comment>
+      <comment>opcodes: (disto_depth): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_depth)\b</begin>
       <beginCaptures>
@@ -5242,7 +4855,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_dry): (0 to 100 loops)</comment>
+      <comment>opcodes: (disto_dry): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_dry)\b</begin>
       <beginCaptures>
@@ -5256,7 +4869,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_stages): (undefined to undefined loops)</comment>
+      <comment>opcodes: (disto_stages): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_stages)\b</begin>
       <beginCaptures>
@@ -5265,12 +4878,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_tone): (0 to 100 loops)</comment>
+      <comment>opcodes: (disto_tone): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_tone)\b</begin>
       <beginCaptures>
@@ -5284,7 +4894,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_wet): (0 to 100 loops)</comment>
+      <comment>opcodes: (disto_wet): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_wet)\b</begin>
       <beginCaptures>
@@ -5298,7 +4908,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (dsp_order): (0 to 14 loops)</comment>
+      <comment>opcodes: (dsp_order): (0 to 14 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(dsp_order)\b</begin>
       <beginCaptures>
@@ -5312,7 +4922,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_bw): (undefined to undefined loops)</comment>
+      <comment>opcodes: (eq_bw): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_bw)\b</begin>
       <beginCaptures>
@@ -5321,12 +4931,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_freq): (undefined to undefined loops)</comment>
+      <comment>opcodes: (eq_freq): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_freq)\b</begin>
       <beginCaptures>
@@ -5335,12 +4942,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_gain): (undefined to undefined loops)</comment>
+      <comment>opcodes: (eq_gain): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_gain)\b</begin>
       <beginCaptures>
@@ -5349,12 +4953,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_type): (undefined to undefined loops)</comment>
+      <comment>opcodes: (eq_type): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_type)\b</begin>
       <beginCaptures>
@@ -5363,12 +4964,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (filter_cutoff): (undefined to undefined loops)</comment>
+      <comment>opcodes: (filter_cutoff): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(filter_cutoff)\b</begin>
       <beginCaptures>
@@ -5377,12 +4975,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (filter_resonance): (undefined to undefined loops)</comment>
+      <comment>opcodes: (filter_resonance): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(filter_resonance)\b</begin>
       <beginCaptures>
@@ -5391,12 +4986,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (filter_type): (undefined to undefined loops)</comment>
+      <comment>opcodes: (filter_type): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(filter_type)\b</begin>
       <beginCaptures>
@@ -5405,9 +4997,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (fxNtomain): (0 to 100 %)</comment>
@@ -5438,7 +5027,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_attack): (undefined to undefined loops)</comment>
+      <comment>opcodes: (gate_attack): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_attack)\b</begin>
       <beginCaptures>
@@ -5447,12 +5036,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_onccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (gate_onccN): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_onccN)\b</begin>
       <beginCaptures>
@@ -5461,12 +5047,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_release): (undefined to undefined loops)</comment>
+      <comment>opcodes: (gate_release): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_release)\b</begin>
       <beginCaptures>
@@ -5475,9 +5058,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (gate_stlink): (on|off)</comment>
@@ -5494,7 +5074,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_threshold): (undefined to undefined loops)</comment>
+      <comment>opcodes: (gate_threshold): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_threshold)\b</begin>
       <beginCaptures>
@@ -5503,9 +5083,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (internal): (on|off)</comment>
@@ -5522,7 +5099,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_depth): (0 to 100 loops)</comment>
+      <comment>opcodes: (phaser_depth): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_depth)\b</begin>
       <beginCaptures>
@@ -5536,7 +5113,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_feedback): (0 to 100 loops)</comment>
+      <comment>opcodes: (phaser_feedback): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_feedback)\b</begin>
       <beginCaptures>
@@ -5550,7 +5127,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_freq): (undefined to undefined Hz)</comment>
+      <comment>opcodes: (phaser_freq): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_freq)\b</begin>
       <beginCaptures>
@@ -5559,12 +5136,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_phase_onccN): (0 to 100 loops)</comment>
+      <comment>opcodes: (phaser_phase_onccN): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_phase_onccN)\b</begin>
       <beginCaptures>
@@ -5578,7 +5152,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_stages): (undefined to undefined loops)</comment>
+      <comment>opcodes: (phaser_stages): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_stages)\b</begin>
       <beginCaptures>
@@ -5587,12 +5161,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_waveform): (undefined to undefined loops)</comment>
+      <comment>opcodes: (phaser_waveform): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_waveform)\b</begin>
       <beginCaptures>
@@ -5601,12 +5172,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_wet): (0 to 100 loops)</comment>
+      <comment>opcodes: (phaser_wet): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_wet)\b</begin>
       <beginCaptures>
@@ -5620,7 +5188,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_damp): (0 to 100 loops)</comment>
+      <comment>opcodes: (reverb_damp): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_damp)\b</begin>
       <beginCaptures>
@@ -5634,7 +5202,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_dry): (0 to 100 loops)</comment>
+      <comment>opcodes: (reverb_dry): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_dry)\b</begin>
       <beginCaptures>
@@ -5648,7 +5216,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_input): (0 to 100 loops)</comment>
+      <comment>opcodes: (reverb_input): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_input)\b</begin>
       <beginCaptures>
@@ -5662,7 +5230,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_predelay): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (reverb_predelay): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_predelay)\b</begin>
       <beginCaptures>
@@ -5671,12 +5239,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_size): (0 to 100 loops)</comment>
+      <comment>opcodes: (reverb_size): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_size)\b</begin>
       <beginCaptures>
@@ -5690,7 +5255,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_tone): (0 to 100 loops)</comment>
+      <comment>opcodes: (reverb_tone): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_tone)\b</begin>
       <beginCaptures>
@@ -5718,7 +5283,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_wet): (0 to 100 loops)</comment>
+      <comment>opcodes: (reverb_wet): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_wet)\b</begin>
       <beginCaptures>
@@ -5732,7 +5297,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_cyclic_level): (0 to 100 loops)</comment>
+      <comment>opcodes: (static_cyclic_level): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_cyclic_level)\b</begin>
       <beginCaptures>
@@ -5746,7 +5311,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_cyclic_time): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (static_cyclic_time): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_cyclic_time)\b</begin>
       <beginCaptures>
@@ -5755,12 +5320,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_filter): (undefined to undefined loops)</comment>
+      <comment>opcodes: (static_filter): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_filter)\b</begin>
       <beginCaptures>
@@ -5769,12 +5331,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_level): (0 to 100 loops)</comment>
+      <comment>opcodes: (static_level): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_level)\b</begin>
       <beginCaptures>
@@ -5788,7 +5347,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_random_level): (0 to 100 loops)</comment>
+      <comment>opcodes: (static_random_level): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_random_level)\b</begin>
       <beginCaptures>
@@ -5802,7 +5361,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_random_maxtime): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (static_random_maxtime): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_random_maxtime)\b</begin>
       <beginCaptures>
@@ -5811,12 +5370,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_random_mintime): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (static_random_mintime): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_random_mintime)\b</begin>
       <beginCaptures>
@@ -5825,12 +5381,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_stereo): (undefined to undefined loops)</comment>
+      <comment>opcodes: (static_stereo): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_stereo)\b</begin>
       <beginCaptures>
@@ -5839,12 +5392,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_tone): (0 to 100 loops)</comment>
+      <comment>opcodes: (static_tone): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_tone)\b</begin>
       <beginCaptures>
@@ -5858,7 +5408,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (strings_number): (undefined to undefined loops)</comment>
+      <comment>opcodes: (strings_number): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(strings_number)\b</begin>
       <beginCaptures>
@@ -5867,12 +5417,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (strings_wet_onccN): (0 to 100 loops)</comment>
+      <comment>opcodes: (strings_wet_onccN): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(strings_wet_onccN)\b</begin>
       <beginCaptures>
@@ -5886,7 +5433,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_dry): (0 to 100 loops)</comment>
+      <comment>opcodes: (tdfir_dry): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_dry)\b</begin>
       <beginCaptures>
@@ -5900,7 +5447,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_gain): (0 to 100 loops)</comment>
+      <comment>opcodes: (tdfir_gain): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_gain)\b</begin>
       <beginCaptures>
@@ -5914,7 +5461,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_impulse): (undefined to undefined loops)</comment>
+      <comment>opcodes: (tdfir_impulse): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_impulse)\b</begin>
       <beginCaptures>
@@ -5923,12 +5470,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_wet): (0 to 100 loops)</comment>
+      <comment>opcodes: (tdfir_wet): (0 to 100 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_wet)\b</begin>
       <beginCaptures>
@@ -6002,7 +5546,7 @@
   </sfz2_effects>
   <cakewalk_loading>
     <patterns>
-      <comment>opcodes: (image): (undefined to undefined loops)</comment>
+      <comment>opcodes: (image): (any string)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(image)\b</begin>
       <beginCaptures>
@@ -6011,12 +5555,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (load_end): (undefined to undefined loops)</comment>
+      <comment>opcodes: (load_end): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(load_end)\b</begin>
       <beginCaptures>
@@ -6025,12 +5566,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (load_mode): (0 to 1 loops)</comment>
+      <comment>opcodes: (load_mode): (0 to 1 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(load_mode)\b</begin>
       <beginCaptures>
@@ -6044,7 +5582,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (load_start): (undefined to undefined loops)</comment>
+      <comment>opcodes: (load_start): (any integer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(load_start)\b</begin>
       <beginCaptures>
@@ -6053,12 +5591,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sample_quality): (1 to 10 loops)</comment>
+      <comment>opcodes: (sample_quality): (1 to 10 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sample_quality)\b</begin>
       <beginCaptures>
@@ -6088,7 +5623,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_detune): (undefined to undefined loops)</comment>
+      <comment>opcodes: (oscillator_detune): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_detune)\b</begin>
       <beginCaptures>
@@ -6097,12 +5632,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_mod_depth): (undefined to undefined loops)</comment>
+      <comment>opcodes: (oscillator_mod_depth): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_mod_depth)\b</begin>
       <beginCaptures>
@@ -6111,12 +5643,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_mode): (0 to 2 loops)</comment>
+      <comment>opcodes: (oscillator_mode): (0 to 2 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_mode)\b</begin>
       <beginCaptures>
@@ -6130,7 +5659,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_multi): (1 to 9 loops)</comment>
+      <comment>opcodes: (oscillator_multi): (1 to 9 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_multi)\b</begin>
       <beginCaptures>
@@ -6158,7 +5687,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_quality): (0 to 3 loops)</comment>
+      <comment>opcodes: (oscillator_quality): (0 to 3 undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_quality)\b</begin>
       <beginCaptures>
@@ -6172,7 +5701,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_table_size): (undefined to undefined loops)</comment>
+      <comment>opcodes: (oscillator_table_size): (any undefined)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_table_size)\b</begin>
       <beginCaptures>
@@ -6181,9 +5710,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
     </patterns>
   </cakewalk_wavetable-oscillator>
 </repository>

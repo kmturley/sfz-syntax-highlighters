@@ -130,7 +130,7 @@
     "sfz1_sound-source": {
       "patterns": [
         {
-          "comment": "opcodes: (count): (0 to 4294967296 loops)",
+          "comment": "opcodes: (count): (0 to 4294967296 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(count)\\b",
           "beginCaptures": {
@@ -274,7 +274,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sample): (undefined to undefined loops)",
+          "comment": "opcodes: (sample): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sample)\\b",
           "beginCaptures": {
@@ -282,12 +282,7 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (sync_beats): (0 to 32 beats)",
@@ -326,7 +321,7 @@
     "sfz1_instrument-settings": {
       "patterns": [
         {
-          "comment": "opcodes: (group): (-2147483648 to 2147483647 loops)",
+          "comment": "opcodes: (group): (-2147483648 to 2147483647 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(group)\\b",
           "beginCaptures": {
@@ -342,7 +337,7 @@
           ]
         },
         {
-          "comment": "opcodes: (off_by): (-2147483648 to 2147483647 loops)",
+          "comment": "opcodes: (off_by): (-2147483648 to 2147483647 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(off_by)\\b",
           "beginCaptures": {
@@ -374,7 +369,7 @@
           ]
         },
         {
-          "comment": "opcodes: (output): (0 to 1024 loops)",
+          "comment": "opcodes: (output): (0 to 1024 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(output)\\b",
           "beginCaptures": {
@@ -394,7 +389,7 @@
     "sfz1_region-logic": {
       "patterns": [
         {
-          "comment": "opcodes: (hibend): (-8192 to 8192 loops)",
+          "comment": "opcodes: (hibend): (-8192 to 8192 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hibend)\\b",
           "beginCaptures": {
@@ -426,7 +421,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hiccN): (0 to 127 loops)",
+          "comment": "opcodes: (hiccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hiccN)\\b",
           "beginCaptures": {
@@ -442,7 +437,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hichan): (1 to 16 loops)",
+          "comment": "opcodes: (hichan): (1 to 16 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hichan)\\b",
           "beginCaptures": {
@@ -458,7 +453,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hichanaft): (0 to 127 loops)",
+          "comment": "opcodes: (hichanaft): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hichanaft)\\b",
           "beginCaptures": {
@@ -474,7 +469,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hikey): (0 to 127 loops)",
+          "comment": "opcodes: (hikey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hikey)\\b",
           "beginCaptures": {
@@ -490,7 +485,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hipolyaft): (0 to 127 loops)",
+          "comment": "opcodes: (hipolyaft): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hipolyaft)\\b",
           "beginCaptures": {
@@ -506,7 +501,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hirand): (0 to 1 loops)",
+          "comment": "opcodes: (hirand): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hirand)\\b",
           "beginCaptures": {
@@ -522,7 +517,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hivel): (1 to 127 loops)",
+          "comment": "opcodes: (hivel): (1 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hivel)\\b",
           "beginCaptures": {
@@ -538,7 +533,7 @@
           ]
         },
         {
-          "comment": "opcodes: (key): (0 to 127 loops)",
+          "comment": "opcodes: (key): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(key)\\b",
           "beginCaptures": {
@@ -554,7 +549,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lobend): (-8192 to 8192 loops)",
+          "comment": "opcodes: (lobend): (-8192 to 8192 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lobend)\\b",
           "beginCaptures": {
@@ -586,7 +581,7 @@
           ]
         },
         {
-          "comment": "opcodes: (loccN): (0 to 127 loops)",
+          "comment": "opcodes: (loccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loccN)\\b",
           "beginCaptures": {
@@ -602,7 +597,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lochan): (1 to 16 loops)",
+          "comment": "opcodes: (lochan): (1 to 16 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lochan)\\b",
           "beginCaptures": {
@@ -618,7 +613,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lochanaft): (0 to 127 loops)",
+          "comment": "opcodes: (lochanaft): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lochanaft)\\b",
           "beginCaptures": {
@@ -634,7 +629,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lokey): (0 to 127 loops)",
+          "comment": "opcodes: (lokey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lokey)\\b",
           "beginCaptures": {
@@ -650,7 +645,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lopolyaft): (0 to 127 loops)",
+          "comment": "opcodes: (lopolyaft): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lopolyaft)\\b",
           "beginCaptures": {
@@ -666,7 +661,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lorand): (0 to 1 loops)",
+          "comment": "opcodes: (lorand): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lorand)\\b",
           "beginCaptures": {
@@ -682,7 +677,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lovel): (1 to 127 loops)",
+          "comment": "opcodes: (lovel): (1 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lovel)\\b",
           "beginCaptures": {
@@ -698,7 +693,7 @@
           ]
         },
         {
-          "comment": "opcodes: (on_hiccN): (0 to 127 loops)",
+          "comment": "opcodes: (on_hiccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(on_hiccN)\\b",
           "beginCaptures": {
@@ -714,7 +709,7 @@
           ]
         },
         {
-          "comment": "opcodes: (on_loccN): (0 to 127 loops)",
+          "comment": "opcodes: (on_loccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(on_loccN)\\b",
           "beginCaptures": {
@@ -730,7 +725,7 @@
           ]
         },
         {
-          "comment": "opcodes: (seq_length): (1 to 100 loops)",
+          "comment": "opcodes: (seq_length): (1 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(seq_length)\\b",
           "beginCaptures": {
@@ -746,7 +741,7 @@
           ]
         },
         {
-          "comment": "opcodes: (seq_position): (1 to 100 loops)",
+          "comment": "opcodes: (seq_position): (1 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(seq_position)\\b",
           "beginCaptures": {
@@ -762,7 +757,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_down): (0 to 127 loops)",
+          "comment": "opcodes: (sw_down): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_down)\\b",
           "beginCaptures": {
@@ -778,7 +773,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_hikey): (0 to 127 loops)",
+          "comment": "opcodes: (sw_hikey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_hikey)\\b",
           "beginCaptures": {
@@ -794,7 +789,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_last): (0 to 127 loops)",
+          "comment": "opcodes: (sw_last): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_last)\\b",
           "beginCaptures": {
@@ -810,7 +805,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_lokey): (0 to 127 loops)",
+          "comment": "opcodes: (sw_lokey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_lokey)\\b",
           "beginCaptures": {
@@ -826,7 +821,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_previous): (0 to 127 loops)",
+          "comment": "opcodes: (sw_previous): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_previous)\\b",
           "beginCaptures": {
@@ -842,7 +837,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_up): (0 to 127 loops)",
+          "comment": "opcodes: (sw_up): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_up)\\b",
           "beginCaptures": {
@@ -894,7 +889,7 @@
     "sfz1_performance-parameters": {
       "patterns": [
         {
-          "comment": "opcodes: (amp_keycenter): (0 to 127 loops)",
+          "comment": "opcodes: (amp_keycenter): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(amp_keycenter)\\b",
           "beginCaptures": {
@@ -942,7 +937,7 @@
           ]
         },
         {
-          "comment": "opcodes: (amp_velcurve_N): (0 to 1 loops)",
+          "comment": "opcodes: (amp_velcurve_N): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(amp_velcurve_N)\\b",
           "beginCaptures": {
@@ -1086,7 +1081,7 @@
           ]
         },
         {
-          "comment": "opcodes: (fil_keycenter): (0 to 127 loops)",
+          "comment": "opcodes: (fil_keycenter): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fil_keycenter)\\b",
           "beginCaptures": {
@@ -1182,7 +1177,7 @@
           ]
         },
         {
-          "comment": "opcodes: (pitch_keycenter): (0 to 127 loops)",
+          "comment": "opcodes: (pitch_keycenter): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitch_keycenter)\\b",
           "beginCaptures": {
@@ -1198,7 +1193,7 @@
           ]
         },
         {
-          "comment": "opcodes: (pitch_keytrack): (-1200 to 1200 loops)",
+          "comment": "opcodes: (pitch_keytrack): (-1200 to 1200 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitch_keytrack)\\b",
           "beginCaptures": {
@@ -1294,7 +1289,7 @@
           ]
         },
         {
-          "comment": "opcodes: (transpose): (-127 to 127 loops)",
+          "comment": "opcodes: (transpose): (-127 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(transpose)\\b",
           "beginCaptures": {
@@ -1406,7 +1401,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfin_hiccN): (0 to 127 loops)",
+          "comment": "opcodes: (xfin_hiccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfin_hiccN)\\b",
           "beginCaptures": {
@@ -1422,7 +1417,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfin_hikey): (0 to 127 loops)",
+          "comment": "opcodes: (xfin_hikey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfin_hikey)\\b",
           "beginCaptures": {
@@ -1438,7 +1433,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfin_hivel): (0 to 127 loops)",
+          "comment": "opcodes: (xfin_hivel): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfin_hivel)\\b",
           "beginCaptures": {
@@ -1454,7 +1449,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfin_loccN): (0 to 127 loops)",
+          "comment": "opcodes: (xfin_loccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfin_loccN)\\b",
           "beginCaptures": {
@@ -1470,7 +1465,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfin_lokey): (0 to 127 loops)",
+          "comment": "opcodes: (xfin_lokey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfin_lokey)\\b",
           "beginCaptures": {
@@ -1486,7 +1481,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfin_lovel): (0 to 127 loops)",
+          "comment": "opcodes: (xfin_lovel): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfin_lovel)\\b",
           "beginCaptures": {
@@ -1502,7 +1497,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfout_hiccN): (0 to 127 loops)",
+          "comment": "opcodes: (xfout_hiccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfout_hiccN)\\b",
           "beginCaptures": {
@@ -1518,7 +1513,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfout_hikey): (0 to 127 loops)",
+          "comment": "opcodes: (xfout_hikey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfout_hikey)\\b",
           "beginCaptures": {
@@ -1534,7 +1529,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfout_hivel): (0 to 127 loops)",
+          "comment": "opcodes: (xfout_hivel): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfout_hivel)\\b",
           "beginCaptures": {
@@ -1550,7 +1545,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfout_loccN): (0 to 127 loops)",
+          "comment": "opcodes: (xfout_loccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfout_loccN)\\b",
           "beginCaptures": {
@@ -1566,7 +1561,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfout_lokey): (0 to 127 loops)",
+          "comment": "opcodes: (xfout_lokey): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfout_lokey)\\b",
           "beginCaptures": {
@@ -1582,7 +1577,7 @@
           ]
         },
         {
-          "comment": "opcodes: (xfout_lovel): (0 to 127 loops)",
+          "comment": "opcodes: (xfout_lovel): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xfout_lovel)\\b",
           "beginCaptures": {
@@ -2205,7 +2200,7 @@
     "sfz2_sound-source": {
       "patterns": [
         {
-          "comment": "opcodes: (delay_beats): (undefined to undefined beats)",
+          "comment": "opcodes: (delay_beats): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_beats)\\b",
           "beginCaptures": {
@@ -2213,15 +2208,10 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_samples): (undefined to undefined sample units)",
+          "comment": "opcodes: (delay_samples): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_samples)\\b",
           "beginCaptures": {
@@ -2229,12 +2219,7 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (direction): (forward|reverse)",
@@ -2253,7 +2238,7 @@
           ]
         },
         {
-          "comment": "opcodes: (loop_count): (undefined to undefined loops)",
+          "comment": "opcodes: (loop_count): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loop_count)\\b",
           "beginCaptures": {
@@ -2261,15 +2246,10 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (loop_crossfade): (undefined to undefined seconds)",
+          "comment": "opcodes: (loop_crossfade): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loop_crossfade)\\b",
           "beginCaptures": {
@@ -2277,12 +2257,7 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (loop_type): (forward|backward|alternate)",
@@ -2301,7 +2276,7 @@
           ]
         },
         {
-          "comment": "opcodes: (md5): (undefined to undefined loops)",
+          "comment": "opcodes: (md5): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(md5)\\b",
           "beginCaptures": {
@@ -2309,15 +2284,10 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (reverse_hiccN): (0 to 127 loops)",
+          "comment": "opcodes: (reverse_hiccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverse_hiccN)\\b",
           "beginCaptures": {
@@ -2333,7 +2303,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverse_loccN): (0 to 127 loops)",
+          "comment": "opcodes: (reverse_loccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverse_loccN)\\b",
           "beginCaptures": {
@@ -2349,7 +2319,7 @@
           ]
         },
         {
-          "comment": "opcodes: (stop_beats): (undefined to undefined beats)",
+          "comment": "opcodes: (stop_beats): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(stop_beats)\\b",
           "beginCaptures": {
@@ -2357,12 +2327,7 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (waveguide): (on|off)",
@@ -2385,7 +2350,7 @@
     "sfz2_instrument-settings": {
       "patterns": [
         {
-          "comment": "opcodes: (#define): (undefined to undefined loops)",
+          "comment": "opcodes: (#define): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(#define)\\b",
           "beginCaptures": {
@@ -2393,15 +2358,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (default_path): (undefined to undefined loops)",
+          "comment": "opcodes: (default_path): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(default_path)\\b",
           "beginCaptures": {
@@ -2409,15 +2369,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (note_offset): (undefined to undefined loops)",
+          "comment": "opcodes: (note_offset): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(note_offset)\\b",
           "beginCaptures": {
@@ -2425,15 +2380,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (note_polyphony): (undefined to undefined loops)",
+          "comment": "opcodes: (note_polyphony): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(note_polyphony)\\b",
           "beginCaptures": {
@@ -2441,12 +2391,7 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (note_selfmask): (on|off)",
@@ -2465,7 +2410,7 @@
           ]
         },
         {
-          "comment": "opcodes: (octave_offset): (undefined to undefined loops)",
+          "comment": "opcodes: (octave_offset): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(octave_offset)\\b",
           "beginCaptures": {
@@ -2473,15 +2418,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (polyphony): (undefined to undefined loops)",
+          "comment": "opcodes: (polyphony): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(polyphony)\\b",
           "beginCaptures": {
@@ -2489,12 +2429,7 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (rt_dead): (on|off)",
@@ -2513,7 +2448,7 @@
           ]
         },
         {
-          "comment": "opcodes: (set_ccN): (0 to 127 loops)",
+          "comment": "opcodes: (set_ccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(set_ccN)\\b",
           "beginCaptures": {
@@ -2533,7 +2468,7 @@
     "sfz2_region-logic": {
       "patterns": [
         {
-          "comment": "opcodes: (hiprog): (0 to 127 loops)",
+          "comment": "opcodes: (hiprog): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hiprog)\\b",
           "beginCaptures": {
@@ -2549,7 +2484,7 @@
           ]
         },
         {
-          "comment": "opcodes: (hitimer): (undefined to undefined loops)",
+          "comment": "opcodes: (hitimer): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hitimer)\\b",
           "beginCaptures": {
@@ -2557,15 +2492,10 @@
               "name": "variable.language.region-logic.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (loprog): (0 to 127 loops)",
+          "comment": "opcodes: (loprog): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loprog)\\b",
           "beginCaptures": {
@@ -2581,7 +2511,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lotimer): (undefined to undefined loops)",
+          "comment": "opcodes: (lotimer): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lotimer)\\b",
           "beginCaptures": {
@@ -2589,12 +2519,7 @@
               "name": "variable.language.region-logic.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (sostenuto_sw): (on|off)",
@@ -2613,7 +2538,7 @@
           ]
         },
         {
-          "comment": "opcodes: (stop_hiccN): (0 to 127 loops)",
+          "comment": "opcodes: (stop_hiccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(stop_hiccN)\\b",
           "beginCaptures": {
@@ -2629,7 +2554,7 @@
           ]
         },
         {
-          "comment": "opcodes: (stop_loccN): (0 to 127 loops)",
+          "comment": "opcodes: (stop_loccN): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(stop_loccN)\\b",
           "beginCaptures": {
@@ -2661,7 +2586,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_default): (0 to 127 loops)",
+          "comment": "opcodes: (sw_default): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_default)\\b",
           "beginCaptures": {
@@ -2745,7 +2670,7 @@
           ]
         },
         {
-          "comment": "opcodes: (pan_keycenter): (0 to 127 loops)",
+          "comment": "opcodes: (pan_keycenter): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pan_keycenter)\\b",
           "beginCaptures": {
@@ -2813,7 +2738,7 @@
     "sfz2_modulation": {
       "patterns": [
         {
-          "comment": "opcodes: (egN_amplitude): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_amplitude): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_amplitude)\\b",
           "beginCaptures": {
@@ -2821,15 +2746,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_curveX): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_curveX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_curveX)\\b",
           "beginCaptures": {
@@ -2837,15 +2757,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_cutoff): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_cutoff): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_cutoff)\\b",
           "beginCaptures": {
@@ -2853,15 +2768,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_cutoff2): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_cutoff2): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_cutoff2)\\b",
           "beginCaptures": {
@@ -2869,15 +2779,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_depth_lfoX): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_depth_lfoX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_depth_lfoX)\\b",
           "beginCaptures": {
@@ -2885,15 +2790,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_depthadd_lfoX): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_depthadd_lfoX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_depthadd_lfoX)\\b",
           "beginCaptures": {
@@ -2901,15 +2801,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_eqXbw): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_eqXbw): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_eqXbw)\\b",
           "beginCaptures": {
@@ -2917,15 +2812,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_eqXfreq): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_eqXfreq): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_eqXfreq)\\b",
           "beginCaptures": {
@@ -2933,15 +2823,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_eqXgain): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_eqXgain): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_eqXgain)\\b",
           "beginCaptures": {
@@ -2949,15 +2834,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_freq_lfoX): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_freq_lfoX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_freq_lfoX)\\b",
           "beginCaptures": {
@@ -2965,15 +2845,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_levelX): (-1 to 1 loops)",
+          "comment": "opcodes: (egN_levelX): (-1 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_levelX)\\b",
           "beginCaptures": {
@@ -2989,7 +2864,7 @@
           ]
         },
         {
-          "comment": "opcodes: (egN_loop): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_loop): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_loop)\\b",
           "beginCaptures": {
@@ -2997,15 +2872,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_loop_count): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_loop_count): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_loop_count)\\b",
           "beginCaptures": {
@@ -3013,15 +2883,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_pan): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_pan): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_pan)\\b",
           "beginCaptures": {
@@ -3029,15 +2894,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_pan_curve): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_pan_curve): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_pan_curve)\\b",
           "beginCaptures": {
@@ -3045,15 +2905,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_pitch): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_pitch): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_pitch)\\b",
           "beginCaptures": {
@@ -3061,15 +2916,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_points): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_points): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_points)\\b",
           "beginCaptures": {
@@ -3077,15 +2927,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_resonance): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_resonance): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_resonance)\\b",
           "beginCaptures": {
@@ -3093,15 +2938,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_resonance2): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_resonance2): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_resonance2)\\b",
           "beginCaptures": {
@@ -3109,15 +2949,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_shapeX): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_shapeX): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_shapeX)\\b",
           "beginCaptures": {
@@ -3125,15 +2960,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_sustain): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_sustain): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_sustain)\\b",
           "beginCaptures": {
@@ -3141,15 +2971,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_timeX): (undefined to undefined seconds)",
+          "comment": "opcodes: (egN_timeX): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_timeX)\\b",
           "beginCaptures": {
@@ -3157,15 +2982,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_volume): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_volume): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_volume)\\b",
           "beginCaptures": {
@@ -3173,15 +2993,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_width): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_width): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_width)\\b",
           "beginCaptures": {
@@ -3189,15 +3004,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_amplitude): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_amplitude): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_amplitude)\\b",
           "beginCaptures": {
@@ -3205,15 +3015,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_count): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_count): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_count)\\b",
           "beginCaptures": {
@@ -3221,15 +3026,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_cutoff): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_cutoff): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_cutoff)\\b",
           "beginCaptures": {
@@ -3237,15 +3037,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_delay): (undefined to undefined seconds)",
+          "comment": "opcodes: (lfoN_delay): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_delay)\\b",
           "beginCaptures": {
@@ -3253,15 +3048,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_depth_lfoX): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_depth_lfoX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_depth_lfoX)\\b",
           "beginCaptures": {
@@ -3269,15 +3059,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_depthadd_lfoX): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_depthadd_lfoX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_depthadd_lfoX)\\b",
           "beginCaptures": {
@@ -3285,15 +3070,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_eqXbw): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_eqXbw): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_eqXbw)\\b",
           "beginCaptures": {
@@ -3301,15 +3081,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_eqXfreq): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_eqXfreq): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_eqXfreq)\\b",
           "beginCaptures": {
@@ -3317,15 +3092,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_eqXgain): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_eqXgain): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_eqXgain)\\b",
           "beginCaptures": {
@@ -3333,15 +3103,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_fade): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_fade): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_fade)\\b",
           "beginCaptures": {
@@ -3349,15 +3114,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_freq): (undefined to undefined Hz)",
+          "comment": "opcodes: (lfoN_freq): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_freq)\\b",
           "beginCaptures": {
@@ -3365,15 +3125,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_freq_lfoX): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_freq_lfoX): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_freq_lfoX)\\b",
           "beginCaptures": {
@@ -3381,15 +3136,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_pan): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_pan): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_pan)\\b",
           "beginCaptures": {
@@ -3397,15 +3147,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_phase): (0 to 1 loops)",
+          "comment": "opcodes: (lfoN_phase): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_phase)\\b",
           "beginCaptures": {
@@ -3421,7 +3166,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lfoN_pitch): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_pitch): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_pitch)\\b",
           "beginCaptures": {
@@ -3429,15 +3174,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_resonance): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_resonance): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_resonance)\\b",
           "beginCaptures": {
@@ -3445,15 +3185,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_smooth): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_smooth): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_smooth)\\b",
           "beginCaptures": {
@@ -3461,15 +3196,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_steps): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_steps): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_steps)\\b",
           "beginCaptures": {
@@ -3477,12 +3207,7 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (lfoN_stepX): (-100 to 100 percent)",
@@ -3501,7 +3226,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lfoN_volume): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_volume): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_volume)\\b",
           "beginCaptures": {
@@ -3509,15 +3234,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_wave): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_wave): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_wave)\\b",
           "beginCaptures": {
@@ -3525,15 +3245,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_width): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_width): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_width)\\b",
           "beginCaptures": {
@@ -3541,19 +3256,14 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
     "sfz2_curves": {
       "patterns": [
         {
-          "comment": "opcodes: (vN): (-1 to 1 loops)",
+          "comment": "opcodes: (vN): (-1 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(vN)\\b",
           "beginCaptures": {
@@ -3589,7 +3299,7 @@
           ]
         },
         {
-          "comment": "opcodes: (#include): (undefined to undefined loops)",
+          "comment": "opcodes: (#include): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(#include)\\b",
           "beginCaptures": {
@@ -3597,15 +3307,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (global_label): (undefined to undefined loops)",
+          "comment": "opcodes: (global_label): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(global_label)\\b",
           "beginCaptures": {
@@ -3613,15 +3318,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (group_label): (undefined to undefined loops)",
+          "comment": "opcodes: (group_label): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(group_label)\\b",
           "beginCaptures": {
@@ -3629,15 +3329,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (hint_*): (undefined to undefined loops)",
+          "comment": "opcodes: (hint_*): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hint_*)\\b",
           "beginCaptures": {
@@ -3645,15 +3340,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (label_ccN): (undefined to undefined loops)",
+          "comment": "opcodes: (label_ccN): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(label_ccN)\\b",
           "beginCaptures": {
@@ -3661,15 +3351,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (master_label): (undefined to undefined loops)",
+          "comment": "opcodes: (master_label): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(master_label)\\b",
           "beginCaptures": {
@@ -3677,15 +3362,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (off_curve): (-2|-1|0|1|2|10)",
+          "comment": "opcodes: (off_curve): (-2 to 10 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(off_curve)\\b",
           "beginCaptures": {
@@ -3696,12 +3376,12 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_off_curve"
+              "include": "#integer_-2-10"
             }
           ]
         },
         {
-          "comment": "opcodes: (off_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (off_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(off_shape)\\b",
           "beginCaptures": {
@@ -3709,15 +3389,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (off_time): (undefined to undefined loops)",
+          "comment": "opcodes: (off_time): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(off_time)\\b",
           "beginCaptures": {
@@ -3725,15 +3400,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (polyphony_stealing): (undefined to undefined loops)",
+          "comment": "opcodes: (polyphony_stealing): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(polyphony_stealing)\\b",
           "beginCaptures": {
@@ -3741,15 +3411,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (region_label): (undefined to undefined loops)",
+          "comment": "opcodes: (region_label): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(region_label)\\b",
           "beginCaptures": {
@@ -3757,15 +3422,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (set_hdccN): (0 to 1 loops)",
+          "comment": "opcodes: (set_hdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(set_hdccN)\\b",
           "beginCaptures": {
@@ -3781,7 +3441,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_note_offset): (undefined to undefined loops)",
+          "comment": "opcodes: (sw_note_offset): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_note_offset)\\b",
           "beginCaptures": {
@@ -3789,15 +3449,10 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (sw_octave_offset): (undefined to undefined loops)",
+          "comment": "opcodes: (sw_octave_offset): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_octave_offset)\\b",
           "beginCaptures": {
@@ -3805,19 +3460,14 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
     "aria_region-logic": {
       "patterns": [
         {
-          "comment": "opcodes: (hihdccN): (0 to 1 loops)",
+          "comment": "opcodes: (hihdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(hihdccN)\\b",
           "beginCaptures": {
@@ -3833,7 +3483,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lohdccN): (0 to 1 loops)",
+          "comment": "opcodes: (lohdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lohdccN)\\b",
           "beginCaptures": {
@@ -3849,7 +3499,7 @@
           ]
         },
         {
-          "comment": "opcodes: (on_hihdccN): (0 to 1 loops)",
+          "comment": "opcodes: (on_hihdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(on_hihdccN)\\b",
           "beginCaptures": {
@@ -3865,7 +3515,7 @@
           ]
         },
         {
-          "comment": "opcodes: (on_lohdccN): (0 to 1 loops)",
+          "comment": "opcodes: (on_lohdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(on_lohdccN)\\b",
           "beginCaptures": {
@@ -3881,7 +3531,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sostenuto_cc): (0 to 127 loops)",
+          "comment": "opcodes: (sostenuto_cc): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sostenuto_cc)\\b",
           "beginCaptures": {
@@ -3897,7 +3547,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sostenuto_lo): (0 to 127 loops)",
+          "comment": "opcodes: (sostenuto_lo): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sostenuto_lo)\\b",
           "beginCaptures": {
@@ -3913,7 +3563,7 @@
           ]
         },
         {
-          "comment": "opcodes: (stop_hihdccN): (0 to 1 loops)",
+          "comment": "opcodes: (stop_hihdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(stop_hihdccN)\\b",
           "beginCaptures": {
@@ -3929,7 +3579,7 @@
           ]
         },
         {
-          "comment": "opcodes: (stop_lohdccN): (0 to 1 loops)",
+          "comment": "opcodes: (stop_lohdccN): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(stop_lohdccN)\\b",
           "beginCaptures": {
@@ -3945,7 +3595,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sustain_cc): (0 to 127 loops)",
+          "comment": "opcodes: (sustain_cc): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sustain_cc)\\b",
           "beginCaptures": {
@@ -3961,7 +3611,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sustain_lo): (0 to 127 loops)",
+          "comment": "opcodes: (sustain_lo): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sustain_lo)\\b",
           "beginCaptures": {
@@ -3977,7 +3627,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_hilast): (0 to 127 loops)",
+          "comment": "opcodes: (sw_hilast): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_hilast)\\b",
           "beginCaptures": {
@@ -3993,7 +3643,7 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_label): (undefined to undefined loops)",
+          "comment": "opcodes: (sw_label): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_label)\\b",
           "beginCaptures": {
@@ -4001,15 +3651,10 @@
               "name": "variable.language.region-logic.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (sw_lolast): (0 to 127 loops)",
+          "comment": "opcodes: (sw_lolast): (0 to 127 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_lolast)\\b",
           "beginCaptures": {
@@ -4025,7 +3670,7 @@
           ]
         },
         {
-          "comment": "opcodes: (varNN_*): (undefined to undefined loops)",
+          "comment": "opcodes: (varNN_*): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(varNN_*)\\b",
           "beginCaptures": {
@@ -4033,12 +3678,7 @@
               "name": "variable.language.region-logic.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (varNN_mod): (mult|add)",
@@ -4061,7 +3701,7 @@
     "aria_performance-parameters": {
       "patterns": [
         {
-          "comment": "opcodes: (amp_veltrack_random): (undefined to undefined loops)",
+          "comment": "opcodes: (amp_veltrack_random): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(amp_veltrack_random)\\b",
           "beginCaptures": {
@@ -4069,12 +3709,7 @@
               "name": "variable.language.performance-parameters.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (amplitude): (0 to 100 %)",
@@ -4093,7 +3728,7 @@
           ]
         },
         {
-          "comment": "opcodes: (eqN_dynamic): (0 to 1 loops)",
+          "comment": "opcodes: (eqN_dynamic): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eqN_dynamic)\\b",
           "beginCaptures": {
@@ -4109,7 +3744,7 @@
           ]
         },
         {
-          "comment": "opcodes: (fil_gain): (undefined to undefined dB)",
+          "comment": "opcodes: (fil_gain): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fil_gain)\\b",
           "beginCaptures": {
@@ -4117,12 +3752,7 @@
               "name": "variable.language.performance-parameters.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (global_amplitude): (0 to 100 %)",
@@ -4301,7 +3931,7 @@
           ]
         },
         {
-          "comment": "opcodes: (position_keycenter): (undefined to undefined loops)",
+          "comment": "opcodes: (position_keycenter): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(position_keycenter)\\b",
           "beginCaptures": {
@@ -4309,15 +3939,10 @@
               "name": "variable.language.performance-parameters.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (position_keytrack): (undefined to undefined loops)",
+          "comment": "opcodes: (position_keytrack): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(position_keytrack)\\b",
           "beginCaptures": {
@@ -4325,12 +3950,7 @@
               "name": "variable.language.performance-parameters.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (position_random): (-100 to 100 %)",
@@ -4349,7 +3969,7 @@
           ]
         },
         {
-          "comment": "opcodes: (position_veltrack): (undefined to undefined loops)",
+          "comment": "opcodes: (position_veltrack): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(position_veltrack)\\b",
           "beginCaptures": {
@@ -4357,12 +3977,7 @@
               "name": "variable.language.performance-parameters.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (resonance_random): (0 to 40 dB)",
@@ -4385,7 +4000,7 @@
     "aria_modulation": {
       "patterns": [
         {
-          "comment": "opcodes: (ampeg_attack_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (ampeg_attack_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(ampeg_attack_shape)\\b",
           "beginCaptures": {
@@ -4393,15 +4008,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (ampeg_decay_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (ampeg_decay_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(ampeg_decay_shape)\\b",
           "beginCaptures": {
@@ -4409,15 +4019,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (ampeg_decay_zero): (0 to 1 loops)",
+          "comment": "opcodes: (ampeg_decay_zero): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(ampeg_decay_zero)\\b",
           "beginCaptures": {
@@ -4433,7 +4038,7 @@
           ]
         },
         {
-          "comment": "opcodes: (ampeg_dynamic): (0 to 1 loops)",
+          "comment": "opcodes: (ampeg_dynamic): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(ampeg_dynamic)\\b",
           "beginCaptures": {
@@ -4449,7 +4054,7 @@
           ]
         },
         {
-          "comment": "opcodes: (ampeg_release_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (ampeg_release_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(ampeg_release_shape)\\b",
           "beginCaptures": {
@@ -4457,15 +4062,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (ampeg_release_zero): (0 to 1 loops)",
+          "comment": "opcodes: (ampeg_release_zero): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(ampeg_release_zero)\\b",
           "beginCaptures": {
@@ -4481,7 +4081,7 @@
           ]
         },
         {
-          "comment": "opcodes: (egN_ampeg): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_ampeg): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_ampeg)\\b",
           "beginCaptures": {
@@ -4489,15 +4089,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (fileg_attack_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (fileg_attack_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fileg_attack_shape)\\b",
           "beginCaptures": {
@@ -4505,15 +4100,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (fileg_decay_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (fileg_decay_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fileg_decay_shape)\\b",
           "beginCaptures": {
@@ -4521,15 +4111,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (fileg_decay_zero): (0 to 1 loops)",
+          "comment": "opcodes: (fileg_decay_zero): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fileg_decay_zero)\\b",
           "beginCaptures": {
@@ -4545,7 +4130,7 @@
           ]
         },
         {
-          "comment": "opcodes: (fileg_dynamic): (0 to 1 loops)",
+          "comment": "opcodes: (fileg_dynamic): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fileg_dynamic)\\b",
           "beginCaptures": {
@@ -4561,7 +4146,7 @@
           ]
         },
         {
-          "comment": "opcodes: (fileg_release_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (fileg_release_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fileg_release_shape)\\b",
           "beginCaptures": {
@@ -4569,15 +4154,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (fileg_release_zero): (0 to 1 loops)",
+          "comment": "opcodes: (fileg_release_zero): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fileg_release_zero)\\b",
           "beginCaptures": {
@@ -4593,7 +4173,7 @@
           ]
         },
         {
-          "comment": "opcodes: (lfoN_offset): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_offset): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_offset)\\b",
           "beginCaptures": {
@@ -4601,15 +4181,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_ratio): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_ratio): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_ratio)\\b",
           "beginCaptures": {
@@ -4617,15 +4192,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_scale): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_scale): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_scale)\\b",
           "beginCaptures": {
@@ -4633,15 +4203,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (pitcheg_attack_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (pitcheg_attack_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitcheg_attack_shape)\\b",
           "beginCaptures": {
@@ -4649,15 +4214,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (pitcheg_decay_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (pitcheg_decay_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitcheg_decay_shape)\\b",
           "beginCaptures": {
@@ -4665,15 +4225,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (pitcheg_decay_zero): (0 to 1 loops)",
+          "comment": "opcodes: (pitcheg_decay_zero): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitcheg_decay_zero)\\b",
           "beginCaptures": {
@@ -4689,7 +4244,7 @@
           ]
         },
         {
-          "comment": "opcodes: (pitcheg_dynamic): (0 to 1 loops)",
+          "comment": "opcodes: (pitcheg_dynamic): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitcheg_dynamic)\\b",
           "beginCaptures": {
@@ -4705,7 +4260,7 @@
           ]
         },
         {
-          "comment": "opcodes: (pitcheg_release_shape): (undefined to undefined loops)",
+          "comment": "opcodes: (pitcheg_release_shape): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitcheg_release_shape)\\b",
           "beginCaptures": {
@@ -4713,15 +4268,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (pitcheg_release_zero): (0 to 1 loops)",
+          "comment": "opcodes: (pitcheg_release_zero): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitcheg_release_zero)\\b",
           "beginCaptures": {
@@ -4741,7 +4291,7 @@
     "aria_curves": {
       "patterns": [
         {
-          "comment": "opcodes: (curve_index): (0 to 255 loops)",
+          "comment": "opcodes: (curve_index): (0 to 255 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(curve_index)\\b",
           "beginCaptures": {
@@ -4761,7 +4311,7 @@
     "aria_effects": {
       "patterns": [
         {
-          "comment": "opcodes: (param_offset): (undefined to undefined loops)",
+          "comment": "opcodes: (param_offset): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(param_offset)\\b",
           "beginCaptures": {
@@ -4769,15 +4319,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (vendor_specific): (undefined to undefined loops)",
+          "comment": "opcodes: (vendor_specific): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(vendor_specific)\\b",
           "beginCaptures": {
@@ -4785,12 +4330,7 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
@@ -4968,7 +4508,7 @@
     "linuxsampler_real-time-instrument-script": {
       "patterns": [
         {
-          "comment": "opcodes: (script): (undefined to undefined loops)",
+          "comment": "opcodes: (script): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(script)\\b",
           "beginCaptures": {
@@ -4976,19 +4516,14 @@
               "name": "variable.language.real-time-instrument-script.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
     "aria_sound-source": {
       "patterns": [
         {
-          "comment": "opcodes: (delay_beats_random): (undefined to undefined beats)",
+          "comment": "opcodes: (delay_beats_random): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_beats_random)\\b",
           "beginCaptures": {
@@ -4996,19 +4531,14 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
     "cakewalk_sound-source": {
       "patterns": [
         {
-          "comment": "opcodes: (loop_tune): (undefined to undefined cents)",
+          "comment": "opcodes: (loop_tune): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loop_tune)\\b",
           "beginCaptures": {
@@ -5016,15 +4546,10 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (sample_fadeout): (undefined to undefined seconds)",
+          "comment": "opcodes: (sample_fadeout): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sample_fadeout)\\b",
           "beginCaptures": {
@@ -5032,19 +4557,14 @@
               "name": "variable.language.sound-source.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
     "sfizz_instrument-settings": {
       "patterns": [
         {
-          "comment": "opcodes: (label_keyN): (undefined to undefined loops)",
+          "comment": "opcodes: (label_keyN): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(label_keyN)\\b",
           "beginCaptures": {
@@ -5052,12 +4572,7 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
@@ -5096,7 +4611,7 @@
           ]
         },
         {
-          "comment": "opcodes: (noise_step): (0 to 100 loops)",
+          "comment": "opcodes: (noise_step): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(noise_step)\\b",
           "beginCaptures": {
@@ -5128,7 +4643,7 @@
           ]
         },
         {
-          "comment": "opcodes: (noise_tone): (0 to 100 loops)",
+          "comment": "opcodes: (noise_tone): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(noise_tone)\\b",
           "beginCaptures": {
@@ -5148,7 +4663,7 @@
     "cakewalk_modulation": {
       "patterns": [
         {
-          "comment": "opcodes: (egN_bitred): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_bitred): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_bitred)\\b",
           "beginCaptures": {
@@ -5156,15 +4671,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_decim): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_decim): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_decim)\\b",
           "beginCaptures": {
@@ -5172,15 +4682,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_driveshape): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_driveshape): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_driveshape)\\b",
           "beginCaptures": {
@@ -5188,15 +4693,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_noiselevel): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_noiselevel): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_noiselevel)\\b",
           "beginCaptures": {
@@ -5204,15 +4704,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_noisestep): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_noisestep): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_noisestep)\\b",
           "beginCaptures": {
@@ -5220,15 +4715,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_noisetone): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_noisetone): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_noisetone)\\b",
           "beginCaptures": {
@@ -5236,15 +4726,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_rectify): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_rectify): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_rectify)\\b",
           "beginCaptures": {
@@ -5252,15 +4737,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (egN_ringmod): (undefined to undefined loops)",
+          "comment": "opcodes: (egN_ringmod): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(egN_ringmod)\\b",
           "beginCaptures": {
@@ -5268,15 +4748,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_bitred): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_bitred): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_bitred)\\b",
           "beginCaptures": {
@@ -5284,15 +4759,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_decim): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_decim): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_decim)\\b",
           "beginCaptures": {
@@ -5300,15 +4770,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_drive): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_drive): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_drive)\\b",
           "beginCaptures": {
@@ -5316,15 +4781,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_noiselevel): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_noiselevel): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_noiselevel)\\b",
           "beginCaptures": {
@@ -5332,15 +4792,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_noisestep): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_noisestep): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_noisestep)\\b",
           "beginCaptures": {
@@ -5348,15 +4803,10 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (lfoN_noisetone): (undefined to undefined loops)",
+          "comment": "opcodes: (lfoN_noisetone): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(lfoN_noisetone)\\b",
           "beginCaptures": {
@@ -5364,19 +4814,14 @@
               "name": "variable.language.modulation.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     },
     "cakewalk_effects": {
       "patterns": [
         {
-          "comment": "opcodes: (apan_depth): (0 to 100 loops)",
+          "comment": "opcodes: (apan_depth): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(apan_depth)\\b",
           "beginCaptures": {
@@ -5392,7 +4837,7 @@
           ]
         },
         {
-          "comment": "opcodes: (apan_dry): (0 to 100 loops)",
+          "comment": "opcodes: (apan_dry): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(apan_dry)\\b",
           "beginCaptures": {
@@ -5408,7 +4853,7 @@
           ]
         },
         {
-          "comment": "opcodes: (apan_freq): (undefined to undefined Hz)",
+          "comment": "opcodes: (apan_freq): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(apan_freq)\\b",
           "beginCaptures": {
@@ -5416,12 +4861,7 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (apan_phase): (0 to 180 °)",
@@ -5440,7 +4880,7 @@
           ]
         },
         {
-          "comment": "opcodes: (apan_waveform): (undefined to undefined loops)",
+          "comment": "opcodes: (apan_waveform): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(apan_waveform)\\b",
           "beginCaptures": {
@@ -5448,15 +4888,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (apan_wet): (0 to 100 loops)",
+          "comment": "opcodes: (apan_wet): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(apan_wet)\\b",
           "beginCaptures": {
@@ -5472,7 +4907,7 @@
           ]
         },
         {
-          "comment": "opcodes: (bitred): (0 to 100 loops)",
+          "comment": "opcodes: (bitred): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(bitred)\\b",
           "beginCaptures": {
@@ -5488,7 +4923,7 @@
           ]
         },
         {
-          "comment": "opcodes: (bypass_onccN): (undefined to undefined loops)",
+          "comment": "opcodes: (bypass_onccN): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(bypass_onccN)\\b",
           "beginCaptures": {
@@ -5496,15 +4931,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (comp_attack): (undefined to undefined seconds)",
+          "comment": "opcodes: (comp_attack): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(comp_attack)\\b",
           "beginCaptures": {
@@ -5512,15 +4942,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (comp_gain): (undefined to undefined loops)",
+          "comment": "opcodes: (comp_gain): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(comp_gain)\\b",
           "beginCaptures": {
@@ -5528,15 +4953,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (comp_ratio): (0 to 100 loops)",
+          "comment": "opcodes: (comp_ratio): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(comp_ratio)\\b",
           "beginCaptures": {
@@ -5552,7 +4972,7 @@
           ]
         },
         {
-          "comment": "opcodes: (comp_release): (undefined to undefined seconds)",
+          "comment": "opcodes: (comp_release): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(comp_release)\\b",
           "beginCaptures": {
@@ -5560,12 +4980,7 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (comp_stlink): (on|off)",
@@ -5584,7 +4999,7 @@
           ]
         },
         {
-          "comment": "opcodes: (comp_threshold): (undefined to undefined dB)",
+          "comment": "opcodes: (comp_threshold): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(comp_threshold)\\b",
           "beginCaptures": {
@@ -5592,15 +5007,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (decim): (0 to 100 loops)",
+          "comment": "opcodes: (decim): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(decim)\\b",
           "beginCaptures": {
@@ -5616,7 +5026,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_cutoff): (undefined to undefined Hz)",
+          "comment": "opcodes: (delay_cutoff): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_cutoff)\\b",
           "beginCaptures": {
@@ -5624,15 +5034,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_damphi): (0 to 100 loops)",
+          "comment": "opcodes: (delay_damphi): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_damphi)\\b",
           "beginCaptures": {
@@ -5648,7 +5053,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_damplo): (0 to 100 loops)",
+          "comment": "opcodes: (delay_damplo): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_damplo)\\b",
           "beginCaptures": {
@@ -5664,7 +5069,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_dry): (0 to 100 loops)",
+          "comment": "opcodes: (delay_dry): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_dry)\\b",
           "beginCaptures": {
@@ -5680,7 +5085,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_feedback): (0 to 100 loops)",
+          "comment": "opcodes: (delay_feedback): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_feedback)\\b",
           "beginCaptures": {
@@ -5696,7 +5101,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_filter): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_filter): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_filter)\\b",
           "beginCaptures": {
@@ -5704,15 +5109,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_input): (0 to 100 loops)",
+          "comment": "opcodes: (delay_input): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_input)\\b",
           "beginCaptures": {
@@ -5728,7 +5128,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_levelc): (0 to 100 loops)",
+          "comment": "opcodes: (delay_levelc): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_levelc)\\b",
           "beginCaptures": {
@@ -5744,7 +5144,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_levell): (0 to 100 loops)",
+          "comment": "opcodes: (delay_levell): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_levell)\\b",
           "beginCaptures": {
@@ -5760,7 +5160,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_levelr): (0 to 100 loops)",
+          "comment": "opcodes: (delay_levelr): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_levelr)\\b",
           "beginCaptures": {
@@ -5776,7 +5176,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_lfofreq): (undefined to undefined Hz)",
+          "comment": "opcodes: (delay_lfofreq): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_lfofreq)\\b",
           "beginCaptures": {
@@ -5784,15 +5184,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_moddepth): (0 to 100 loops)",
+          "comment": "opcodes: (delay_moddepth): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_moddepth)\\b",
           "beginCaptures": {
@@ -5824,7 +5219,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_panc): (0 to 100 loops)",
+          "comment": "opcodes: (delay_panc): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_panc)\\b",
           "beginCaptures": {
@@ -5840,7 +5235,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_panl): (0 to 100 loops)",
+          "comment": "opcodes: (delay_panl): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_panl)\\b",
           "beginCaptures": {
@@ -5856,7 +5251,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_panr): (0 to 100 loops)",
+          "comment": "opcodes: (delay_panr): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_panr)\\b",
           "beginCaptures": {
@@ -5872,7 +5267,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_resonance): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_resonance): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_resonance)\\b",
           "beginCaptures": {
@@ -5880,15 +5275,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_spread): (0 to 100 loops)",
+          "comment": "opcodes: (delay_spread): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_spread)\\b",
           "beginCaptures": {
@@ -5904,7 +5294,7 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_syncc_onccN): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_syncc_onccN): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_syncc_onccN)\\b",
           "beginCaptures": {
@@ -5912,15 +5302,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_syncl_onccN): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_syncl_onccN): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_syncl_onccN)\\b",
           "beginCaptures": {
@@ -5928,15 +5313,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_syncr_onccN): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_syncr_onccN): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_syncr_onccN)\\b",
           "beginCaptures": {
@@ -5944,15 +5324,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_time_tap): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_time_tap): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_time_tap)\\b",
           "beginCaptures": {
@@ -5960,15 +5335,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_timec): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_timec): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_timec)\\b",
           "beginCaptures": {
@@ -5976,15 +5346,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_timel): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_timel): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_timel)\\b",
           "beginCaptures": {
@@ -5992,15 +5357,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_timer): (undefined to undefined loops)",
+          "comment": "opcodes: (delay_timer): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_timer)\\b",
           "beginCaptures": {
@@ -6008,15 +5368,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (delay_wet): (0 to 100 loops)",
+          "comment": "opcodes: (delay_wet): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_wet)\\b",
           "beginCaptures": {
@@ -6048,7 +5403,7 @@
           ]
         },
         {
-          "comment": "opcodes: (disto_depth): (0 to 100 loops)",
+          "comment": "opcodes: (disto_depth): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(disto_depth)\\b",
           "beginCaptures": {
@@ -6064,7 +5419,7 @@
           ]
         },
         {
-          "comment": "opcodes: (disto_dry): (0 to 100 loops)",
+          "comment": "opcodes: (disto_dry): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(disto_dry)\\b",
           "beginCaptures": {
@@ -6080,7 +5435,7 @@
           ]
         },
         {
-          "comment": "opcodes: (disto_stages): (undefined to undefined loops)",
+          "comment": "opcodes: (disto_stages): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(disto_stages)\\b",
           "beginCaptures": {
@@ -6088,15 +5443,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (disto_tone): (0 to 100 loops)",
+          "comment": "opcodes: (disto_tone): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(disto_tone)\\b",
           "beginCaptures": {
@@ -6112,7 +5462,7 @@
           ]
         },
         {
-          "comment": "opcodes: (disto_wet): (0 to 100 loops)",
+          "comment": "opcodes: (disto_wet): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(disto_wet)\\b",
           "beginCaptures": {
@@ -6128,7 +5478,7 @@
           ]
         },
         {
-          "comment": "opcodes: (dsp_order): (0 to 14 loops)",
+          "comment": "opcodes: (dsp_order): (0 to 14 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(dsp_order)\\b",
           "beginCaptures": {
@@ -6144,7 +5494,7 @@
           ]
         },
         {
-          "comment": "opcodes: (eq_bw): (undefined to undefined loops)",
+          "comment": "opcodes: (eq_bw): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eq_bw)\\b",
           "beginCaptures": {
@@ -6152,15 +5502,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (eq_freq): (undefined to undefined loops)",
+          "comment": "opcodes: (eq_freq): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eq_freq)\\b",
           "beginCaptures": {
@@ -6168,15 +5513,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (eq_gain): (undefined to undefined loops)",
+          "comment": "opcodes: (eq_gain): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eq_gain)\\b",
           "beginCaptures": {
@@ -6184,15 +5524,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (eq_type): (undefined to undefined loops)",
+          "comment": "opcodes: (eq_type): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eq_type)\\b",
           "beginCaptures": {
@@ -6200,15 +5535,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (filter_cutoff): (undefined to undefined loops)",
+          "comment": "opcodes: (filter_cutoff): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(filter_cutoff)\\b",
           "beginCaptures": {
@@ -6216,15 +5546,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (filter_resonance): (undefined to undefined loops)",
+          "comment": "opcodes: (filter_resonance): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(filter_resonance)\\b",
           "beginCaptures": {
@@ -6232,15 +5557,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (filter_type): (undefined to undefined loops)",
+          "comment": "opcodes: (filter_type): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(filter_type)\\b",
           "beginCaptures": {
@@ -6248,12 +5568,7 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (fxNtomain): (0 to 100 %)",
@@ -6288,7 +5603,7 @@
           ]
         },
         {
-          "comment": "opcodes: (gate_attack): (undefined to undefined loops)",
+          "comment": "opcodes: (gate_attack): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(gate_attack)\\b",
           "beginCaptures": {
@@ -6296,15 +5611,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (gate_onccN): (undefined to undefined loops)",
+          "comment": "opcodes: (gate_onccN): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(gate_onccN)\\b",
           "beginCaptures": {
@@ -6312,15 +5622,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (gate_release): (undefined to undefined loops)",
+          "comment": "opcodes: (gate_release): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(gate_release)\\b",
           "beginCaptures": {
@@ -6328,12 +5633,7 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (gate_stlink): (on|off)",
@@ -6352,7 +5652,7 @@
           ]
         },
         {
-          "comment": "opcodes: (gate_threshold): (undefined to undefined loops)",
+          "comment": "opcodes: (gate_threshold): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(gate_threshold)\\b",
           "beginCaptures": {
@@ -6360,12 +5660,7 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (internal): (on|off)",
@@ -6384,7 +5679,7 @@
           ]
         },
         {
-          "comment": "opcodes: (phaser_depth): (0 to 100 loops)",
+          "comment": "opcodes: (phaser_depth): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_depth)\\b",
           "beginCaptures": {
@@ -6400,7 +5695,7 @@
           ]
         },
         {
-          "comment": "opcodes: (phaser_feedback): (0 to 100 loops)",
+          "comment": "opcodes: (phaser_feedback): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_feedback)\\b",
           "beginCaptures": {
@@ -6416,7 +5711,7 @@
           ]
         },
         {
-          "comment": "opcodes: (phaser_freq): (undefined to undefined Hz)",
+          "comment": "opcodes: (phaser_freq): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_freq)\\b",
           "beginCaptures": {
@@ -6424,15 +5719,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (phaser_phase_onccN): (0 to 100 loops)",
+          "comment": "opcodes: (phaser_phase_onccN): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_phase_onccN)\\b",
           "beginCaptures": {
@@ -6448,7 +5738,7 @@
           ]
         },
         {
-          "comment": "opcodes: (phaser_stages): (undefined to undefined loops)",
+          "comment": "opcodes: (phaser_stages): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_stages)\\b",
           "beginCaptures": {
@@ -6456,15 +5746,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (phaser_waveform): (undefined to undefined loops)",
+          "comment": "opcodes: (phaser_waveform): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_waveform)\\b",
           "beginCaptures": {
@@ -6472,15 +5757,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (phaser_wet): (0 to 100 loops)",
+          "comment": "opcodes: (phaser_wet): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phaser_wet)\\b",
           "beginCaptures": {
@@ -6496,7 +5776,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_damp): (0 to 100 loops)",
+          "comment": "opcodes: (reverb_damp): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_damp)\\b",
           "beginCaptures": {
@@ -6512,7 +5792,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_dry): (0 to 100 loops)",
+          "comment": "opcodes: (reverb_dry): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_dry)\\b",
           "beginCaptures": {
@@ -6528,7 +5808,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_input): (0 to 100 loops)",
+          "comment": "opcodes: (reverb_input): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_input)\\b",
           "beginCaptures": {
@@ -6544,7 +5824,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_predelay): (undefined to undefined seconds)",
+          "comment": "opcodes: (reverb_predelay): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_predelay)\\b",
           "beginCaptures": {
@@ -6552,15 +5832,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (reverb_size): (0 to 100 loops)",
+          "comment": "opcodes: (reverb_size): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_size)\\b",
           "beginCaptures": {
@@ -6576,7 +5851,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_tone): (0 to 100 loops)",
+          "comment": "opcodes: (reverb_tone): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_tone)\\b",
           "beginCaptures": {
@@ -6608,7 +5883,7 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_wet): (0 to 100 loops)",
+          "comment": "opcodes: (reverb_wet): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_wet)\\b",
           "beginCaptures": {
@@ -6624,7 +5899,7 @@
           ]
         },
         {
-          "comment": "opcodes: (static_cyclic_level): (0 to 100 loops)",
+          "comment": "opcodes: (static_cyclic_level): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_cyclic_level)\\b",
           "beginCaptures": {
@@ -6640,7 +5915,7 @@
           ]
         },
         {
-          "comment": "opcodes: (static_cyclic_time): (undefined to undefined seconds)",
+          "comment": "opcodes: (static_cyclic_time): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_cyclic_time)\\b",
           "beginCaptures": {
@@ -6648,15 +5923,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (static_filter): (undefined to undefined loops)",
+          "comment": "opcodes: (static_filter): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_filter)\\b",
           "beginCaptures": {
@@ -6664,15 +5934,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (static_level): (0 to 100 loops)",
+          "comment": "opcodes: (static_level): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_level)\\b",
           "beginCaptures": {
@@ -6688,7 +5953,7 @@
           ]
         },
         {
-          "comment": "opcodes: (static_random_level): (0 to 100 loops)",
+          "comment": "opcodes: (static_random_level): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_random_level)\\b",
           "beginCaptures": {
@@ -6704,7 +5969,7 @@
           ]
         },
         {
-          "comment": "opcodes: (static_random_maxtime): (undefined to undefined seconds)",
+          "comment": "opcodes: (static_random_maxtime): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_random_maxtime)\\b",
           "beginCaptures": {
@@ -6712,15 +5977,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (static_random_mintime): (undefined to undefined seconds)",
+          "comment": "opcodes: (static_random_mintime): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_random_mintime)\\b",
           "beginCaptures": {
@@ -6728,15 +5988,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#float_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (static_stereo): (undefined to undefined loops)",
+          "comment": "opcodes: (static_stereo): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_stereo)\\b",
           "beginCaptures": {
@@ -6744,15 +5999,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (static_tone): (0 to 100 loops)",
+          "comment": "opcodes: (static_tone): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(static_tone)\\b",
           "beginCaptures": {
@@ -6768,7 +6018,7 @@
           ]
         },
         {
-          "comment": "opcodes: (strings_number): (undefined to undefined loops)",
+          "comment": "opcodes: (strings_number): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(strings_number)\\b",
           "beginCaptures": {
@@ -6776,15 +6026,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (strings_wet_onccN): (0 to 100 loops)",
+          "comment": "opcodes: (strings_wet_onccN): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(strings_wet_onccN)\\b",
           "beginCaptures": {
@@ -6800,7 +6045,7 @@
           ]
         },
         {
-          "comment": "opcodes: (tdfir_dry): (0 to 100 loops)",
+          "comment": "opcodes: (tdfir_dry): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(tdfir_dry)\\b",
           "beginCaptures": {
@@ -6816,7 +6061,7 @@
           ]
         },
         {
-          "comment": "opcodes: (tdfir_gain): (0 to 100 loops)",
+          "comment": "opcodes: (tdfir_gain): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(tdfir_gain)\\b",
           "beginCaptures": {
@@ -6832,7 +6077,7 @@
           ]
         },
         {
-          "comment": "opcodes: (tdfir_impulse): (undefined to undefined loops)",
+          "comment": "opcodes: (tdfir_impulse): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(tdfir_impulse)\\b",
           "beginCaptures": {
@@ -6840,15 +6085,10 @@
               "name": "variable.language.effects.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (tdfir_wet): (0 to 100 loops)",
+          "comment": "opcodes: (tdfir_wet): (0 to 100 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(tdfir_wet)\\b",
           "beginCaptures": {
@@ -6936,7 +6176,7 @@
     "cakewalk_loading": {
       "patterns": [
         {
-          "comment": "opcodes: (image): (undefined to undefined loops)",
+          "comment": "opcodes: (image): (any string)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(image)\\b",
           "beginCaptures": {
@@ -6944,15 +6184,10 @@
               "name": "variable.language.loading.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#string_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (load_end): (undefined to undefined loops)",
+          "comment": "opcodes: (load_end): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(load_end)\\b",
           "beginCaptures": {
@@ -6960,15 +6195,10 @@
               "name": "variable.language.loading.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (load_mode): (0 to 1 loops)",
+          "comment": "opcodes: (load_mode): (0 to 1 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(load_mode)\\b",
           "beginCaptures": {
@@ -6984,7 +6214,7 @@
           ]
         },
         {
-          "comment": "opcodes: (load_start): (undefined to undefined loops)",
+          "comment": "opcodes: (load_start): (any integer)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(load_start)\\b",
           "beginCaptures": {
@@ -6992,15 +6222,10 @@
               "name": "variable.language.loading.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (sample_quality): (1 to 10 loops)",
+          "comment": "opcodes: (sample_quality): (1 to 10 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sample_quality)\\b",
           "beginCaptures": {
@@ -7036,7 +6261,7 @@
           ]
         },
         {
-          "comment": "opcodes: (oscillator_detune): (undefined to undefined loops)",
+          "comment": "opcodes: (oscillator_detune): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator_detune)\\b",
           "beginCaptures": {
@@ -7044,15 +6269,10 @@
               "name": "variable.language.wavetable-oscillator.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (oscillator_mod_depth): (undefined to undefined loops)",
+          "comment": "opcodes: (oscillator_mod_depth): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator_mod_depth)\\b",
           "beginCaptures": {
@@ -7060,15 +6280,10 @@
               "name": "variable.language.wavetable-oscillator.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (oscillator_mode): (0 to 2 loops)",
+          "comment": "opcodes: (oscillator_mode): (0 to 2 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator_mode)\\b",
           "beginCaptures": {
@@ -7084,7 +6299,7 @@
           ]
         },
         {
-          "comment": "opcodes: (oscillator_multi): (1 to 9 loops)",
+          "comment": "opcodes: (oscillator_multi): (1 to 9 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator_multi)\\b",
           "beginCaptures": {
@@ -7116,7 +6331,7 @@
           ]
         },
         {
-          "comment": "opcodes: (oscillator_quality): (0 to 3 loops)",
+          "comment": "opcodes: (oscillator_quality): (0 to 3 undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator_quality)\\b",
           "beginCaptures": {
@@ -7132,7 +6347,7 @@
           ]
         },
         {
-          "comment": "opcodes: (oscillator_table_size): (undefined to undefined loops)",
+          "comment": "opcodes: (oscillator_table_size): (any undefined)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator_table_size)\\b",
           "beginCaptures": {
@@ -7140,12 +6355,7 @@
               "name": "variable.language.wavetable-oscillator.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#undefined_undefined-undefined"
-            }
-          ]
+          "end": "\\s|$"
         }
       ]
     }
