@@ -107,7 +107,7 @@
         {
           "comment": "Headers",
           "name": "meta.structure.header.$2.start.sfz",
-          "match": "(<)(control|global|master|group|region|curve|effect|midi)(>)",
+          "match": "(<)(control|curve|effect|global|group|master|midi|region)(>)",
           "captures": {
             "1": {
               "name": "punctuation.definition.tag.begin.sfz"
@@ -123,7 +123,7 @@
         {
           "comment": "Non-compliant headers",
           "name": "invalid.sfz",
-          "match": "<.*(?!(control|global|master|group|region|curve|effect|midi))>"
+          "match": "<.*(?!(control|curve|effect|global|group|master|midi|region))>"
         }
       ]
     },

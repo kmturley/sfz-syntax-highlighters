@@ -101,7 +101,7 @@
     <patterns>
       <comment>Headers</comment>
       <name>meta.structure.header.$2.start.sfz</name>
-      <match>(&lt;)(control|global|master|group|region|curve|effect|midi)(&gt;)</match>
+      <match>(&lt;)(control|curve|effect|global|group|master|midi|region)(&gt;)</match>
       <captures>
         <1>
           <name>punctuation.definition.tag.begin.sfz</name>
@@ -117,7 +117,7 @@
     <patterns>
       <comment>Non-compliant headers</comment>
       <name>invalid.sfz</name>
-      <match>&lt;.*(?!(control|global|master|group|region|curve|effect|midi))&gt;</match>
+      <match>&lt;.*(?!(control|curve|effect|global|group|master|midi|region))&gt;</match>
     </patterns>
   </headers>
   <sfz1_sound-source>

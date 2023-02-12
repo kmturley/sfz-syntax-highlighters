@@ -101,7 +101,7 @@
     <patterns>
       <comment>Headers</comment>
       <name>meta.structure.header.$2.start.sfz</name>
-      <match>(&lt;)(region|group|control|global|curve|effect|master|midi|sample)(&gt;)</match>
+      <match>(&lt;)(control|curve|effect|global|group|master|midi|region|sample)(&gt;)</match>
       <captures>
         <1>
           <name>punctuation.definition.tag.begin.sfz</name>
@@ -117,7 +117,7 @@
     <patterns>
       <comment>Non-compliant headers</comment>
       <name>invalid.sfz</name>
-      <match>&lt;.*(?!(region|group|control|global|curve|effect|master|midi|sample))&gt;</match>
+      <match>&lt;.*(?!(control|curve|effect|global|group|master|midi|region|sample))&gt;</match>
     </patterns>
   </headers>
   <sfz1_sound-source>
@@ -350,9 +350,37 @@
   </sfz1_instrument-settings>
   <sfz1_region-logic>
     <patterns>
-      <comment>opcodes: (key): (0 to 127 loops)</comment>
+      <comment>opcodes: (hibend): (-8192 to 8192 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(key)\b</begin>
+      <begin>\b(hibend)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_-8192-8192</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (hibpm): (0 to 500 bpm)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(hibpm)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-500</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (hiccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(hiccN)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -364,9 +392,23 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lokey): (0 to 127 loops)</comment>
+      <comment>opcodes: (hichan): (1 to 16 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lokey)\b</begin>
+      <begin>\b(hichan)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-16</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (hichanaft): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(hichanaft)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -392,9 +434,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lovel): (1 to 127 loops)</comment>
+      <comment>opcodes: (hipolyaft): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lovel)\b</begin>
+      <begin>\b(hipolyaft)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -402,7 +444,21 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_1-127</include>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (hirand): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(hirand)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
       </patterns>
     </patterns>
     <patterns>
@@ -420,51 +476,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lochan): (1 to 16 loops)</comment>
+      <comment>opcodes: (key): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lochan)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-16</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hichan): (1 to 16 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hichan)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-16</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (loccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(loccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hiccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hiccN)\b</begin>
+      <begin>\b(key)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -490,9 +504,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hibend): (-8192 to 8192 loops)</comment>
+      <comment>opcodes: (lobpm): (0 to 500 bpm)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(hibend)\b</begin>
+      <begin>\b(lobpm)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -500,13 +514,167 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_-8192-8192</include>
+        <include>#float_0-500</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_lokey): (0 to 127 loops)</comment>
+      <comment>opcodes: (loccN): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(sw_lokey)\b</begin>
+      <begin>\b(loccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lochan): (1 to 16 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lochan)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-16</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lochanaft): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lochanaft)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lokey): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lokey)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lopolyaft): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lopolyaft)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lorand): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lorand)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lovel): (1 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lovel)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (on_hiccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(on_hiccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (on_loccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(on_loccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (seq_length): (1 to 100 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(seq_length)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (seq_position): (1 to 100 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(seq_position)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (sw_down): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(sw_down)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -546,23 +714,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_down): (0 to 127 loops)</comment>
+      <comment>opcodes: (sw_lokey): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(sw_down)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (sw_up): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(sw_up)\b</begin>
+      <begin>\b(sw_lokey)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -588,6 +742,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (sw_up): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(sw_up)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (sw_vel): (current|previous)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_vel)\b</begin>
@@ -599,146 +767,6 @@
       <end>\s|$</end>
       <patterns>
         <include>#string_sw_vel</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lobpm): (0 to 500 bpm)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lobpm)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-500</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hibpm): (0 to 500 bpm)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hibpm)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-500</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lochanaft): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lochanaft)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hichanaft): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hichanaft)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lopolyaft): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lopolyaft)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hipolyaft): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hipolyaft)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lorand): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lorand)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hirand): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hirand)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (seq_length): (1 to 100 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(seq_length)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (seq_position): (1 to 100 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(seq_position)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-100</include>
       </patterns>
     </patterns>
     <patterns>
@@ -755,92 +783,8 @@
         <include>#string_trigger</include>
       </patterns>
     </patterns>
-    <patterns>
-      <comment>opcodes: (on_loccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(on_loccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (on_hiccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(on_hiccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
   </sfz1_region-logic>
   <sfz1_performance-parameters>
-    <patterns>
-      <comment>opcodes: (pan): (-100 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(pan)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-100-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (position): (-100 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(position)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-100-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (volume): (-144 to 6 dB)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(volume)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-144-6</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (width): (-100 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(width)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-100-100</include>
-      </patterns>
-    </patterns>
     <patterns>
       <comment>opcodes: (amp_keycenter): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
@@ -870,9 +814,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (amp_veltrack): (-100 to 100 %)</comment>
+      <comment>opcodes: (amp_random): (0 to 24 dB)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(amp_veltrack)\b</begin>
+      <begin>\b(amp_random)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -880,7 +824,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_-100-100</include>
+        <include>#float_0-24</include>
       </patterns>
     </patterns>
     <patterns>
@@ -898,9 +842,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (amp_random): (0 to 24 dB)</comment>
+      <comment>opcodes: (amp_veltrack): (-100 to 100 %)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(amp_random)\b</begin>
+      <begin>\b(amp_veltrack)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -908,13 +852,13 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_0-24</include>
+        <include>#float_-100-100</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (rt_decay): (0 to 200 dB)</comment>
+      <comment>opcodes: (bend_down): (-9600 to 9600 cents)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(rt_decay)\b</begin>
+      <begin>\b(bend_down)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -922,13 +866,13 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_0-200</include>
+        <include>#integer_-9600-9600</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xf_cccurve): (gain|power)</comment>
+      <comment>opcodes: (bend_step): (1 to 1200 cents)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xf_cccurve)\b</begin>
+      <begin>\b(bend_step)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -936,13 +880,13 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#string_xf_cccurve</include>
+        <include>#integer_1-1200</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xf_keycurve): (gain|power)</comment>
+      <comment>opcodes: (bend_up): (-9600 to 9600 cents)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xf_keycurve)\b</begin>
+      <begin>\b(bend_up)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -950,13 +894,13 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#string_xf_keycurve</include>
+        <include>#integer_-9600-9600</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xf_velcurve): (gain|power)</comment>
+      <comment>opcodes: (cutoff): (0 to SampleRate / 2 Hz)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xf_velcurve)\b</begin>
+      <begin>\b(cutoff)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -964,175 +908,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#string_xf_velcurve</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfin_loccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_loccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfin_hiccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_hiccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfout_loccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_loccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfout_hiccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_hiccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfin_lokey): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_lokey)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfin_hikey): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_hikey)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfout_lokey): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_lokey)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfout_hikey): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_hikey)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfin_lovel): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_lovel)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfin_hivel): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_hivel)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfout_lovel): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_lovel)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (xfout_hivel): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_hivel)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
+        <include>#float_0-SampleRate / 2</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1175,20 +951,6 @@
       <end>\s|$</end>
       <patterns>
         <include>#float_-96-24</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (cutoff): (0 to SampleRate / 2 Hz)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(cutoff)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-SampleRate / 2</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1262,9 +1024,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (resonance): (0 to 40 dB)</comment>
+      <comment>opcodes: (pan): (-100 to 100 %)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(resonance)\b</begin>
+      <begin>\b(pan)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -1272,63 +1034,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_0-40</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (bend_up): (-9600 to 9600 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(bend_up)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_-9600-9600</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (bend_down): (-9600 to 9600 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(bend_down)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_-9600-9600</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (bend_step): (1 to 1200 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(bend_step)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-1200</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (tune): (-100 to 100 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(tune)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_-100-100</include>
+        <include>#float_-100-100</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1388,6 +1094,48 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (position): (-100 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(position)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (resonance): (0 to 40 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(resonance)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-40</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (rt_decay): (0 to 200 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(rt_decay)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-200</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (transpose): (-127 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(transpose)\b</begin>
@@ -1399,6 +1147,258 @@
       <end>\s|$</end>
       <patterns>
         <include>#integer_-127-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (tune): (-100 to 100 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(tune)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (volume): (-144 to 6 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(volume)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-144-6</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (width): (-100 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(width)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xf_cccurve): (gain|power)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xf_cccurve)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_xf_cccurve</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xf_keycurve): (gain|power)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xf_keycurve)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_xf_keycurve</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xf_velcurve): (gain|power)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xf_velcurve)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_xf_velcurve</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfin_hiccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfin_hiccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfin_hikey): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfin_hikey)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfin_hivel): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfin_hivel)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfin_loccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfin_loccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfin_lokey): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfin_lokey)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfin_lovel): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfin_lovel)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfout_hiccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfout_hiccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfout_hikey): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfout_hikey)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfout_hivel): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfout_hivel)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfout_loccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfout_loccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfout_lokey): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfout_lokey)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (xfout_lovel): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(xfout_lovel)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
   </sfz1_performance-parameters>
@@ -1474,6 +1474,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (ampeg_start): (0 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(ampeg_start)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (ampeg_sustain): (0 to 100 %)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_sustain)\b</begin>
@@ -1488,9 +1502,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_start): (0 to 100 %)</comment>
+      <comment>opcodes: (amplfo_delay): (0 to 100 seconds)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(ampeg_start)\b</begin>
+      <begin>\b(amplfo_delay)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -1499,6 +1513,48 @@
       <end>\s|$</end>
       <patterns>
         <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (amplfo_depth): (-10 to 10 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(amplfo_depth)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-10-10</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (amplfo_fade): (0 to 100 seconds)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(amplfo_fade)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (amplfo_freq): (0 to 20 Hz)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(amplfo_freq)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-20</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1614,6 +1670,62 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (fillfo_delay): (0 to 100 seconds)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(fillfo_delay)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (fillfo_depth): (-1200 to 1200 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(fillfo_depth)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-1200-1200</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (fillfo_fade): (0 to 100 seconds)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(fillfo_fade)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (fillfo_freq): (0 to 20 Hz)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(fillfo_freq)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-20</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (pitcheg_attack): (0 to 100 seconds)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_attack)\b</begin>
@@ -1726,118 +1838,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (amplfo_delay): (0 to 100 seconds)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(amplfo_delay)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (amplfo_depth): (-10 to 10 dB)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(amplfo_depth)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-10-10</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (amplfo_fade): (0 to 100 seconds)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(amplfo_fade)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (amplfo_freq): (0 to 20 Hz)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(amplfo_freq)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-20</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (fillfo_delay): (0 to 100 seconds)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(fillfo_delay)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (fillfo_depth): (-1200 to 1200 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(fillfo_depth)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-1200-1200</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (fillfo_fade): (0 to 100 seconds)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(fillfo_fade)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (fillfo_freq): (0 to 20 Hz)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(fillfo_freq)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-20</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (pitchlfo_delay): (0 to 100 seconds)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitchlfo_delay)\b</begin>
@@ -1928,6 +1928,20 @@
   </sfz2_directives>
   <sfz2_sound-source>
     <patterns>
+      <comment>opcodes: (delay_beats): (undefined to undefined beats)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(delay_beats)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.sound-source.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (delay_samples): (undefined to undefined sample units)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_samples)\b</begin>
@@ -1939,6 +1953,20 @@
       <end>\s|$</end>
       <patterns>
         <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (direction): (forward|reverse)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(direction)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.sound-source.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_direction</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1984,48 +2012,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_beats): (undefined to undefined beats)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(delay_beats)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.sound-source.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (stop_beats): (undefined to undefined beats)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(stop_beats)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.sound-source.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (direction): (forward|reverse)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(direction)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.sound-source.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_direction</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (md5): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(md5)\b</begin>
@@ -2037,6 +2023,20 @@
       <end>\s|$</end>
       <patterns>
         <include>#string_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (reverse_hiccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(reverse_hiccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.sound-source.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -2054,9 +2054,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverse_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (stop_beats): (undefined to undefined beats)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(reverse_hiccN)\b</begin>
+      <begin>\b(stop_beats)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.sound-source.$1.sfz</name>
@@ -2064,7 +2064,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_0-127</include>
+        <include>#float_undefined-undefined</include>
       </patterns>
     </patterns>
     <patterns>
@@ -2126,48 +2126,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (octave_offset): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(octave_offset)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (set_ccN): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(set_ccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-127</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (polyphony): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(polyphony)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (note_polyphony): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(note_polyphony)\b</begin>
@@ -2196,6 +2154,34 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (octave_offset): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(octave_offset)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (polyphony): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(polyphony)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (rt_dead): (on|off)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(rt_dead)\b</begin>
@@ -2209,43 +2195,13 @@
         <include>#string_rt_dead</include>
       </patterns>
     </patterns>
-  </sfz2_instrument-settings>
-  <sfz2_region-logic>
     <patterns>
-      <comment>opcodes: (sostenuto_sw): (on|off)</comment>
+      <comment>opcodes: (set_ccN): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(sostenuto_sw)\b</begin>
+      <begin>\b(set_ccN)\b</begin>
       <beginCaptures>
         <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_sostenuto_sw</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (sustain_sw): (on|off)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(sustain_sw)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_sustain_sw</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (loprog): (0 to 127 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(loprog)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
+          <name>variable.language.instrument-settings.$1.sfz</name>
         </1>
       </beginCaptures>
       <end>\s|$</end>
@@ -2253,6 +2209,8 @@
         <include>#integer_0-127</include>
       </patterns>
     </patterns>
+  </sfz2_instrument-settings>
+  <sfz2_region-logic>
     <patterns>
       <comment>opcodes: (hiprog): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
@@ -2268,9 +2226,23 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_default): (0 to 127 loops)</comment>
+      <comment>opcodes: (hitimer): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(sw_default)\b</begin>
+      <begin>\b(hitimer)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (loprog): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(loprog)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -2296,9 +2268,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hitimer): (undefined to undefined loops)</comment>
+      <comment>opcodes: (sostenuto_sw): (on|off)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(hitimer)\b</begin>
+      <begin>\b(sostenuto_sw)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -2306,7 +2278,21 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_undefined-undefined</include>
+        <include>#string_sostenuto_sw</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (stop_hiccN): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(stop_hiccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -2324,9 +2310,23 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_hiccN): (0 to 127 loops)</comment>
+      <comment>opcodes: (sustain_sw): (on|off)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(stop_hiccN)\b</begin>
+      <begin>\b(sustain_sw)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_sustain_sw</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (sw_default): (0 to 127 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(sw_default)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -2340,9 +2340,9 @@
   </sfz2_region-logic>
   <sfz2_performance-parameters>
     <patterns>
-      <comment>opcodes: (phase): (normal|invert)</comment>
+      <comment>opcodes: (bend_smooth): (0 to undefined ms)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(phase)\b</begin>
+      <begin>\b(bend_smooth)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -2350,7 +2350,49 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#string_phase</include>
+        <include>#float_0-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (bend_stepdown): (1 to 1200 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(bend_stepdown)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-1200</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (bend_stepup): (1 to 1200 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(bend_stepup)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_1-1200</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (eqN_type): (peak|lshelf|hshelf)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(eqN_type)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_eqN_type</include>
       </patterns>
     </patterns>
     <patterns>
@@ -2396,9 +2438,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eqN_type): (peak|lshelf|hshelf)</comment>
+      <comment>opcodes: (phase): (normal|invert)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_type)\b</begin>
+      <begin>\b(phase)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -2406,179 +2448,11 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#string_eqN_type</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (bend_smooth): (0 to undefined ms)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(bend_smooth)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (bend_stepup): (1 to 1200 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(bend_stepup)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-1200</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (bend_stepdown): (1 to 1200 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(bend_stepdown)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_1-1200</include>
+        <include>#string_phase</include>
       </patterns>
     </patterns>
   </sfz2_performance-parameters>
   <sfz2_modulation>
-    <patterns>
-      <comment>opcodes: (egN_points): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_points)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_timeX): (undefined to undefined seconds)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_timeX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_levelX): (-1 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_levelX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-1-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_shapeX): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_shapeX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_curveX): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_curveX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_sustain): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_sustain)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_loop): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_loop)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_loop_count): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_loop_count)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_volume): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_volume)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
     <patterns>
       <comment>opcodes: (egN_amplitude): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
@@ -2594,93 +2468,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pan): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_curveX): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_pan)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_width): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_width)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_pan_curve): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_pan_curve)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_freq_lfoX): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_freq_lfoX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_depth_lfoX): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_depth_lfoX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_depthadd_lfoX): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_depthadd_lfoX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_pitch): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_pitch)\b</begin>
+      <begin>\b(egN_curveX)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2720,6 +2510,188 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (egN_depth_lfoX): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_depth_lfoX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_depthadd_lfoX): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_depthadd_lfoX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_eqXbw): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_eqXbw)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_eqXfreq): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_eqXfreq)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_eqXgain): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_eqXgain)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_freq_lfoX): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_freq_lfoX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_levelX): (-1 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_levelX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-1-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_loop): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_loop)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_loop_count): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_loop_count)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_pan): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_pan)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_pan_curve): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_pan_curve)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_pitch): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_pitch)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_points): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_points)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (egN_resonance): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_resonance)\b</begin>
@@ -2748,51 +2720,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXfreq): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_shapeX): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_eqXfreq)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_eqXbw): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_eqXbw)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_eqXgain): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_eqXgain)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_freq): (undefined to undefined Hz)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_freq)\b</begin>
+      <begin>\b(egN_shapeX)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2804,107 +2734,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_delay): (undefined to undefined seconds)</comment>
+      <comment>opcodes: (egN_sustain): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_delay)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_fade): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_fade)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_phase): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_phase)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_count): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_count)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_wave): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_wave)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_steps): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_steps)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_stepX): (-100 to 100 percent)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_stepX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-100-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_smooth): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_smooth)\b</begin>
+      <begin>\b(egN_sustain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2916,9 +2748,37 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_volume): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_timeX): (undefined to undefined seconds)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_volume)\b</begin>
+      <begin>\b(egN_timeX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_volume): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_volume)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_width): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_width)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2944,9 +2804,23 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_pan): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_count): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_pan)\b</begin>
+      <begin>\b(lfoN_count)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_cutoff): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_cutoff)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2958,9 +2832,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_width): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_delay): (undefined to undefined seconds)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_width)\b</begin>
+      <begin>\b(lfoN_delay)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2968,21 +2842,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_freq_lfoX): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_freq_lfoX)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
+        <include>#float_undefined-undefined</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3014,37 +2874,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_pitch): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_eqXbw): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_pitch)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_cutoff): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_cutoff)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_resonance): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_resonance)\b</begin>
+      <begin>\b(lfoN_eqXbw)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3070,9 +2902,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXbw): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_eqXgain): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_eqXbw)\b</begin>
+      <begin>\b(lfoN_eqXgain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3084,9 +2916,177 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXgain): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_fade): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_eqXgain)\b</begin>
+      <begin>\b(lfoN_fade)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_freq): (undefined to undefined Hz)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_freq)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_freq_lfoX): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_freq_lfoX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_pan): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_pan)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_phase): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_phase)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_pitch): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_pitch)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_resonance): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_resonance)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_smooth): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_smooth)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_steps): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_steps)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_stepX): (-100 to 100 percent)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_stepX)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_volume): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_volume)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_wave): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_wave)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_width): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_width)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3116,9 +3116,9 @@
   </sfz2_curves>
   <aria_instrument-settings>
     <patterns>
-      <comment>opcodes: (label_ccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (*_mod): (add|mult)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(label_ccN)\b</begin>
+      <begin>\b(*_mod)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -3126,7 +3126,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#string_undefined-undefined</include>
+        <include>#string_*_mod</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3144,93 +3144,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hint_*): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hint_*)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (*_mod): (add|mult)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(*_mod)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_*_mod</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (set_hdccN): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(set_hdccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (sw_note_offset): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(sw_note_offset)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (sw_octave_offset): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(sw_octave_offset)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (global_label): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(global_label)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.instrument-settings.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (master_label): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(master_label)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -3256,9 +3172,23 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (region_label): (undefined to undefined loops)</comment>
+      <comment>opcodes: (hint_*): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(region_label)\b</begin>
+      <begin>\b(hint_*)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (label_ccN): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(label_ccN)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -3270,9 +3200,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (polyphony_stealing): (undefined to undefined loops)</comment>
+      <comment>opcodes: (master_label): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(polyphony_stealing)\b</begin>
+      <begin>\b(master_label)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -3280,7 +3210,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_undefined-undefined</include>
+        <include>#string_undefined-undefined</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3325,8 +3255,134 @@
         <include>#float_undefined-undefined</include>
       </patterns>
     </patterns>
+    <patterns>
+      <comment>opcodes: (polyphony_stealing): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(polyphony_stealing)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (region_label): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(region_label)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (set_hdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(set_hdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (sw_note_offset): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(sw_note_offset)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (sw_octave_offset): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(sw_octave_offset)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.instrument-settings.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
   </aria_instrument-settings>
   <aria_region-logic>
+    <patterns>
+      <comment>opcodes: (hihdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(hihdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lohdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lohdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (on_hihdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(on_hihdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (on_lohdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(on_lohdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
     <patterns>
       <comment>opcodes: (sostenuto_cc): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
@@ -3353,6 +3409,34 @@
       <end>\s|$</end>
       <patterns>
         <include>#float_0-127</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (stop_hihdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(stop_hihdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (stop_lohdccN): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(stop_lohdccN)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.region-logic.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-1</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3384,9 +3468,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lohdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (sw_hilast): (0 to 127 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lohdccN)\b</begin>
+      <begin>\b(sw_hilast)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3394,21 +3478,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (hihdccN): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(hihdccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3440,9 +3510,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_hilast): (0 to 127 loops)</comment>
+      <comment>opcodes: (varNN_*): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(sw_hilast)\b</begin>
+      <begin>\b(varNN_*)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3450,7 +3520,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_0-127</include>
+        <include>#undefined_undefined-undefined</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3467,13 +3537,15 @@
         <include>#string_varNN_mod</include>
       </patterns>
     </patterns>
+  </aria_region-logic>
+  <aria_performance-parameters>
     <patterns>
-      <comment>opcodes: (varNN_*): (undefined to undefined loops)</comment>
+      <comment>opcodes: (amp_veltrack_random): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(varNN_*)\b</begin>
+      <begin>\b(amp_veltrack_random)\b</begin>
       <beginCaptures>
         <1>
-          <name>variable.language.region-logic.$1.sfz</name>
+          <name>variable.language.performance-parameters.$1.sfz</name>
         </1>
       </beginCaptures>
       <end>\s|$</end>
@@ -3482,67 +3554,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_lohdccN): (0 to 1 loops)</comment>
+      <comment>opcodes: (amplitude): (0 to 100 %)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(on_lohdccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (on_hihdccN): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(on_hihdccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (stop_lohdccN): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(stop_lohdccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (stop_hihdccN): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(stop_hihdccN)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.region-logic.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-1</include>
-      </patterns>
-    </patterns>
-  </aria_region-logic>
-  <aria_performance-parameters>
-    <patterns>
-      <comment>opcodes: (pan_random): (-100 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(pan_random)\b</begin>
+      <begin>\b(amplitude)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -3550,13 +3564,181 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_-100-100</include>
+        <include>#float_0-100</include>
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_random): (-100 to 100 %)</comment>
+      <comment>opcodes: (eqN_dynamic): (0 to 1 loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(position_random)\b</begin>
+      <begin>\b(eqN_dynamic)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (fil_gain): (undefined to undefined dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(fil_gain)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (global_amplitude): (0 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(global_amplitude)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (global_tune): (-100 to 100 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(global_tune)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (global_volume): (-144 to 6 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(global_volume)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-144-6</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (group_amplitude): (0 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(group_amplitude)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (group_tune): (-100 to 100 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(group_tune)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (group_volume): (-144 to 6 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(group_volume)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-144-6</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (master_amplitude): (0 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(master_amplitude)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_0-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (master_tune): (-100 to 100 cents)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(master_tune)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (master_volume): (-144 to 6 dB)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(master_volume)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-144-6</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (pan_law): (mma|balance)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(pan_law)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_pan_law</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (pan_random): (-100 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(pan_random)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -3596,6 +3778,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (position_random): (-100 to 100 %)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(position_random)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_-100-100</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (position_veltrack): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_veltrack)\b</begin>
@@ -3610,160 +3806,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (amp_veltrack_random): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(amp_veltrack_random)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (amplitude): (0 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(amplitude)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (global_amplitude): (0 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(global_amplitude)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (master_amplitude): (0 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(master_amplitude)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (group_amplitude): (0 to 100 %)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(group_amplitude)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_0-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (pan_law): (mma|balance)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(pan_law)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_pan_law</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (global_volume): (-144 to 6 dB)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(global_volume)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-144-6</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (master_volume): (-144 to 6 dB)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(master_volume)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-144-6</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (group_volume): (-144 to 6 dB)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(group_volume)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_-144-6</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (eqN_dynamic): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_dynamic)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (fil_gain): (undefined to undefined dB)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(fil_gain)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (resonance_random): (0 to 40 dB)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(resonance_random)\b</begin>
@@ -3775,48 +3817,6 @@
       <end>\s|$</end>
       <patterns>
         <include>#float_0-40</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (group_tune): (-100 to 100 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(group_tune)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_-100-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (master_tune): (-100 to 100 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(master_tune)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_-100-100</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (global_tune): (-100 to 100 cents)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(global_tune)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_-100-100</include>
       </patterns>
     </patterns>
   </aria_performance-parameters>
@@ -3906,6 +3906,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (egN_ampeg): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_ampeg)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (fileg_attack_shape): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_attack_shape)\b</begin>
@@ -3948,6 +3962,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (fileg_dynamic): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(fileg_dynamic)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (fileg_release_shape): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_release_shape)\b</begin>
@@ -3976,9 +4004,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_dynamic): (0 to 1 loops)</comment>
+      <comment>opcodes: (lfoN_offset): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(fileg_dynamic)\b</begin>
+      <begin>\b(lfoN_offset)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3986,7 +4014,35 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#integer_0-1</include>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_ratio): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_ratio)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_scale): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_scale)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
       </patterns>
     </patterns>
     <patterns>
@@ -4032,6 +4088,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (pitcheg_dynamic): (0 to 1 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(pitcheg_dynamic)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-1</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (pitcheg_release_shape): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_release_shape)\b</begin>
@@ -4057,76 +4127,6 @@
       <end>\s|$</end>
       <patterns>
         <include>#integer_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (pitcheg_dynamic): (0 to 1 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(pitcheg_dynamic)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-1</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (egN_ampeg): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_ampeg)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_offset): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_offset)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_ratio): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_ratio)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_scale): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_scale)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
       </patterns>
     </patterns>
   </aria_modulation>
@@ -4306,6 +4306,22 @@
       </patterns>
     </patterns>
   </linuxsampler_real-time-instrument-script>
+  <aria_sound-source>
+    <patterns>
+      <comment>opcodes: (delay_beats_random): (undefined to undefined beats)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(delay_beats_random)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.sound-source.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#float_undefined-undefined</include>
+      </patterns>
+    </patterns>
+  </aria_sound-source>
   <cakewalk_sound-source>
     <patterns>
       <comment>opcodes: (loop_tune): (undefined to undefined cents)</comment>
@@ -4336,22 +4352,6 @@
       </patterns>
     </patterns>
   </cakewalk_sound-source>
-  <aria_sound-source>
-    <patterns>
-      <comment>opcodes: (delay_beats_random): (undefined to undefined beats)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(delay_beats_random)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.sound-source.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#float_undefined-undefined</include>
-      </patterns>
-    </patterns>
-  </aria_sound-source>
   <sfizz_instrument-settings>
     <patterns>
       <comment>opcodes: (label_keyN): (undefined to undefined loops)</comment>
@@ -4384,20 +4384,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (noise_stereo): (on|off)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(noise_stereo)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.performance-parameters.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_noise_stereo</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (noise_level): (-96 to 24 dB)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_level)\b</begin>
@@ -4426,6 +4412,20 @@
       </patterns>
     </patterns>
     <patterns>
+      <comment>opcodes: (noise_stereo): (on|off)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(noise_stereo)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.performance-parameters.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_noise_stereo</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (noise_tone): (0 to 100 loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_tone)\b</begin>
@@ -4442,20 +4442,6 @@
   </cakewalk_performance-parameters>
   <cakewalk_modulation>
     <patterns>
-      <comment>opcodes: (egN_decim): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(egN_decim)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (egN_bitred): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_bitred)\b</begin>
@@ -4470,9 +4456,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_rectify): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_decim): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_rectify)\b</begin>
+      <begin>\b(egN_decim)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4484,9 +4470,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_ringmod): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_driveshape): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_ringmod)\b</begin>
+      <begin>\b(egN_driveshape)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4540,9 +4526,37 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_driveshape): (undefined to undefined loops)</comment>
+      <comment>opcodes: (egN_rectify): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_driveshape)\b</begin>
+      <begin>\b(egN_rectify)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_ringmod): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(egN_ringmod)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (lfoN_bitred): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(lfoN_bitred)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4568,9 +4582,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_bitred): (undefined to undefined loops)</comment>
+      <comment>opcodes: (lfoN_drive): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_bitred)\b</begin>
+      <begin>\b(lfoN_drive)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4613,20 +4627,6 @@
       <comment>opcodes: (lfoN_noisetone): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noisetone)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.modulation.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#undefined_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (lfoN_drive): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_drive)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -5438,9 +5438,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_onccN): (undefined to undefined loops)</comment>
+      <comment>opcodes: (gate_attack): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(gate_onccN)\b</begin>
+      <begin>\b(gate_attack)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -5452,9 +5452,9 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_attack): (undefined to undefined loops)</comment>
+      <comment>opcodes: (gate_onccN): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(gate_attack)\b</begin>
+      <begin>\b(gate_onccN)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -6002,6 +6002,34 @@
   </sfz2_effects>
   <cakewalk_loading>
     <patterns>
+      <comment>opcodes: (image): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(image)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.loading.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#string_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (load_end): (undefined to undefined loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(load_end)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.loading.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
       <comment>opcodes: (load_mode): (0 to 1 loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(load_mode)\b</begin>
@@ -6030,20 +6058,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (load_end): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(load_end)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.loading.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_undefined-undefined</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (sample_quality): (1 to 10 loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sample_quality)\b</begin>
@@ -6055,20 +6069,6 @@
       <end>\s|$</end>
       <patterns>
         <include>#integer_1-10</include>
-      </patterns>
-    </patterns>
-    <patterns>
-      <comment>opcodes: (image): (undefined to undefined loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(image)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.loading.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#string_undefined-undefined</include>
       </patterns>
     </patterns>
   </cakewalk_loading>
@@ -6102,20 +6102,6 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_mode): (0 to 2 loops)</comment>
-      <name>meta.opcode.sfz</name>
-      <begin>\b(oscillator_mode)\b</begin>
-      <beginCaptures>
-        <1>
-          <name>variable.language.wavetable-oscillator.$1.sfz</name>
-        </1>
-      </beginCaptures>
-      <end>\s|$</end>
-      <patterns>
-        <include>#integer_0-2</include>
-      </patterns>
-    </patterns>
-    <patterns>
       <comment>opcodes: (oscillator_mod_depth): (undefined to undefined loops)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_mod_depth)\b</begin>
@@ -6127,6 +6113,20 @@
       <end>\s|$</end>
       <patterns>
         <include>#undefined_undefined-undefined</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (oscillator_mode): (0 to 2 loops)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(oscillator_mode)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.wavetable-oscillator.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-2</include>
       </patterns>
     </patterns>
     <patterns>
