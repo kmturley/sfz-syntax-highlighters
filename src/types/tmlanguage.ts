@@ -107,7 +107,7 @@ export interface PurplePattern {
   begin: string;
   beginCaptures: BeginCaptures;
   end: End;
-  patterns: TmLanguagePattern[];
+  patterns?: TmLanguagePattern[];
 }
 
 export interface BeginCaptures {

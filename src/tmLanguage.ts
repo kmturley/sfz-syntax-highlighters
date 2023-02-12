@@ -4,10 +4,11 @@ import { End, PurpleName, PurplePattern, Repository, TmLanguage } from './types/
 import { fileLoadJson, fileSave, findOpcodes, jsToXml } from './utils';
 
 async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Syntax) {
-  // Get tmLanguage template and update header values
+  // Get tmLanguage template
   const tmLanguageTemplate: TmLanguage = await fileLoadJson('./src/templates/tmLanguage.json');
   fileSave(path, 'tmLanguage-original.json', JSON.stringify(tmLanguageTemplate, null, 2));
   fileSave(path, 'tmLanguage-original.tmLanguage', jsToXml(tmLanguageTemplate));
+
   // Remove template patterns
   Object.keys(tmLanguageTemplate.repository).map((key: string) => {
     if (key === 'comment') return;
@@ -57,12 +58,18 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
           patterns: [],
         };
       }
-      const patternValue: string = opcode.value?.options
-        ? opcode.value?.options.map((option: AliasElement) => option.name).join('|')
-        : `${opcode.value?.min} to ${opcode.value?.max} ${opcode.value?.unit || 'loops'}`;
-      const patternInclude: string = opcode.value?.options
-        ? `#${opcode.value?.type_name}_${opcode.name}`
-        : `#${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
+
+      // Handle different types of values
+      let patternValue: string = `any ${opcode.value?.type_name}`;
+      let patternInclude: string = ``;
+      if (opcode.value?.options !== undefined) {
+        patternValue = opcode.value?.options.map((option: AliasElement) => option.name).join('|');
+        patternInclude = `#${opcode.value?.type_name}_${opcode.name}`;
+      }
+      if (opcode.value?.min !== undefined) {
+        patternValue = `${opcode.value?.min} to ${opcode.value?.max} ${opcode.value?.unit}`;
+        patternInclude = `#${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
+      }
       const pattern: PurplePattern = {
         comment: `opcodes: (${opcode.name}): (${patternValue})`,
         name: PurpleName.MetaOpcodeSfz,
@@ -73,12 +80,14 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
           },
         },
         end: End.S,
-        patterns: [
+      };
+      if (patternInclude.length > 0) {
+        pattern.patterns = [
           {
             include: patternInclude,
           },
-        ],
-      };
+        ];
+      }
       tmLanguageTemplate.repository[opcodeMapId].patterns.push(pattern as any);
     });
   });
