@@ -166,19 +166,19 @@
           },
           "keyword": [
             {
-              "_text": "group"
-            },
-            {
               "_text": "control"
-            },
-            {
-              "_text": "global"
             },
             {
               "_text": "curve"
             },
             {
               "_text": "effect"
+            },
+            {
+              "_text": "global"
+            },
+            {
+              "_text": "group"
             },
             {
               "_text": "master"

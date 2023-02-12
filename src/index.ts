@@ -9,7 +9,7 @@ const OUT_DIR: string = './out';
 async function init() {
   const syntaxYaml: string = await fileLoad('./src/templates/syntax.yml');
   const syntaxFile: Syntax = yamlToJs(syntaxYaml);
-  const headers: string[] = syntaxFile.headers.map((header: Header) => header.name);
+  const headers: string[] = syntaxFile.headers.map((header: Header) => header.name).sort();
 
   // await examples(OUT_DIR);
   await geditConvert(OUT_DIR, headers, syntaxFile);

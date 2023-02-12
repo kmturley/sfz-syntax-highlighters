@@ -41,7 +41,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
   ];
   // Loop through opcode categories and update
   syntaxFile.categories.forEach((category: Category) => {
-    const categoryOpcodes: CategoryOpcode[] = findOpcodes(category);
+    const categoryOpcodes: CategoryOpcode[] = findOpcodes(category).sort((a, b) => a.name.localeCompare(b.name));;
     const categorySlug: string = slugify(category.name, {
       lower: true,
       remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,

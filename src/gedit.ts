@@ -9,9 +9,9 @@ async function geditConvert(path: string, headers: string[], syntaxFile: Syntax)
   fileSave(path, 'gedit-original.lang', jsToXml(geditTemplate));
   geditTemplate.language.definitions.context.forEach((contextItem: DefinitionsContext) => {
     if (contextItem._attributes.id === 'headers-others') {
-      contextItem.keyword = headers.map((header: string) => ({ _text: header }));
+      contextItem.keyword = headers.map((header: string) => ({ _text: header })).sort((a, b) => a._text.localeCompare(b._text));
     } else if (contextItem._attributes.id === 'opcodes') {
-      contextItem.keyword = opcodes.map((opcode: CategoryOpcode) => ({ _text: opcode.name }));
+      contextItem.keyword = opcodes.map((opcode: CategoryOpcode) => ({ _text: opcode.name })).sort((a, b) => a._text.localeCompare(b._text));
     }
   });
   fileSave(path, 'gedit-modified.json', JSON.stringify(geditTemplate, null, 2));
