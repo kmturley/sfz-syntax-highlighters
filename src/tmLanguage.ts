@@ -60,7 +60,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       }
 
       // Handle different types of values
-      let patternValue: string = `any ${opcode.value?.type_name}`;
+      let patternValue: string = opcode.value?.type_name ? `any ${opcode.value?.type_name}` : `none`;
       let patternInclude: string = ``;
       if (opcode.value?.options !== undefined) {
         patternValue = opcode.value?.options.map((option: AliasElement) => option.name).join('|');
