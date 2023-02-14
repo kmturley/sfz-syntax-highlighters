@@ -7,61 +7,88 @@
   <include>#headers</include>
 </patterns>
 <patterns>
-  <include>#sfz1_sound-source</include>
+  <include>#aria_curves</include>
 </patterns>
 <patterns>
-  <include>#sfz1_instrument-settings</include>
-</patterns>
-<patterns>
-  <include>#sfz1_region-logic</include>
-</patterns>
-<patterns>
-  <include>#sfz1_performance-parameters</include>
-</patterns>
-<patterns>
-  <include>#sfz1_modulation</include>
-</patterns>
-<patterns>
-  <include>#sfz1_effects</include>
-</patterns>
-<patterns>
-  <include>#sfz2_directives</include>
-</patterns>
-<patterns>
-  <include>#sfz2_sound-source</include>
-</patterns>
-<patterns>
-  <include>#sfz2_instrument-settings</include>
-</patterns>
-<patterns>
-  <include>#sfz2_region-logic</include>
-</patterns>
-<patterns>
-  <include>#sfz2_performance-parameters</include>
-</patterns>
-<patterns>
-  <include>#sfz2_modulation</include>
-</patterns>
-<patterns>
-  <include>#sfz2_curves</include>
+  <include>#aria_effects</include>
 </patterns>
 <patterns>
   <include>#aria_instrument-settings</include>
 </patterns>
 <patterns>
-  <include>#aria_region-logic</include>
+  <include>#aria_modulation</include>
 </patterns>
 <patterns>
   <include>#aria_performance-parameters</include>
 </patterns>
 <patterns>
-  <include>#aria_modulation</include>
+  <include>#aria_region-logic</include>
 </patterns>
 <patterns>
-  <include>#aria_curves</include>
+  <include>#aria_sound-source</include>
 </patterns>
 <patterns>
-  <include>#aria_effects</include>
+  <include>#cakewalk_effects</include>
+</patterns>
+<patterns>
+  <include>#cakewalk_loading</include>
+</patterns>
+<patterns>
+  <include>#cakewalk_modulation</include>
+</patterns>
+<patterns>
+  <include>#cakewalk_performance-parameters</include>
+</patterns>
+<patterns>
+  <include>#cakewalk_sound-source</include>
+</patterns>
+<patterns>
+  <include>#cakewalk_wavetable-oscillator</include>
+</patterns>
+<patterns>
+  <include>#linuxsampler_real-time-instrument-script</include>
+</patterns>
+<patterns>
+  <include>#sfizz_instrument-settings</include>
+</patterns>
+<patterns>
+  <include>#sfz1_effects</include>
+</patterns>
+<patterns>
+  <include>#sfz1_instrument-settings</include>
+</patterns>
+<patterns>
+  <include>#sfz1_modulation</include>
+</patterns>
+<patterns>
+  <include>#sfz1_performance-parameters</include>
+</patterns>
+<patterns>
+  <include>#sfz1_region-logic</include>
+</patterns>
+<patterns>
+  <include>#sfz1_sound-source</include>
+</patterns>
+<patterns>
+  <include>#sfz2_curves</include>
+</patterns>
+<patterns>
+  <include>#sfz2_effects</include>
+</patterns>
+<patterns>
+  <include>#sfz2_instrument-settings</include>
+</patterns>
+<patterns>
+  <include>#sfz2_modulation</include>
+</patterns>
+<patterns>
+  <include>#sfz2_performance-parameters</include>
+</patterns>
+<patterns>
+  <include>#sfz2_region-logic</include>
+</patterns>
+<patterns>
+  <include>#sfz2_sound-source</include>
 </patterns>
 <repository>
   <comment>
@@ -122,7 +149,7 @@
   </headers>
   <sfz1_sound-source>
     <patterns>
-      <comment>opcodes: (count): (0 to 4294967296 undefined)</comment>
+      <comment>opcodes: (count): (0 to 4294967296)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(count)\b</begin>
       <beginCaptures>
@@ -192,7 +219,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (loop_mode): (no_loop|one_shot|loop_continuous|loop_sustain)</comment>
+      <comment>opcodes: (loop_mode): (no_loop|one_shot|loop_continuous|loop_sustain</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loop_mode)\b</begin>
       <beginCaptures>
@@ -289,7 +316,7 @@
   </sfz1_sound-source>
   <sfz1_instrument-settings>
     <patterns>
-      <comment>opcodes: (group): (-2147483648 to 2147483647 undefined)</comment>
+      <comment>opcodes: (group): (-2147483648 to 2147483647)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(group)\b</begin>
       <beginCaptures>
@@ -303,7 +330,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_by): (-2147483648 to 2147483647 undefined)</comment>
+      <comment>opcodes: (off_by): (-2147483648 to 2147483647)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_by)\b</begin>
       <beginCaptures>
@@ -317,7 +344,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_mode): (fast|normal|time)</comment>
+      <comment>opcodes: (off_mode): (fast|normal|time</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_mode)\b</begin>
       <beginCaptures>
@@ -331,7 +358,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (output): (0 to 1024 undefined)</comment>
+      <comment>opcodes: (output): (0 to 1024)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(output)\b</begin>
       <beginCaptures>
@@ -347,7 +374,7 @@
   </sfz1_instrument-settings>
   <sfz1_region-logic>
     <patterns>
-      <comment>opcodes: (hibend): (-8192 to 8192 undefined)</comment>
+      <comment>opcodes: (hibend): (-8192 to 8192)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hibend)\b</begin>
       <beginCaptures>
@@ -375,7 +402,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hiccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hiccN)\b</begin>
       <beginCaptures>
@@ -389,7 +416,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hichan): (1 to 16 undefined)</comment>
+      <comment>opcodes: (hichan): (1 to 16)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hichan)\b</begin>
       <beginCaptures>
@@ -403,7 +430,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hichanaft): (0 to 127 undefined)</comment>
+      <comment>opcodes: (hichanaft): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hichanaft)\b</begin>
       <beginCaptures>
@@ -417,7 +444,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hikey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (hikey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hikey)\b</begin>
       <beginCaptures>
@@ -431,7 +458,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hipolyaft): (0 to 127 undefined)</comment>
+      <comment>opcodes: (hipolyaft): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hipolyaft)\b</begin>
       <beginCaptures>
@@ -445,7 +472,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hirand): (0 to 1 undefined)</comment>
+      <comment>opcodes: (hirand): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hirand)\b</begin>
       <beginCaptures>
@@ -459,7 +486,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (hivel): (1 to 127 undefined)</comment>
+      <comment>opcodes: (hivel): (1 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hivel)\b</begin>
       <beginCaptures>
@@ -473,7 +500,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (key): (0 to 127 undefined)</comment>
+      <comment>opcodes: (key): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(key)\b</begin>
       <beginCaptures>
@@ -487,7 +514,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lobend): (-8192 to 8192 undefined)</comment>
+      <comment>opcodes: (lobend): (-8192 to 8192)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lobend)\b</begin>
       <beginCaptures>
@@ -515,7 +542,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (loccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loccN)\b</begin>
       <beginCaptures>
@@ -529,7 +556,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lochan): (1 to 16 undefined)</comment>
+      <comment>opcodes: (lochan): (1 to 16)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lochan)\b</begin>
       <beginCaptures>
@@ -543,7 +570,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lochanaft): (0 to 127 undefined)</comment>
+      <comment>opcodes: (lochanaft): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lochanaft)\b</begin>
       <beginCaptures>
@@ -557,7 +584,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lokey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (lokey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lokey)\b</begin>
       <beginCaptures>
@@ -571,7 +598,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lopolyaft): (0 to 127 undefined)</comment>
+      <comment>opcodes: (lopolyaft): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lopolyaft)\b</begin>
       <beginCaptures>
@@ -585,7 +612,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lorand): (0 to 1 undefined)</comment>
+      <comment>opcodes: (lorand): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lorand)\b</begin>
       <beginCaptures>
@@ -599,7 +626,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lovel): (1 to 127 undefined)</comment>
+      <comment>opcodes: (lovel): (1 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lovel)\b</begin>
       <beginCaptures>
@@ -613,7 +640,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_hiccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (on_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_hiccN)\b</begin>
       <beginCaptures>
@@ -627,7 +654,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_loccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (on_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_loccN)\b</begin>
       <beginCaptures>
@@ -641,7 +668,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (seq_length): (1 to 100 undefined)</comment>
+      <comment>opcodes: (seq_length): (1 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(seq_length)\b</begin>
       <beginCaptures>
@@ -655,7 +682,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (seq_position): (1 to 100 undefined)</comment>
+      <comment>opcodes: (seq_position): (1 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(seq_position)\b</begin>
       <beginCaptures>
@@ -669,7 +696,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_down): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_down): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_down)\b</begin>
       <beginCaptures>
@@ -683,7 +710,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_hikey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_hikey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_hikey)\b</begin>
       <beginCaptures>
@@ -697,7 +724,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_last): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_last): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_last)\b</begin>
       <beginCaptures>
@@ -711,7 +738,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_lokey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_lokey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_lokey)\b</begin>
       <beginCaptures>
@@ -725,7 +752,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_previous): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_previous): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_previous)\b</begin>
       <beginCaptures>
@@ -739,7 +766,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_up): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_up): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_up)\b</begin>
       <beginCaptures>
@@ -753,7 +780,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_vel): (current|previous)</comment>
+      <comment>opcodes: (sw_vel): (current|previous</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_vel)\b</begin>
       <beginCaptures>
@@ -767,7 +794,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (trigger): (attack|release|first|legato|release_key)</comment>
+      <comment>opcodes: (trigger): (attack|release|first|legato|release_key</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(trigger)\b</begin>
       <beginCaptures>
@@ -783,7 +810,7 @@
   </sfz1_region-logic>
   <sfz1_performance-parameters>
     <patterns>
-      <comment>opcodes: (amp_keycenter): (0 to 127 undefined)</comment>
+      <comment>opcodes: (amp_keycenter): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(amp_keycenter)\b</begin>
       <beginCaptures>
@@ -825,7 +852,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (amp_velcurve_N): (0 to 1 undefined)</comment>
+      <comment>opcodes: (amp_velcurve_N): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(amp_velcurve_N)\b</begin>
       <beginCaptures>
@@ -951,7 +978,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fil_keycenter): (0 to 127 undefined)</comment>
+      <comment>opcodes: (fil_keycenter): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fil_keycenter)\b</begin>
       <beginCaptures>
@@ -993,7 +1020,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fil_type): (lpf_1p|hpf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|bpf_1p|brf_1p|apf_1p|lpf_2p_sv|hpf_2p_sv|bpf_2p_sv|brf_2p_sv|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink|lsh|hsh|peq)</comment>
+      <comment>opcodes: (fil_type): (lpf_1p|hpf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|bpf_1p|brf_1p|apf_1p|lpf_2p_sv|hpf_2p_sv|bpf_2p_sv|brf_2p_sv|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink|lsh|hsh|peq</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fil_type)\b</begin>
       <beginCaptures>
@@ -1035,7 +1062,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitch_keycenter): (0 to 127 undefined)</comment>
+      <comment>opcodes: (pitch_keycenter): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitch_keycenter)\b</begin>
       <beginCaptures>
@@ -1049,7 +1076,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitch_keytrack): (-1200 to 1200 undefined)</comment>
+      <comment>opcodes: (pitch_keytrack): (-1200 to 1200)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitch_keytrack)\b</begin>
       <beginCaptures>
@@ -1133,7 +1160,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (transpose): (-127 to 127 undefined)</comment>
+      <comment>opcodes: (transpose): (-127 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(transpose)\b</begin>
       <beginCaptures>
@@ -1189,7 +1216,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xf_cccurve): (gain|power)</comment>
+      <comment>opcodes: (xf_cccurve): (gain|power</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xf_cccurve)\b</begin>
       <beginCaptures>
@@ -1203,7 +1230,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xf_keycurve): (gain|power)</comment>
+      <comment>opcodes: (xf_keycurve): (gain|power</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xf_keycurve)\b</begin>
       <beginCaptures>
@@ -1217,7 +1244,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xf_velcurve): (gain|power)</comment>
+      <comment>opcodes: (xf_velcurve): (gain|power</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xf_velcurve)\b</begin>
       <beginCaptures>
@@ -1231,7 +1258,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_hiccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfin_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_hiccN)\b</begin>
       <beginCaptures>
@@ -1245,7 +1272,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_hikey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfin_hikey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_hikey)\b</begin>
       <beginCaptures>
@@ -1259,7 +1286,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_hivel): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfin_hivel): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_hivel)\b</begin>
       <beginCaptures>
@@ -1273,7 +1300,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_loccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfin_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_loccN)\b</begin>
       <beginCaptures>
@@ -1287,7 +1314,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_lokey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfin_lokey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_lokey)\b</begin>
       <beginCaptures>
@@ -1301,7 +1328,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfin_lovel): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfin_lovel): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfin_lovel)\b</begin>
       <beginCaptures>
@@ -1315,7 +1342,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_hiccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfout_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_hiccN)\b</begin>
       <beginCaptures>
@@ -1329,7 +1356,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_hikey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfout_hikey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_hikey)\b</begin>
       <beginCaptures>
@@ -1343,7 +1370,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_hivel): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfout_hivel): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_hivel)\b</begin>
       <beginCaptures>
@@ -1357,7 +1384,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_loccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfout_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_loccN)\b</begin>
       <beginCaptures>
@@ -1371,7 +1398,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_lokey): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfout_lokey): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_lokey)\b</begin>
       <beginCaptures>
@@ -1385,7 +1412,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (xfout_lovel): (0 to 127 undefined)</comment>
+      <comment>opcodes: (xfout_lovel): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(xfout_lovel)\b</begin>
       <beginCaptures>
@@ -1947,7 +1974,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (direction): (forward|reverse)</comment>
+      <comment>opcodes: (direction): (forward|reverse</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(direction)\b</begin>
       <beginCaptures>
@@ -1983,7 +2010,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (loop_type): (forward|backward|alternate)</comment>
+      <comment>opcodes: (loop_type): (forward|backward|alternate</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loop_type)\b</begin>
       <beginCaptures>
@@ -2008,7 +2035,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverse_hiccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (reverse_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverse_hiccN)\b</begin>
       <beginCaptures>
@@ -2022,7 +2049,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverse_loccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (reverse_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverse_loccN)\b</begin>
       <beginCaptures>
@@ -2047,7 +2074,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (waveguide): (on|off)</comment>
+      <comment>opcodes: (waveguide): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(waveguide)\b</begin>
       <beginCaptures>
@@ -2107,7 +2134,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (note_selfmask): (on|off)</comment>
+      <comment>opcodes: (note_selfmask): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(note_selfmask)\b</begin>
       <beginCaptures>
@@ -2143,7 +2170,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (rt_dead): (on|off)</comment>
+      <comment>opcodes: (rt_dead): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(rt_dead)\b</begin>
       <beginCaptures>
@@ -2157,7 +2184,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (set_ccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (set_ccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(set_ccN)\b</begin>
       <beginCaptures>
@@ -2173,7 +2200,7 @@
   </sfz2_instrument-settings>
   <sfz2_region-logic>
     <patterns>
-      <comment>opcodes: (hiprog): (0 to 127 undefined)</comment>
+      <comment>opcodes: (hiprog): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hiprog)\b</begin>
       <beginCaptures>
@@ -2198,7 +2225,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (loprog): (0 to 127 undefined)</comment>
+      <comment>opcodes: (loprog): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(loprog)\b</begin>
       <beginCaptures>
@@ -2223,7 +2250,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (sostenuto_sw): (on|off)</comment>
+      <comment>opcodes: (sostenuto_sw): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sostenuto_sw)\b</begin>
       <beginCaptures>
@@ -2237,7 +2264,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_hiccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (stop_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_hiccN)\b</begin>
       <beginCaptures>
@@ -2251,7 +2278,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_loccN): (0 to 127 undefined)</comment>
+      <comment>opcodes: (stop_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_loccN)\b</begin>
       <beginCaptures>
@@ -2265,7 +2292,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sustain_sw): (on|off)</comment>
+      <comment>opcodes: (sustain_sw): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sustain_sw)\b</begin>
       <beginCaptures>
@@ -2279,7 +2306,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_default): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_default): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_default)\b</begin>
       <beginCaptures>
@@ -2337,7 +2364,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eqN_type): (peak|lshelf|hshelf)</comment>
+      <comment>opcodes: (eqN_type): (peak|lshelf|hshelf</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eqN_type)\b</begin>
       <beginCaptures>
@@ -2351,7 +2378,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pan_keycenter): (0 to 127 undefined)</comment>
+      <comment>opcodes: (pan_keycenter): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pan_keycenter)\b</begin>
       <beginCaptures>
@@ -2393,7 +2420,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phase): (normal|invert)</comment>
+      <comment>opcodes: (phase): (normal|invert</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phase)\b</begin>
       <beginCaptures>
@@ -2409,7 +2436,7 @@
   </sfz2_performance-parameters>
   <sfz2_modulation>
     <patterns>
-      <comment>opcodes: (egN_amplitude): (any undefined)</comment>
+      <comment>opcodes: (egN_amplitude)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_amplitude)\b</begin>
       <beginCaptures>
@@ -2420,7 +2447,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_curveX): (any undefined)</comment>
+      <comment>opcodes: (egN_curveX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_curveX)\b</begin>
       <beginCaptures>
@@ -2431,7 +2458,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_cutoff): (any undefined)</comment>
+      <comment>opcodes: (egN_cutoff)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_cutoff)\b</begin>
       <beginCaptures>
@@ -2442,7 +2469,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_cutoff2): (any undefined)</comment>
+      <comment>opcodes: (egN_cutoff2)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_cutoff2)\b</begin>
       <beginCaptures>
@@ -2453,7 +2480,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_depth_lfoX): (any undefined)</comment>
+      <comment>opcodes: (egN_depth_lfoX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_depth_lfoX)\b</begin>
       <beginCaptures>
@@ -2464,7 +2491,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_depthadd_lfoX): (any undefined)</comment>
+      <comment>opcodes: (egN_depthadd_lfoX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_depthadd_lfoX)\b</begin>
       <beginCaptures>
@@ -2475,7 +2502,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXbw): (any undefined)</comment>
+      <comment>opcodes: (egN_eqXbw)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_eqXbw)\b</begin>
       <beginCaptures>
@@ -2486,7 +2513,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXfreq): (any undefined)</comment>
+      <comment>opcodes: (egN_eqXfreq)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_eqXfreq)\b</begin>
       <beginCaptures>
@@ -2497,7 +2524,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_eqXgain): (any undefined)</comment>
+      <comment>opcodes: (egN_eqXgain)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_eqXgain)\b</begin>
       <beginCaptures>
@@ -2508,7 +2535,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_freq_lfoX): (any undefined)</comment>
+      <comment>opcodes: (egN_freq_lfoX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_freq_lfoX)\b</begin>
       <beginCaptures>
@@ -2519,7 +2546,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_levelX): (-1 to 1 undefined)</comment>
+      <comment>opcodes: (egN_levelX): (-1 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_levelX)\b</begin>
       <beginCaptures>
@@ -2533,7 +2560,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_loop): (any undefined)</comment>
+      <comment>opcodes: (egN_loop)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_loop)\b</begin>
       <beginCaptures>
@@ -2544,7 +2571,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_loop_count): (any undefined)</comment>
+      <comment>opcodes: (egN_loop_count)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_loop_count)\b</begin>
       <beginCaptures>
@@ -2555,7 +2582,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pan): (any undefined)</comment>
+      <comment>opcodes: (egN_pan)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_pan)\b</begin>
       <beginCaptures>
@@ -2566,7 +2593,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pan_curve): (any undefined)</comment>
+      <comment>opcodes: (egN_pan_curve)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_pan_curve)\b</begin>
       <beginCaptures>
@@ -2577,7 +2604,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_pitch): (any undefined)</comment>
+      <comment>opcodes: (egN_pitch)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_pitch)\b</begin>
       <beginCaptures>
@@ -2588,7 +2615,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_points): (any undefined)</comment>
+      <comment>opcodes: (egN_points)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_points)\b</begin>
       <beginCaptures>
@@ -2599,7 +2626,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_resonance): (any undefined)</comment>
+      <comment>opcodes: (egN_resonance)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_resonance)\b</begin>
       <beginCaptures>
@@ -2610,7 +2637,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_resonance2): (any undefined)</comment>
+      <comment>opcodes: (egN_resonance2)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_resonance2)\b</begin>
       <beginCaptures>
@@ -2632,7 +2659,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_sustain): (any undefined)</comment>
+      <comment>opcodes: (egN_sustain)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_sustain)\b</begin>
       <beginCaptures>
@@ -2654,7 +2681,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_volume): (any undefined)</comment>
+      <comment>opcodes: (egN_volume)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_volume)\b</begin>
       <beginCaptures>
@@ -2665,7 +2692,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_width): (any undefined)</comment>
+      <comment>opcodes: (egN_width)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_width)\b</begin>
       <beginCaptures>
@@ -2676,7 +2703,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_amplitude): (any undefined)</comment>
+      <comment>opcodes: (lfoN_amplitude)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_amplitude)\b</begin>
       <beginCaptures>
@@ -2698,7 +2725,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_cutoff): (any undefined)</comment>
+      <comment>opcodes: (lfoN_cutoff)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_cutoff)\b</begin>
       <beginCaptures>
@@ -2720,7 +2747,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_depth_lfoX): (any undefined)</comment>
+      <comment>opcodes: (lfoN_depth_lfoX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_depth_lfoX)\b</begin>
       <beginCaptures>
@@ -2731,7 +2758,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_depthadd_lfoX): (any undefined)</comment>
+      <comment>opcodes: (lfoN_depthadd_lfoX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_depthadd_lfoX)\b</begin>
       <beginCaptures>
@@ -2742,7 +2769,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXbw): (any undefined)</comment>
+      <comment>opcodes: (lfoN_eqXbw)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_eqXbw)\b</begin>
       <beginCaptures>
@@ -2753,7 +2780,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXfreq): (any undefined)</comment>
+      <comment>opcodes: (lfoN_eqXfreq)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_eqXfreq)\b</begin>
       <beginCaptures>
@@ -2764,7 +2791,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_eqXgain): (any undefined)</comment>
+      <comment>opcodes: (lfoN_eqXgain)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_eqXgain)\b</begin>
       <beginCaptures>
@@ -2797,7 +2824,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_freq_lfoX): (any undefined)</comment>
+      <comment>opcodes: (lfoN_freq_lfoX)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_freq_lfoX)\b</begin>
       <beginCaptures>
@@ -2808,7 +2835,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_pan): (any undefined)</comment>
+      <comment>opcodes: (lfoN_pan)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_pan)\b</begin>
       <beginCaptures>
@@ -2819,7 +2846,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_phase): (0 to 1 undefined)</comment>
+      <comment>opcodes: (lfoN_phase): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_phase)\b</begin>
       <beginCaptures>
@@ -2833,7 +2860,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_pitch): (any undefined)</comment>
+      <comment>opcodes: (lfoN_pitch)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_pitch)\b</begin>
       <beginCaptures>
@@ -2844,7 +2871,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_resonance): (any undefined)</comment>
+      <comment>opcodes: (lfoN_resonance)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_resonance)\b</begin>
       <beginCaptures>
@@ -2855,7 +2882,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_smooth): (any undefined)</comment>
+      <comment>opcodes: (lfoN_smooth)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_smooth)\b</begin>
       <beginCaptures>
@@ -2891,7 +2918,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_volume): (any undefined)</comment>
+      <comment>opcodes: (lfoN_volume)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_volume)\b</begin>
       <beginCaptures>
@@ -2913,7 +2940,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_width): (any undefined)</comment>
+      <comment>opcodes: (lfoN_width)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_width)\b</begin>
       <beginCaptures>
@@ -2926,7 +2953,7 @@
   </sfz2_modulation>
   <sfz2_curves>
     <patterns>
-      <comment>opcodes: (vN): (-1 to 1 undefined)</comment>
+      <comment>opcodes: (vN): (-1 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(vN)\b</begin>
       <beginCaptures>
@@ -2942,7 +2969,7 @@
   </sfz2_curves>
   <aria_instrument-settings>
     <patterns>
-      <comment>opcodes: (*_mod): (add|mult)</comment>
+      <comment>opcodes: (*_mod): (add|mult</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(*_mod)\b</begin>
       <beginCaptures>
@@ -2989,7 +3016,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (hint_*): (any undefined)</comment>
+      <comment>opcodes: (hint_*)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hint_*)\b</begin>
       <beginCaptures>
@@ -3022,7 +3049,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (off_curve): (-2 to 10 undefined)</comment>
+      <comment>opcodes: (off_curve): (-2 to 10)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(off_curve)\b</begin>
       <beginCaptures>
@@ -3080,7 +3107,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (set_hdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (set_hdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(set_hdccN)\b</begin>
       <beginCaptures>
@@ -3118,7 +3145,7 @@
   </aria_instrument-settings>
   <aria_region-logic>
     <patterns>
-      <comment>opcodes: (hihdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (hihdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(hihdccN)\b</begin>
       <beginCaptures>
@@ -3132,7 +3159,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (lohdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (lohdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lohdccN)\b</begin>
       <beginCaptures>
@@ -3146,7 +3173,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_hihdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (on_hihdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_hihdccN)\b</begin>
       <beginCaptures>
@@ -3160,7 +3187,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (on_lohdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (on_lohdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(on_lohdccN)\b</begin>
       <beginCaptures>
@@ -3174,7 +3201,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sostenuto_cc): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sostenuto_cc): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sostenuto_cc)\b</begin>
       <beginCaptures>
@@ -3188,7 +3215,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sostenuto_lo): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sostenuto_lo): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sostenuto_lo)\b</begin>
       <beginCaptures>
@@ -3202,7 +3229,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_hihdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (stop_hihdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_hihdccN)\b</begin>
       <beginCaptures>
@@ -3216,7 +3243,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (stop_lohdccN): (0 to 1 undefined)</comment>
+      <comment>opcodes: (stop_lohdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(stop_lohdccN)\b</begin>
       <beginCaptures>
@@ -3230,7 +3257,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sustain_cc): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sustain_cc): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sustain_cc)\b</begin>
       <beginCaptures>
@@ -3244,7 +3271,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sustain_lo): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sustain_lo): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sustain_lo)\b</begin>
       <beginCaptures>
@@ -3258,7 +3285,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_hilast): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_hilast): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_hilast)\b</begin>
       <beginCaptures>
@@ -3283,7 +3310,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (sw_lolast): (0 to 127 undefined)</comment>
+      <comment>opcodes: (sw_lolast): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sw_lolast)\b</begin>
       <beginCaptures>
@@ -3297,7 +3324,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (varNN_*): (any undefined)</comment>
+      <comment>opcodes: (varNN_*)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(varNN_*)\b</begin>
       <beginCaptures>
@@ -3308,7 +3335,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (varNN_mod): (mult|add)</comment>
+      <comment>opcodes: (varNN_mod): (mult|add</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(varNN_mod)\b</begin>
       <beginCaptures>
@@ -3324,7 +3351,7 @@
   </aria_region-logic>
   <aria_performance-parameters>
     <patterns>
-      <comment>opcodes: (amp_veltrack_random): (any undefined)</comment>
+      <comment>opcodes: (amp_veltrack_random)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(amp_veltrack_random)\b</begin>
       <beginCaptures>
@@ -3349,7 +3376,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eqN_dynamic): (0 to 1 undefined)</comment>
+      <comment>opcodes: (eqN_dynamic): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eqN_dynamic)\b</begin>
       <beginCaptures>
@@ -3500,7 +3527,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pan_law): (mma|balance)</comment>
+      <comment>opcodes: (pan_law): (mma|balance</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pan_law)\b</begin>
       <beginCaptures>
@@ -3528,7 +3555,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_keycenter): (any undefined)</comment>
+      <comment>opcodes: (position_keycenter)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_keycenter)\b</begin>
       <beginCaptures>
@@ -3539,7 +3566,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_keytrack): (any undefined)</comment>
+      <comment>opcodes: (position_keytrack)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_keytrack)\b</begin>
       <beginCaptures>
@@ -3564,7 +3591,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (position_veltrack): (any undefined)</comment>
+      <comment>opcodes: (position_veltrack)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(position_veltrack)\b</begin>
       <beginCaptures>
@@ -3613,7 +3640,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_decay_zero): (0 to 1 undefined)</comment>
+      <comment>opcodes: (ampeg_decay_zero): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_decay_zero)\b</begin>
       <beginCaptures>
@@ -3627,7 +3654,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_dynamic): (0 to 1 undefined)</comment>
+      <comment>opcodes: (ampeg_dynamic): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_dynamic)\b</begin>
       <beginCaptures>
@@ -3652,7 +3679,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (ampeg_release_zero): (0 to 1 undefined)</comment>
+      <comment>opcodes: (ampeg_release_zero): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(ampeg_release_zero)\b</begin>
       <beginCaptures>
@@ -3666,7 +3693,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_ampeg): (any undefined)</comment>
+      <comment>opcodes: (egN_ampeg)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_ampeg)\b</begin>
       <beginCaptures>
@@ -3699,7 +3726,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_decay_zero): (0 to 1 undefined)</comment>
+      <comment>opcodes: (fileg_decay_zero): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_decay_zero)\b</begin>
       <beginCaptures>
@@ -3713,7 +3740,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_dynamic): (0 to 1 undefined)</comment>
+      <comment>opcodes: (fileg_dynamic): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_dynamic)\b</begin>
       <beginCaptures>
@@ -3738,7 +3765,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (fileg_release_zero): (0 to 1 undefined)</comment>
+      <comment>opcodes: (fileg_release_zero): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(fileg_release_zero)\b</begin>
       <beginCaptures>
@@ -3807,7 +3834,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_decay_zero): (0 to 1 undefined)</comment>
+      <comment>opcodes: (pitcheg_decay_zero): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_decay_zero)\b</begin>
       <beginCaptures>
@@ -3821,7 +3848,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_dynamic): (0 to 1 undefined)</comment>
+      <comment>opcodes: (pitcheg_dynamic): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_dynamic)\b</begin>
       <beginCaptures>
@@ -3846,7 +3873,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitcheg_release_zero): (0 to 1 undefined)</comment>
+      <comment>opcodes: (pitcheg_release_zero): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitcheg_release_zero)\b</begin>
       <beginCaptures>
@@ -3862,7 +3889,7 @@
   </aria_modulation>
   <aria_curves>
     <patterns>
-      <comment>opcodes: (curve_index): (0 to 255 undefined)</comment>
+      <comment>opcodes: (curve_index): (0 to 255)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(curve_index)\b</begin>
       <beginCaptures>
@@ -4079,7 +4106,7 @@
   </sfizz_instrument-settings>
   <cakewalk_performance-parameters>
     <patterns>
-      <comment>opcodes: (noise_filter): (on|off|lpf_1p|hpf_1p|bpf_1p|brf_1p|apf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink)</comment>
+      <comment>opcodes: (noise_filter): (on|off|lpf_1p|hpf_1p|bpf_1p|brf_1p|apf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_filter)\b</begin>
       <beginCaptures>
@@ -4107,7 +4134,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (noise_step): (0 to 100 undefined)</comment>
+      <comment>opcodes: (noise_step): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_step)\b</begin>
       <beginCaptures>
@@ -4121,7 +4148,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (noise_stereo): (on|off)</comment>
+      <comment>opcodes: (noise_stereo): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_stereo)\b</begin>
       <beginCaptures>
@@ -4135,7 +4162,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (noise_tone): (0 to 100 undefined)</comment>
+      <comment>opcodes: (noise_tone): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(noise_tone)\b</begin>
       <beginCaptures>
@@ -4151,7 +4178,7 @@
   </cakewalk_performance-parameters>
   <cakewalk_modulation>
     <patterns>
-      <comment>opcodes: (egN_bitred): (any undefined)</comment>
+      <comment>opcodes: (egN_bitred)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_bitred)\b</begin>
       <beginCaptures>
@@ -4162,7 +4189,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_decim): (any undefined)</comment>
+      <comment>opcodes: (egN_decim)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_decim)\b</begin>
       <beginCaptures>
@@ -4173,7 +4200,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_driveshape): (any undefined)</comment>
+      <comment>opcodes: (egN_driveshape)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_driveshape)\b</begin>
       <beginCaptures>
@@ -4184,7 +4211,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_noiselevel): (any undefined)</comment>
+      <comment>opcodes: (egN_noiselevel)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_noiselevel)\b</begin>
       <beginCaptures>
@@ -4195,7 +4222,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_noisestep): (any undefined)</comment>
+      <comment>opcodes: (egN_noisestep)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_noisestep)\b</begin>
       <beginCaptures>
@@ -4206,7 +4233,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_noisetone): (any undefined)</comment>
+      <comment>opcodes: (egN_noisetone)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_noisetone)\b</begin>
       <beginCaptures>
@@ -4217,7 +4244,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_rectify): (any undefined)</comment>
+      <comment>opcodes: (egN_rectify)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_rectify)\b</begin>
       <beginCaptures>
@@ -4228,7 +4255,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_ringmod): (any undefined)</comment>
+      <comment>opcodes: (egN_ringmod)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(egN_ringmod)\b</begin>
       <beginCaptures>
@@ -4239,7 +4266,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_bitred): (any undefined)</comment>
+      <comment>opcodes: (lfoN_bitred)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_bitred)\b</begin>
       <beginCaptures>
@@ -4250,7 +4277,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_decim): (any undefined)</comment>
+      <comment>opcodes: (lfoN_decim)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_decim)\b</begin>
       <beginCaptures>
@@ -4261,7 +4288,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_drive): (any undefined)</comment>
+      <comment>opcodes: (lfoN_drive)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_drive)\b</begin>
       <beginCaptures>
@@ -4272,7 +4299,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_noiselevel): (any undefined)</comment>
+      <comment>opcodes: (lfoN_noiselevel)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noiselevel)\b</begin>
       <beginCaptures>
@@ -4283,7 +4310,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_noisestep): (any undefined)</comment>
+      <comment>opcodes: (lfoN_noisestep)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noisestep)\b</begin>
       <beginCaptures>
@@ -4294,7 +4321,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (lfoN_noisetone): (any undefined)</comment>
+      <comment>opcodes: (lfoN_noisetone)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(lfoN_noisetone)\b</begin>
       <beginCaptures>
@@ -4307,7 +4334,7 @@
   </cakewalk_modulation>
   <cakewalk_effects>
     <patterns>
-      <comment>opcodes: (apan_depth): (0 to 100 undefined)</comment>
+      <comment>opcodes: (apan_depth): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_depth)\b</begin>
       <beginCaptures>
@@ -4321,7 +4348,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_dry): (0 to 100 undefined)</comment>
+      <comment>opcodes: (apan_dry): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_dry)\b</begin>
       <beginCaptures>
@@ -4360,7 +4387,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_waveform): (any undefined)</comment>
+      <comment>opcodes: (apan_waveform)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_waveform)\b</begin>
       <beginCaptures>
@@ -4371,7 +4398,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (apan_wet): (0 to 100 undefined)</comment>
+      <comment>opcodes: (apan_wet): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(apan_wet)\b</begin>
       <beginCaptures>
@@ -4385,7 +4412,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (bitred): (0 to 100 undefined)</comment>
+      <comment>opcodes: (bitred): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(bitred)\b</begin>
       <beginCaptures>
@@ -4421,7 +4448,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_gain): (any undefined)</comment>
+      <comment>opcodes: (comp_gain)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_gain)\b</begin>
       <beginCaptures>
@@ -4432,7 +4459,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_ratio): (0 to 100 undefined)</comment>
+      <comment>opcodes: (comp_ratio): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_ratio)\b</begin>
       <beginCaptures>
@@ -4457,7 +4484,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (comp_stlink): (on|off)</comment>
+      <comment>opcodes: (comp_stlink): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(comp_stlink)\b</begin>
       <beginCaptures>
@@ -4482,7 +4509,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (decim): (0 to 100 undefined)</comment>
+      <comment>opcodes: (decim): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(decim)\b</begin>
       <beginCaptures>
@@ -4507,7 +4534,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_damphi): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_damphi): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_damphi)\b</begin>
       <beginCaptures>
@@ -4521,7 +4548,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_damplo): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_damplo): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_damplo)\b</begin>
       <beginCaptures>
@@ -4535,7 +4562,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_dry): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_dry): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_dry)\b</begin>
       <beginCaptures>
@@ -4549,7 +4576,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_feedback): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_feedback): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_feedback)\b</begin>
       <beginCaptures>
@@ -4574,7 +4601,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_input): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_input): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_input)\b</begin>
       <beginCaptures>
@@ -4588,7 +4615,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_levelc): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_levelc): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_levelc)\b</begin>
       <beginCaptures>
@@ -4602,7 +4629,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_levell): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_levell): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_levell)\b</begin>
       <beginCaptures>
@@ -4616,7 +4643,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_levelr): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_levelr): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_levelr)\b</begin>
       <beginCaptures>
@@ -4641,7 +4668,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_moddepth): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_moddepth): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_moddepth)\b</begin>
       <beginCaptures>
@@ -4655,7 +4682,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_mode): (detune|chorus|cross|flanger|lrc|mod|multimod|panning|ping|rlc|stereo|tlcr)</comment>
+      <comment>opcodes: (delay_mode): (detune|chorus|cross|flanger|lrc|mod|multimod|panning|ping|rlc|stereo|tlcr</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_mode)\b</begin>
       <beginCaptures>
@@ -4669,7 +4696,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_panc): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_panc): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_panc)\b</begin>
       <beginCaptures>
@@ -4683,7 +4710,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_panl): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_panl): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_panl)\b</begin>
       <beginCaptures>
@@ -4697,7 +4724,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_panr): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_panr): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_panr)\b</begin>
       <beginCaptures>
@@ -4711,7 +4738,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_resonance): (any undefined)</comment>
+      <comment>opcodes: (delay_resonance)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_resonance)\b</begin>
       <beginCaptures>
@@ -4722,7 +4749,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_spread): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_spread): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_spread)\b</begin>
       <beginCaptures>
@@ -4736,7 +4763,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_syncc_onccN): (any undefined)</comment>
+      <comment>opcodes: (delay_syncc_onccN)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_syncc_onccN)\b</begin>
       <beginCaptures>
@@ -4747,7 +4774,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_syncl_onccN): (any undefined)</comment>
+      <comment>opcodes: (delay_syncl_onccN)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_syncl_onccN)\b</begin>
       <beginCaptures>
@@ -4758,7 +4785,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_syncr_onccN): (any undefined)</comment>
+      <comment>opcodes: (delay_syncr_onccN)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_syncr_onccN)\b</begin>
       <beginCaptures>
@@ -4769,7 +4796,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_time_tap): (any undefined)</comment>
+      <comment>opcodes: (delay_time_tap)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_time_tap)\b</begin>
       <beginCaptures>
@@ -4780,7 +4807,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_timec): (any undefined)</comment>
+      <comment>opcodes: (delay_timec)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_timec)\b</begin>
       <beginCaptures>
@@ -4791,7 +4818,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_timel): (any undefined)</comment>
+      <comment>opcodes: (delay_timel)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_timel)\b</begin>
       <beginCaptures>
@@ -4802,7 +4829,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_timer): (any undefined)</comment>
+      <comment>opcodes: (delay_timer)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_timer)\b</begin>
       <beginCaptures>
@@ -4813,7 +4840,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (delay_wet): (0 to 100 undefined)</comment>
+      <comment>opcodes: (delay_wet): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(delay_wet)\b</begin>
       <beginCaptures>
@@ -4841,7 +4868,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_depth): (0 to 100 undefined)</comment>
+      <comment>opcodes: (disto_depth): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_depth)\b</begin>
       <beginCaptures>
@@ -4855,7 +4882,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_dry): (0 to 100 undefined)</comment>
+      <comment>opcodes: (disto_dry): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_dry)\b</begin>
       <beginCaptures>
@@ -4869,7 +4896,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_stages): (any undefined)</comment>
+      <comment>opcodes: (disto_stages)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_stages)\b</begin>
       <beginCaptures>
@@ -4880,7 +4907,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_tone): (0 to 100 undefined)</comment>
+      <comment>opcodes: (disto_tone): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_tone)\b</begin>
       <beginCaptures>
@@ -4894,7 +4921,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (disto_wet): (0 to 100 undefined)</comment>
+      <comment>opcodes: (disto_wet): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(disto_wet)\b</begin>
       <beginCaptures>
@@ -4908,7 +4935,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (dsp_order): (0 to 14 undefined)</comment>
+      <comment>opcodes: (dsp_order): (0 to 14)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(dsp_order)\b</begin>
       <beginCaptures>
@@ -4922,7 +4949,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_bw): (any undefined)</comment>
+      <comment>opcodes: (eq_bw)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_bw)\b</begin>
       <beginCaptures>
@@ -4933,7 +4960,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_freq): (any undefined)</comment>
+      <comment>opcodes: (eq_freq)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_freq)\b</begin>
       <beginCaptures>
@@ -4944,7 +4971,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_gain): (any undefined)</comment>
+      <comment>opcodes: (eq_gain)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_gain)\b</begin>
       <beginCaptures>
@@ -4955,7 +4982,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (eq_type): (any undefined)</comment>
+      <comment>opcodes: (eq_type)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eq_type)\b</begin>
       <beginCaptures>
@@ -4966,7 +4993,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (filter_cutoff): (any undefined)</comment>
+      <comment>opcodes: (filter_cutoff)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(filter_cutoff)\b</begin>
       <beginCaptures>
@@ -4977,7 +5004,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (filter_resonance): (any undefined)</comment>
+      <comment>opcodes: (filter_resonance)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(filter_resonance)\b</begin>
       <beginCaptures>
@@ -5027,7 +5054,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_attack): (any undefined)</comment>
+      <comment>opcodes: (gate_attack)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_attack)\b</begin>
       <beginCaptures>
@@ -5038,7 +5065,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_onccN): (any undefined)</comment>
+      <comment>opcodes: (gate_onccN)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_onccN)\b</begin>
       <beginCaptures>
@@ -5049,7 +5076,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_release): (any undefined)</comment>
+      <comment>opcodes: (gate_release)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_release)\b</begin>
       <beginCaptures>
@@ -5060,7 +5087,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_stlink): (on|off)</comment>
+      <comment>opcodes: (gate_stlink): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_stlink)\b</begin>
       <beginCaptures>
@@ -5074,7 +5101,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (gate_threshold): (any undefined)</comment>
+      <comment>opcodes: (gate_threshold)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(gate_threshold)\b</begin>
       <beginCaptures>
@@ -5085,7 +5112,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (internal): (on|off)</comment>
+      <comment>opcodes: (internal): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(internal)\b</begin>
       <beginCaptures>
@@ -5099,7 +5126,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_depth): (0 to 100 undefined)</comment>
+      <comment>opcodes: (phaser_depth): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_depth)\b</begin>
       <beginCaptures>
@@ -5113,7 +5140,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_feedback): (0 to 100 undefined)</comment>
+      <comment>opcodes: (phaser_feedback): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_feedback)\b</begin>
       <beginCaptures>
@@ -5138,7 +5165,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_phase_onccN): (0 to 100 undefined)</comment>
+      <comment>opcodes: (phaser_phase_onccN): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_phase_onccN)\b</begin>
       <beginCaptures>
@@ -5152,7 +5179,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_stages): (any undefined)</comment>
+      <comment>opcodes: (phaser_stages)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_stages)\b</begin>
       <beginCaptures>
@@ -5163,7 +5190,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_waveform): (any undefined)</comment>
+      <comment>opcodes: (phaser_waveform)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_waveform)\b</begin>
       <beginCaptures>
@@ -5174,7 +5201,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (phaser_wet): (0 to 100 undefined)</comment>
+      <comment>opcodes: (phaser_wet): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(phaser_wet)\b</begin>
       <beginCaptures>
@@ -5188,7 +5215,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_damp): (0 to 100 undefined)</comment>
+      <comment>opcodes: (reverb_damp): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_damp)\b</begin>
       <beginCaptures>
@@ -5202,7 +5229,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_dry): (0 to 100 undefined)</comment>
+      <comment>opcodes: (reverb_dry): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_dry)\b</begin>
       <beginCaptures>
@@ -5216,7 +5243,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_input): (0 to 100 undefined)</comment>
+      <comment>opcodes: (reverb_input): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_input)\b</begin>
       <beginCaptures>
@@ -5241,7 +5268,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_size): (0 to 100 undefined)</comment>
+      <comment>opcodes: (reverb_size): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_size)\b</begin>
       <beginCaptures>
@@ -5255,7 +5282,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_tone): (0 to 100 undefined)</comment>
+      <comment>opcodes: (reverb_tone): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_tone)\b</begin>
       <beginCaptures>
@@ -5269,7 +5296,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_type): (chamber|large_hall|large_room|mid_hall|mid_room|small_hall|small_room)</comment>
+      <comment>opcodes: (reverb_type): (chamber|large_hall|large_room|mid_hall|mid_room|small_hall|small_room</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_type)\b</begin>
       <beginCaptures>
@@ -5283,7 +5310,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (reverb_wet): (0 to 100 undefined)</comment>
+      <comment>opcodes: (reverb_wet): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(reverb_wet)\b</begin>
       <beginCaptures>
@@ -5297,7 +5324,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_cyclic_level): (0 to 100 undefined)</comment>
+      <comment>opcodes: (static_cyclic_level): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_cyclic_level)\b</begin>
       <beginCaptures>
@@ -5333,7 +5360,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_level): (0 to 100 undefined)</comment>
+      <comment>opcodes: (static_level): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_level)\b</begin>
       <beginCaptures>
@@ -5347,7 +5374,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_random_level): (0 to 100 undefined)</comment>
+      <comment>opcodes: (static_random_level): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_random_level)\b</begin>
       <beginCaptures>
@@ -5383,7 +5410,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_stereo): (any undefined)</comment>
+      <comment>opcodes: (static_stereo)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_stereo)\b</begin>
       <beginCaptures>
@@ -5394,7 +5421,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (static_tone): (0 to 100 undefined)</comment>
+      <comment>opcodes: (static_tone): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(static_tone)\b</begin>
       <beginCaptures>
@@ -5408,7 +5435,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (strings_number): (any undefined)</comment>
+      <comment>opcodes: (strings_number)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(strings_number)\b</begin>
       <beginCaptures>
@@ -5419,7 +5446,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (strings_wet_onccN): (0 to 100 undefined)</comment>
+      <comment>opcodes: (strings_wet_onccN): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(strings_wet_onccN)\b</begin>
       <beginCaptures>
@@ -5433,7 +5460,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_dry): (0 to 100 undefined)</comment>
+      <comment>opcodes: (tdfir_dry): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_dry)\b</begin>
       <beginCaptures>
@@ -5447,7 +5474,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_gain): (0 to 100 undefined)</comment>
+      <comment>opcodes: (tdfir_gain): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_gain)\b</begin>
       <beginCaptures>
@@ -5461,7 +5488,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_impulse): (any undefined)</comment>
+      <comment>opcodes: (tdfir_impulse)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_impulse)\b</begin>
       <beginCaptures>
@@ -5472,7 +5499,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (tdfir_wet): (0 to 100 undefined)</comment>
+      <comment>opcodes: (tdfir_wet): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(tdfir_wet)\b</begin>
       <beginCaptures>
@@ -5488,7 +5515,7 @@
   </cakewalk_effects>
   <sfz2_effects>
     <patterns>
-      <comment>opcodes: (bus): (main|aux1|aux2|aux3|aux4|aux5|aux6|aux7|aux8|fx1|fx2|fx3|fx4|midi)</comment>
+      <comment>opcodes: (bus): (main|aux1|aux2|aux3|aux4|aux5|aux6|aux7|aux8|fx1|fx2|fx3|fx4|midi</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(bus)\b</begin>
       <beginCaptures>
@@ -5530,7 +5557,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (type): (apan|comp|delay|disto|eq|filter|fverb|gate|limiter|lofi|mverb|phaser|static|strings|tdfir|com.mda.Limiter|com.mda.Overdrive|com.mda.Leslie|com.mda.RingMod|com.mda.Delay|com.mda.Bandisto|com.mda.Ambience|com.mda.DubDelay|com.mda.Detune|com.mda.Dither|com.mda.Combo|com.mda.Degrade|com.mda.SubSynth|com.mda.RezFilter)</comment>
+      <comment>opcodes: (type): (apan|comp|delay|disto|eq|filter|fverb|gate|limiter|lofi|mverb|phaser|static|strings|tdfir|com.mda.Limiter|com.mda.Overdrive|com.mda.Leslie|com.mda.RingMod|com.mda.Delay|com.mda.Bandisto|com.mda.Ambience|com.mda.DubDelay|com.mda.Detune|com.mda.Dither|com.mda.Combo|com.mda.Degrade|com.mda.SubSynth|com.mda.RezFilter</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(type)\b</begin>
       <beginCaptures>
@@ -5568,7 +5595,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (load_mode): (0 to 1 undefined)</comment>
+      <comment>opcodes: (load_mode): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(load_mode)\b</begin>
       <beginCaptures>
@@ -5593,7 +5620,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (sample_quality): (1 to 10 undefined)</comment>
+      <comment>opcodes: (sample_quality): (1 to 10)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(sample_quality)\b</begin>
       <beginCaptures>
@@ -5609,7 +5636,7 @@
   </cakewalk_loading>
   <cakewalk_wavetable-oscillator>
     <patterns>
-      <comment>opcodes: (oscillator): (on|off)</comment>
+      <comment>opcodes: (oscillator): (on|off</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator)\b</begin>
       <beginCaptures>
@@ -5623,7 +5650,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_detune): (any undefined)</comment>
+      <comment>opcodes: (oscillator_detune)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_detune)\b</begin>
       <beginCaptures>
@@ -5634,7 +5661,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_mod_depth): (any undefined)</comment>
+      <comment>opcodes: (oscillator_mod_depth)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_mod_depth)\b</begin>
       <beginCaptures>
@@ -5645,7 +5672,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_mode): (0 to 2 undefined)</comment>
+      <comment>opcodes: (oscillator_mode): (0 to 2)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_mode)\b</begin>
       <beginCaptures>
@@ -5659,7 +5686,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_multi): (1 to 9 undefined)</comment>
+      <comment>opcodes: (oscillator_multi): (1 to 9)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_multi)\b</begin>
       <beginCaptures>
@@ -5687,7 +5714,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_quality): (0 to 3 undefined)</comment>
+      <comment>opcodes: (oscillator_quality): (0 to 3)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_quality)\b</begin>
       <beginCaptures>
@@ -5701,7 +5728,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (oscillator_table_size): (any undefined)</comment>
+      <comment>opcodes: (oscillator_table_size)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(oscillator_table_size)\b</begin>
       <beginCaptures>

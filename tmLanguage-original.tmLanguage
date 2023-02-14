@@ -7,61 +7,61 @@
   <include>#headers</include>
 </patterns>
 <patterns>
-  <include>#sfz1_sound-source</include>
+  <include>#aria_curves</include>
 </patterns>
 <patterns>
-  <include>#sfz1_instrument-settings</include>
-</patterns>
-<patterns>
-  <include>#sfz1_region-logic</include>
-</patterns>
-<patterns>
-  <include>#sfz1_performance-parameters</include>
-</patterns>
-<patterns>
-  <include>#sfz1_modulation</include>
-</patterns>
-<patterns>
-  <include>#sfz1_effects</include>
-</patterns>
-<patterns>
-  <include>#sfz2_directives</include>
-</patterns>
-<patterns>
-  <include>#sfz2_sound-source</include>
-</patterns>
-<patterns>
-  <include>#sfz2_instrument-settings</include>
-</patterns>
-<patterns>
-  <include>#sfz2_region-logic</include>
-</patterns>
-<patterns>
-  <include>#sfz2_performance-parameters</include>
-</patterns>
-<patterns>
-  <include>#sfz2_modulation</include>
-</patterns>
-<patterns>
-  <include>#sfz2_curves</include>
+  <include>#aria_effects</include>
 </patterns>
 <patterns>
   <include>#aria_instrument-settings</include>
 </patterns>
 <patterns>
-  <include>#aria_region-logic</include>
+  <include>#aria_modulation</include>
 </patterns>
 <patterns>
   <include>#aria_performance-parameters</include>
 </patterns>
 <patterns>
-  <include>#aria_modulation</include>
+  <include>#aria_region-logic</include>
 </patterns>
 <patterns>
-  <include>#aria_curves</include>
+  <include>#sfz1_effects</include>
 </patterns>
 <patterns>
-  <include>#aria_effects</include>
+  <include>#sfz1_instrument-settings</include>
+</patterns>
+<patterns>
+  <include>#sfz1_modulation</include>
+</patterns>
+<patterns>
+  <include>#sfz1_performance-parameters</include>
+</patterns>
+<patterns>
+  <include>#sfz1_region-logic</include>
+</patterns>
+<patterns>
+  <include>#sfz1_sound-source</include>
+</patterns>
+<patterns>
+  <include>#sfz2_curves</include>
+</patterns>
+<patterns>
+  <include>#sfz2_directives</include>
+</patterns>
+<patterns>
+  <include>#sfz2_instrument-settings</include>
+</patterns>
+<patterns>
+  <include>#sfz2_modulation</include>
+</patterns>
+<patterns>
+  <include>#sfz2_performance-parameters</include>
+</patterns>
+<patterns>
+  <include>#sfz2_region-logic</include>
+</patterns>
+<patterns>
+  <include>#sfz2_sound-source</include>
 </patterns>
 <repository>
   <comment>
