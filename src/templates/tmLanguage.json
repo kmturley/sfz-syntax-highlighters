@@ -9,61 +9,61 @@
       "include": "#headers"
     },
     {
-      "include": "#sfz1_sound-source"
+      "include": "#aria_curves"
     },
     {
-      "include": "#sfz1_instrument-settings"
-    },
-    {
-      "include": "#sfz1_region-logic"
-    },
-    {
-      "include": "#sfz1_performance-parameters"
-    },
-    {
-      "include": "#sfz1_modulation"
-    },
-    {
-      "include": "#sfz1_effects"
-    },
-    {
-      "include": "#sfz2_directives"
-    },
-    {
-      "include": "#sfz2_sound-source"
-    },
-    {
-      "include": "#sfz2_instrument-settings"
-    },
-    {
-      "include": "#sfz2_region-logic"
-    },
-    {
-      "include": "#sfz2_performance-parameters"
-    },
-    {
-      "include": "#sfz2_modulation"
-    },
-    {
-      "include": "#sfz2_curves"
+      "include": "#aria_effects"
     },
     {
       "include": "#aria_instrument-settings"
     },
     {
-      "include": "#aria_region-logic"
+      "include": "#aria_modulation"
     },
     {
       "include": "#aria_performance-parameters"
     },
     {
-      "include": "#aria_modulation"
+      "include": "#aria_region-logic"
     },
     {
-      "include": "#aria_curves"
+      "include": "#sfz1_effects"
     },
     {
-      "include": "#aria_effects"
+      "include": "#sfz1_instrument-settings"
+    },
+    {
+      "include": "#sfz1_modulation"
+    },
+    {
+      "include": "#sfz1_performance-parameters"
+    },
+    {
+      "include": "#sfz1_region-logic"
+    },
+    {
+      "include": "#sfz1_sound-source"
+    },
+    {
+      "include": "#sfz2_curves"
+    },
+    {
+      "include": "#sfz2_directives"
+    },
+    {
+      "include": "#sfz2_instrument-settings"
+    },
+    {
+      "include": "#sfz2_modulation"
+    },
+    {
+      "include": "#sfz2_performance-parameters"
+    },
+    {
+      "include": "#sfz2_region-logic"
+    },
+    {
+      "include": "#sfz2_sound-source"
     }
   ],
   "repository": {

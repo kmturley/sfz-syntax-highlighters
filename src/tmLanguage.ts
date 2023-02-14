@@ -1,6 +1,6 @@
 import slugify from 'slugify';
 import { AliasElement, Category, CategoryOpcode, Syntax } from './types/syntax';
-import { End, PurpleName, PurplePattern, Repository, TmLanguage } from './types/tmlanguage';
+import { End, PurpleName, PurplePattern, Repository, TmLanguage, TmLanguagePattern } from './types/tmlanguage';
 import { fileLoadJson, fileSave, findOpcodes, jsToXml } from './utils';
 
 async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Syntax) {
@@ -41,6 +41,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
     },
   ];
   // Loop through opcode categories and update
+  const opcodeMapIds: string[] = [];
   syntaxFile.categories.forEach((category: Category) => {
     const categoryOpcodes: CategoryOpcode[] = findOpcodes(category).sort((a, b) => a.name.localeCompare(b.name));
     const categorySlug: string = slugify(category.name, {
@@ -53,6 +54,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
         remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
       }).replace('-v', '');
       const opcodeMapId: keyof Repository = `${versionSlug}_${categorySlug}` as keyof Repository;
+      if (!opcodeMapIds.includes(opcodeMapId)) opcodeMapIds.push(opcodeMapId);
       if (!tmLanguageTemplate.repository[opcodeMapId]) {
         tmLanguageTemplate.repository[opcodeMapId] = {
           patterns: [],
@@ -60,18 +62,19 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       }
 
       // Handle different types of values
-      let patternValue: string = opcode.value?.type_name ? `any ${opcode.value?.type_name}` : `none`;
+      let patternValue: string = opcode.value?.type_name ? `: (any ${opcode.value?.type_name})` : ``;
       let patternInclude: string = ``;
       if (opcode.value?.options !== undefined) {
-        patternValue = opcode.value?.options.map((option: AliasElement) => option.name).join('|');
+        patternValue = `: (${opcode.value?.options.map((option: AliasElement) => option.name).join('|')}`;
         patternInclude = `#${opcode.value?.type_name}_${opcode.name}`;
       }
       if (opcode.value?.min !== undefined) {
-        patternValue = `${opcode.value?.min} to ${opcode.value?.max} ${opcode.value?.unit}`;
+        const unit: string = opcode.value?.unit ? ` ${opcode.value?.unit}` : ``;
+        patternValue = `: (${opcode.value?.min} to ${opcode.value?.max}${unit})`;
         patternInclude = `#${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
       }
       const pattern: PurplePattern = {
-        comment: `opcodes: (${opcode.name}): (${patternValue})`,
+        comment: `opcodes: (${opcode.name})${patternValue}`,
         name: PurpleName.MetaOpcodeSfz,
         begin: `\\b(${opcode.name})\\b`,
         beginCaptures: {
@@ -91,6 +94,11 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       tmLanguageTemplate.repository[opcodeMapId].patterns.push(pattern as any);
     });
   });
+  // Update pattern includes
+  tmLanguageTemplate.patterns = opcodeMapIds.sort().map((opcodeMapId: string) => {
+    return { include: `#${opcodeMapId}` };
+  });
+  tmLanguageTemplate.patterns.unshift({ include: '#comment' }, { include: '#headers' });
   fileSave(path, 'tmLanguage-modified.json', JSON.stringify(tmLanguageTemplate, null, 2));
   fileSave(path, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
 }
