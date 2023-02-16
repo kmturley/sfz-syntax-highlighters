@@ -18,7 +18,7 @@ async function geditConvert(path: string, headers: string[], syntaxFile: Syntax)
         .map((header: string) => ({ _text: header }))
         .sort((a, b) => a._text.localeCompare(b._text));
     } else if (contextItem._attributes.id === 'opcodes') {
-      let keywords: Prefix[] = [];
+      const keywords: Prefix[] = [];
       opcodes.forEach((opcode: TypeOpcode) => {
         keywords.push(geditRegEx(opcode.name));
         if (opcode.modulation?.midi_cc) {
