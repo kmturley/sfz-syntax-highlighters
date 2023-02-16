@@ -8,19 +8,19 @@ const URL_SYNTAX: string =
 const URL_TMLANG: string = 'https://raw.githubusercontent.com/jokela/vscode-sfz/master/syntaxes/sfz.tmLanguage.json';
 
 async function examples(path: string) {
-  // Get gedit file and convert to json
+  // Get gedit file, output xml and json versions.
   const geditLang: string = await fileGet(URL_GEDIT);
   fileSave(path, 'gedit.lang', geditLang);
   const geditFile: Gedit = xmlToJs(geditLang);
   fileSave(path, 'gedit.json', JSON.stringify(geditFile, null, 2));
 
-  // Get syntax file and convert to json
+  // Get syntax file, output yaml and json versions.
   const syntaxYaml: string = await fileGet(URL_SYNTAX);
   fileSave(path, 'syntax.yml', syntaxYaml);
   const syntaxFile: Syntax = yamlToJs(syntaxYaml);
   fileSave(path, 'syntax.json', JSON.stringify(syntaxFile, null, 2));
 
-  // Get tmLanguage file
+  // Get tmLanguage file, output json version.
   const tmLanguageFile: any = await fileGetJson(URL_TMLANG);
   fileSave(path, 'tmLanguage.json', JSON.stringify(tmLanguageFile, null, 2));
 }

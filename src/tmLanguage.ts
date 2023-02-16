@@ -1,22 +1,22 @@
 import slugify from 'slugify';
 import { AliasElement, Category, CategoryOpcode, Syntax } from './types/syntax';
-import { End, PurpleName, PurplePattern, Repository, TmLanguage, TmLanguagePattern } from './types/tmlanguage';
+import { End, PurpleName, PurplePattern, Repository, TmLanguage } from './types/tmlanguage';
 import { fileLoadJson, fileSave, findOpcodes, jsToXml } from './utils';
 
 async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Syntax) {
-  // Get tmLanguage template
+  // Get tmLanguage template, output xml and json versions.
   const tmLanguageTemplate: TmLanguage = await fileLoadJson('./src/templates/tmLanguage.json');
   fileSave(path, 'tmLanguage-original.json', JSON.stringify(tmLanguageTemplate, null, 2));
   fileSave(path, 'tmLanguage-original.tmLanguage', jsToXml(tmLanguageTemplate));
 
-  // Remove template patterns
+  // Remove all template patterns.
   Object.keys(tmLanguageTemplate.repository).map((key: string) => {
     if (key === 'comment') return;
     tmLanguageTemplate.repository[key as keyof Repository] = {
       patterns: [],
     };
   });
-  // Update header patterns
+  // Update header patterns using syntax headers.
   tmLanguageTemplate.repository.headers.patterns = [
     {
       comment: 'Headers',
@@ -94,11 +94,14 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       tmLanguageTemplate.repository[opcodeMapId].patterns.push(pattern as any);
     });
   });
-  // Update pattern includes
+
+  // Update pattern includes using map of sections.
   tmLanguageTemplate.patterns = opcodeMapIds.sort().map((opcodeMapId: string) => {
     return { include: `#${opcodeMapId}` };
   });
   tmLanguageTemplate.patterns.unshift({ include: '#comment' }, { include: '#headers' });
+
+  // Save out json and xml versions.
   fileSave(path, 'tmLanguage-modified.json', JSON.stringify(tmLanguageTemplate, null, 2));
   fileSave(path, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
 }
