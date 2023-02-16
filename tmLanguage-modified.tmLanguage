@@ -1076,7 +1076,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (pitch_keytrack): (-1200 to 1200)</comment>
+      <comment>opcodes: (pitch_keytrack): (-1200 to 1200 cents)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(pitch_keytrack)\b</begin>
       <beginCaptures>
@@ -2112,7 +2112,7 @@
       <end>\s|$</end>
     </patterns>
     <patterns>
-      <comment>opcodes: (note_offset): (any integer)</comment>
+      <comment>opcodes: (note_offset): (-127 to 127 semitones)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(note_offset)\b</begin>
       <beginCaptures>
@@ -2121,6 +2121,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
+      <patterns>
+        <include>#integer_-127-127</include>
+      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (note_polyphony): (any integer)</comment>
@@ -2148,7 +2151,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (octave_offset): (any integer)</comment>
+      <comment>opcodes: (octave_offset): (-10 to 10 octaves)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(octave_offset)\b</begin>
       <beginCaptures>
@@ -2157,6 +2160,9 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
+      <patterns>
+        <include>#integer_-10-10</include>
+      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (polyphony): (any integer)</comment>
@@ -3211,7 +3217,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -3267,7 +3273,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#float_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>

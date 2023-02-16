@@ -1220,7 +1220,7 @@
           ]
         },
         {
-          "comment": "opcodes: (pitch_keytrack): (-1200 to 1200)",
+          "comment": "opcodes: (pitch_keytrack): (-1200 to 1200 cents)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pitch_keytrack)\\b",
           "beginCaptures": {
@@ -2399,7 +2399,7 @@
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (note_offset): (any integer)",
+          "comment": "opcodes: (note_offset): (-127 to 127 semitones)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(note_offset)\\b",
           "beginCaptures": {
@@ -2407,7 +2407,12 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$"
+          "end": "\\s|$",
+          "patterns": [
+            {
+              "include": "#integer_-127-127"
+            }
+          ]
         },
         {
           "comment": "opcodes: (note_polyphony): (any integer)",
@@ -2437,7 +2442,7 @@
           ]
         },
         {
-          "comment": "opcodes: (octave_offset): (any integer)",
+          "comment": "opcodes: (octave_offset): (-10 to 10 octaves)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(octave_offset)\\b",
           "beginCaptures": {
@@ -2445,7 +2450,12 @@
               "name": "variable.language.instrument-settings.$1.sfz"
             }
           },
-          "end": "\\s|$"
+          "end": "\\s|$",
+          "patterns": [
+            {
+              "include": "#integer_-10-10"
+            }
+          ]
         },
         {
           "comment": "opcodes: (polyphony): (any integer)",
@@ -3569,7 +3579,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -3633,7 +3643,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },

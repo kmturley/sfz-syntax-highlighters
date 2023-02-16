@@ -80,33 +80,65 @@
       <keyword>amp_keycenter</keyword>
       <keyword>amp_keytrack</keyword>
       <keyword>amp_random</keyword>
-      <keyword>amp_velcurve_N</keyword>
+      <keyword>amp_velcurve_\%{N}</keyword>
       <keyword>amp_veltrack</keyword>
+      <keyword>amp_veltrack_curvecc\%{N}</keyword>
+      <keyword>amp_veltrack_oncc\%{N}</keyword>
       <keyword>amp_veltrack_random</keyword>
       <keyword>ampeg_attack</keyword>
       <keyword>ampeg_attack_shape</keyword>
+      <keyword>ampeg_attackcc\%{N}</keyword>
       <keyword>ampeg_decay</keyword>
+      <keyword>ampeg_decay_curvecc\%{N}</keyword>
       <keyword>ampeg_decay_shape</keyword>
       <keyword>ampeg_decay_zero</keyword>
+      <keyword>ampeg_decaycc\%{N}</keyword>
       <keyword>ampeg_delay</keyword>
+      <keyword>ampeg_delaycc\%{N}</keyword>
       <keyword>ampeg_dynamic</keyword>
       <keyword>ampeg_hold</keyword>
+      <keyword>ampeg_hold_curvecc\%{N}</keyword>
+      <keyword>ampeg_holdcc\%{N}</keyword>
       <keyword>ampeg_release</keyword>
       <keyword>ampeg_release_shape</keyword>
       <keyword>ampeg_release_zero</keyword>
+      <keyword>ampeg_releasecc\%{N}</keyword>
       <keyword>ampeg_start</keyword>
+      <keyword>ampeg_startcc\%{N}</keyword>
       <keyword>ampeg_sustain</keyword>
+      <keyword>ampeg_sustain_curvecc\%{N}</keyword>
+      <keyword>ampeg_sustaincc\%{N}</keyword>
+      <keyword>ampeg_vel2attack</keyword>
+      <keyword>ampeg_vel2decay</keyword>
+      <keyword>ampeg_vel2delay</keyword>
+      <keyword>ampeg_vel2hold</keyword>
+      <keyword>ampeg_vel2release</keyword>
+      <keyword>ampeg_vel2sustain</keyword>
       <keyword>amplfo_delay</keyword>
       <keyword>amplfo_depth</keyword>
+      <keyword>amplfo_depthcc\%{N}</keyword>
+      <keyword>amplfo_depthchanaft</keyword>
+      <keyword>amplfo_depthpolyaft</keyword>
       <keyword>amplfo_fade</keyword>
       <keyword>amplfo_freq</keyword>
+      <keyword>amplfo_freqcc\%{N}</keyword>
+      <keyword>amplfo_freqchanaft</keyword>
+      <keyword>amplfo_freqpolyaft</keyword>
       <keyword>amplitude</keyword>
+      <keyword>amplitude_curvecc\%{N}</keyword>
+      <keyword>amplitude_oncc\%{N}</keyword>
+      <keyword>amplitude_smoothcc\%{N}</keyword>
       <keyword>apan_depth</keyword>
+      <keyword>apan_depth_oncc\%{N}</keyword>
       <keyword>apan_dry</keyword>
+      <keyword>apan_dry_oncc\%{N}</keyword>
       <keyword>apan_freq</keyword>
+      <keyword>apan_freq_oncc\%{N}</keyword>
       <keyword>apan_phase</keyword>
+      <keyword>apan_phase_oncc\%{N}</keyword>
       <keyword>apan_waveform</keyword>
       <keyword>apan_wet</keyword>
+      <keyword>apan_wet_oncc\%{N}</keyword>
       <keyword>bend_down</keyword>
       <keyword>bend_smooth</keyword>
       <keyword>bend_step</keyword>
@@ -114,8 +146,12 @@
       <keyword>bend_stepup</keyword>
       <keyword>bend_up</keyword>
       <keyword>bitred</keyword>
+      <keyword>bitred_curvecc\%{N}</keyword>
+      <keyword>bitred_oncc\%{N}</keyword>
+      <keyword>bitred_smoothcc\%{N}</keyword>
+      <keyword>bitred_stepcc\%{N}</keyword>
       <keyword>bus</keyword>
-      <keyword>bypass_onccN</keyword>
+      <keyword>bypass_oncc\%{N}</keyword>
       <keyword>comp_attack</keyword>
       <keyword>comp_gain</keyword>
       <keyword>comp_ratio</keyword>
@@ -125,125 +161,217 @@
       <keyword>count</keyword>
       <keyword>curve_index</keyword>
       <keyword>cutoff</keyword>
+      <keyword>cutoff_cc\%{N}</keyword>
+      <keyword>cutoff_chanaft</keyword>
+      <keyword>cutoff_curvecc\%{N}</keyword>
+      <keyword>cutoff_polyaft</keyword>
+      <keyword>cutoff_smoothcc\%{N}</keyword>
+      <keyword>cutoff_stepcc\%{N}</keyword>
       <keyword>decim</keyword>
+      <keyword>decim_curvecc\%{N}</keyword>
+      <keyword>decim_oncc\%{N}</keyword>
+      <keyword>decim_smoothcc\%{N}</keyword>
+      <keyword>decim_stepcc\%{N}</keyword>
       <keyword>default_path</keyword>
       <keyword>delay</keyword>
       <keyword>delay_beats</keyword>
+      <keyword>delay_beats_curvecc\%{N}</keyword>
+      <keyword>delay_beats_oncc\%{N}</keyword>
       <keyword>delay_beats_random</keyword>
+      <keyword>delay_cc\%{N}</keyword>
+      <keyword>delay_curvecc\%{N}</keyword>
       <keyword>delay_cutoff</keyword>
+      <keyword>delay_cutoff_oncc\%{N}</keyword>
       <keyword>delay_damphi</keyword>
+      <keyword>delay_damphi_oncc\%{N}</keyword>
       <keyword>delay_damplo</keyword>
+      <keyword>delay_damplo_oncc\%{N}</keyword>
       <keyword>delay_dry</keyword>
+      <keyword>delay_dry_oncc\%{N}</keyword>
       <keyword>delay_feedback</keyword>
+      <keyword>delay_feedback_oncc\%{N}</keyword>
       <keyword>delay_filter</keyword>
       <keyword>delay_input</keyword>
+      <keyword>delay_input_oncc\%{N}</keyword>
       <keyword>delay_levelc</keyword>
       <keyword>delay_levell</keyword>
       <keyword>delay_levelr</keyword>
       <keyword>delay_lfofreq</keyword>
+      <keyword>delay_lfofreq_oncc\%{N}</keyword>
       <keyword>delay_moddepth</keyword>
+      <keyword>delay_moddepth_oncc\%{N}</keyword>
       <keyword>delay_mode</keyword>
       <keyword>delay_panc</keyword>
+      <keyword>delay_panc_oncc\%{N}</keyword>
       <keyword>delay_panl</keyword>
+      <keyword>delay_panl_oncc\%{N}</keyword>
       <keyword>delay_panr</keyword>
+      <keyword>delay_panr_oncc\%{N}</keyword>
       <keyword>delay_random</keyword>
       <keyword>delay_resonance</keyword>
+      <keyword>delay_resonance_oncc\%{N}</keyword>
       <keyword>delay_samples</keyword>
+      <keyword>delay_samples_oncc\%{N}</keyword>
       <keyword>delay_spread</keyword>
-      <keyword>delay_syncc_onccN</keyword>
-      <keyword>delay_syncl_onccN</keyword>
-      <keyword>delay_syncr_onccN</keyword>
+      <keyword>delay_spread_oncc\%{N}</keyword>
+      <keyword>delay_syncc_oncc\%{N}</keyword>
+      <keyword>delay_syncl_oncc\%{N}</keyword>
+      <keyword>delay_syncr_oncc\%{N}</keyword>
       <keyword>delay_time_tap</keyword>
       <keyword>delay_timec</keyword>
+      <keyword>delay_timec_oncc\%{N}</keyword>
       <keyword>delay_timel</keyword>
+      <keyword>delay_timel_oncc\%{N}</keyword>
       <keyword>delay_timer</keyword>
+      <keyword>delay_timer_oncc\%{N}</keyword>
       <keyword>delay_wet</keyword>
+      <keyword>delay_wet_oncc\%{N}</keyword>
       <keyword>direction</keyword>
       <keyword>directtomain</keyword>
       <keyword>disto_depth</keyword>
+      <keyword>disto_depth_oncc\%{N}</keyword>
       <keyword>disto_dry</keyword>
+      <keyword>disto_dry_oncc\%{N}</keyword>
       <keyword>disto_stages</keyword>
       <keyword>disto_tone</keyword>
+      <keyword>disto_tone_oncc\%{N}</keyword>
       <keyword>disto_wet</keyword>
+      <keyword>disto_wet_oncc\%{N}</keyword>
       <keyword>dsp_order</keyword>
       <keyword>effect1</keyword>
       <keyword>effect2</keyword>
       <keyword>effect3</keyword>
       <keyword>effect4</keyword>
-      <keyword>egN_ampeg</keyword>
-      <keyword>egN_amplitude</keyword>
-      <keyword>egN_bitred</keyword>
-      <keyword>egN_curveX</keyword>
-      <keyword>egN_cutoff</keyword>
-      <keyword>egN_cutoff2</keyword>
-      <keyword>egN_decim</keyword>
-      <keyword>egN_depth_lfoX</keyword>
-      <keyword>egN_depthadd_lfoX</keyword>
-      <keyword>egN_driveshape</keyword>
-      <keyword>egN_eqXbw</keyword>
-      <keyword>egN_eqXfreq</keyword>
-      <keyword>egN_eqXgain</keyword>
-      <keyword>egN_freq_lfoX</keyword>
-      <keyword>egN_levelX</keyword>
-      <keyword>egN_loop</keyword>
-      <keyword>egN_loop_count</keyword>
-      <keyword>egN_noiselevel</keyword>
-      <keyword>egN_noisestep</keyword>
-      <keyword>egN_noisetone</keyword>
-      <keyword>egN_pan</keyword>
-      <keyword>egN_pan_curve</keyword>
-      <keyword>egN_pitch</keyword>
-      <keyword>egN_points</keyword>
-      <keyword>egN_rectify</keyword>
-      <keyword>egN_resonance</keyword>
-      <keyword>egN_resonance2</keyword>
-      <keyword>egN_ringmod</keyword>
-      <keyword>egN_shapeX</keyword>
-      <keyword>egN_sustain</keyword>
-      <keyword>egN_timeX</keyword>
-      <keyword>egN_volume</keyword>
-      <keyword>egN_width</keyword>
+      <keyword>eg\%{N}_ampeg</keyword>
+      <keyword>eg\%{N}_amplitude</keyword>
+      <keyword>eg\%{N}_amplitude_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_bitred</keyword>
+      <keyword>eg\%{N}_bitred_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_curve\%{N}</keyword>
+      <keyword>eg\%{N}_cutoff</keyword>
+      <keyword>eg\%{N}_cutoff_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_cutoff2</keyword>
+      <keyword>eg\%{N}_cutoff2_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_decim</keyword>
+      <keyword>eg\%{N}_decim_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_depth_lfo\%{N}</keyword>
+      <keyword>eg\%{N}_depthadd_lfo\%{N}</keyword>
+      <keyword>eg\%{N}_driveshape</keyword>
+      <keyword>eg\%{N}_driveshape_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_eq\%{N}bw</keyword>
+      <keyword>eg\%{N}_eq\%{N}bw_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_eq\%{N}freq</keyword>
+      <keyword>eg\%{N}_eq\%{N}freq_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_eq\%{N}gain</keyword>
+      <keyword>eg\%{N}_eq\%{N}gain_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_freq_lfo\%{N}</keyword>
+      <keyword>eg\%{N}_level\%{N}</keyword>
+      <keyword>eg\%{N}_level\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_loop</keyword>
+      <keyword>eg\%{N}_loop_count</keyword>
+      <keyword>eg\%{N}_noiselevel</keyword>
+      <keyword>eg\%{N}_noiselevel_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_noisestep</keyword>
+      <keyword>eg\%{N}_noisestep_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_noisetone</keyword>
+      <keyword>eg\%{N}_noisetone_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_pan</keyword>
+      <keyword>eg\%{N}_pan_curve</keyword>
+      <keyword>eg\%{N}_pan_curvecc\%{N}</keyword>
+      <keyword>eg\%{N}_pan_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_pitch</keyword>
+      <keyword>eg\%{N}_pitch_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_points</keyword>
+      <keyword>eg\%{N}_rectify</keyword>
+      <keyword>eg\%{N}_rectify_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_resonance</keyword>
+      <keyword>eg\%{N}_resonance_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_resonance2</keyword>
+      <keyword>eg\%{N}_resonance2_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_ringmod</keyword>
+      <keyword>eg\%{N}_ringmod_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_shape\%{N}</keyword>
+      <keyword>eg\%{N}_sustain</keyword>
+      <keyword>eg\%{N}_time\%{N}</keyword>
+      <keyword>eg\%{N}_time\%{N}_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_volume</keyword>
+      <keyword>eg\%{N}_volume_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_width</keyword>
+      <keyword>eg\%{N}_width_oncc\%{N}</keyword>
       <keyword>end</keyword>
       <keyword>eq_bw</keyword>
+      <keyword>eq_bw_oncc\%{N}</keyword>
       <keyword>eq_freq</keyword>
+      <keyword>eq_freq_oncc\%{N}</keyword>
       <keyword>eq_gain</keyword>
+      <keyword>eq_gain_oncc\%{N}</keyword>
       <keyword>eq_type</keyword>
-      <keyword>eqN_bw</keyword>
-      <keyword>eqN_dynamic</keyword>
-      <keyword>eqN_freq</keyword>
-      <keyword>eqN_gain</keyword>
-      <keyword>eqN_type</keyword>
+      <keyword>eq\%{N}_bw</keyword>
+      <keyword>eq\%{N}_bwcc\%{N}</keyword>
+      <keyword>eq\%{N}_dynamic</keyword>
+      <keyword>eq\%{N}_freq</keyword>
+      <keyword>eq\%{N}_freqcc\%{N}</keyword>
+      <keyword>eq\%{N}_gain</keyword>
+      <keyword>eq\%{N}_gaincc\%{N}</keyword>
+      <keyword>eq\%{N}_type</keyword>
+      <keyword>eq\%{N}_vel2freq</keyword>
+      <keyword>eq\%{N}_vel2gain</keyword>
       <keyword>fil_gain</keyword>
+      <keyword>fil_gain_oncc\%{N}</keyword>
       <keyword>fil_keycenter</keyword>
       <keyword>fil_keytrack</keyword>
       <keyword>fil_random</keyword>
       <keyword>fil_type</keyword>
       <keyword>fil_veltrack</keyword>
       <keyword>fileg_attack</keyword>
+      <keyword>fileg_attack_oncc\%{N}</keyword>
       <keyword>fileg_attack_shape</keyword>
       <keyword>fileg_decay</keyword>
+      <keyword>fileg_decay_oncc\%{N}</keyword>
       <keyword>fileg_decay_shape</keyword>
       <keyword>fileg_decay_zero</keyword>
       <keyword>fileg_delay</keyword>
+      <keyword>fileg_delay_oncc\%{N}</keyword>
       <keyword>fileg_depth</keyword>
+      <keyword>fileg_depth_oncc\%{N}</keyword>
       <keyword>fileg_dynamic</keyword>
       <keyword>fileg_hold</keyword>
+      <keyword>fileg_hold_oncc\%{N}</keyword>
       <keyword>fileg_release</keyword>
+      <keyword>fileg_release_oncc\%{N}</keyword>
       <keyword>fileg_release_shape</keyword>
       <keyword>fileg_release_zero</keyword>
       <keyword>fileg_start</keyword>
+      <keyword>fileg_start_oncc\%{N}</keyword>
       <keyword>fileg_sustain</keyword>
+      <keyword>fileg_sustain_oncc\%{N}</keyword>
+      <keyword>fileg_vel2attack</keyword>
+      <keyword>fileg_vel2decay</keyword>
+      <keyword>fileg_vel2delay</keyword>
+      <keyword>fileg_vel2depth</keyword>
+      <keyword>fileg_vel2hold</keyword>
+      <keyword>fileg_vel2release</keyword>
+      <keyword>fileg_vel2sustain</keyword>
       <keyword>fillfo_delay</keyword>
       <keyword>fillfo_depth</keyword>
+      <keyword>fillfo_depthcc\%{N}</keyword>
+      <keyword>fillfo_depthchanaft</keyword>
+      <keyword>fillfo_depthpolyaft</keyword>
       <keyword>fillfo_fade</keyword>
       <keyword>fillfo_freq</keyword>
+      <keyword>fillfo_freqcc\%{N}</keyword>
+      <keyword>fillfo_freqchanaft</keyword>
+      <keyword>fillfo_freqpolyaft</keyword>
       <keyword>filter_cutoff</keyword>
+      <keyword>filter_cutoff_oncc\%{N}</keyword>
       <keyword>filter_resonance</keyword>
+      <keyword>filter_resonance_oncc\%{N}</keyword>
       <keyword>filter_type</keyword>
-      <keyword>fxNtomain</keyword>
-      <keyword>fxNtomix</keyword>
+      <keyword>fx\%{N}tomain</keyword>
+      <keyword>fx\%{N}tomix</keyword>
+      <keyword>gain_cc\%{N}</keyword>
       <keyword>gate_attack</keyword>
-      <keyword>gate_onccN</keyword>
+      <keyword>gate_oncc\%{N}</keyword>
       <keyword>gate_release</keyword>
       <keyword>gate_stlink</keyword>
       <keyword>gate_threshold</keyword>
@@ -258,10 +386,10 @@
       <keyword>group_volume</keyword>
       <keyword>hibend</keyword>
       <keyword>hibpm</keyword>
-      <keyword>hiccN</keyword>
+      <keyword>hicc\%{N}</keyword>
       <keyword>hichan</keyword>
       <keyword>hichanaft</keyword>
-      <keyword>hihdccN</keyword>
+      <keyword>hihdcc\%{N}</keyword>
       <keyword>hikey</keyword>
       <keyword>hint_*</keyword>
       <keyword>hipolyaft</keyword>
@@ -272,54 +400,115 @@
       <keyword>image</keyword>
       <keyword>internal</keyword>
       <keyword>key</keyword>
-      <keyword>label_ccN</keyword>
-      <keyword>label_keyN</keyword>
-      <keyword>lfoN_amplitude</keyword>
-      <keyword>lfoN_bitred</keyword>
-      <keyword>lfoN_count</keyword>
-      <keyword>lfoN_cutoff</keyword>
-      <keyword>lfoN_decim</keyword>
-      <keyword>lfoN_delay</keyword>
-      <keyword>lfoN_depth_lfoX</keyword>
-      <keyword>lfoN_depthadd_lfoX</keyword>
-      <keyword>lfoN_drive</keyword>
-      <keyword>lfoN_eqXbw</keyword>
-      <keyword>lfoN_eqXfreq</keyword>
-      <keyword>lfoN_eqXgain</keyword>
-      <keyword>lfoN_fade</keyword>
-      <keyword>lfoN_freq</keyword>
-      <keyword>lfoN_freq_lfoX</keyword>
-      <keyword>lfoN_noiselevel</keyword>
-      <keyword>lfoN_noisestep</keyword>
-      <keyword>lfoN_noisetone</keyword>
-      <keyword>lfoN_offset</keyword>
-      <keyword>lfoN_pan</keyword>
-      <keyword>lfoN_phase</keyword>
-      <keyword>lfoN_pitch</keyword>
-      <keyword>lfoN_ratio</keyword>
-      <keyword>lfoN_resonance</keyword>
-      <keyword>lfoN_scale</keyword>
-      <keyword>lfoN_smooth</keyword>
-      <keyword>lfoN_steps</keyword>
-      <keyword>lfoN_stepX</keyword>
-      <keyword>lfoN_volume</keyword>
-      <keyword>lfoN_wave</keyword>
-      <keyword>lfoN_width</keyword>
+      <keyword>label_cc\%{N}</keyword>
+      <keyword>label_key\%{N}</keyword>
+      <keyword>lfo\%{N}_amplitude</keyword>
+      <keyword>lfo\%{N}_amplitude_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_amplitude_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_amplitude_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_bitred</keyword>
+      <keyword>lfo\%{N}_bitred_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_bitred_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_bitred_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_count</keyword>
+      <keyword>lfo\%{N}_cutoff</keyword>
+      <keyword>lfo\%{N}_cutoff_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_cutoff_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_decim</keyword>
+      <keyword>lfo\%{N}_decim_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_decim_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_decim_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_delay</keyword>
+      <keyword>lfo\%{N}_delay_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_depth_lfo\%{N}</keyword>
+      <keyword>lfo\%{N}_depthadd_lfo\%{N}</keyword>
+      <keyword>lfo\%{N}_drive</keyword>
+      <keyword>lfo\%{N}_drive_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_drive_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_drive_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}bw</keyword>
+      <keyword>lfo\%{N}_eq\%{N}bw_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}bw_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}bw_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}freq</keyword>
+      <keyword>lfo\%{N}_eq\%{N}freq_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}freq_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}freq_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}gain</keyword>
+      <keyword>lfo\%{N}_eq\%{N}gain_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}gain_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_eq\%{N}gain_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_fade</keyword>
+      <keyword>lfo\%{N}_fade_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq</keyword>
+      <keyword>lfo\%{N}_freq_lfo\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_lfo\%{N}_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_freq_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_noiselevel</keyword>
+      <keyword>lfo\%{N}_noiselevel_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_noiselevel_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_noiselevel_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_noisestep</keyword>
+      <keyword>lfo\%{N}_noisestep_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_noisestep_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_noisestep_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_noisetone</keyword>
+      <keyword>lfo\%{N}_noisetone_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_noisetone_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_noisetone_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_offset</keyword>
+      <keyword>lfo\%{N}_pan</keyword>
+      <keyword>lfo\%{N}_pan_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_pan_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_pan_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_phase</keyword>
+      <keyword>lfo\%{N}_phase_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch</keyword>
+      <keyword>lfo\%{N}_pitch_curvecc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_pitch_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_ratio</keyword>
+      <keyword>lfo\%{N}_resonance</keyword>
+      <keyword>lfo\%{N}_resonance_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_resonance_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_scale</keyword>
+      <keyword>lfo\%{N}_smooth</keyword>
+      <keyword>lfo\%{N}_smooth_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_step\%{N}</keyword>
+      <keyword>lfo\%{N}_step\%{N}_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_steps</keyword>
+      <keyword>lfo\%{N}_volume</keyword>
+      <keyword>lfo\%{N}_volume_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_volume_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_volume_stepcc\%{N}</keyword>
+      <keyword>lfo\%{N}_wave</keyword>
+      <keyword>lfo\%{N}_wave_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_width</keyword>
+      <keyword>lfo\%{N}_width_oncc\%{N}</keyword>
+      <keyword>lfo\%{N}_width_smoothcc\%{N}</keyword>
+      <keyword>lfo\%{N}_width_stepcc\%{N}</keyword>
       <keyword>load_end</keyword>
       <keyword>load_mode</keyword>
       <keyword>load_start</keyword>
       <keyword>lobend</keyword>
       <keyword>lobpm</keyword>
-      <keyword>loccN</keyword>
+      <keyword>locc\%{N}</keyword>
       <keyword>lochan</keyword>
       <keyword>lochanaft</keyword>
-      <keyword>lohdccN</keyword>
+      <keyword>lohdcc\%{N}</keyword>
       <keyword>lokey</keyword>
       <keyword>loop_count</keyword>
       <keyword>loop_crossfade</keyword>
       <keyword>loop_end</keyword>
+      <keyword>loop_lengthcc\%{N}</keyword>
       <keyword>loop_mode</keyword>
       <keyword>loop_start</keyword>
+      <keyword>loop_startcc\%{N}</keyword>
       <keyword>loop_tune</keyword>
       <keyword>loop_type</keyword>
       <keyword>lopolyaft</keyword>
@@ -334,9 +523,13 @@
       <keyword>md5</keyword>
       <keyword>noise_filter</keyword>
       <keyword>noise_level</keyword>
+      <keyword>noise_level_oncc\%{N}</keyword>
+      <keyword>noise_level_smoothcc\%{N}</keyword>
       <keyword>noise_step</keyword>
+      <keyword>noise_step_oncc\%{N}</keyword>
       <keyword>noise_stereo</keyword>
       <keyword>noise_tone</keyword>
+      <keyword>noise_tone_oncc\%{N}</keyword>
       <keyword>note_offset</keyword>
       <keyword>note_polyphony</keyword>
       <keyword>note_selfmask</keyword>
@@ -347,14 +540,18 @@
       <keyword>off_shape</keyword>
       <keyword>off_time</keyword>
       <keyword>offset</keyword>
+      <keyword>offset_cc\%{N}</keyword>
       <keyword>offset_random</keyword>
-      <keyword>on_hiccN</keyword>
-      <keyword>on_hihdccN</keyword>
-      <keyword>on_loccN</keyword>
-      <keyword>on_lohdccN</keyword>
+      <keyword>on_hicc\%{N}</keyword>
+      <keyword>on_hihdcc\%{N}</keyword>
+      <keyword>on_locc\%{N}</keyword>
+      <keyword>on_lohdcc\%{N}</keyword>
       <keyword>oscillator</keyword>
       <keyword>oscillator_detune</keyword>
+      <keyword>oscillator_detune_oncc\%{N}</keyword>
       <keyword>oscillator_mod_depth</keyword>
+      <keyword>oscillator_mod_depth_oncc\%{N}</keyword>
+      <keyword>oscillator_mod_smoothcc\%{N}</keyword>
       <keyword>oscillator_mode</keyword>
       <keyword>oscillator_multi</keyword>
       <keyword>oscillator_phase</keyword>
@@ -362,62 +559,110 @@
       <keyword>oscillator_table_size</keyword>
       <keyword>output</keyword>
       <keyword>pan</keyword>
+      <keyword>pan_curvecc\%{N}</keyword>
       <keyword>pan_keycenter</keyword>
       <keyword>pan_keytrack</keyword>
       <keyword>pan_law</keyword>
+      <keyword>pan_oncc\%{N}</keyword>
       <keyword>pan_random</keyword>
+      <keyword>pan_smoothcc\%{N}</keyword>
+      <keyword>pan_stepcc\%{N}</keyword>
       <keyword>pan_veltrack</keyword>
       <keyword>param_offset</keyword>
       <keyword>phase</keyword>
       <keyword>phaser_depth</keyword>
+      <keyword>phaser_depth_oncc\%{N}</keyword>
       <keyword>phaser_feedback</keyword>
+      <keyword>phaser_feedback_oncc\%{N}</keyword>
       <keyword>phaser_freq</keyword>
-      <keyword>phaser_phase_onccN</keyword>
+      <keyword>phaser_freq_oncc\%{N}</keyword>
+      <keyword>phaser_phase_oncc\%{N}</keyword>
       <keyword>phaser_stages</keyword>
       <keyword>phaser_waveform</keyword>
       <keyword>phaser_wet</keyword>
+      <keyword>phaser_wet_oncc\%{N}</keyword>
+      <keyword>pitch_curvecc\%{N}</keyword>
       <keyword>pitch_keycenter</keyword>
       <keyword>pitch_keytrack</keyword>
+      <keyword>pitch_oncc\%{N}</keyword>
       <keyword>pitch_random</keyword>
+      <keyword>pitch_smoothcc\%{N}</keyword>
+      <keyword>pitch_stepcc\%{N}</keyword>
       <keyword>pitch_veltrack</keyword>
       <keyword>pitcheg_attack</keyword>
+      <keyword>pitcheg_attack_oncc\%{N}</keyword>
       <keyword>pitcheg_attack_shape</keyword>
       <keyword>pitcheg_decay</keyword>
+      <keyword>pitcheg_decay_oncc\%{N}</keyword>
       <keyword>pitcheg_decay_shape</keyword>
       <keyword>pitcheg_decay_zero</keyword>
       <keyword>pitcheg_delay</keyword>
+      <keyword>pitcheg_delay_oncc\%{N}</keyword>
       <keyword>pitcheg_depth</keyword>
+      <keyword>pitcheg_depth_oncc\%{N}</keyword>
       <keyword>pitcheg_dynamic</keyword>
       <keyword>pitcheg_hold</keyword>
+      <keyword>pitcheg_hold_oncc\%{N}</keyword>
       <keyword>pitcheg_release</keyword>
+      <keyword>pitcheg_release_oncc\%{N}</keyword>
       <keyword>pitcheg_release_shape</keyword>
       <keyword>pitcheg_release_zero</keyword>
       <keyword>pitcheg_start</keyword>
+      <keyword>pitcheg_start_oncc\%{N}</keyword>
       <keyword>pitcheg_sustain</keyword>
+      <keyword>pitcheg_sustain_oncc\%{N}</keyword>
+      <keyword>pitcheg_vel2attack</keyword>
+      <keyword>pitcheg_vel2decay</keyword>
+      <keyword>pitcheg_vel2delay</keyword>
+      <keyword>pitcheg_vel2depth</keyword>
+      <keyword>pitcheg_vel2hold</keyword>
+      <keyword>pitcheg_vel2release</keyword>
+      <keyword>pitcheg_vel2sustain</keyword>
       <keyword>pitchlfo_delay</keyword>
       <keyword>pitchlfo_depth</keyword>
+      <keyword>pitchlfo_depthcc\%{N}</keyword>
+      <keyword>pitchlfo_depthchanaft</keyword>
+      <keyword>pitchlfo_depthpolyaft</keyword>
       <keyword>pitchlfo_fade</keyword>
       <keyword>pitchlfo_freq</keyword>
+      <keyword>pitchlfo_freqcc\%{N}</keyword>
+      <keyword>pitchlfo_freqchanaft</keyword>
+      <keyword>pitchlfo_freqpolyaft</keyword>
       <keyword>polyphony</keyword>
       <keyword>polyphony_stealing</keyword>
       <keyword>position</keyword>
+      <keyword>position_curvecc\%{N}</keyword>
       <keyword>position_keycenter</keyword>
       <keyword>position_keytrack</keyword>
+      <keyword>position_oncc\%{N}</keyword>
       <keyword>position_random</keyword>
+      <keyword>position_smoothcc\%{N}</keyword>
+      <keyword>position_stepcc\%{N}</keyword>
       <keyword>position_veltrack</keyword>
       <keyword>region_label</keyword>
       <keyword>resonance</keyword>
+      <keyword>resonance_curvecc\%{N}</keyword>
+      <keyword>resonance_oncc\%{N}</keyword>
       <keyword>resonance_random</keyword>
+      <keyword>resonance_smoothcc\%{N}</keyword>
+      <keyword>resonance_stepcc\%{N}</keyword>
       <keyword>reverb_damp</keyword>
+      <keyword>reverb_damp_oncc\%{N}</keyword>
       <keyword>reverb_dry</keyword>
+      <keyword>reverb_dry_oncc\%{N}</keyword>
       <keyword>reverb_input</keyword>
+      <keyword>reverb_input_oncc\%{N}</keyword>
       <keyword>reverb_predelay</keyword>
+      <keyword>reverb_predelay_oncc\%{N}</keyword>
       <keyword>reverb_size</keyword>
+      <keyword>reverb_size_oncc\%{N}</keyword>
       <keyword>reverb_tone</keyword>
+      <keyword>reverb_tone_oncc\%{N}</keyword>
       <keyword>reverb_type</keyword>
       <keyword>reverb_wet</keyword>
-      <keyword>reverse_hiccN</keyword>
-      <keyword>reverse_loccN</keyword>
+      <keyword>reverb_wet_oncc\%{N}</keyword>
+      <keyword>reverse_hicc\%{N}</keyword>
+      <keyword>reverse_locc\%{N}</keyword>
       <keyword>rt_dead</keyword>
       <keyword>rt_decay</keyword>
       <keyword>sample</keyword>
@@ -426,8 +671,8 @@
       <keyword>script</keyword>
       <keyword>seq_length</keyword>
       <keyword>seq_position</keyword>
-      <keyword>set_ccN</keyword>
-      <keyword>set_hdccN</keyword>
+      <keyword>set_cc\%{N}</keyword>
+      <keyword>set_hdcc\%{N}</keyword>
       <keyword>sostenuto_cc</keyword>
       <keyword>sostenuto_lo</keyword>
       <keyword>sostenuto_sw</keyword>
@@ -435,18 +680,19 @@
       <keyword>static_cyclic_time</keyword>
       <keyword>static_filter</keyword>
       <keyword>static_level</keyword>
+      <keyword>static_level_oncc\%{N}</keyword>
       <keyword>static_random_level</keyword>
       <keyword>static_random_maxtime</keyword>
       <keyword>static_random_mintime</keyword>
       <keyword>static_stereo</keyword>
       <keyword>static_tone</keyword>
       <keyword>stop_beats</keyword>
-      <keyword>stop_hiccN</keyword>
-      <keyword>stop_hihdccN</keyword>
-      <keyword>stop_loccN</keyword>
-      <keyword>stop_lohdccN</keyword>
+      <keyword>stop_hicc\%{N}</keyword>
+      <keyword>stop_hihdcc\%{N}</keyword>
+      <keyword>stop_locc\%{N}</keyword>
+      <keyword>stop_lohdcc\%{N}</keyword>
       <keyword>strings_number</keyword>
-      <keyword>strings_wet_onccN</keyword>
+      <keyword>strings_wet_oncc\%{N}</keyword>
       <keyword>sustain_cc</keyword>
       <keyword>sustain_lo</keyword>
       <keyword>sustain_sw</keyword>
@@ -466,33 +712,44 @@
       <keyword>sync_beats</keyword>
       <keyword>sync_offset</keyword>
       <keyword>tdfir_dry</keyword>
+      <keyword>tdfir_dry_oncc\%{N}</keyword>
       <keyword>tdfir_gain</keyword>
       <keyword>tdfir_impulse</keyword>
       <keyword>tdfir_wet</keyword>
+      <keyword>tdfir_wet_oncc\%{N}</keyword>
       <keyword>transpose</keyword>
       <keyword>trigger</keyword>
       <keyword>tune</keyword>
       <keyword>type</keyword>
-      <keyword>varNN_*</keyword>
-      <keyword>varNN_mod</keyword>
+      <keyword>v\%{N}</keyword>
+      <keyword>var\%{N}_*</keyword>
+      <keyword>var\%{N}_curvecc\%{N}</keyword>
+      <keyword>var\%{N}_mod</keyword>
+      <keyword>var\%{N}_oncc\%{N}</keyword>
       <keyword>vendor_specific</keyword>
-      <keyword>vN</keyword>
       <keyword>volume</keyword>
+      <keyword>volume_curvecc\%{N}</keyword>
+      <keyword>volume_smoothcc\%{N}</keyword>
+      <keyword>volume_stepcc\%{N}</keyword>
       <keyword>waveguide</keyword>
       <keyword>width</keyword>
+      <keyword>width_curvecc\%{N}</keyword>
+      <keyword>width_oncc\%{N}</keyword>
+      <keyword>width_smoothcc\%{N}</keyword>
+      <keyword>width_stepcc\%{N}</keyword>
       <keyword>xf_cccurve</keyword>
       <keyword>xf_keycurve</keyword>
       <keyword>xf_velcurve</keyword>
-      <keyword>xfin_hiccN</keyword>
+      <keyword>xfin_hicc\%{N}</keyword>
       <keyword>xfin_hikey</keyword>
       <keyword>xfin_hivel</keyword>
-      <keyword>xfin_loccN</keyword>
+      <keyword>xfin_locc\%{N}</keyword>
       <keyword>xfin_lokey</keyword>
       <keyword>xfin_lovel</keyword>
-      <keyword>xfout_hiccN</keyword>
+      <keyword>xfout_hicc\%{N}</keyword>
       <keyword>xfout_hikey</keyword>
       <keyword>xfout_hivel</keyword>
-      <keyword>xfout_loccN</keyword>
+      <keyword>xfout_locc\%{N}</keyword>
       <keyword>xfout_lokey</keyword>
       <keyword>xfout_lovel</keyword>
     </context>

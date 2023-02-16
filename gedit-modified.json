@@ -239,10 +239,16 @@
               "_text": "amp_random"
             },
             {
-              "_text": "amp_velcurve_N"
+              "_text": "amp_velcurve_\\%{N}"
             },
             {
               "_text": "amp_veltrack"
+            },
+            {
+              "_text": "amp_veltrack_curvecc\\%{N}"
+            },
+            {
+              "_text": "amp_veltrack_oncc\\%{N}"
             },
             {
               "_text": "amp_veltrack_random"
@@ -254,7 +260,13 @@
               "_text": "ampeg_attack_shape"
             },
             {
+              "_text": "ampeg_attackcc\\%{N}"
+            },
+            {
               "_text": "ampeg_decay"
+            },
+            {
+              "_text": "ampeg_decay_curvecc\\%{N}"
             },
             {
               "_text": "ampeg_decay_shape"
@@ -263,13 +275,25 @@
               "_text": "ampeg_decay_zero"
             },
             {
+              "_text": "ampeg_decaycc\\%{N}"
+            },
+            {
               "_text": "ampeg_delay"
+            },
+            {
+              "_text": "ampeg_delaycc\\%{N}"
             },
             {
               "_text": "ampeg_dynamic"
             },
             {
               "_text": "ampeg_hold"
+            },
+            {
+              "_text": "ampeg_hold_curvecc\\%{N}"
+            },
+            {
+              "_text": "ampeg_holdcc\\%{N}"
             },
             {
               "_text": "ampeg_release"
@@ -281,10 +305,40 @@
               "_text": "ampeg_release_zero"
             },
             {
+              "_text": "ampeg_releasecc\\%{N}"
+            },
+            {
               "_text": "ampeg_start"
             },
             {
+              "_text": "ampeg_startcc\\%{N}"
+            },
+            {
               "_text": "ampeg_sustain"
+            },
+            {
+              "_text": "ampeg_sustain_curvecc\\%{N}"
+            },
+            {
+              "_text": "ampeg_sustaincc\\%{N}"
+            },
+            {
+              "_text": "ampeg_vel2attack"
+            },
+            {
+              "_text": "ampeg_vel2decay"
+            },
+            {
+              "_text": "ampeg_vel2delay"
+            },
+            {
+              "_text": "ampeg_vel2hold"
+            },
+            {
+              "_text": "ampeg_vel2release"
+            },
+            {
+              "_text": "ampeg_vel2sustain"
             },
             {
               "_text": "amplfo_delay"
@@ -293,31 +347,73 @@
               "_text": "amplfo_depth"
             },
             {
+              "_text": "amplfo_depthcc\\%{N}"
+            },
+            {
+              "_text": "amplfo_depthchanaft"
+            },
+            {
+              "_text": "amplfo_depthpolyaft"
+            },
+            {
               "_text": "amplfo_fade"
             },
             {
               "_text": "amplfo_freq"
             },
             {
+              "_text": "amplfo_freqcc\\%{N}"
+            },
+            {
+              "_text": "amplfo_freqchanaft"
+            },
+            {
+              "_text": "amplfo_freqpolyaft"
+            },
+            {
               "_text": "amplitude"
+            },
+            {
+              "_text": "amplitude_curvecc\\%{N}"
+            },
+            {
+              "_text": "amplitude_oncc\\%{N}"
+            },
+            {
+              "_text": "amplitude_smoothcc\\%{N}"
             },
             {
               "_text": "apan_depth"
             },
             {
+              "_text": "apan_depth_oncc\\%{N}"
+            },
+            {
               "_text": "apan_dry"
+            },
+            {
+              "_text": "apan_dry_oncc\\%{N}"
             },
             {
               "_text": "apan_freq"
             },
             {
+              "_text": "apan_freq_oncc\\%{N}"
+            },
+            {
               "_text": "apan_phase"
+            },
+            {
+              "_text": "apan_phase_oncc\\%{N}"
             },
             {
               "_text": "apan_waveform"
             },
             {
               "_text": "apan_wet"
+            },
+            {
+              "_text": "apan_wet_oncc\\%{N}"
             },
             {
               "_text": "bend_down"
@@ -341,10 +437,22 @@
               "_text": "bitred"
             },
             {
+              "_text": "bitred_curvecc\\%{N}"
+            },
+            {
+              "_text": "bitred_oncc\\%{N}"
+            },
+            {
+              "_text": "bitred_smoothcc\\%{N}"
+            },
+            {
+              "_text": "bitred_stepcc\\%{N}"
+            },
+            {
               "_text": "bus"
             },
             {
-              "_text": "bypass_onccN"
+              "_text": "bypass_oncc\\%{N}"
             },
             {
               "_text": "comp_attack"
@@ -374,7 +482,37 @@
               "_text": "cutoff"
             },
             {
+              "_text": "cutoff_cc\\%{N}"
+            },
+            {
+              "_text": "cutoff_chanaft"
+            },
+            {
+              "_text": "cutoff_curvecc\\%{N}"
+            },
+            {
+              "_text": "cutoff_polyaft"
+            },
+            {
+              "_text": "cutoff_smoothcc\\%{N}"
+            },
+            {
+              "_text": "cutoff_stepcc\\%{N}"
+            },
+            {
               "_text": "decim"
+            },
+            {
+              "_text": "decim_curvecc\\%{N}"
+            },
+            {
+              "_text": "decim_oncc\\%{N}"
+            },
+            {
+              "_text": "decim_smoothcc\\%{N}"
+            },
+            {
+              "_text": "decim_stepcc\\%{N}"
             },
             {
               "_text": "default_path"
@@ -386,28 +524,58 @@
               "_text": "delay_beats"
             },
             {
+              "_text": "delay_beats_curvecc\\%{N}"
+            },
+            {
+              "_text": "delay_beats_oncc\\%{N}"
+            },
+            {
               "_text": "delay_beats_random"
+            },
+            {
+              "_text": "delay_cc\\%{N}"
+            },
+            {
+              "_text": "delay_curvecc\\%{N}"
             },
             {
               "_text": "delay_cutoff"
             },
             {
+              "_text": "delay_cutoff_oncc\\%{N}"
+            },
+            {
               "_text": "delay_damphi"
+            },
+            {
+              "_text": "delay_damphi_oncc\\%{N}"
             },
             {
               "_text": "delay_damplo"
             },
             {
+              "_text": "delay_damplo_oncc\\%{N}"
+            },
+            {
               "_text": "delay_dry"
             },
             {
+              "_text": "delay_dry_oncc\\%{N}"
+            },
+            {
               "_text": "delay_feedback"
+            },
+            {
+              "_text": "delay_feedback_oncc\\%{N}"
             },
             {
               "_text": "delay_filter"
             },
             {
               "_text": "delay_input"
+            },
+            {
+              "_text": "delay_input_oncc\\%{N}"
             },
             {
               "_text": "delay_levelc"
@@ -422,7 +590,13 @@
               "_text": "delay_lfofreq"
             },
             {
+              "_text": "delay_lfofreq_oncc\\%{N}"
+            },
+            {
               "_text": "delay_moddepth"
+            },
+            {
+              "_text": "delay_moddepth_oncc\\%{N}"
             },
             {
               "_text": "delay_mode"
@@ -431,10 +605,19 @@
               "_text": "delay_panc"
             },
             {
+              "_text": "delay_panc_oncc\\%{N}"
+            },
+            {
               "_text": "delay_panl"
             },
             {
+              "_text": "delay_panl_oncc\\%{N}"
+            },
+            {
               "_text": "delay_panr"
+            },
+            {
+              "_text": "delay_panr_oncc\\%{N}"
             },
             {
               "_text": "delay_random"
@@ -443,19 +626,28 @@
               "_text": "delay_resonance"
             },
             {
+              "_text": "delay_resonance_oncc\\%{N}"
+            },
+            {
               "_text": "delay_samples"
+            },
+            {
+              "_text": "delay_samples_oncc\\%{N}"
             },
             {
               "_text": "delay_spread"
             },
             {
-              "_text": "delay_syncc_onccN"
+              "_text": "delay_spread_oncc\\%{N}"
             },
             {
-              "_text": "delay_syncl_onccN"
+              "_text": "delay_syncc_oncc\\%{N}"
             },
             {
-              "_text": "delay_syncr_onccN"
+              "_text": "delay_syncl_oncc\\%{N}"
+            },
+            {
+              "_text": "delay_syncr_oncc\\%{N}"
             },
             {
               "_text": "delay_time_tap"
@@ -464,13 +656,25 @@
               "_text": "delay_timec"
             },
             {
+              "_text": "delay_timec_oncc\\%{N}"
+            },
+            {
               "_text": "delay_timel"
+            },
+            {
+              "_text": "delay_timel_oncc\\%{N}"
             },
             {
               "_text": "delay_timer"
             },
             {
+              "_text": "delay_timer_oncc\\%{N}"
+            },
+            {
               "_text": "delay_wet"
+            },
+            {
+              "_text": "delay_wet_oncc\\%{N}"
             },
             {
               "_text": "direction"
@@ -482,7 +686,13 @@
               "_text": "disto_depth"
             },
             {
+              "_text": "disto_depth_oncc\\%{N}"
+            },
+            {
               "_text": "disto_dry"
+            },
+            {
+              "_text": "disto_dry_oncc\\%{N}"
             },
             {
               "_text": "disto_stages"
@@ -491,7 +701,13 @@
               "_text": "disto_tone"
             },
             {
+              "_text": "disto_tone_oncc\\%{N}"
+            },
+            {
               "_text": "disto_wet"
+            },
+            {
+              "_text": "disto_wet_oncc\\%{N}"
             },
             {
               "_text": "dsp_order"
@@ -509,103 +725,172 @@
               "_text": "effect4"
             },
             {
-              "_text": "egN_ampeg"
+              "_text": "eg\\%{N}_ampeg"
             },
             {
-              "_text": "egN_amplitude"
+              "_text": "eg\\%{N}_amplitude"
             },
             {
-              "_text": "egN_bitred"
+              "_text": "eg\\%{N}_amplitude_oncc\\%{N}"
             },
             {
-              "_text": "egN_curveX"
+              "_text": "eg\\%{N}_bitred"
             },
             {
-              "_text": "egN_cutoff"
+              "_text": "eg\\%{N}_bitred_oncc\\%{N}"
             },
             {
-              "_text": "egN_cutoff2"
+              "_text": "eg\\%{N}_curve\\%{N}"
             },
             {
-              "_text": "egN_decim"
+              "_text": "eg\\%{N}_cutoff"
             },
             {
-              "_text": "egN_depth_lfoX"
+              "_text": "eg\\%{N}_cutoff_oncc\\%{N}"
             },
             {
-              "_text": "egN_depthadd_lfoX"
+              "_text": "eg\\%{N}_cutoff2"
             },
             {
-              "_text": "egN_driveshape"
+              "_text": "eg\\%{N}_cutoff2_oncc\\%{N}"
             },
             {
-              "_text": "egN_eqXbw"
+              "_text": "eg\\%{N}_decim"
             },
             {
-              "_text": "egN_eqXfreq"
+              "_text": "eg\\%{N}_decim_oncc\\%{N}"
             },
             {
-              "_text": "egN_eqXgain"
+              "_text": "eg\\%{N}_depth_lfo\\%{N}"
             },
             {
-              "_text": "egN_freq_lfoX"
+              "_text": "eg\\%{N}_depthadd_lfo\\%{N}"
             },
             {
-              "_text": "egN_levelX"
+              "_text": "eg\\%{N}_driveshape"
             },
             {
-              "_text": "egN_loop"
+              "_text": "eg\\%{N}_driveshape_oncc\\%{N}"
             },
             {
-              "_text": "egN_loop_count"
+              "_text": "eg\\%{N}_eq\\%{N}bw"
             },
             {
-              "_text": "egN_noiselevel"
+              "_text": "eg\\%{N}_eq\\%{N}bw_oncc\\%{N}"
             },
             {
-              "_text": "egN_noisestep"
+              "_text": "eg\\%{N}_eq\\%{N}freq"
             },
             {
-              "_text": "egN_noisetone"
+              "_text": "eg\\%{N}_eq\\%{N}freq_oncc\\%{N}"
             },
             {
-              "_text": "egN_pan"
+              "_text": "eg\\%{N}_eq\\%{N}gain"
             },
             {
-              "_text": "egN_pan_curve"
+              "_text": "eg\\%{N}_eq\\%{N}gain_oncc\\%{N}"
             },
             {
-              "_text": "egN_pitch"
+              "_text": "eg\\%{N}_freq_lfo\\%{N}"
             },
             {
-              "_text": "egN_points"
+              "_text": "eg\\%{N}_level\\%{N}"
             },
             {
-              "_text": "egN_rectify"
+              "_text": "eg\\%{N}_level\\%{N}_oncc\\%{N}"
             },
             {
-              "_text": "egN_resonance"
+              "_text": "eg\\%{N}_loop"
             },
             {
-              "_text": "egN_resonance2"
+              "_text": "eg\\%{N}_loop_count"
             },
             {
-              "_text": "egN_ringmod"
+              "_text": "eg\\%{N}_noiselevel"
             },
             {
-              "_text": "egN_shapeX"
+              "_text": "eg\\%{N}_noiselevel_oncc\\%{N}"
             },
             {
-              "_text": "egN_sustain"
+              "_text": "eg\\%{N}_noisestep"
             },
             {
-              "_text": "egN_timeX"
+              "_text": "eg\\%{N}_noisestep_oncc\\%{N}"
             },
             {
-              "_text": "egN_volume"
+              "_text": "eg\\%{N}_noisetone"
             },
             {
-              "_text": "egN_width"
+              "_text": "eg\\%{N}_noisetone_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pan"
+            },
+            {
+              "_text": "eg\\%{N}_pan_curve"
+            },
+            {
+              "_text": "eg\\%{N}_pan_curvecc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pan_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_pitch"
+            },
+            {
+              "_text": "eg\\%{N}_pitch_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_points"
+            },
+            {
+              "_text": "eg\\%{N}_rectify"
+            },
+            {
+              "_text": "eg\\%{N}_rectify_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_resonance"
+            },
+            {
+              "_text": "eg\\%{N}_resonance_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_resonance2"
+            },
+            {
+              "_text": "eg\\%{N}_resonance2_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_ringmod"
+            },
+            {
+              "_text": "eg\\%{N}_ringmod_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_shape\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_sustain"
+            },
+            {
+              "_text": "eg\\%{N}_time\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_time\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_volume"
+            },
+            {
+              "_text": "eg\\%{N}_volume_oncc\\%{N}"
+            },
+            {
+              "_text": "eg\\%{N}_width"
+            },
+            {
+              "_text": "eg\\%{N}_width_oncc\\%{N}"
             },
             {
               "_text": "end"
@@ -614,31 +899,58 @@
               "_text": "eq_bw"
             },
             {
+              "_text": "eq_bw_oncc\\%{N}"
+            },
+            {
               "_text": "eq_freq"
+            },
+            {
+              "_text": "eq_freq_oncc\\%{N}"
             },
             {
               "_text": "eq_gain"
             },
             {
+              "_text": "eq_gain_oncc\\%{N}"
+            },
+            {
               "_text": "eq_type"
             },
             {
-              "_text": "eqN_bw"
+              "_text": "eq\\%{N}_bw"
             },
             {
-              "_text": "eqN_dynamic"
+              "_text": "eq\\%{N}_bwcc\\%{N}"
             },
             {
-              "_text": "eqN_freq"
+              "_text": "eq\\%{N}_dynamic"
             },
             {
-              "_text": "eqN_gain"
+              "_text": "eq\\%{N}_freq"
             },
             {
-              "_text": "eqN_type"
+              "_text": "eq\\%{N}_freqcc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{N}_gain"
+            },
+            {
+              "_text": "eq\\%{N}_gaincc\\%{N}"
+            },
+            {
+              "_text": "eq\\%{N}_type"
+            },
+            {
+              "_text": "eq\\%{N}_vel2freq"
+            },
+            {
+              "_text": "eq\\%{N}_vel2gain"
             },
             {
               "_text": "fil_gain"
+            },
+            {
+              "_text": "fil_gain_oncc\\%{N}"
             },
             {
               "_text": "fil_keycenter"
@@ -659,10 +971,16 @@
               "_text": "fileg_attack"
             },
             {
+              "_text": "fileg_attack_oncc\\%{N}"
+            },
+            {
               "_text": "fileg_attack_shape"
             },
             {
               "_text": "fileg_decay"
+            },
+            {
+              "_text": "fileg_decay_oncc\\%{N}"
             },
             {
               "_text": "fileg_decay_shape"
@@ -674,7 +992,13 @@
               "_text": "fileg_delay"
             },
             {
+              "_text": "fileg_delay_oncc\\%{N}"
+            },
+            {
               "_text": "fileg_depth"
+            },
+            {
+              "_text": "fileg_depth_oncc\\%{N}"
             },
             {
               "_text": "fileg_dynamic"
@@ -683,7 +1007,13 @@
               "_text": "fileg_hold"
             },
             {
+              "_text": "fileg_hold_oncc\\%{N}"
+            },
+            {
               "_text": "fileg_release"
+            },
+            {
+              "_text": "fileg_release_oncc\\%{N}"
             },
             {
               "_text": "fileg_release_shape"
@@ -695,7 +1025,34 @@
               "_text": "fileg_start"
             },
             {
+              "_text": "fileg_start_oncc\\%{N}"
+            },
+            {
               "_text": "fileg_sustain"
+            },
+            {
+              "_text": "fileg_sustain_oncc\\%{N}"
+            },
+            {
+              "_text": "fileg_vel2attack"
+            },
+            {
+              "_text": "fileg_vel2decay"
+            },
+            {
+              "_text": "fileg_vel2delay"
+            },
+            {
+              "_text": "fileg_vel2depth"
+            },
+            {
+              "_text": "fileg_vel2hold"
+            },
+            {
+              "_text": "fileg_vel2release"
+            },
+            {
+              "_text": "fileg_vel2sustain"
             },
             {
               "_text": "fillfo_delay"
@@ -704,31 +1061,58 @@
               "_text": "fillfo_depth"
             },
             {
+              "_text": "fillfo_depthcc\\%{N}"
+            },
+            {
+              "_text": "fillfo_depthchanaft"
+            },
+            {
+              "_text": "fillfo_depthpolyaft"
+            },
+            {
               "_text": "fillfo_fade"
             },
             {
               "_text": "fillfo_freq"
             },
             {
+              "_text": "fillfo_freqcc\\%{N}"
+            },
+            {
+              "_text": "fillfo_freqchanaft"
+            },
+            {
+              "_text": "fillfo_freqpolyaft"
+            },
+            {
               "_text": "filter_cutoff"
+            },
+            {
+              "_text": "filter_cutoff_oncc\\%{N}"
             },
             {
               "_text": "filter_resonance"
             },
             {
+              "_text": "filter_resonance_oncc\\%{N}"
+            },
+            {
               "_text": "filter_type"
             },
             {
-              "_text": "fxNtomain"
+              "_text": "fx\\%{N}tomain"
             },
             {
-              "_text": "fxNtomix"
+              "_text": "fx\\%{N}tomix"
+            },
+            {
+              "_text": "gain_cc\\%{N}"
             },
             {
               "_text": "gate_attack"
             },
             {
-              "_text": "gate_onccN"
+              "_text": "gate_oncc\\%{N}"
             },
             {
               "_text": "gate_release"
@@ -773,7 +1157,7 @@
               "_text": "hibpm"
             },
             {
-              "_text": "hiccN"
+              "_text": "hicc\\%{N}"
             },
             {
               "_text": "hichan"
@@ -782,7 +1166,7 @@
               "_text": "hichanaft"
             },
             {
-              "_text": "hihdccN"
+              "_text": "hihdcc\\%{N}"
             },
             {
               "_text": "hikey"
@@ -815,103 +1199,280 @@
               "_text": "key"
             },
             {
-              "_text": "label_ccN"
+              "_text": "label_cc\\%{N}"
             },
             {
-              "_text": "label_keyN"
+              "_text": "label_key\\%{N}"
             },
             {
-              "_text": "lfoN_amplitude"
+              "_text": "lfo\\%{N}_amplitude"
             },
             {
-              "_text": "lfoN_bitred"
+              "_text": "lfo\\%{N}_amplitude_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_count"
+              "_text": "lfo\\%{N}_amplitude_smoothcc\\%{N}"
             },
             {
-              "_text": "lfoN_cutoff"
+              "_text": "lfo\\%{N}_amplitude_stepcc\\%{N}"
             },
             {
-              "_text": "lfoN_decim"
+              "_text": "lfo\\%{N}_bitred"
             },
             {
-              "_text": "lfoN_delay"
+              "_text": "lfo\\%{N}_bitred_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_depth_lfoX"
+              "_text": "lfo\\%{N}_bitred_smoothcc\\%{N}"
             },
             {
-              "_text": "lfoN_depthadd_lfoX"
+              "_text": "lfo\\%{N}_bitred_stepcc\\%{N}"
             },
             {
-              "_text": "lfoN_drive"
+              "_text": "lfo\\%{N}_count"
             },
             {
-              "_text": "lfoN_eqXbw"
+              "_text": "lfo\\%{N}_cutoff"
             },
             {
-              "_text": "lfoN_eqXfreq"
+              "_text": "lfo\\%{N}_cutoff_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_eqXgain"
+              "_text": "lfo\\%{N}_cutoff_smoothcc\\%{N}"
             },
             {
-              "_text": "lfoN_fade"
+              "_text": "lfo\\%{N}_cutoff_stepcc\\%{N}"
             },
             {
-              "_text": "lfoN_freq"
+              "_text": "lfo\\%{N}_decim"
             },
             {
-              "_text": "lfoN_freq_lfoX"
+              "_text": "lfo\\%{N}_decim_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_noiselevel"
+              "_text": "lfo\\%{N}_decim_smoothcc\\%{N}"
             },
             {
-              "_text": "lfoN_noisestep"
+              "_text": "lfo\\%{N}_decim_stepcc\\%{N}"
             },
             {
-              "_text": "lfoN_noisetone"
+              "_text": "lfo\\%{N}_delay"
             },
             {
-              "_text": "lfoN_offset"
+              "_text": "lfo\\%{N}_delay_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_pan"
+              "_text": "lfo\\%{N}_depth_lfo\\%{N}"
             },
             {
-              "_text": "lfoN_phase"
+              "_text": "lfo\\%{N}_depthadd_lfo\\%{N}"
             },
             {
-              "_text": "lfoN_pitch"
+              "_text": "lfo\\%{N}_drive"
             },
             {
-              "_text": "lfoN_ratio"
+              "_text": "lfo\\%{N}_drive_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_resonance"
+              "_text": "lfo\\%{N}_drive_smoothcc\\%{N}"
             },
             {
-              "_text": "lfoN_scale"
+              "_text": "lfo\\%{N}_drive_stepcc\\%{N}"
             },
             {
-              "_text": "lfoN_smooth"
+              "_text": "lfo\\%{N}_eq\\%{N}bw"
             },
             {
-              "_text": "lfoN_steps"
+              "_text": "lfo\\%{N}_eq\\%{N}bw_oncc\\%{N}"
             },
             {
-              "_text": "lfoN_stepX"
+              "_text": "lfo\\%{N}_eq\\%{N}bw_smoothcc\\%{N}"
             },
             {
-              "_text": "lfoN_volume"
+              "_text": "lfo\\%{N}_eq\\%{N}bw_stepcc\\%{N}"
             },
             {
-              "_text": "lfoN_wave"
+              "_text": "lfo\\%{N}_eq\\%{N}freq"
             },
             {
-              "_text": "lfoN_width"
+              "_text": "lfo\\%{N}_eq\\%{N}freq_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{N}freq_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{N}freq_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{N}gain"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{N}gain_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{N}gain_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_eq\\%{N}gain_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_fade"
+            },
+            {
+              "_text": "lfo\\%{N}_fade_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_lfo\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_lfo\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_freq_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noiselevel"
+            },
+            {
+              "_text": "lfo\\%{N}_noiselevel_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noiselevel_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noiselevel_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noisestep"
+            },
+            {
+              "_text": "lfo\\%{N}_noisestep_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noisestep_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noisestep_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noisetone"
+            },
+            {
+              "_text": "lfo\\%{N}_noisetone_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noisetone_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_noisetone_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_offset"
+            },
+            {
+              "_text": "lfo\\%{N}_pan"
+            },
+            {
+              "_text": "lfo\\%{N}_pan_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pan_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pan_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_phase"
+            },
+            {
+              "_text": "lfo\\%{N}_phase_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_curvecc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_pitch_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_ratio"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_resonance_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_scale"
+            },
+            {
+              "_text": "lfo\\%{N}_smooth"
+            },
+            {
+              "_text": "lfo\\%{N}_smooth_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_step\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_step\\%{N}_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_steps"
+            },
+            {
+              "_text": "lfo\\%{N}_volume"
+            },
+            {
+              "_text": "lfo\\%{N}_volume_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_volume_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_volume_stepcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_wave"
+            },
+            {
+              "_text": "lfo\\%{N}_wave_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_width"
+            },
+            {
+              "_text": "lfo\\%{N}_width_oncc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_width_smoothcc\\%{N}"
+            },
+            {
+              "_text": "lfo\\%{N}_width_stepcc\\%{N}"
             },
             {
               "_text": "load_end"
@@ -929,7 +1490,7 @@
               "_text": "lobpm"
             },
             {
-              "_text": "loccN"
+              "_text": "locc\\%{N}"
             },
             {
               "_text": "lochan"
@@ -938,7 +1499,7 @@
               "_text": "lochanaft"
             },
             {
-              "_text": "lohdccN"
+              "_text": "lohdcc\\%{N}"
             },
             {
               "_text": "lokey"
@@ -953,10 +1514,16 @@
               "_text": "loop_end"
             },
             {
+              "_text": "loop_lengthcc\\%{N}"
+            },
+            {
               "_text": "loop_mode"
             },
             {
               "_text": "loop_start"
+            },
+            {
+              "_text": "loop_startcc\\%{N}"
             },
             {
               "_text": "loop_tune"
@@ -1001,13 +1568,25 @@
               "_text": "noise_level"
             },
             {
+              "_text": "noise_level_oncc\\%{N}"
+            },
+            {
+              "_text": "noise_level_smoothcc\\%{N}"
+            },
+            {
               "_text": "noise_step"
+            },
+            {
+              "_text": "noise_step_oncc\\%{N}"
             },
             {
               "_text": "noise_stereo"
             },
             {
               "_text": "noise_tone"
+            },
+            {
+              "_text": "noise_tone_oncc\\%{N}"
             },
             {
               "_text": "note_offset"
@@ -1040,19 +1619,22 @@
               "_text": "offset"
             },
             {
+              "_text": "offset_cc\\%{N}"
+            },
+            {
               "_text": "offset_random"
             },
             {
-              "_text": "on_hiccN"
+              "_text": "on_hicc\\%{N}"
             },
             {
-              "_text": "on_hihdccN"
+              "_text": "on_hihdcc\\%{N}"
             },
             {
-              "_text": "on_loccN"
+              "_text": "on_locc\\%{N}"
             },
             {
-              "_text": "on_lohdccN"
+              "_text": "on_lohdcc\\%{N}"
             },
             {
               "_text": "oscillator"
@@ -1061,7 +1643,16 @@
               "_text": "oscillator_detune"
             },
             {
+              "_text": "oscillator_detune_oncc\\%{N}"
+            },
+            {
               "_text": "oscillator_mod_depth"
+            },
+            {
+              "_text": "oscillator_mod_depth_oncc\\%{N}"
+            },
+            {
+              "_text": "oscillator_mod_smoothcc\\%{N}"
             },
             {
               "_text": "oscillator_mode"
@@ -1085,6 +1676,9 @@
               "_text": "pan"
             },
             {
+              "_text": "pan_curvecc\\%{N}"
+            },
+            {
               "_text": "pan_keycenter"
             },
             {
@@ -1094,7 +1688,16 @@
               "_text": "pan_law"
             },
             {
+              "_text": "pan_oncc\\%{N}"
+            },
+            {
               "_text": "pan_random"
+            },
+            {
+              "_text": "pan_smoothcc\\%{N}"
+            },
+            {
+              "_text": "pan_stepcc\\%{N}"
             },
             {
               "_text": "pan_veltrack"
@@ -1109,13 +1712,22 @@
               "_text": "phaser_depth"
             },
             {
+              "_text": "phaser_depth_oncc\\%{N}"
+            },
+            {
               "_text": "phaser_feedback"
+            },
+            {
+              "_text": "phaser_feedback_oncc\\%{N}"
             },
             {
               "_text": "phaser_freq"
             },
             {
-              "_text": "phaser_phase_onccN"
+              "_text": "phaser_freq_oncc\\%{N}"
+            },
+            {
+              "_text": "phaser_phase_oncc\\%{N}"
             },
             {
               "_text": "phaser_stages"
@@ -1127,13 +1739,28 @@
               "_text": "phaser_wet"
             },
             {
+              "_text": "phaser_wet_oncc\\%{N}"
+            },
+            {
+              "_text": "pitch_curvecc\\%{N}"
+            },
+            {
               "_text": "pitch_keycenter"
             },
             {
               "_text": "pitch_keytrack"
             },
             {
+              "_text": "pitch_oncc\\%{N}"
+            },
+            {
               "_text": "pitch_random"
+            },
+            {
+              "_text": "pitch_smoothcc\\%{N}"
+            },
+            {
+              "_text": "pitch_stepcc\\%{N}"
             },
             {
               "_text": "pitch_veltrack"
@@ -1142,10 +1769,16 @@
               "_text": "pitcheg_attack"
             },
             {
+              "_text": "pitcheg_attack_oncc\\%{N}"
+            },
+            {
               "_text": "pitcheg_attack_shape"
             },
             {
               "_text": "pitcheg_decay"
+            },
+            {
+              "_text": "pitcheg_decay_oncc\\%{N}"
             },
             {
               "_text": "pitcheg_decay_shape"
@@ -1157,7 +1790,13 @@
               "_text": "pitcheg_delay"
             },
             {
+              "_text": "pitcheg_delay_oncc\\%{N}"
+            },
+            {
               "_text": "pitcheg_depth"
+            },
+            {
+              "_text": "pitcheg_depth_oncc\\%{N}"
             },
             {
               "_text": "pitcheg_dynamic"
@@ -1166,7 +1805,13 @@
               "_text": "pitcheg_hold"
             },
             {
+              "_text": "pitcheg_hold_oncc\\%{N}"
+            },
+            {
               "_text": "pitcheg_release"
+            },
+            {
+              "_text": "pitcheg_release_oncc\\%{N}"
             },
             {
               "_text": "pitcheg_release_shape"
@@ -1178,7 +1823,34 @@
               "_text": "pitcheg_start"
             },
             {
+              "_text": "pitcheg_start_oncc\\%{N}"
+            },
+            {
               "_text": "pitcheg_sustain"
+            },
+            {
+              "_text": "pitcheg_sustain_oncc\\%{N}"
+            },
+            {
+              "_text": "pitcheg_vel2attack"
+            },
+            {
+              "_text": "pitcheg_vel2decay"
+            },
+            {
+              "_text": "pitcheg_vel2delay"
+            },
+            {
+              "_text": "pitcheg_vel2depth"
+            },
+            {
+              "_text": "pitcheg_vel2hold"
+            },
+            {
+              "_text": "pitcheg_vel2release"
+            },
+            {
+              "_text": "pitcheg_vel2sustain"
             },
             {
               "_text": "pitchlfo_delay"
@@ -1187,10 +1859,28 @@
               "_text": "pitchlfo_depth"
             },
             {
+              "_text": "pitchlfo_depthcc\\%{N}"
+            },
+            {
+              "_text": "pitchlfo_depthchanaft"
+            },
+            {
+              "_text": "pitchlfo_depthpolyaft"
+            },
+            {
               "_text": "pitchlfo_fade"
             },
             {
               "_text": "pitchlfo_freq"
+            },
+            {
+              "_text": "pitchlfo_freqcc\\%{N}"
+            },
+            {
+              "_text": "pitchlfo_freqchanaft"
+            },
+            {
+              "_text": "pitchlfo_freqpolyaft"
             },
             {
               "_text": "polyphony"
@@ -1202,13 +1892,25 @@
               "_text": "position"
             },
             {
+              "_text": "position_curvecc\\%{N}"
+            },
+            {
               "_text": "position_keycenter"
             },
             {
               "_text": "position_keytrack"
             },
             {
+              "_text": "position_oncc\\%{N}"
+            },
+            {
               "_text": "position_random"
+            },
+            {
+              "_text": "position_smoothcc\\%{N}"
+            },
+            {
+              "_text": "position_stepcc\\%{N}"
             },
             {
               "_text": "position_veltrack"
@@ -1220,25 +1922,55 @@
               "_text": "resonance"
             },
             {
+              "_text": "resonance_curvecc\\%{N}"
+            },
+            {
+              "_text": "resonance_oncc\\%{N}"
+            },
+            {
               "_text": "resonance_random"
+            },
+            {
+              "_text": "resonance_smoothcc\\%{N}"
+            },
+            {
+              "_text": "resonance_stepcc\\%{N}"
             },
             {
               "_text": "reverb_damp"
             },
             {
+              "_text": "reverb_damp_oncc\\%{N}"
+            },
+            {
               "_text": "reverb_dry"
+            },
+            {
+              "_text": "reverb_dry_oncc\\%{N}"
             },
             {
               "_text": "reverb_input"
             },
             {
+              "_text": "reverb_input_oncc\\%{N}"
+            },
+            {
               "_text": "reverb_predelay"
+            },
+            {
+              "_text": "reverb_predelay_oncc\\%{N}"
             },
             {
               "_text": "reverb_size"
             },
             {
+              "_text": "reverb_size_oncc\\%{N}"
+            },
+            {
               "_text": "reverb_tone"
+            },
+            {
+              "_text": "reverb_tone_oncc\\%{N}"
             },
             {
               "_text": "reverb_type"
@@ -1247,10 +1979,13 @@
               "_text": "reverb_wet"
             },
             {
-              "_text": "reverse_hiccN"
+              "_text": "reverb_wet_oncc\\%{N}"
             },
             {
-              "_text": "reverse_loccN"
+              "_text": "reverse_hicc\\%{N}"
+            },
+            {
+              "_text": "reverse_locc\\%{N}"
             },
             {
               "_text": "rt_dead"
@@ -1277,10 +2012,10 @@
               "_text": "seq_position"
             },
             {
-              "_text": "set_ccN"
+              "_text": "set_cc\\%{N}"
             },
             {
-              "_text": "set_hdccN"
+              "_text": "set_hdcc\\%{N}"
             },
             {
               "_text": "sostenuto_cc"
@@ -1304,6 +2039,9 @@
               "_text": "static_level"
             },
             {
+              "_text": "static_level_oncc\\%{N}"
+            },
+            {
               "_text": "static_random_level"
             },
             {
@@ -1322,22 +2060,22 @@
               "_text": "stop_beats"
             },
             {
-              "_text": "stop_hiccN"
+              "_text": "stop_hicc\\%{N}"
             },
             {
-              "_text": "stop_hihdccN"
+              "_text": "stop_hihdcc\\%{N}"
             },
             {
-              "_text": "stop_loccN"
+              "_text": "stop_locc\\%{N}"
             },
             {
-              "_text": "stop_lohdccN"
+              "_text": "stop_lohdcc\\%{N}"
             },
             {
               "_text": "strings_number"
             },
             {
-              "_text": "strings_wet_onccN"
+              "_text": "strings_wet_oncc\\%{N}"
             },
             {
               "_text": "sustain_cc"
@@ -1397,6 +2135,9 @@
               "_text": "tdfir_dry"
             },
             {
+              "_text": "tdfir_dry_oncc\\%{N}"
+            },
+            {
               "_text": "tdfir_gain"
             },
             {
@@ -1404,6 +2145,9 @@
             },
             {
               "_text": "tdfir_wet"
+            },
+            {
+              "_text": "tdfir_wet_oncc\\%{N}"
             },
             {
               "_text": "transpose"
@@ -1418,25 +2162,52 @@
               "_text": "type"
             },
             {
-              "_text": "varNN_*"
+              "_text": "v\\%{N}"
             },
             {
-              "_text": "varNN_mod"
+              "_text": "var\\%{N}_*"
+            },
+            {
+              "_text": "var\\%{N}_curvecc\\%{N}"
+            },
+            {
+              "_text": "var\\%{N}_mod"
+            },
+            {
+              "_text": "var\\%{N}_oncc\\%{N}"
             },
             {
               "_text": "vendor_specific"
             },
             {
-              "_text": "vN"
+              "_text": "volume"
             },
             {
-              "_text": "volume"
+              "_text": "volume_curvecc\\%{N}"
+            },
+            {
+              "_text": "volume_smoothcc\\%{N}"
+            },
+            {
+              "_text": "volume_stepcc\\%{N}"
             },
             {
               "_text": "waveguide"
             },
             {
               "_text": "width"
+            },
+            {
+              "_text": "width_curvecc\\%{N}"
+            },
+            {
+              "_text": "width_oncc\\%{N}"
+            },
+            {
+              "_text": "width_smoothcc\\%{N}"
+            },
+            {
+              "_text": "width_stepcc\\%{N}"
             },
             {
               "_text": "xf_cccurve"
@@ -1448,7 +2219,7 @@
               "_text": "xf_velcurve"
             },
             {
-              "_text": "xfin_hiccN"
+              "_text": "xfin_hicc\\%{N}"
             },
             {
               "_text": "xfin_hikey"
@@ -1457,7 +2228,7 @@
               "_text": "xfin_hivel"
             },
             {
-              "_text": "xfin_loccN"
+              "_text": "xfin_locc\\%{N}"
             },
             {
               "_text": "xfin_lokey"
@@ -1466,7 +2237,7 @@
               "_text": "xfin_lovel"
             },
             {
-              "_text": "xfout_hiccN"
+              "_text": "xfout_hicc\\%{N}"
             },
             {
               "_text": "xfout_hikey"
@@ -1475,7 +2246,7 @@
               "_text": "xfout_hivel"
             },
             {
-              "_text": "xfout_loccN"
+              "_text": "xfout_locc\\%{N}"
             },
             {
               "_text": "xfout_lokey"
