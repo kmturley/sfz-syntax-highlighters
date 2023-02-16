@@ -1,5 +1,5 @@
-import { DefinitionsContext, Gedit } from './types/gedit';
-import { CategoryOpcode, Syntax } from './types/syntax';
+import { DefinitionsContext, Gedit, Prefix } from './types/gedit';
+import { CategoryOpcode, Syntax, TypeOpcode } from './types/syntax';
 import { fileLoadJson, fileSave, findOpcodes, jsToXml } from './utils';
 
 async function geditConvert(path: string, headers: string[], syntaxFile: Syntax) {
@@ -18,9 +18,17 @@ async function geditConvert(path: string, headers: string[], syntaxFile: Syntax)
         .map((header: string) => ({ _text: header }))
         .sort((a, b) => a._text.localeCompare(b._text));
     } else if (contextItem._attributes.id === 'opcodes') {
-      contextItem.keyword = opcodes
-        .map((opcode: CategoryOpcode) => ({ _text: opcode.name }))
-        .sort((a, b) => a._text.localeCompare(b._text));
+      let keywords: Prefix[] = [];
+      opcodes.forEach((opcode: TypeOpcode) => {
+        keywords.push(geditRegEx(opcode.name));
+        if (opcode.modulation?.midi_cc) {
+          opcode.modulation.midi_cc.forEach((midi) => keywords.push(geditRegEx(midi.name)));
+        }
+        if (opcode.modulation?.velocity) {
+          opcode.modulation.velocity.forEach((vel) => keywords.push(geditRegEx(vel.name)));
+        }
+      });
+      contextItem.keyword = keywords.sort((a: Prefix, b: Prefix) => a._text.localeCompare(b._text));
     }
   });
 
@@ -29,4 +37,10 @@ async function geditConvert(path: string, headers: string[], syntaxFile: Syntax)
   fileSave(path, 'gedit-modified.lang', jsToXml(geditTemplate));
 }
 
-export { geditConvert };
+function geditRegEx(input: string): Prefix {
+  // Replace N, X, Y values with regex.
+  input = input.replace(/[NXY]+/g, '\\%{N}');
+  return { _text: input };
+}
+
+export { geditConvert, geditRegEx };
