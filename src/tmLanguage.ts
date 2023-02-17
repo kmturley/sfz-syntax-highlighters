@@ -76,7 +76,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       const pattern: PurplePattern = {
         comment: `opcodes: (${opcode.name})${patternValue}`,
         name: PurpleName.MetaOpcodeSfz,
-        begin: `\\b(${opcode.name})\\b`,
+        begin: `\\b(${tmLanguageRegEx(opcode.name)})\\b`,
         beginCaptures: {
           1: {
             name: `variable.language.${categorySlug}.$1.sfz`,
@@ -104,6 +104,11 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
   // Save out json and xml versions.
   fileSave(path, 'tmLanguage-modified.json', JSON.stringify(tmLanguageTemplate, null, 2));
   fileSave(path, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
+}
+
+function tmLanguageRegEx(input: string): string {
+  // Replace N, X, Y values with regex.
+  return input.replace(/[NXY]+/g, '(?:\\d{1,3})?');
 }
 
 export { tmLanguageConvert };
