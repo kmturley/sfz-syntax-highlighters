@@ -74,9 +74,6 @@
       <keyword>=</keyword>
     </context>
     <context id="opcodes" style-ref="opcode">
-      <keyword>*_mod</keyword>
-      <keyword>#define</keyword>
-      <keyword>#include</keyword>
       <keyword>amp_keycenter</keyword>
       <keyword>amp_keytrack</keyword>
       <keyword>amp_random</keyword>

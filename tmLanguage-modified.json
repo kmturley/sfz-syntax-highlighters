@@ -450,7 +450,7 @@
         {
           "comment": "opcodes: (hiccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(hiccN)\\b",
+          "begin": "\\b(hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -610,7 +610,7 @@
         {
           "comment": "opcodes: (loccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(loccN)\\b",
+          "begin": "\\b(locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -722,7 +722,7 @@
         {
           "comment": "opcodes: (on_hiccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(on_hiccN)\\b",
+          "begin": "\\b(on_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -738,7 +738,7 @@
         {
           "comment": "opcodes: (on_loccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(on_loccN)\\b",
+          "begin": "\\b(on_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -966,7 +966,7 @@
         {
           "comment": "opcodes: (amp_velcurve_N): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(amp_velcurve_N)\\b",
+          "begin": "\\b(amp_velcurve_(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1062,7 +1062,7 @@
         {
           "comment": "opcodes: (eqN_bw): (0.001 to 4 octaves)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(eqN_bw)\\b",
+          "begin": "\\b(eq(?:\\d{1,3})?_bw)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1078,7 +1078,7 @@
         {
           "comment": "opcodes: (eqN_freq): (0 to 30000 Hz)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(eqN_freq)\\b",
+          "begin": "\\b(eq(?:\\d{1,3})?_freq)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1094,7 +1094,7 @@
         {
           "comment": "opcodes: (eqN_gain): (-96 to 24 dB)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(eqN_gain)\\b",
+          "begin": "\\b(eq(?:\\d{1,3})?_gain)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1430,7 +1430,7 @@
         {
           "comment": "opcodes: (xfin_hiccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(xfin_hiccN)\\b",
+          "begin": "\\b(xfin_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1478,7 +1478,7 @@
         {
           "comment": "opcodes: (xfin_loccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(xfin_loccN)\\b",
+          "begin": "\\b(xfin_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1526,7 +1526,7 @@
         {
           "comment": "opcodes: (xfout_hiccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(xfout_hiccN)\\b",
+          "begin": "\\b(xfout_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -1574,7 +1574,7 @@
         {
           "comment": "opcodes: (xfout_loccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(xfout_loccN)\\b",
+          "begin": "\\b(xfout_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -2316,7 +2316,7 @@
         {
           "comment": "opcodes: (reverse_hiccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(reverse_hiccN)\\b",
+          "begin": "\\b(reverse_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.sound-source.$1.sfz"
@@ -2332,7 +2332,7 @@
         {
           "comment": "opcodes: (reverse_loccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(reverse_loccN)\\b",
+          "begin": "\\b(reverse_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.sound-source.$1.sfz"
@@ -2487,7 +2487,7 @@
         {
           "comment": "opcodes: (set_ccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(set_ccN)\\b",
+          "begin": "\\b(set_cc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.instrument-settings.$1.sfz"
@@ -2577,7 +2577,7 @@
         {
           "comment": "opcodes: (stop_hiccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(stop_hiccN)\\b",
+          "begin": "\\b(stop_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -2593,7 +2593,7 @@
         {
           "comment": "opcodes: (stop_loccN): (0 to 127)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(stop_loccN)\\b",
+          "begin": "\\b(stop_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -2693,7 +2693,7 @@
         {
           "comment": "opcodes: (eqN_type): (peak|lshelf|hshelf",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(eqN_type)\\b",
+          "begin": "\\b(eq(?:\\d{1,3})?_type)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -2777,7 +2777,7 @@
         {
           "comment": "opcodes: (egN_amplitude)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_amplitude)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_amplitude)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2788,7 +2788,7 @@
         {
           "comment": "opcodes: (egN_curveX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_curveX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_curve(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2799,7 +2799,7 @@
         {
           "comment": "opcodes: (egN_cutoff)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_cutoff)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_cutoff)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2810,7 +2810,7 @@
         {
           "comment": "opcodes: (egN_cutoff2)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_cutoff2)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_cutoff2)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2821,7 +2821,7 @@
         {
           "comment": "opcodes: (egN_depth_lfoX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_depth_lfoX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_depth_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2832,7 +2832,7 @@
         {
           "comment": "opcodes: (egN_depthadd_lfoX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_depthadd_lfoX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_depthadd_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2843,7 +2843,7 @@
         {
           "comment": "opcodes: (egN_eqXbw)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_eqXbw)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_eq(?:\\d{1,3})?bw)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2854,7 +2854,7 @@
         {
           "comment": "opcodes: (egN_eqXfreq)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_eqXfreq)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_eq(?:\\d{1,3})?freq)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2865,7 +2865,7 @@
         {
           "comment": "opcodes: (egN_eqXgain)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_eqXgain)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_eq(?:\\d{1,3})?gain)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2876,7 +2876,7 @@
         {
           "comment": "opcodes: (egN_freq_lfoX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_freq_lfoX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_freq_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2887,7 +2887,7 @@
         {
           "comment": "opcodes: (egN_levelX): (-1 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_levelX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_level(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2903,7 +2903,7 @@
         {
           "comment": "opcodes: (egN_loop)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_loop)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_loop)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2914,7 +2914,7 @@
         {
           "comment": "opcodes: (egN_loop_count)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_loop_count)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_loop_count)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2925,7 +2925,7 @@
         {
           "comment": "opcodes: (egN_pan)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_pan)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_pan)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2936,7 +2936,7 @@
         {
           "comment": "opcodes: (egN_pan_curve)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_pan_curve)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_pan_curve)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2947,7 +2947,7 @@
         {
           "comment": "opcodes: (egN_pitch)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_pitch)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_pitch)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2958,7 +2958,7 @@
         {
           "comment": "opcodes: (egN_points)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_points)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_points)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2969,7 +2969,7 @@
         {
           "comment": "opcodes: (egN_resonance)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_resonance)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_resonance)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2980,7 +2980,7 @@
         {
           "comment": "opcodes: (egN_resonance2)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_resonance2)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_resonance2)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -2991,7 +2991,7 @@
         {
           "comment": "opcodes: (egN_shapeX): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_shapeX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_shape(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3002,7 +3002,7 @@
         {
           "comment": "opcodes: (egN_sustain)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_sustain)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_sustain)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3013,7 +3013,7 @@
         {
           "comment": "opcodes: (egN_timeX): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_timeX)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_time(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3024,7 +3024,7 @@
         {
           "comment": "opcodes: (egN_volume)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_volume)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_volume)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3035,7 +3035,7 @@
         {
           "comment": "opcodes: (egN_width)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_width)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_width)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3046,7 +3046,7 @@
         {
           "comment": "opcodes: (lfoN_amplitude)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_amplitude)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_amplitude)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3057,7 +3057,7 @@
         {
           "comment": "opcodes: (lfoN_count): (any integer)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_count)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_count)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3068,7 +3068,7 @@
         {
           "comment": "opcodes: (lfoN_cutoff)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_cutoff)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_cutoff)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3079,7 +3079,7 @@
         {
           "comment": "opcodes: (lfoN_delay): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_delay)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_delay)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3090,7 +3090,7 @@
         {
           "comment": "opcodes: (lfoN_depth_lfoX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_depth_lfoX)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_depth_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3101,7 +3101,7 @@
         {
           "comment": "opcodes: (lfoN_depthadd_lfoX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_depthadd_lfoX)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_depthadd_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3112,7 +3112,7 @@
         {
           "comment": "opcodes: (lfoN_eqXbw)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_eqXbw)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_eq(?:\\d{1,3})?bw)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3123,7 +3123,7 @@
         {
           "comment": "opcodes: (lfoN_eqXfreq)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_eqXfreq)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_eq(?:\\d{1,3})?freq)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3134,7 +3134,7 @@
         {
           "comment": "opcodes: (lfoN_eqXgain)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_eqXgain)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_eq(?:\\d{1,3})?gain)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3145,7 +3145,7 @@
         {
           "comment": "opcodes: (lfoN_fade): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_fade)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_fade)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3156,7 +3156,7 @@
         {
           "comment": "opcodes: (lfoN_freq): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_freq)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_freq)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3167,7 +3167,7 @@
         {
           "comment": "opcodes: (lfoN_freq_lfoX)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_freq_lfoX)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_freq_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3178,7 +3178,7 @@
         {
           "comment": "opcodes: (lfoN_pan)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_pan)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_pan)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3189,7 +3189,7 @@
         {
           "comment": "opcodes: (lfoN_phase): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_phase)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_phase)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3205,7 +3205,7 @@
         {
           "comment": "opcodes: (lfoN_pitch)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_pitch)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_pitch)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3216,7 +3216,7 @@
         {
           "comment": "opcodes: (lfoN_resonance)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_resonance)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_resonance)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3227,7 +3227,7 @@
         {
           "comment": "opcodes: (lfoN_smooth)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_smooth)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_smooth)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3238,7 +3238,7 @@
         {
           "comment": "opcodes: (lfoN_steps): (any integer)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_steps)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_steps)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3249,7 +3249,7 @@
         {
           "comment": "opcodes: (lfoN_stepX): (-100 to 100 percent)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_stepX)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_step(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3265,7 +3265,7 @@
         {
           "comment": "opcodes: (lfoN_volume)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_volume)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_volume)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3276,7 +3276,7 @@
         {
           "comment": "opcodes: (lfoN_wave): (any integer)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_wave)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_wave)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3287,7 +3287,7 @@
         {
           "comment": "opcodes: (lfoN_width)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_width)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_width)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -3302,7 +3302,7 @@
         {
           "comment": "opcodes: (vN): (-1 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(vN)\\b",
+          "begin": "\\b(v(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.curves.$1.sfz"
@@ -3382,7 +3382,7 @@
         {
           "comment": "opcodes: (label_ccN): (any string)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(label_ccN)\\b",
+          "begin": "\\b(label_cc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.instrument-settings.$1.sfz"
@@ -3464,7 +3464,7 @@
         {
           "comment": "opcodes: (set_hdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(set_hdccN)\\b",
+          "begin": "\\b(set_hdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.instrument-settings.$1.sfz"
@@ -3506,7 +3506,7 @@
         {
           "comment": "opcodes: (hihdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(hihdccN)\\b",
+          "begin": "\\b(hihdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3522,7 +3522,7 @@
         {
           "comment": "opcodes: (lohdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lohdccN)\\b",
+          "begin": "\\b(lohdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3538,7 +3538,7 @@
         {
           "comment": "opcodes: (on_hihdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(on_hihdccN)\\b",
+          "begin": "\\b(on_hihdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3554,7 +3554,7 @@
         {
           "comment": "opcodes: (on_lohdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(on_lohdccN)\\b",
+          "begin": "\\b(on_lohdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3602,7 +3602,7 @@
         {
           "comment": "opcodes: (stop_hihdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(stop_hihdccN)\\b",
+          "begin": "\\b(stop_hihdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3618,7 +3618,7 @@
         {
           "comment": "opcodes: (stop_lohdccN): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(stop_lohdccN)\\b",
+          "begin": "\\b(stop_lohdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3709,7 +3709,7 @@
         {
           "comment": "opcodes: (varNN_*)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(varNN_*)\\b",
+          "begin": "\\b(var(?:\\d{1,3})?_*)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3720,7 +3720,7 @@
         {
           "comment": "opcodes: (varNN_mod): (mult|add",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(varNN_mod)\\b",
+          "begin": "\\b(var(?:\\d{1,3})?_mod)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.region-logic.$1.sfz"
@@ -3767,7 +3767,7 @@
         {
           "comment": "opcodes: (eqN_dynamic): (0 to 1)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(eqN_dynamic)\\b",
+          "begin": "\\b(eq(?:\\d{1,3})?_dynamic)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.$1.sfz"
@@ -4120,7 +4120,7 @@
         {
           "comment": "opcodes: (egN_ampeg)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_ampeg)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_ampeg)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4212,7 +4212,7 @@
         {
           "comment": "opcodes: (lfoN_offset): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_offset)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_offset)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4223,7 +4223,7 @@
         {
           "comment": "opcodes: (lfoN_ratio): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_ratio)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_ratio)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4234,7 +4234,7 @@
         {
           "comment": "opcodes: (lfoN_scale): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_scale)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_scale)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4603,7 +4603,7 @@
         {
           "comment": "opcodes: (label_keyN): (any string)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(label_keyN)\\b",
+          "begin": "\\b(label_key(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.instrument-settings.$1.sfz"
@@ -4702,7 +4702,7 @@
         {
           "comment": "opcodes: (egN_bitred)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_bitred)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_bitred)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4713,7 +4713,7 @@
         {
           "comment": "opcodes: (egN_decim)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_decim)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_decim)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4724,7 +4724,7 @@
         {
           "comment": "opcodes: (egN_driveshape)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_driveshape)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_driveshape)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4735,7 +4735,7 @@
         {
           "comment": "opcodes: (egN_noiselevel)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_noiselevel)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_noiselevel)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4746,7 +4746,7 @@
         {
           "comment": "opcodes: (egN_noisestep)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_noisestep)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_noisestep)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4757,7 +4757,7 @@
         {
           "comment": "opcodes: (egN_noisetone)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_noisetone)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_noisetone)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4768,7 +4768,7 @@
         {
           "comment": "opcodes: (egN_rectify)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_rectify)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_rectify)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4779,7 +4779,7 @@
         {
           "comment": "opcodes: (egN_ringmod)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(egN_ringmod)\\b",
+          "begin": "\\b(eg(?:\\d{1,3})?_ringmod)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4790,7 +4790,7 @@
         {
           "comment": "opcodes: (lfoN_bitred)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_bitred)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_bitred)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4801,7 +4801,7 @@
         {
           "comment": "opcodes: (lfoN_decim)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_decim)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_decim)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4812,7 +4812,7 @@
         {
           "comment": "opcodes: (lfoN_drive)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_drive)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_drive)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4823,7 +4823,7 @@
         {
           "comment": "opcodes: (lfoN_noiselevel)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_noiselevel)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_noiselevel)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4834,7 +4834,7 @@
         {
           "comment": "opcodes: (lfoN_noisestep)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_noisestep)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_noisestep)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4845,7 +4845,7 @@
         {
           "comment": "opcodes: (lfoN_noisetone)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(lfoN_noisetone)\\b",
+          "begin": "\\b(lfo(?:\\d{1,3})?_noisetone)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.modulation.$1.sfz"
@@ -4962,7 +4962,7 @@
         {
           "comment": "opcodes: (bypass_onccN): (any float)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(bypass_onccN)\\b",
+          "begin": "\\b(bypass_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5333,7 +5333,7 @@
         {
           "comment": "opcodes: (delay_syncc_onccN)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(delay_syncc_onccN)\\b",
+          "begin": "\\b(delay_syncc_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5344,7 +5344,7 @@
         {
           "comment": "opcodes: (delay_syncl_onccN)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(delay_syncl_onccN)\\b",
+          "begin": "\\b(delay_syncl_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5355,7 +5355,7 @@
         {
           "comment": "opcodes: (delay_syncr_onccN)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(delay_syncr_onccN)\\b",
+          "begin": "\\b(delay_syncr_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5610,7 +5610,7 @@
         {
           "comment": "opcodes: (fxNtomain): (0 to 100 %)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(fxNtomain)\\b",
+          "begin": "\\b(fx(?:\\d{1,3})?tomain)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5626,7 +5626,7 @@
         {
           "comment": "opcodes: (fxNtomix): (0 to 100 %)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(fxNtomix)\\b",
+          "begin": "\\b(fx(?:\\d{1,3})?tomix)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5653,7 +5653,7 @@
         {
           "comment": "opcodes: (gate_onccN)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(gate_onccN)\\b",
+          "begin": "\\b(gate_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -5761,7 +5761,7 @@
         {
           "comment": "opcodes: (phaser_phase_onccN): (0 to 100)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(phaser_phase_onccN)\\b",
+          "begin": "\\b(phaser_phase_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"
@@ -6068,7 +6068,7 @@
         {
           "comment": "opcodes: (strings_wet_onccN): (0 to 100)",
           "name": "meta.opcode.sfz",
-          "begin": "\\b(strings_wet_onccN)\\b",
+          "begin": "\\b(strings_wet_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.effects.$1.sfz"

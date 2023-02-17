@@ -404,7 +404,7 @@
     <patterns>
       <comment>opcodes: (hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(hiccN)\b</begin>
+      <begin>\b(hicc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -544,7 +544,7 @@
     <patterns>
       <comment>opcodes: (loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(loccN)\b</begin>
+      <begin>\b(locc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -642,7 +642,7 @@
     <patterns>
       <comment>opcodes: (on_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(on_hiccN)\b</begin>
+      <begin>\b(on_hicc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -656,7 +656,7 @@
     <patterns>
       <comment>opcodes: (on_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(on_loccN)\b</begin>
+      <begin>\b(on_locc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -854,7 +854,7 @@
     <patterns>
       <comment>opcodes: (amp_velcurve_N): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(amp_velcurve_N)\b</begin>
+      <begin>\b(amp_velcurve_(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -938,7 +938,7 @@
     <patterns>
       <comment>opcodes: (eqN_bw): (0.001 to 4 octaves)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_bw)\b</begin>
+      <begin>\b(eq(?:\d{1,3})?_bw)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -952,7 +952,7 @@
     <patterns>
       <comment>opcodes: (eqN_freq): (0 to 30000 Hz)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_freq)\b</begin>
+      <begin>\b(eq(?:\d{1,3})?_freq)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -966,7 +966,7 @@
     <patterns>
       <comment>opcodes: (eqN_gain): (-96 to 24 dB)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_gain)\b</begin>
+      <begin>\b(eq(?:\d{1,3})?_gain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -1260,7 +1260,7 @@
     <patterns>
       <comment>opcodes: (xfin_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_hiccN)\b</begin>
+      <begin>\b(xfin_hicc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -1302,7 +1302,7 @@
     <patterns>
       <comment>opcodes: (xfin_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xfin_loccN)\b</begin>
+      <begin>\b(xfin_locc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -1344,7 +1344,7 @@
     <patterns>
       <comment>opcodes: (xfout_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_hiccN)\b</begin>
+      <begin>\b(xfout_hicc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -1386,7 +1386,7 @@
     <patterns>
       <comment>opcodes: (xfout_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(xfout_loccN)\b</begin>
+      <begin>\b(xfout_locc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -2037,7 +2037,7 @@
     <patterns>
       <comment>opcodes: (reverse_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(reverse_hiccN)\b</begin>
+      <begin>\b(reverse_hicc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.sound-source.$1.sfz</name>
@@ -2051,7 +2051,7 @@
     <patterns>
       <comment>opcodes: (reverse_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(reverse_loccN)\b</begin>
+      <begin>\b(reverse_locc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.sound-source.$1.sfz</name>
@@ -2192,7 +2192,7 @@
     <patterns>
       <comment>opcodes: (set_ccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(set_ccN)\b</begin>
+      <begin>\b(set_cc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -2272,7 +2272,7 @@
     <patterns>
       <comment>opcodes: (stop_hiccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(stop_hiccN)\b</begin>
+      <begin>\b(stop_hicc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -2286,7 +2286,7 @@
     <patterns>
       <comment>opcodes: (stop_loccN): (0 to 127)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(stop_loccN)\b</begin>
+      <begin>\b(stop_locc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -2372,7 +2372,7 @@
     <patterns>
       <comment>opcodes: (eqN_type): (peak|lshelf|hshelf</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_type)\b</begin>
+      <begin>\b(eq(?:\d{1,3})?_type)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -2444,7 +2444,7 @@
     <patterns>
       <comment>opcodes: (egN_amplitude)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_amplitude)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_amplitude)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2455,7 +2455,7 @@
     <patterns>
       <comment>opcodes: (egN_curveX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_curveX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_curve(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2466,7 +2466,7 @@
     <patterns>
       <comment>opcodes: (egN_cutoff)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_cutoff)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_cutoff)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2477,7 +2477,7 @@
     <patterns>
       <comment>opcodes: (egN_cutoff2)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_cutoff2)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_cutoff2)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2488,7 +2488,7 @@
     <patterns>
       <comment>opcodes: (egN_depth_lfoX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_depth_lfoX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_depth_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2499,7 +2499,7 @@
     <patterns>
       <comment>opcodes: (egN_depthadd_lfoX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_depthadd_lfoX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_depthadd_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2510,7 +2510,7 @@
     <patterns>
       <comment>opcodes: (egN_eqXbw)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_eqXbw)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_eq(?:\d{1,3})?bw)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2521,7 +2521,7 @@
     <patterns>
       <comment>opcodes: (egN_eqXfreq)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_eqXfreq)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_eq(?:\d{1,3})?freq)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2532,7 +2532,7 @@
     <patterns>
       <comment>opcodes: (egN_eqXgain)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_eqXgain)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_eq(?:\d{1,3})?gain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2543,7 +2543,7 @@
     <patterns>
       <comment>opcodes: (egN_freq_lfoX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_freq_lfoX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_freq_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2554,7 +2554,7 @@
     <patterns>
       <comment>opcodes: (egN_levelX): (-1 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_levelX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_level(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2568,7 +2568,7 @@
     <patterns>
       <comment>opcodes: (egN_loop)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_loop)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_loop)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2579,7 +2579,7 @@
     <patterns>
       <comment>opcodes: (egN_loop_count)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_loop_count)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_loop_count)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2590,7 +2590,7 @@
     <patterns>
       <comment>opcodes: (egN_pan)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_pan)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_pan)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2601,7 +2601,7 @@
     <patterns>
       <comment>opcodes: (egN_pan_curve)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_pan_curve)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_pan_curve)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2612,7 +2612,7 @@
     <patterns>
       <comment>opcodes: (egN_pitch)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_pitch)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_pitch)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2623,7 +2623,7 @@
     <patterns>
       <comment>opcodes: (egN_points)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_points)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_points)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2634,7 +2634,7 @@
     <patterns>
       <comment>opcodes: (egN_resonance)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_resonance)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_resonance)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2645,7 +2645,7 @@
     <patterns>
       <comment>opcodes: (egN_resonance2)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_resonance2)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_resonance2)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2656,7 +2656,7 @@
     <patterns>
       <comment>opcodes: (egN_shapeX): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_shapeX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_shape(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2667,7 +2667,7 @@
     <patterns>
       <comment>opcodes: (egN_sustain)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_sustain)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_sustain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2678,7 +2678,7 @@
     <patterns>
       <comment>opcodes: (egN_timeX): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_timeX)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_time(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2689,7 +2689,7 @@
     <patterns>
       <comment>opcodes: (egN_volume)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_volume)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_volume)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2700,7 +2700,7 @@
     <patterns>
       <comment>opcodes: (egN_width)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_width)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_width)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2711,7 +2711,7 @@
     <patterns>
       <comment>opcodes: (lfoN_amplitude)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_amplitude)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_amplitude)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2722,7 +2722,7 @@
     <patterns>
       <comment>opcodes: (lfoN_count): (any integer)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_count)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_count)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2733,7 +2733,7 @@
     <patterns>
       <comment>opcodes: (lfoN_cutoff)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_cutoff)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_cutoff)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2744,7 +2744,7 @@
     <patterns>
       <comment>opcodes: (lfoN_delay): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_delay)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_delay)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2755,7 +2755,7 @@
     <patterns>
       <comment>opcodes: (lfoN_depth_lfoX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_depth_lfoX)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_depth_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2766,7 +2766,7 @@
     <patterns>
       <comment>opcodes: (lfoN_depthadd_lfoX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_depthadd_lfoX)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_depthadd_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2777,7 +2777,7 @@
     <patterns>
       <comment>opcodes: (lfoN_eqXbw)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_eqXbw)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_eq(?:\d{1,3})?bw)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2788,7 +2788,7 @@
     <patterns>
       <comment>opcodes: (lfoN_eqXfreq)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_eqXfreq)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_eq(?:\d{1,3})?freq)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2799,7 +2799,7 @@
     <patterns>
       <comment>opcodes: (lfoN_eqXgain)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_eqXgain)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_eq(?:\d{1,3})?gain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2810,7 +2810,7 @@
     <patterns>
       <comment>opcodes: (lfoN_fade): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_fade)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_fade)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2821,7 +2821,7 @@
     <patterns>
       <comment>opcodes: (lfoN_freq): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_freq)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_freq)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2832,7 +2832,7 @@
     <patterns>
       <comment>opcodes: (lfoN_freq_lfoX)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_freq_lfoX)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_freq_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2843,7 +2843,7 @@
     <patterns>
       <comment>opcodes: (lfoN_pan)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_pan)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_pan)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2854,7 +2854,7 @@
     <patterns>
       <comment>opcodes: (lfoN_phase): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_phase)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_phase)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2868,7 +2868,7 @@
     <patterns>
       <comment>opcodes: (lfoN_pitch)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_pitch)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_pitch)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2879,7 +2879,7 @@
     <patterns>
       <comment>opcodes: (lfoN_resonance)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_resonance)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_resonance)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2890,7 +2890,7 @@
     <patterns>
       <comment>opcodes: (lfoN_smooth)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_smooth)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_smooth)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2901,7 +2901,7 @@
     <patterns>
       <comment>opcodes: (lfoN_steps): (any integer)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_steps)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_steps)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2912,7 +2912,7 @@
     <patterns>
       <comment>opcodes: (lfoN_stepX): (-100 to 100 percent)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_stepX)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_step(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2926,7 +2926,7 @@
     <patterns>
       <comment>opcodes: (lfoN_volume)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_volume)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_volume)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2937,7 +2937,7 @@
     <patterns>
       <comment>opcodes: (lfoN_wave): (any integer)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_wave)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_wave)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2948,7 +2948,7 @@
     <patterns>
       <comment>opcodes: (lfoN_width)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_width)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_width)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -2961,7 +2961,7 @@
     <patterns>
       <comment>opcodes: (vN): (-1 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(vN)\b</begin>
+      <begin>\b(v(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.curves.$1.sfz</name>
@@ -3035,7 +3035,7 @@
     <patterns>
       <comment>opcodes: (label_ccN): (any string)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(label_ccN)\b</begin>
+      <begin>\b(label_cc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -3115,7 +3115,7 @@
     <patterns>
       <comment>opcodes: (set_hdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(set_hdccN)\b</begin>
+      <begin>\b(set_hdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -3153,7 +3153,7 @@
     <patterns>
       <comment>opcodes: (hihdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(hihdccN)\b</begin>
+      <begin>\b(hihdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3167,7 +3167,7 @@
     <patterns>
       <comment>opcodes: (lohdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lohdccN)\b</begin>
+      <begin>\b(lohdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3181,7 +3181,7 @@
     <patterns>
       <comment>opcodes: (on_hihdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(on_hihdccN)\b</begin>
+      <begin>\b(on_hihdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3195,7 +3195,7 @@
     <patterns>
       <comment>opcodes: (on_lohdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(on_lohdccN)\b</begin>
+      <begin>\b(on_lohdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3237,7 +3237,7 @@
     <patterns>
       <comment>opcodes: (stop_hihdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(stop_hihdccN)\b</begin>
+      <begin>\b(stop_hihdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3251,7 +3251,7 @@
     <patterns>
       <comment>opcodes: (stop_lohdccN): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(stop_lohdccN)\b</begin>
+      <begin>\b(stop_lohdcc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3332,7 +3332,7 @@
     <patterns>
       <comment>opcodes: (varNN_*)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(varNN_*)\b</begin>
+      <begin>\b(var(?:\d{1,3})?_*)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3343,7 +3343,7 @@
     <patterns>
       <comment>opcodes: (varNN_mod): (mult|add</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(varNN_mod)\b</begin>
+      <begin>\b(var(?:\d{1,3})?_mod)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.region-logic.$1.sfz</name>
@@ -3384,7 +3384,7 @@
     <patterns>
       <comment>opcodes: (eqN_dynamic): (0 to 1)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(eqN_dynamic)\b</begin>
+      <begin>\b(eq(?:\d{1,3})?_dynamic)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.performance-parameters.$1.sfz</name>
@@ -3701,7 +3701,7 @@
     <patterns>
       <comment>opcodes: (egN_ampeg)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_ampeg)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_ampeg)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3787,7 +3787,7 @@
     <patterns>
       <comment>opcodes: (lfoN_offset): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_offset)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_offset)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3798,7 +3798,7 @@
     <patterns>
       <comment>opcodes: (lfoN_ratio): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_ratio)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_ratio)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -3809,7 +3809,7 @@
     <patterns>
       <comment>opcodes: (lfoN_scale): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_scale)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_scale)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4101,7 +4101,7 @@
     <patterns>
       <comment>opcodes: (label_keyN): (any string)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(label_keyN)\b</begin>
+      <begin>\b(label_key(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.instrument-settings.$1.sfz</name>
@@ -4186,7 +4186,7 @@
     <patterns>
       <comment>opcodes: (egN_bitred)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_bitred)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_bitred)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4197,7 +4197,7 @@
     <patterns>
       <comment>opcodes: (egN_decim)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_decim)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_decim)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4208,7 +4208,7 @@
     <patterns>
       <comment>opcodes: (egN_driveshape)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_driveshape)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_driveshape)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4219,7 +4219,7 @@
     <patterns>
       <comment>opcodes: (egN_noiselevel)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_noiselevel)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_noiselevel)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4230,7 +4230,7 @@
     <patterns>
       <comment>opcodes: (egN_noisestep)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_noisestep)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_noisestep)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4241,7 +4241,7 @@
     <patterns>
       <comment>opcodes: (egN_noisetone)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_noisetone)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_noisetone)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4252,7 +4252,7 @@
     <patterns>
       <comment>opcodes: (egN_rectify)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_rectify)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_rectify)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4263,7 +4263,7 @@
     <patterns>
       <comment>opcodes: (egN_ringmod)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(egN_ringmod)\b</begin>
+      <begin>\b(eg(?:\d{1,3})?_ringmod)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4274,7 +4274,7 @@
     <patterns>
       <comment>opcodes: (lfoN_bitred)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_bitred)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_bitred)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4285,7 +4285,7 @@
     <patterns>
       <comment>opcodes: (lfoN_decim)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_decim)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_decim)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4296,7 +4296,7 @@
     <patterns>
       <comment>opcodes: (lfoN_drive)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_drive)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_drive)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4307,7 +4307,7 @@
     <patterns>
       <comment>opcodes: (lfoN_noiselevel)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_noiselevel)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_noiselevel)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4318,7 +4318,7 @@
     <patterns>
       <comment>opcodes: (lfoN_noisestep)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_noisestep)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_noisestep)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4329,7 +4329,7 @@
     <patterns>
       <comment>opcodes: (lfoN_noisetone)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(lfoN_noisetone)\b</begin>
+      <begin>\b(lfo(?:\d{1,3})?_noisetone)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.modulation.$1.sfz</name>
@@ -4434,7 +4434,7 @@
     <patterns>
       <comment>opcodes: (bypass_onccN): (any float)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(bypass_onccN)\b</begin>
+      <begin>\b(bypass_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -4771,7 +4771,7 @@
     <patterns>
       <comment>opcodes: (delay_syncc_onccN)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(delay_syncc_onccN)\b</begin>
+      <begin>\b(delay_syncc_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -4782,7 +4782,7 @@
     <patterns>
       <comment>opcodes: (delay_syncl_onccN)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(delay_syncl_onccN)\b</begin>
+      <begin>\b(delay_syncl_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -4793,7 +4793,7 @@
     <patterns>
       <comment>opcodes: (delay_syncr_onccN)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(delay_syncr_onccN)\b</begin>
+      <begin>\b(delay_syncr_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -5034,7 +5034,7 @@
     <patterns>
       <comment>opcodes: (fxNtomain): (0 to 100 %)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(fxNtomain)\b</begin>
+      <begin>\b(fx(?:\d{1,3})?tomain)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -5048,7 +5048,7 @@
     <patterns>
       <comment>opcodes: (fxNtomix): (0 to 100 %)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(fxNtomix)\b</begin>
+      <begin>\b(fx(?:\d{1,3})?tomix)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -5073,7 +5073,7 @@
     <patterns>
       <comment>opcodes: (gate_onccN)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(gate_onccN)\b</begin>
+      <begin>\b(gate_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -5173,7 +5173,7 @@
     <patterns>
       <comment>opcodes: (phaser_phase_onccN): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(phaser_phase_onccN)\b</begin>
+      <begin>\b(phaser_phase_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>
@@ -5454,7 +5454,7 @@
     <patterns>
       <comment>opcodes: (strings_wet_onccN): (0 to 100)</comment>
       <name>meta.opcode.sfz</name>
-      <begin>\b(strings_wet_onccN)\b</begin>
+      <begin>\b(strings_wet_oncc(?:\d{1,3})?)\b</begin>
       <beginCaptures>
         <1>
           <name>variable.language.effects.$1.sfz</name>

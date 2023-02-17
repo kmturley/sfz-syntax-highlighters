@@ -221,15 +221,6 @@
           },
           "keyword": [
             {
-              "_text": "*_mod"
-            },
-            {
-              "_text": "#define"
-            },
-            {
-              "_text": "#include"
-            },
-            {
               "_text": "amp_keycenter"
             },
             {
