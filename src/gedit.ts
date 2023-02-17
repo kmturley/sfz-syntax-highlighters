@@ -20,6 +20,7 @@ async function geditConvert(path: string, headers: string[], syntaxFile: Syntax)
     } else if (contextItem._attributes.id === 'opcodes') {
       const keywords: Prefix[] = [];
       opcodes.forEach((opcode: TypeOpcode) => {
+        if (opcode.name.startsWith('*') || opcode.name.startsWith('#')) return;
         keywords.push(geditRegEx(opcode.name));
         if (opcode.modulation?.midi_cc) {
           opcode.modulation.midi_cc.forEach((midi) => keywords.push(geditRegEx(midi.name)));
