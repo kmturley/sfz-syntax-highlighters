@@ -7,10 +7,14 @@
     "build": "rimraf ./dist && tsc && npm run copy",
     "copy": "copyfiles -u 1 ./src/templates/* ./dist && copyfiles -u 2 ./src/html/**/* ./out",
     "dev": "ts-node src/index.ts",
+    "diff:gedit": "code --diff ./out/gedit-original.lang ./out/gedit-modified.lang",
+    "diff:vscode": "code --diff ./out/tmLanguage-original.json ./out/tmLanguage-modified.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "tslint -p tsconfig.json",
     "start": "node dist/index.js",
-    "test": "echo 'No tests were run'"
+    "test": "echo 'No tests were run'",
+    "test:gedit": "mkdir -p $HOME/.local/share/gtksourceview-4/language-specs && cp ./out/gedit-modified.lang $HOME/.local/share/gtksourceview-4/language-specs/sfz.lang && gedit ./src/templates/example.sfz --new-window",
+    "test:vscode": "cp ./out/tmLanguage-modified.json $HOME/.vscode/extensions/jokela.vscode-sfz-0.1.0/syntaxes/sfz.tmLanguage.json && code ./src/templates/example.sfz --new-window"
   },
   "keywords": [
     "sfz",

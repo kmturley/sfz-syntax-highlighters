@@ -26,7 +26,17 @@ Create a build using:
 
 View built files at:
 
-    ./build
+    ./out
+
+Diff built files in VSCode:
+
+    npm run diff:gedit
+    npm run diff:vscode
+
+Run built files in the target code editor:
+
+    npm run test:gedit
+    npm run test:vscode
 
 
 ## Deployment
