@@ -16,6 +16,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       patterns: [],
     };
   });
+
   // Update header patterns using syntax headers.
   tmLanguageTemplate.repository.headers.patterns = [
     {
@@ -40,20 +41,13 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       match: `<.*(?!(${headers.join('|')}))>`,
     },
   ];
+
   // Loop through opcode categories and update
   const opcodeMapIds: string[] = [];
   syntaxFile.categories.forEach((category: Category) => {
     const categoryOpcodes: CategoryOpcode[] = findOpcodes(category).sort((a, b) => a.name.localeCompare(b.name));
-    const categorySlug: string = slugify(category.name, {
-      lower: true,
-      remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
-    });
     categoryOpcodes.forEach((opcode: CategoryOpcode) => {
-      const versionSlug: string = slugify(opcode.version, {
-        lower: true,
-        remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
-      }).replace('-v', '');
-      const opcodeMapId: keyof Repository = `${versionSlug}_${categorySlug}` as keyof Repository;
+      const opcodeMapId: keyof Repository = tmOpcodeId(category, opcode) as keyof Repository;
       if (!opcodeMapIds.includes(opcodeMapId)) opcodeMapIds.push(opcodeMapId);
       if (!tmLanguageTemplate.repository[opcodeMapId]) {
         tmLanguageTemplate.repository[opcodeMapId] = {
@@ -62,32 +56,21 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       }
 
       // Handle different types of values
-      let patternValue: string = opcode.value?.type_name ? `: (any ${opcode.value?.type_name})` : ``;
-      let patternInclude: string = ``;
-      if (opcode.value?.options !== undefined) {
-        patternValue = `: (${opcode.value?.options.map((option: AliasElement) => option.name).join('|')}`;
-        patternInclude = `#${opcode.value?.type_name}_${opcode.name}`;
-      }
-      if (opcode.value?.min !== undefined) {
-        const unit: string = opcode.value?.unit ? ` ${opcode.value?.unit}` : ``;
-        patternValue = `: (${opcode.value?.min} to ${opcode.value?.max}${unit})`;
-        patternInclude = `#${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
-      }
       const pattern: PurplePattern = {
-        comment: `opcodes: (${opcode.name})${patternValue}`,
+        comment: tmComment(opcode),
         name: PurpleName.MetaOpcodeSfz,
         begin: `\\b(${tmLanguageRegEx(opcode.name)})\\b`,
         beginCaptures: {
           1: {
-            name: `variable.language.${categorySlug}.$1.sfz`,
+            name: `variable.language.${opcodeMapId}.$1.sfz`,
           },
         },
         end: End.S,
       };
-      if (patternInclude.length > 0) {
+      if (tmPattern(opcode).length > 0) {
         pattern.patterns = [
           {
-            include: patternInclude,
+            include: tmPattern(opcode),
           },
         ];
       }
@@ -104,6 +87,40 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
   // Save out json and xml versions.
   fileSave(path, 'tmLanguage-modified.json', JSON.stringify(tmLanguageTemplate, null, 2));
   fileSave(path, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
+}
+
+function tmComment(opcode: CategoryOpcode) {
+  const prefix: string = `opcodes: (${opcode.name})`;
+  if (opcode.value?.options !== undefined) {
+    return `${prefix}: (${opcode.value?.options.map((option: AliasElement) => option.name).join('|')})`;
+  }
+  if (opcode.value?.min !== undefined) {
+    const unit: string = opcode.value?.unit ? ` ${opcode.value?.unit}` : ``;
+    return `${prefix}: (${opcode.value?.min} to ${opcode.value?.max}${unit})`;
+  }
+  return opcode.value?.type_name ? `${prefix}: (any ${opcode.value?.type_name})` : prefix;
+}
+
+function tmOpcodeId(category: Category, opcode: CategoryOpcode): string {
+  const categorySlug: string = slugify(category.name, {
+    lower: true,
+    remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
+  });
+  const versionSlug: string = slugify(opcode.version, {
+    lower: true,
+    remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
+  }).replace('-v', '');
+  return `${versionSlug}_${categorySlug}`;
+}
+
+function tmPattern(opcode: CategoryOpcode): string {
+  if (opcode.value?.options !== undefined) {
+    return `#${opcode.value?.type_name}_${opcode.name}`;
+  }
+  if (opcode.value?.min !== undefined) {
+    return `#${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
+  }
+  return '';
 }
 
 function tmLanguageRegEx(input: string): string {

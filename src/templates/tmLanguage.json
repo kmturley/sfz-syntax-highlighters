@@ -141,7 +141,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -173,7 +173,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive_or_neg1"
+              "include": "#integer_positive_or_neg1"
             }
           ]
         },
@@ -189,7 +189,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -221,7 +221,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -272,7 +272,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -304,7 +304,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-1024"
+              "include": "#integer_0-1024"
             }
           ]
         }
@@ -324,7 +324,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127_or_string_note"
+              "include": "#integer_0-127_or_string_note"
             }
           ]
         },
@@ -340,7 +340,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -356,7 +356,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_1-16"
+              "include": "#integer_1-16"
             }
           ]
         },
@@ -372,7 +372,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -388,7 +388,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg8192-8192"
+              "include": "#integer_neg8192-8192"
             }
           ]
         },
@@ -404,7 +404,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127_or_string_note"
+              "include": "#integer_0-127_or_string_note"
             }
           ]
         },
@@ -452,7 +452,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -484,7 +484,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_1-100"
+              "include": "#integer_1-100"
             }
           ]
         },
@@ -516,7 +516,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg1-127"
+              "include": "#integer_neg1-127"
             }
           ]
         }
@@ -568,7 +568,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127_or_string_note"
+              "include": "#integer_0-127_or_string_note"
             }
           ]
         },
@@ -680,7 +680,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -696,7 +696,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127_or_string_note"
+              "include": "#integer_0-127_or_string_note"
             }
           ]
         },
@@ -712,7 +712,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg9600-9600"
+              "include": "#integer_neg9600-9600"
             }
           ]
         },
@@ -728,7 +728,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_1-1200"
+              "include": "#integer_1-1200"
             }
           ]
         },
@@ -744,7 +744,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127_or_string_note"
+              "include": "#integer_0-127_or_string_note"
             }
           ]
         },
@@ -760,7 +760,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg1200-1200"
+              "include": "#integer_neg1200-1200"
             }
           ]
         },
@@ -776,7 +776,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-9600"
+              "include": "#integer_0-9600"
             }
           ]
         },
@@ -792,7 +792,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg127-127"
+              "include": "#integer_neg127-127"
             }
           ]
         },
@@ -808,7 +808,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg9600-9600"
+              "include": "#integer_neg9600-9600"
             }
           ]
         },
@@ -840,7 +840,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg9600-9600"
+              "include": "#integer_neg9600-9600"
             }
           ]
         },
@@ -856,7 +856,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-1200"
+              "include": "#integer_0-1200"
             }
           ]
         },
@@ -872,7 +872,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127_or_string_note"
+              "include": "#integer_0-127_or_string_note"
             }
           ]
         },
@@ -888,7 +888,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-9600"
+              "include": "#integer_0-9600"
             }
           ]
         },
@@ -920,7 +920,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg9600-9600"
+              "include": "#integer_neg9600-9600"
             }
           ]
         },
@@ -1052,7 +1052,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg12000-12000"
+              "include": "#integer_neg12000-12000"
             }
           ]
         },
@@ -1084,7 +1084,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg1200-1200"
+              "include": "#integer_neg1200-1200"
             }
           ]
         },
@@ -1254,7 +1254,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -1306,7 +1306,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg10-10"
+              "include": "#integer_neg10-10"
             }
           ]
         },
@@ -1337,7 +1337,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -1353,7 +1353,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -1405,7 +1405,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         }
@@ -1473,7 +1473,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-9600"
+              "include": "#integer_0-9600"
             }
           ]
         },
@@ -1489,7 +1489,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_1-1200"
+              "include": "#integer_1-1200"
             }
           ]
         },
@@ -1557,7 +1557,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -1621,7 +1621,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -1773,7 +1773,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -1789,7 +1789,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_neg10-10"
+              "include": "#integer_neg10-10"
             }
           ]
         },
@@ -1805,7 +1805,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -1841,7 +1841,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         },
@@ -1873,7 +1873,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -1941,7 +1941,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         },
@@ -1957,7 +1957,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-9600"
+              "include": "#integer_0-9600"
             }
           ]
         },
@@ -2057,7 +2057,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_0-127"
+              "include": "#integer_0-127"
             }
           ]
         }
@@ -2077,7 +2077,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_positive"
+              "include": "#integer_positive"
             }
           ]
         }
@@ -2097,7 +2097,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#int_any"
+              "include": "#integer_any"
             }
           ]
         },
@@ -2556,7 +2556,7 @@
         }
       ]
     },
-    "int_neg12000-12000": {
+    "integer_neg12000-12000": {
       "patterns": [
         {
           "match": "(=)(-?\\b(12000|[0-9]|[1-9][0-9]{1,3}|1[01][0-9]{3}))\\b",
@@ -2575,7 +2575,7 @@
         }
       ]
     },
-    "int_neg9600-9600": {
+    "integer_neg9600-9600": {
       "patterns": [
         {
           "match": "(=)(-?([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600))\\b",
@@ -2594,7 +2594,7 @@
         }
       ]
     },
-    "int_neg8192-8192": {
+    "integer_neg8192-8192": {
       "patterns": [
         {
           "match": "(=)(-?([0-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-7][0-9]{3}|80[0-9]{2}|81[0-8][0-9]|819[0-2]))\\b",
@@ -2613,7 +2613,7 @@
         }
       ]
     },
-    "int_neg1200-1200": {
+    "integer_neg1200-1200": {
       "patterns": [
         {
           "match": "(=)(-?\\b(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2}))\\b",
@@ -2632,7 +2632,7 @@
         }
       ]
     },
-    "int_neg100-100": {
+    "integer_neg100-100": {
       "patterns": [
         {
           "match": "(=)(-?\\b(100|[0-9]|[1-9][0-9]))\\b",
@@ -2651,7 +2651,7 @@
         }
       ]
     },
-    "int_neg10-10": {
+    "integer_neg10-10": {
       "patterns": [
         {
           "match": "(=)(-?\\b(10|[0-9]))\\b",
@@ -2670,7 +2670,7 @@
         }
       ]
     },
-    "int_neg1-127": {
+    "integer_neg1-127": {
       "patterns": [
         {
           "match": "(=)(-1|[0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b",
@@ -2689,7 +2689,7 @@
         }
       ]
     },
-    "int_neg127-127": {
+    "integer_neg127-127": {
       "patterns": [
         {
           "match": "(=)(-?\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7]))\\b",
@@ -2708,7 +2708,7 @@
         }
       ]
     },
-    "int_0-127": {
+    "integer_0-127": {
       "patterns": [
         {
           "match": "(=)([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b",
@@ -2727,7 +2727,7 @@
         }
       ]
     },
-    "int_0-127_or_string_note": {
+    "integer_0-127_or_string_note": {
       "patterns": [
         {
           "match": "(=)(([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])|[cdefgabCDEFGAB]\\#?(-1|[0-9]))\\b",
@@ -2746,7 +2746,7 @@
         }
       ]
     },
-    "int_0-1024": {
+    "integer_0-1024": {
       "patterns": [
         {
           "match": "(=)([0-9]|[1-9][0-9]|[1-9][0-9]{2}|10[01][0-9]|102[0-4])\\b",
@@ -2758,7 +2758,7 @@
         }
       ]
     },
-    "int_0-1200": {
+    "integer_0-1200": {
       "patterns": [
         {
           "match": "(=)(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9{2}])\\b",
@@ -2777,7 +2777,7 @@
         }
       ]
     },
-    "int_0-9600": {
+    "integer_0-9600": {
       "patterns": [
         {
           "match": "(=)([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600)\\b",
@@ -2796,7 +2796,7 @@
         }
       ]
     },
-    "int_1-16": {
+    "integer_1-16": {
       "patterns": [
         {
           "match": "(=)([1-9]|1[0-6])\\b",
@@ -2808,7 +2808,7 @@
         }
       ]
     },
-    "int_1-100": {
+    "integer_1-100": {
       "patterns": [
         {
           "match": "(=)(100|[1-9]|[1-9][0-9])\\b",
@@ -2820,7 +2820,7 @@
         }
       ]
     },
-    "int_1-1200": {
+    "integer_1-1200": {
       "patterns": [
         {
           "match": "(=)(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2})\\b",
@@ -2832,7 +2832,7 @@
         }
       ]
     },
-    "int_positive": {
+    "integer_positive": {
       "patterns": [
         {
           "match": "(=)(\\d+)\\b",
@@ -2851,7 +2851,7 @@
         }
       ]
     },
-    "int_positive_or_neg1": {
+    "integer_positive_or_neg1": {
       "patterns": [
         {
           "match": "(=)(-1|\\d+)\\b",
@@ -2870,7 +2870,7 @@
         }
       ]
     },
-    "int_any": {
+    "integer_any": {
       "patterns": [
         {
           "match": "(=)(-?\\b\\d+)\\b",
