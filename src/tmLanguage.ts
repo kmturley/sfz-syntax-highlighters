@@ -62,15 +62,16 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
         begin: `\\b(${tmLanguageRegEx(opcode.name)})\\b`,
         beginCaptures: {
           1: {
-            name: `variable.language.${opcodeMapId}.$1.sfz`,
+            name: `variable.language.${tmCategoryId(category)}.$1.sfz`,
           },
         },
         end: End.S,
       };
-      if (tmPattern(opcode).length > 0) {
+      const patternId: string = tmPattern(opcode);
+      if (patternId.length > 0) {
         pattern.patterns = [
           {
-            include: tmPattern(opcode),
+            include: `#${patternId}`,
           },
         ];
       }
@@ -89,6 +90,13 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
   fileSave(path, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
 }
 
+function tmCategoryId(category: Category): string {
+  return slugify(category.name, {
+    lower: true,
+    remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
+  });
+}
+
 function tmComment(opcode: CategoryOpcode) {
   const prefix: string = `opcodes: (${opcode.name})`;
   if (opcode.value?.options !== undefined) {
@@ -102,10 +110,7 @@ function tmComment(opcode: CategoryOpcode) {
 }
 
 function tmOpcodeId(category: Category, opcode: CategoryOpcode): string {
-  const categorySlug: string = slugify(category.name, {
-    lower: true,
-    remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
-  });
+  const categorySlug: string = tmCategoryId(category);
   const versionSlug: string = slugify(opcode.version, {
     lower: true,
     remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
@@ -115,10 +120,11 @@ function tmOpcodeId(category: Category, opcode: CategoryOpcode): string {
 
 function tmPattern(opcode: CategoryOpcode): string {
   if (opcode.value?.options !== undefined) {
-    return `#${opcode.value?.type_name}_${opcode.name}`;
+    return `${opcode.value?.type_name}_${opcode.name}`;
   }
-  if (opcode.value?.min !== undefined) {
-    return `#${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
+  if (opcode.value?.min !== undefined && opcode.value?.max !== undefined) {
+    if (opcode.value?.min >= 0 && opcode.value?.max >= 0) return `${opcode.value?.type_name}_positive`;
+    return `${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
   }
   return '';
 }
