@@ -1,6 +1,6 @@
 import slugify from 'slugify';
 import { AliasElement, Category, CategoryOpcode, Syntax } from './types/syntax';
-import { End, PurpleName, PurplePattern, Repository, TmLanguage } from './types/tmlanguage';
+import { End, PurpleName, PurplePattern, Repository, Sfz1SoundSourcePattern, TmLanguage } from './types/tmlanguage';
 import { fileLoadJson, fileSave, findOpcodes, jsToXml } from './utils';
 
 async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Syntax) {
@@ -54,28 +54,12 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
           patterns: [],
         };
       }
-
-      // Handle different types of values
-      const pattern: PurplePattern = {
-        comment: tmComment(opcode),
-        name: PurpleName.MetaOpcodeSfz,
-        begin: `\\b(${tmLanguageRegEx(opcode.name)})\\b`,
-        beginCaptures: {
-          1: {
-            name: `variable.language.${tmCategoryId(category)}.$1.sfz`,
-          },
-        },
-        end: End.S,
-      };
-      const patternId: string = tmPattern(opcode);
-      if (patternId.length > 0) {
-        pattern.patterns = [
-          {
-            include: `#${patternId}`,
-          },
-        ];
+      const patterns: any = tmLanguageTemplate.repository[opcodeMapId].patterns;
+      if (opcode.value?.type_name === 'string') {
+        patterns.push(tmString(category, opcode));
+      } else {
+        patterns.push(tmInteger(category, opcode));
       }
-      tmLanguageTemplate.repository[opcodeMapId].patterns.push(pattern as any);
     });
   });
 
@@ -95,6 +79,48 @@ function tmCategoryId(category: Category): string {
     lower: true,
     remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
   });
+}
+
+function tmInteger(category: Category, opcode: CategoryOpcode): PurplePattern {
+  const pattern: PurplePattern = {
+    comment: tmComment(opcode),
+    name: PurpleName.MetaOpcodeSfz,
+    begin: tmLanguageRegEx(opcode),
+    beginCaptures: {
+      1: {
+        name: `variable.language.${tmCategoryId(category)}.$1.sfz`,
+      },
+    },
+    end: End.S,
+  };
+  const patternId: string = tmPattern(opcode);
+  if (patternId.length > 0) {
+    pattern.patterns = [
+      {
+        include: `#${patternId}`,
+      },
+    ];
+  }
+  return pattern;
+}
+
+function tmString(category: Category, opcode: CategoryOpcode): Sfz1SoundSourcePattern {
+  const pattern: Sfz1SoundSourcePattern = {
+    comment: tmComment(opcode),
+    name: PurpleName.MetaOpcodeSfz,
+    begin: tmLanguageRegEx(opcode),
+    beginCaptures: {
+      1: {
+        name: `variable.language.${tmCategoryId(category)}.$1.sfz`,
+      },
+      2: {
+        name: 'keyword.operator.assignment.sfz',
+      },
+    },
+    end: End.EndS,
+    contentName: 'string.unquoted.sfz',
+  };
+  return pattern;
 }
 
 function tmComment(opcode: CategoryOpcode) {
@@ -123,15 +149,19 @@ function tmPattern(opcode: CategoryOpcode): string {
     return `${opcode.value?.type_name}_${opcode.name}`;
   }
   if (opcode.value?.min !== undefined && opcode.value?.max !== undefined) {
-    if (opcode.value?.min >= 0 && opcode.value?.max >= 0) return `${opcode.value?.type_name}_positive`;
+    const ignoredMaxValues = [32, 100, 1024];
+    if (opcode.value?.min >= 0 && opcode.value?.max >= 0 && !ignoredMaxValues.includes(opcode.value?.max))
+      return `${opcode.value?.type_name}_positive`;
     return `${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
   }
   return '';
 }
 
-function tmLanguageRegEx(input: string): string {
+function tmLanguageRegEx(opcode: CategoryOpcode): string {
   // Replace N, X, Y values with regex.
-  return input.replace(/[NXY]+/g, '(?:\\d{1,3})?');
+  const regExWithoutVariables: string = opcode.name.replace(/[NXY]+/g, '(?:\\d{1,3})?');
+  if (opcode.value?.type_name === 'string') return `\\b(${regExWithoutVariables})(=?)`;
+  return `\\b(${regExWithoutVariables})\\b`;
 }
 
 export { tmLanguageConvert };
