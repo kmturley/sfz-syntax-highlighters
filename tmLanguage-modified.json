@@ -162,7 +162,7 @@
           "begin": "\\b(count)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -178,7 +178,7 @@
           "begin": "\\b(delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -194,7 +194,7 @@
           "begin": "\\b(delay_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -210,7 +210,7 @@
           "begin": "\\b(end)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -226,7 +226,7 @@
           "begin": "\\b(loop_end)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -237,12 +237,12 @@
           ]
         },
         {
-          "comment": "opcodes: (loop_mode): (no_loop|one_shot|loop_continuous|loop_sustain",
+          "comment": "opcodes: (loop_mode): (no_loop|one_shot|loop_continuous|loop_sustain)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loop_mode)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -258,7 +258,7 @@
           "begin": "\\b(loop_start)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -274,7 +274,7 @@
           "begin": "\\b(offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -290,7 +290,7 @@
           "begin": "\\b(offset_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -306,7 +306,7 @@
           "begin": "\\b(sample)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -317,7 +317,7 @@
           "begin": "\\b(sync_beats)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -333,7 +333,7 @@
           "begin": "\\b(sync_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz1_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -353,7 +353,7 @@
           "begin": "\\b(group)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz1_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -369,7 +369,7 @@
           "begin": "\\b(off_by)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz1_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -380,12 +380,12 @@
           ]
         },
         {
-          "comment": "opcodes: (off_mode): (fast|normal|time",
+          "comment": "opcodes: (off_mode): (fast|normal|time)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(off_mode)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz1_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -401,7 +401,7 @@
           "begin": "\\b(output)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz1_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -421,7 +421,7 @@
           "begin": "\\b(hibend)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -437,7 +437,7 @@
           "begin": "\\b(hibpm)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -453,7 +453,7 @@
           "begin": "\\b(hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -469,7 +469,7 @@
           "begin": "\\b(hichan)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -485,7 +485,7 @@
           "begin": "\\b(hichanaft)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -501,7 +501,7 @@
           "begin": "\\b(hikey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -517,7 +517,7 @@
           "begin": "\\b(hipolyaft)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -533,7 +533,7 @@
           "begin": "\\b(hirand)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -549,7 +549,7 @@
           "begin": "\\b(hivel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -565,7 +565,7 @@
           "begin": "\\b(key)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -581,7 +581,7 @@
           "begin": "\\b(lobend)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -597,7 +597,7 @@
           "begin": "\\b(lobpm)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -613,7 +613,7 @@
           "begin": "\\b(locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -629,7 +629,7 @@
           "begin": "\\b(lochan)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -645,7 +645,7 @@
           "begin": "\\b(lochanaft)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -661,7 +661,7 @@
           "begin": "\\b(lokey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -677,7 +677,7 @@
           "begin": "\\b(lopolyaft)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -693,7 +693,7 @@
           "begin": "\\b(lorand)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -709,7 +709,7 @@
           "begin": "\\b(lovel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -725,7 +725,7 @@
           "begin": "\\b(on_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -741,7 +741,7 @@
           "begin": "\\b(on_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -757,7 +757,7 @@
           "begin": "\\b(seq_length)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -773,7 +773,7 @@
           "begin": "\\b(seq_position)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -789,7 +789,7 @@
           "begin": "\\b(sw_down)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -805,7 +805,7 @@
           "begin": "\\b(sw_hikey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -821,7 +821,7 @@
           "begin": "\\b(sw_last)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -837,7 +837,7 @@
           "begin": "\\b(sw_lokey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -853,7 +853,7 @@
           "begin": "\\b(sw_previous)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -869,7 +869,7 @@
           "begin": "\\b(sw_up)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -880,12 +880,12 @@
           ]
         },
         {
-          "comment": "opcodes: (sw_vel): (current|previous",
+          "comment": "opcodes: (sw_vel): (current|previous)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sw_vel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -896,12 +896,12 @@
           ]
         },
         {
-          "comment": "opcodes: (trigger): (attack|release|first|legato|release_key",
+          "comment": "opcodes: (trigger): (attack|release|first|legato|release_key)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(trigger)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz1_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -921,7 +921,7 @@
           "begin": "\\b(amp_keycenter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -937,7 +937,7 @@
           "begin": "\\b(amp_keytrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -953,7 +953,7 @@
           "begin": "\\b(amp_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -969,7 +969,7 @@
           "begin": "\\b(amp_velcurve_(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -985,7 +985,7 @@
           "begin": "\\b(amp_veltrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1001,7 +1001,7 @@
           "begin": "\\b(bend_down)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1017,7 +1017,7 @@
           "begin": "\\b(bend_step)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1033,7 +1033,7 @@
           "begin": "\\b(bend_up)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1049,7 +1049,7 @@
           "begin": "\\b(cutoff)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1065,7 +1065,7 @@
           "begin": "\\b(eq(?:\\d{1,3})?_bw)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1081,7 +1081,7 @@
           "begin": "\\b(eq(?:\\d{1,3})?_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1097,7 +1097,7 @@
           "begin": "\\b(eq(?:\\d{1,3})?_gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1113,7 +1113,7 @@
           "begin": "\\b(fil_keycenter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1129,7 +1129,7 @@
           "begin": "\\b(fil_keytrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1145,7 +1145,7 @@
           "begin": "\\b(fil_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1156,12 +1156,12 @@
           ]
         },
         {
-          "comment": "opcodes: (fil_type): (lpf_1p|hpf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|bpf_1p|brf_1p|apf_1p|lpf_2p_sv|hpf_2p_sv|bpf_2p_sv|brf_2p_sv|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink|lsh|hsh|peq",
+          "comment": "opcodes: (fil_type): (lpf_1p|hpf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|bpf_1p|brf_1p|apf_1p|lpf_2p_sv|hpf_2p_sv|bpf_2p_sv|brf_2p_sv|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink|lsh|hsh|peq)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(fil_type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1177,7 +1177,7 @@
           "begin": "\\b(fil_veltrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1193,7 +1193,7 @@
           "begin": "\\b(pan)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1209,7 +1209,7 @@
           "begin": "\\b(pitch_keycenter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1225,7 +1225,7 @@
           "begin": "\\b(pitch_keytrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1241,7 +1241,7 @@
           "begin": "\\b(pitch_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1257,7 +1257,7 @@
           "begin": "\\b(pitch_veltrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1273,7 +1273,7 @@
           "begin": "\\b(position)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1289,7 +1289,7 @@
           "begin": "\\b(resonance)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1305,7 +1305,7 @@
           "begin": "\\b(rt_decay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1321,7 +1321,7 @@
           "begin": "\\b(transpose)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1337,7 +1337,7 @@
           "begin": "\\b(tune)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1353,7 +1353,7 @@
           "begin": "\\b(volume)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1369,7 +1369,7 @@
           "begin": "\\b(width)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1380,12 +1380,12 @@
           ]
         },
         {
-          "comment": "opcodes: (xf_cccurve): (gain|power",
+          "comment": "opcodes: (xf_cccurve): (gain|power)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xf_cccurve)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1396,12 +1396,12 @@
           ]
         },
         {
-          "comment": "opcodes: (xf_keycurve): (gain|power",
+          "comment": "opcodes: (xf_keycurve): (gain|power)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xf_keycurve)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1412,12 +1412,12 @@
           ]
         },
         {
-          "comment": "opcodes: (xf_velcurve): (gain|power",
+          "comment": "opcodes: (xf_velcurve): (gain|power)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(xf_velcurve)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1433,7 +1433,7 @@
           "begin": "\\b(xfin_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1449,7 +1449,7 @@
           "begin": "\\b(xfin_hikey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1465,7 +1465,7 @@
           "begin": "\\b(xfin_hivel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1481,7 +1481,7 @@
           "begin": "\\b(xfin_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1497,7 +1497,7 @@
           "begin": "\\b(xfin_lokey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1513,7 +1513,7 @@
           "begin": "\\b(xfin_lovel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1529,7 +1529,7 @@
           "begin": "\\b(xfout_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1545,7 +1545,7 @@
           "begin": "\\b(xfout_hikey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1561,7 +1561,7 @@
           "begin": "\\b(xfout_hivel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1577,7 +1577,7 @@
           "begin": "\\b(xfout_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1593,7 +1593,7 @@
           "begin": "\\b(xfout_lokey)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1609,7 +1609,7 @@
           "begin": "\\b(xfout_lovel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz1_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1629,7 +1629,7 @@
           "begin": "\\b(ampeg_attack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1645,7 +1645,7 @@
           "begin": "\\b(ampeg_decay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1661,7 +1661,7 @@
           "begin": "\\b(ampeg_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1677,7 +1677,7 @@
           "begin": "\\b(ampeg_hold)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1693,7 +1693,7 @@
           "begin": "\\b(ampeg_release)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1709,7 +1709,7 @@
           "begin": "\\b(ampeg_start)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1725,7 +1725,7 @@
           "begin": "\\b(ampeg_sustain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1741,7 +1741,7 @@
           "begin": "\\b(amplfo_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1757,7 +1757,7 @@
           "begin": "\\b(amplfo_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1773,7 +1773,7 @@
           "begin": "\\b(amplfo_fade)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1789,7 +1789,7 @@
           "begin": "\\b(amplfo_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1805,7 +1805,7 @@
           "begin": "\\b(fileg_attack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1821,7 +1821,7 @@
           "begin": "\\b(fileg_decay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1837,7 +1837,7 @@
           "begin": "\\b(fileg_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1853,7 +1853,7 @@
           "begin": "\\b(fileg_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1869,7 +1869,7 @@
           "begin": "\\b(fileg_hold)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1885,7 +1885,7 @@
           "begin": "\\b(fileg_release)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1901,7 +1901,7 @@
           "begin": "\\b(fileg_start)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1917,7 +1917,7 @@
           "begin": "\\b(fileg_sustain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1933,7 +1933,7 @@
           "begin": "\\b(fillfo_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1949,7 +1949,7 @@
           "begin": "\\b(fillfo_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1965,7 +1965,7 @@
           "begin": "\\b(fillfo_fade)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1981,7 +1981,7 @@
           "begin": "\\b(fillfo_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -1997,7 +1997,7 @@
           "begin": "\\b(pitcheg_attack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2013,7 +2013,7 @@
           "begin": "\\b(pitcheg_decay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2029,7 +2029,7 @@
           "begin": "\\b(pitcheg_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2045,7 +2045,7 @@
           "begin": "\\b(pitcheg_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2061,7 +2061,7 @@
           "begin": "\\b(pitcheg_hold)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2077,7 +2077,7 @@
           "begin": "\\b(pitcheg_release)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2093,7 +2093,7 @@
           "begin": "\\b(pitcheg_start)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2109,7 +2109,7 @@
           "begin": "\\b(pitcheg_sustain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2125,7 +2125,7 @@
           "begin": "\\b(pitchlfo_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2141,7 +2141,7 @@
           "begin": "\\b(pitchlfo_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2157,7 +2157,7 @@
           "begin": "\\b(pitchlfo_fade)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2173,7 +2173,7 @@
           "begin": "\\b(pitchlfo_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz1_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2193,7 +2193,7 @@
           "begin": "\\b(effect1)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.sfz1_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2209,7 +2209,7 @@
           "begin": "\\b(effect2)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.sfz1_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2232,7 +2232,7 @@
           "begin": "\\b(delay_beats)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2243,18 +2243,18 @@
           "begin": "\\b(delay_samples)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (direction): (forward|reverse",
+          "comment": "opcodes: (direction): (forward|reverse)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(direction)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2270,7 +2270,7 @@
           "begin": "\\b(loop_count)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2281,18 +2281,18 @@
           "begin": "\\b(loop_crossfade)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (loop_type): (forward|backward|alternate",
+          "comment": "opcodes: (loop_type): (forward|backward|alternate)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(loop_type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2308,7 +2308,7 @@
           "begin": "\\b(md5)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2319,7 +2319,7 @@
           "begin": "\\b(reverse_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2335,7 +2335,7 @@
           "begin": "\\b(reverse_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2351,18 +2351,18 @@
           "begin": "\\b(stop_beats)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (waveguide): (on|off",
+          "comment": "opcodes: (waveguide): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(waveguide)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.sfz2_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2382,7 +2382,7 @@
           "begin": "\\b(#define)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2393,7 +2393,7 @@
           "begin": "\\b(default_path)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2404,7 +2404,7 @@
           "begin": "\\b(note_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2420,18 +2420,18 @@
           "begin": "\\b(note_polyphony)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (note_selfmask): (on|off",
+          "comment": "opcodes: (note_selfmask): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(note_selfmask)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2447,7 +2447,7 @@
           "begin": "\\b(octave_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2463,18 +2463,18 @@
           "begin": "\\b(polyphony)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (rt_dead): (on|off",
+          "comment": "opcodes: (rt_dead): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(rt_dead)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2490,7 +2490,7 @@
           "begin": "\\b(set_cc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfz2_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2510,7 +2510,7 @@
           "begin": "\\b(hiprog)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2526,7 +2526,7 @@
           "begin": "\\b(hitimer)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2537,7 +2537,7 @@
           "begin": "\\b(loprog)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2553,18 +2553,18 @@
           "begin": "\\b(lotimer)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (sostenuto_sw): (on|off",
+          "comment": "opcodes: (sostenuto_sw): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sostenuto_sw)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2580,7 +2580,7 @@
           "begin": "\\b(stop_hicc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2596,7 +2596,7 @@
           "begin": "\\b(stop_locc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2607,12 +2607,12 @@
           ]
         },
         {
-          "comment": "opcodes: (sustain_sw): (on|off",
+          "comment": "opcodes: (sustain_sw): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(sustain_sw)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2628,7 +2628,7 @@
           "begin": "\\b(sw_default)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.sfz2_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2648,7 +2648,7 @@
           "begin": "\\b(bend_smooth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2664,7 +2664,7 @@
           "begin": "\\b(bend_stepdown)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2680,7 +2680,7 @@
           "begin": "\\b(bend_stepup)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2691,12 +2691,12 @@
           ]
         },
         {
-          "comment": "opcodes: (eqN_type): (peak|lshelf|hshelf",
+          "comment": "opcodes: (eqN_type): (peak|lshelf|hshelf)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eq(?:\\d{1,3})?_type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2712,7 +2712,7 @@
           "begin": "\\b(pan_keycenter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2728,7 +2728,7 @@
           "begin": "\\b(pan_keytrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2744,7 +2744,7 @@
           "begin": "\\b(pan_veltrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2755,12 +2755,12 @@
           ]
         },
         {
-          "comment": "opcodes: (phase): (normal|invert",
+          "comment": "opcodes: (phase): (normal|invert)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(phase)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.sfz2_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2780,7 +2780,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_amplitude)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2791,7 +2791,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_curve(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2802,7 +2802,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_cutoff)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2813,7 +2813,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_cutoff2)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2824,7 +2824,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_depth_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2835,7 +2835,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_depthadd_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2846,7 +2846,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_eq(?:\\d{1,3})?bw)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2857,7 +2857,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_eq(?:\\d{1,3})?freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2868,7 +2868,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_eq(?:\\d{1,3})?gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2879,7 +2879,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_freq_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2890,7 +2890,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_level(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -2906,7 +2906,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_loop)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2917,7 +2917,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_loop_count)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2928,7 +2928,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_pan)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2939,7 +2939,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_pan_curve)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2950,7 +2950,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_pitch)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2961,7 +2961,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_points)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2972,7 +2972,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_resonance)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2983,7 +2983,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_resonance2)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -2994,7 +2994,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_shape(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3005,7 +3005,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_sustain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3016,7 +3016,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_time(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3027,7 +3027,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_volume)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3038,7 +3038,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_width)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3049,7 +3049,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_amplitude)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3060,7 +3060,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_count)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3071,7 +3071,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_cutoff)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3082,7 +3082,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_delay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3093,7 +3093,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_depth_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3104,7 +3104,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_depthadd_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3115,7 +3115,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_eq(?:\\d{1,3})?bw)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3126,7 +3126,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_eq(?:\\d{1,3})?freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3137,7 +3137,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_eq(?:\\d{1,3})?gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3148,7 +3148,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_fade)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3159,7 +3159,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3170,7 +3170,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_freq_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3181,7 +3181,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_pan)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3192,7 +3192,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_phase)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3208,7 +3208,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_pitch)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3219,7 +3219,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_resonance)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3230,7 +3230,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_smooth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3241,7 +3241,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_steps)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3252,7 +3252,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_step(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3268,7 +3268,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_volume)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3279,7 +3279,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_wave)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3290,7 +3290,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_width)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.sfz2_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3305,7 +3305,7 @@
           "begin": "\\b(v(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.curves.$1.sfz"
+              "name": "variable.language.sfz2_curves.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3320,12 +3320,12 @@
     "aria_instrument-settings": {
       "patterns": [
         {
-          "comment": "opcodes: (*_mod): (add|mult",
+          "comment": "opcodes: (*_mod): (add|mult)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(*_mod)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3341,7 +3341,7 @@
           "begin": "\\b(#include)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3352,7 +3352,7 @@
           "begin": "\\b(global_label)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3363,7 +3363,7 @@
           "begin": "\\b(group_label)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3374,7 +3374,7 @@
           "begin": "\\b(hint_*)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3385,7 +3385,7 @@
           "begin": "\\b(label_cc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3396,24 +3396,24 @@
           "begin": "\\b(master_label)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (off_curve): (-2 to 10)",
+          "comment": "opcodes: (off_curve): (-2|-1|0|1|2|10)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(off_curve)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_-2-10"
+              "include": "#integer_off_curve"
             }
           ]
         },
@@ -3423,7 +3423,7 @@
           "begin": "\\b(off_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3434,7 +3434,7 @@
           "begin": "\\b(off_time)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3445,7 +3445,7 @@
           "begin": "\\b(polyphony_stealing)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3456,7 +3456,7 @@
           "begin": "\\b(region_label)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3467,7 +3467,7 @@
           "begin": "\\b(set_hdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3483,7 +3483,7 @@
           "begin": "\\b(sw_note_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3494,7 +3494,7 @@
           "begin": "\\b(sw_octave_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.aria_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3509,7 +3509,7 @@
           "begin": "\\b(hihdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3525,7 +3525,7 @@
           "begin": "\\b(lohdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3541,7 +3541,7 @@
           "begin": "\\b(on_hihdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3557,7 +3557,7 @@
           "begin": "\\b(on_lohdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3573,7 +3573,7 @@
           "begin": "\\b(sostenuto_cc)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3589,7 +3589,7 @@
           "begin": "\\b(sostenuto_lo)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3605,7 +3605,7 @@
           "begin": "\\b(stop_hihdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3621,7 +3621,7 @@
           "begin": "\\b(stop_lohdcc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3637,7 +3637,7 @@
           "begin": "\\b(sustain_cc)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3653,7 +3653,7 @@
           "begin": "\\b(sustain_lo)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3669,7 +3669,7 @@
           "begin": "\\b(sw_hilast)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3685,7 +3685,7 @@
           "begin": "\\b(sw_label)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3696,7 +3696,7 @@
           "begin": "\\b(sw_lolast)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3712,18 +3712,18 @@
           "begin": "\\b(var(?:\\d{1,3})?_*)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (varNN_mod): (mult|add",
+          "comment": "opcodes: (varNN_mod): (mult|add)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(var(?:\\d{1,3})?_mod)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.region-logic.$1.sfz"
+              "name": "variable.language.aria_region-logic.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3743,7 +3743,7 @@
           "begin": "\\b(amp_veltrack_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3754,7 +3754,7 @@
           "begin": "\\b(amplitude)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3770,7 +3770,7 @@
           "begin": "\\b(eq(?:\\d{1,3})?_dynamic)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3786,7 +3786,7 @@
           "begin": "\\b(fil_gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3797,7 +3797,7 @@
           "begin": "\\b(global_amplitude)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3813,7 +3813,7 @@
           "begin": "\\b(global_tune)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3829,7 +3829,7 @@
           "begin": "\\b(global_volume)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3845,7 +3845,7 @@
           "begin": "\\b(group_amplitude)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3861,7 +3861,7 @@
           "begin": "\\b(group_tune)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3877,7 +3877,7 @@
           "begin": "\\b(group_volume)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3893,7 +3893,7 @@
           "begin": "\\b(master_amplitude)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3909,7 +3909,7 @@
           "begin": "\\b(master_tune)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3925,7 +3925,7 @@
           "begin": "\\b(master_volume)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3936,12 +3936,12 @@
           ]
         },
         {
-          "comment": "opcodes: (pan_law): (mma|balance",
+          "comment": "opcodes: (pan_law): (mma|balance)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(pan_law)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3957,7 +3957,7 @@
           "begin": "\\b(pan_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -3973,7 +3973,7 @@
           "begin": "\\b(position_keycenter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3984,7 +3984,7 @@
           "begin": "\\b(position_keytrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -3995,7 +3995,7 @@
           "begin": "\\b(position_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4011,7 +4011,7 @@
           "begin": "\\b(position_veltrack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4022,7 +4022,7 @@
           "begin": "\\b(resonance_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.aria_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4042,7 +4042,7 @@
           "begin": "\\b(ampeg_attack_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4053,7 +4053,7 @@
           "begin": "\\b(ampeg_decay_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4064,7 +4064,7 @@
           "begin": "\\b(ampeg_decay_zero)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4080,7 +4080,7 @@
           "begin": "\\b(ampeg_dynamic)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4096,7 +4096,7 @@
           "begin": "\\b(ampeg_release_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4107,7 +4107,7 @@
           "begin": "\\b(ampeg_release_zero)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4123,7 +4123,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_ampeg)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4134,7 +4134,7 @@
           "begin": "\\b(fileg_attack_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4145,7 +4145,7 @@
           "begin": "\\b(fileg_decay_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4156,7 +4156,7 @@
           "begin": "\\b(fileg_decay_zero)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4172,7 +4172,7 @@
           "begin": "\\b(fileg_dynamic)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4188,7 +4188,7 @@
           "begin": "\\b(fileg_release_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4199,7 +4199,7 @@
           "begin": "\\b(fileg_release_zero)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4215,7 +4215,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4226,7 +4226,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_ratio)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4237,7 +4237,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_scale)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4248,7 +4248,7 @@
           "begin": "\\b(pitcheg_attack_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4259,7 +4259,7 @@
           "begin": "\\b(pitcheg_decay_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4270,7 +4270,7 @@
           "begin": "\\b(pitcheg_decay_zero)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4286,7 +4286,7 @@
           "begin": "\\b(pitcheg_dynamic)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4302,7 +4302,7 @@
           "begin": "\\b(pitcheg_release_shape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4313,7 +4313,7 @@
           "begin": "\\b(pitcheg_release_zero)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.aria_modulation.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4333,7 +4333,7 @@
           "begin": "\\b(curve_index)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.curves.$1.sfz"
+              "name": "variable.language.aria_curves.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4353,7 +4353,7 @@
           "begin": "\\b(param_offset)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.aria_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4364,7 +4364,7 @@
           "begin": "\\b(vendor_specific)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.aria_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4440,61 +4440,61 @@
     "float_any": {
       "patterns": []
     },
-    "int_neg12000-12000": {
+    "integer_neg12000-12000": {
       "patterns": []
     },
-    "int_neg9600-9600": {
+    "integer_neg9600-9600": {
       "patterns": []
     },
-    "int_neg8192-8192": {
+    "integer_neg8192-8192": {
       "patterns": []
     },
-    "int_neg1200-1200": {
+    "integer_neg1200-1200": {
       "patterns": []
     },
-    "int_neg100-100": {
+    "integer_neg100-100": {
       "patterns": []
     },
-    "int_neg10-10": {
+    "integer_neg10-10": {
       "patterns": []
     },
-    "int_neg1-127": {
+    "integer_neg1-127": {
       "patterns": []
     },
-    "int_neg127-127": {
+    "integer_neg127-127": {
       "patterns": []
     },
-    "int_0-127": {
+    "integer_0-127": {
       "patterns": []
     },
-    "int_0-127_or_string_note": {
+    "integer_0-127_or_string_note": {
       "patterns": []
     },
-    "int_0-1024": {
+    "integer_0-1024": {
       "patterns": []
     },
-    "int_0-1200": {
+    "integer_0-1200": {
       "patterns": []
     },
-    "int_0-9600": {
+    "integer_0-9600": {
       "patterns": []
     },
-    "int_1-16": {
+    "integer_1-16": {
       "patterns": []
     },
-    "int_1-100": {
+    "integer_1-100": {
       "patterns": []
     },
-    "int_1-1200": {
+    "integer_1-1200": {
       "patterns": []
     },
-    "int_positive": {
+    "integer_positive": {
       "patterns": []
     },
-    "int_positive_or_neg1": {
+    "integer_positive_or_neg1": {
       "patterns": []
     },
-    "int_any": {
+    "integer_any": {
       "patterns": []
     },
     "string_add-mult": {
@@ -4550,7 +4550,7 @@
           "begin": "\\b(script)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.real-time-instrument-script.$1.sfz"
+              "name": "variable.language.linuxsampler_real-time-instrument-script.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4565,7 +4565,7 @@
           "begin": "\\b(delay_beats_random)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.aria_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4580,7 +4580,7 @@
           "begin": "\\b(loop_tune)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.cakewalk_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4591,7 +4591,7 @@
           "begin": "\\b(sample_fadeout)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.sound-source.$1.sfz"
+              "name": "variable.language.cakewalk_sound-source.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4606,7 +4606,7 @@
           "begin": "\\b(label_key(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.instrument-settings.$1.sfz"
+              "name": "variable.language.sfizz_instrument-settings.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4616,12 +4616,12 @@
     "cakewalk_performance-parameters": {
       "patterns": [
         {
-          "comment": "opcodes: (noise_filter): (on|off|lpf_1p|hpf_1p|bpf_1p|brf_1p|apf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink",
+          "comment": "opcodes: (noise_filter): (on|off|lpf_1p|hpf_1p|bpf_1p|brf_1p|apf_1p|lpf_2p|hpf_2p|bpf_2p|brf_2p|pkf_2p|lpf_4p|hpf_4p|lpf_6p|hpf_6p|comb|pink)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(noise_filter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.cakewalk_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4637,7 +4637,7 @@
           "begin": "\\b(noise_level)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.cakewalk_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4653,7 +4653,7 @@
           "begin": "\\b(noise_step)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.cakewalk_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4664,12 +4664,12 @@
           ]
         },
         {
-          "comment": "opcodes: (noise_stereo): (on|off",
+          "comment": "opcodes: (noise_stereo): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(noise_stereo)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.cakewalk_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4685,7 +4685,7 @@
           "begin": "\\b(noise_tone)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.performance-parameters.$1.sfz"
+              "name": "variable.language.cakewalk_performance-parameters.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4705,7 +4705,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_bitred)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4716,7 +4716,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_decim)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4727,7 +4727,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_driveshape)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4738,7 +4738,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_noiselevel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4749,7 +4749,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_noisestep)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4760,7 +4760,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_noisetone)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4771,7 +4771,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_rectify)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4782,7 +4782,7 @@
           "begin": "\\b(eg(?:\\d{1,3})?_ringmod)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4793,7 +4793,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_bitred)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4804,7 +4804,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_decim)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4815,7 +4815,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_drive)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4826,7 +4826,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_noiselevel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4837,7 +4837,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_noisestep)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4848,7 +4848,7 @@
           "begin": "\\b(lfo(?:\\d{1,3})?_noisetone)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.modulation.$1.sfz"
+              "name": "variable.language.cakewalk_modulation.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4863,7 +4863,7 @@
           "begin": "\\b(apan_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4879,7 +4879,7 @@
           "begin": "\\b(apan_dry)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4895,7 +4895,7 @@
           "begin": "\\b(apan_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4906,7 +4906,7 @@
           "begin": "\\b(apan_phase)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4922,7 +4922,7 @@
           "begin": "\\b(apan_waveform)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4933,7 +4933,7 @@
           "begin": "\\b(apan_wet)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4949,7 +4949,7 @@
           "begin": "\\b(bitred)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -4965,7 +4965,7 @@
           "begin": "\\b(bypass_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4976,7 +4976,7 @@
           "begin": "\\b(comp_attack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4987,7 +4987,7 @@
           "begin": "\\b(comp_gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -4998,7 +4998,7 @@
           "begin": "\\b(comp_ratio)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5014,18 +5014,18 @@
           "begin": "\\b(comp_release)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (comp_stlink): (on|off",
+          "comment": "opcodes: (comp_stlink): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(comp_stlink)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5041,7 +5041,7 @@
           "begin": "\\b(comp_threshold)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5052,7 +5052,7 @@
           "begin": "\\b(decim)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5068,7 +5068,7 @@
           "begin": "\\b(delay_cutoff)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5079,7 +5079,7 @@
           "begin": "\\b(delay_damphi)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5095,7 +5095,7 @@
           "begin": "\\b(delay_damplo)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5111,7 +5111,7 @@
           "begin": "\\b(delay_dry)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5127,7 +5127,7 @@
           "begin": "\\b(delay_feedback)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5143,7 +5143,7 @@
           "begin": "\\b(delay_filter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5154,7 +5154,7 @@
           "begin": "\\b(delay_input)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5170,7 +5170,7 @@
           "begin": "\\b(delay_levelc)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5186,7 +5186,7 @@
           "begin": "\\b(delay_levell)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5202,7 +5202,7 @@
           "begin": "\\b(delay_levelr)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5218,7 +5218,7 @@
           "begin": "\\b(delay_lfofreq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5229,7 +5229,7 @@
           "begin": "\\b(delay_moddepth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5240,12 +5240,12 @@
           ]
         },
         {
-          "comment": "opcodes: (delay_mode): (detune|chorus|cross|flanger|lrc|mod|multimod|panning|ping|rlc|stereo|tlcr",
+          "comment": "opcodes: (delay_mode): (detune|chorus|cross|flanger|lrc|mod|multimod|panning|ping|rlc|stereo|tlcr)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(delay_mode)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5261,7 +5261,7 @@
           "begin": "\\b(delay_panc)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5277,7 +5277,7 @@
           "begin": "\\b(delay_panl)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5293,7 +5293,7 @@
           "begin": "\\b(delay_panr)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5309,7 +5309,7 @@
           "begin": "\\b(delay_resonance)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5320,7 +5320,7 @@
           "begin": "\\b(delay_spread)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5336,7 +5336,7 @@
           "begin": "\\b(delay_syncc_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5347,7 +5347,7 @@
           "begin": "\\b(delay_syncl_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5358,7 +5358,7 @@
           "begin": "\\b(delay_syncr_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5369,7 +5369,7 @@
           "begin": "\\b(delay_time_tap)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5380,7 +5380,7 @@
           "begin": "\\b(delay_timec)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5391,7 +5391,7 @@
           "begin": "\\b(delay_timel)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5402,7 +5402,7 @@
           "begin": "\\b(delay_timer)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5413,7 +5413,7 @@
           "begin": "\\b(delay_wet)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5429,7 +5429,7 @@
           "begin": "\\b(directtomain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5445,7 +5445,7 @@
           "begin": "\\b(disto_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5461,7 +5461,7 @@
           "begin": "\\b(disto_dry)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5477,7 +5477,7 @@
           "begin": "\\b(disto_stages)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5488,7 +5488,7 @@
           "begin": "\\b(disto_tone)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5504,7 +5504,7 @@
           "begin": "\\b(disto_wet)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5520,7 +5520,7 @@
           "begin": "\\b(dsp_order)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5536,7 +5536,7 @@
           "begin": "\\b(eq_bw)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5547,7 +5547,7 @@
           "begin": "\\b(eq_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5558,7 +5558,7 @@
           "begin": "\\b(eq_gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5569,7 +5569,7 @@
           "begin": "\\b(eq_type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5580,7 +5580,7 @@
           "begin": "\\b(filter_cutoff)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5591,7 +5591,7 @@
           "begin": "\\b(filter_resonance)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5602,7 +5602,7 @@
           "begin": "\\b(filter_type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5613,7 +5613,7 @@
           "begin": "\\b(fx(?:\\d{1,3})?tomain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5629,7 +5629,7 @@
           "begin": "\\b(fx(?:\\d{1,3})?tomix)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5645,7 +5645,7 @@
           "begin": "\\b(gate_attack)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5656,7 +5656,7 @@
           "begin": "\\b(gate_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5667,18 +5667,18 @@
           "begin": "\\b(gate_release)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (gate_stlink): (on|off",
+          "comment": "opcodes: (gate_stlink): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(gate_stlink)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5694,18 +5694,18 @@
           "begin": "\\b(gate_threshold)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
         },
         {
-          "comment": "opcodes: (internal): (on|off",
+          "comment": "opcodes: (internal): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(internal)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5721,7 +5721,7 @@
           "begin": "\\b(phaser_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5737,7 +5737,7 @@
           "begin": "\\b(phaser_feedback)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5753,7 +5753,7 @@
           "begin": "\\b(phaser_freq)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5764,7 +5764,7 @@
           "begin": "\\b(phaser_phase_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5780,7 +5780,7 @@
           "begin": "\\b(phaser_stages)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5791,7 +5791,7 @@
           "begin": "\\b(phaser_waveform)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5802,7 +5802,7 @@
           "begin": "\\b(phaser_wet)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5818,7 +5818,7 @@
           "begin": "\\b(reverb_damp)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5834,7 +5834,7 @@
           "begin": "\\b(reverb_dry)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5850,7 +5850,7 @@
           "begin": "\\b(reverb_input)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5866,7 +5866,7 @@
           "begin": "\\b(reverb_predelay)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5877,7 +5877,7 @@
           "begin": "\\b(reverb_size)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5893,7 +5893,7 @@
           "begin": "\\b(reverb_tone)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5904,12 +5904,12 @@
           ]
         },
         {
-          "comment": "opcodes: (reverb_type): (chamber|large_hall|large_room|mid_hall|mid_room|small_hall|small_room",
+          "comment": "opcodes: (reverb_type): (chamber|large_hall|large_room|mid_hall|mid_room|small_hall|small_room)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(reverb_type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5925,7 +5925,7 @@
           "begin": "\\b(reverb_wet)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5941,7 +5941,7 @@
           "begin": "\\b(static_cyclic_level)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5957,7 +5957,7 @@
           "begin": "\\b(static_cyclic_time)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5968,7 +5968,7 @@
           "begin": "\\b(static_filter)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -5979,7 +5979,7 @@
           "begin": "\\b(static_level)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -5995,7 +5995,7 @@
           "begin": "\\b(static_random_level)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6011,7 +6011,7 @@
           "begin": "\\b(static_random_maxtime)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6022,7 +6022,7 @@
           "begin": "\\b(static_random_mintime)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6033,7 +6033,7 @@
           "begin": "\\b(static_stereo)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6044,7 +6044,7 @@
           "begin": "\\b(static_tone)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6060,7 +6060,7 @@
           "begin": "\\b(strings_number)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6071,7 +6071,7 @@
           "begin": "\\b(strings_wet_oncc(?:\\d{1,3})?)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6087,7 +6087,7 @@
           "begin": "\\b(tdfir_dry)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6103,7 +6103,7 @@
           "begin": "\\b(tdfir_gain)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6119,7 +6119,7 @@
           "begin": "\\b(tdfir_impulse)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6130,7 +6130,7 @@
           "begin": "\\b(tdfir_wet)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.cakewalk_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6145,12 +6145,12 @@
     "sfz2_effects": {
       "patterns": [
         {
-          "comment": "opcodes: (bus): (main|aux1|aux2|aux3|aux4|aux5|aux6|aux7|aux8|fx1|fx2|fx3|fx4|midi",
+          "comment": "opcodes: (bus): (main|aux1|aux2|aux3|aux4|aux5|aux6|aux7|aux8|fx1|fx2|fx3|fx4|midi)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(bus)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.sfz2_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6166,7 +6166,7 @@
           "begin": "\\b(effect3)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.sfz2_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6182,7 +6182,7 @@
           "begin": "\\b(effect4)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.sfz2_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6193,12 +6193,12 @@
           ]
         },
         {
-          "comment": "opcodes: (type): (apan|comp|delay|disto|eq|filter|fverb|gate|limiter|lofi|mverb|phaser|static|strings|tdfir|com.mda.Limiter|com.mda.Overdrive|com.mda.Leslie|com.mda.RingMod|com.mda.Delay|com.mda.Bandisto|com.mda.Ambience|com.mda.DubDelay|com.mda.Detune|com.mda.Dither|com.mda.Combo|com.mda.Degrade|com.mda.SubSynth|com.mda.RezFilter",
+          "comment": "opcodes: (type): (apan|comp|delay|disto|eq|filter|fverb|gate|limiter|lofi|mverb|phaser|static|strings|tdfir|com.mda.Limiter|com.mda.Overdrive|com.mda.Leslie|com.mda.RingMod|com.mda.Delay|com.mda.Bandisto|com.mda.Ambience|com.mda.DubDelay|com.mda.Detune|com.mda.Dither|com.mda.Combo|com.mda.Degrade|com.mda.SubSynth|com.mda.RezFilter)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(type)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.effects.$1.sfz"
+              "name": "variable.language.sfz2_effects.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6218,7 +6218,7 @@
           "begin": "\\b(image)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.loading.$1.sfz"
+              "name": "variable.language.cakewalk_loading.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6229,7 +6229,7 @@
           "begin": "\\b(load_end)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.loading.$1.sfz"
+              "name": "variable.language.cakewalk_loading.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6240,7 +6240,7 @@
           "begin": "\\b(load_mode)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.loading.$1.sfz"
+              "name": "variable.language.cakewalk_loading.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6256,7 +6256,7 @@
           "begin": "\\b(load_start)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.loading.$1.sfz"
+              "name": "variable.language.cakewalk_loading.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6267,7 +6267,7 @@
           "begin": "\\b(sample_quality)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.loading.$1.sfz"
+              "name": "variable.language.cakewalk_loading.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6282,12 +6282,12 @@
     "cakewalk_wavetable-oscillator": {
       "patterns": [
         {
-          "comment": "opcodes: (oscillator): (on|off",
+          "comment": "opcodes: (oscillator): (on|off)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(oscillator)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6303,7 +6303,7 @@
           "begin": "\\b(oscillator_detune)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6314,7 +6314,7 @@
           "begin": "\\b(oscillator_mod_depth)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$"
@@ -6325,7 +6325,7 @@
           "begin": "\\b(oscillator_mode)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6341,7 +6341,7 @@
           "begin": "\\b(oscillator_multi)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6357,7 +6357,7 @@
           "begin": "\\b(oscillator_phase)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6373,7 +6373,7 @@
           "begin": "\\b(oscillator_quality)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$",
@@ -6389,7 +6389,7 @@
           "begin": "\\b(oscillator_table_size)\\b",
           "beginCaptures": {
             "1": {
-              "name": "variable.language.wavetable-oscillator.$1.sfz"
+              "name": "variable.language.cakewalk_wavetable-oscillator.$1.sfz"
             }
           },
           "end": "\\s|$"

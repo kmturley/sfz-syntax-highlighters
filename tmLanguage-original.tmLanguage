@@ -132,7 +132,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -160,7 +160,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive_or_neg1</include>
+        <include>#integer_positive_or_neg1</include>
       </patterns>
     </patterns>
     <patterns>
@@ -174,7 +174,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -202,7 +202,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -247,7 +247,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -275,7 +275,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-1024</include>
+        <include>#integer_0-1024</include>
       </patterns>
     </patterns>
   </sfz1_instrument-settings>
@@ -291,7 +291,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127_or_string_note</include>
+        <include>#integer_0-127_or_string_note</include>
       </patterns>
     </patterns>
     <patterns>
@@ -305,7 +305,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -319,7 +319,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_1-16</include>
+        <include>#integer_1-16</include>
       </patterns>
     </patterns>
     <patterns>
@@ -333,7 +333,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -347,7 +347,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg8192-8192</include>
+        <include>#integer_neg8192-8192</include>
       </patterns>
     </patterns>
     <patterns>
@@ -361,7 +361,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127_or_string_note</include>
+        <include>#integer_0-127_or_string_note</include>
       </patterns>
     </patterns>
     <patterns>
@@ -403,7 +403,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -431,7 +431,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_1-100</include>
+        <include>#integer_1-100</include>
       </patterns>
     </patterns>
     <patterns>
@@ -459,7 +459,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg1-127</include>
+        <include>#integer_neg1-127</include>
       </patterns>
     </patterns>
   </sfz1_region-logic>
@@ -503,7 +503,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127_or_string_note</include>
+        <include>#integer_0-127_or_string_note</include>
       </patterns>
     </patterns>
     <patterns>
@@ -601,7 +601,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -615,7 +615,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127_or_string_note</include>
+        <include>#integer_0-127_or_string_note</include>
       </patterns>
     </patterns>
     <patterns>
@@ -629,7 +629,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg9600-9600</include>
+        <include>#integer_neg9600-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -643,7 +643,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_1-1200</include>
+        <include>#integer_1-1200</include>
       </patterns>
     </patterns>
     <patterns>
@@ -657,7 +657,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127_or_string_note</include>
+        <include>#integer_0-127_or_string_note</include>
       </patterns>
     </patterns>
     <patterns>
@@ -671,7 +671,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg1200-1200</include>
+        <include>#integer_neg1200-1200</include>
       </patterns>
     </patterns>
     <patterns>
@@ -685,7 +685,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-9600</include>
+        <include>#integer_0-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -699,7 +699,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg127-127</include>
+        <include>#integer_neg127-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -713,7 +713,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg9600-9600</include>
+        <include>#integer_neg9600-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -741,7 +741,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg9600-9600</include>
+        <include>#integer_neg9600-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -755,7 +755,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-1200</include>
+        <include>#integer_0-1200</include>
       </patterns>
     </patterns>
     <patterns>
@@ -769,7 +769,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127_or_string_note</include>
+        <include>#integer_0-127_or_string_note</include>
       </patterns>
     </patterns>
     <patterns>
@@ -783,7 +783,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-9600</include>
+        <include>#integer_0-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -811,7 +811,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg9600-9600</include>
+        <include>#integer_neg9600-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -925,7 +925,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg12000-12000</include>
+        <include>#integer_neg12000-12000</include>
       </patterns>
     </patterns>
     <patterns>
@@ -953,7 +953,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg1200-1200</include>
+        <include>#integer_neg1200-1200</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1105,7 +1105,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1149,7 +1149,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg10-10</include>
+        <include>#integer_neg10-10</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1178,7 +1178,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1192,7 +1192,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1236,7 +1236,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
   </sfz2_region-logic>
@@ -1294,7 +1294,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-9600</include>
+        <include>#integer_0-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1308,7 +1308,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_1-1200</include>
+        <include>#integer_1-1200</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1366,7 +1366,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1422,7 +1422,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1552,7 +1552,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1566,7 +1566,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_neg10-10</include>
+        <include>#integer_neg10-10</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1580,7 +1580,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1610,7 +1610,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1638,7 +1638,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1696,7 +1696,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1710,7 +1710,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-9600</include>
+        <include>#integer_0-9600</include>
       </patterns>
     </patterns>
     <patterns>
@@ -1796,7 +1796,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_0-127</include>
+        <include>#integer_0-127</include>
       </patterns>
     </patterns>
   </aria_modulation>
@@ -1812,7 +1812,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_positive</include>
+        <include>#integer_positive</include>
       </patterns>
     </patterns>
   </aria_curves>
@@ -1828,7 +1828,7 @@
       </beginCaptures>
       <end>\s|$</end>
       <patterns>
-        <include>#int_any</include>
+        <include>#integer_any</include>
       </patterns>
     </patterns>
     <patterns>
@@ -2237,7 +2237,7 @@
       <name>invalid.sfz</name>
     </patterns>
   </float_any>
-  <int_neg12000-12000>
+  <integer_neg12000-12000>
     <patterns>
       <match>(=)(-?\b(12000|[0-9]|[1-9][0-9]{1,3}|1[01][0-9]{3}))\b</match>
       <captures>
@@ -2253,8 +2253,8 @@
       <match>(?!(=)(-?\b(12000|[0-9]|[1-9][0-9]{1,3}|1[01][0-9]{3}))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg12000-12000>
-  <int_neg9600-9600>
+  </integer_neg12000-12000>
+  <integer_neg9600-9600>
     <patterns>
       <match>(=)(-?([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600))\b</match>
       <captures>
@@ -2270,8 +2270,8 @@
       <match>(?!(=)(-?([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg9600-9600>
-  <int_neg8192-8192>
+  </integer_neg9600-9600>
+  <integer_neg8192-8192>
     <patterns>
       <match>(=)(-?([0-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-7][0-9]{3}|80[0-9]{2}|81[0-8][0-9]|819[0-2]))\b</match>
       <captures>
@@ -2287,8 +2287,8 @@
       <match>(?!(=)(-?([0-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-7][0-9]{3}|80[0-9]{2}|81[0-8][0-9]|819[0-2]))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg8192-8192>
-  <int_neg1200-1200>
+  </integer_neg8192-8192>
+  <integer_neg1200-1200>
     <patterns>
       <match>(=)(-?\b(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2}))\b</match>
       <captures>
@@ -2304,8 +2304,8 @@
       <match>(?!(=)(-?\b(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2}))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg1200-1200>
-  <int_neg100-100>
+  </integer_neg1200-1200>
+  <integer_neg100-100>
     <patterns>
       <match>(=)(-?\b(100|[0-9]|[1-9][0-9]))\b</match>
       <captures>
@@ -2321,8 +2321,8 @@
       <match>(?!(=)(-?\b(100|[0-9]|[1-9][0-9]))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg100-100>
-  <int_neg10-10>
+  </integer_neg100-100>
+  <integer_neg10-10>
     <patterns>
       <match>(=)(-?\b(10|[0-9]))\b</match>
       <captures>
@@ -2338,8 +2338,8 @@
       <match>(?!(=)(-?\b(10|[0-9]))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg10-10>
-  <int_neg1-127>
+  </integer_neg10-10>
+  <integer_neg1-127>
     <patterns>
       <match>(=)(-1|[0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\b</match>
       <captures>
@@ -2355,8 +2355,8 @@
       <match>(?!(=)(-1|[0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg1-127>
-  <int_neg127-127>
+  </integer_neg1-127>
+  <integer_neg127-127>
     <patterns>
       <match>(=)(-?\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7]))\b</match>
       <captures>
@@ -2372,8 +2372,8 @@
       <match>(?!(=)(-?\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7]))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_neg127-127>
-  <int_0-127>
+  </integer_neg127-127>
+  <integer_0-127>
     <patterns>
       <match>(=)([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\b</match>
       <captures>
@@ -2389,8 +2389,8 @@
       <match>(?!(=)([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_0-127>
-  <int_0-127_or_string_note>
+  </integer_0-127>
+  <integer_0-127_or_string_note>
     <patterns>
       <match>(=)(([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])|[cdefgabCDEFGAB]\#?(-1|[0-9]))\b</match>
       <captures>
@@ -2406,8 +2406,8 @@
       <match>(?!(=)(([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])|[cdefgabCDEFGAB]\#?(-1|[0-9]))\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_0-127_or_string_note>
-  <int_0-1024>
+  </integer_0-127_or_string_note>
+  <integer_0-1024>
     <patterns>
       <match>(=)([0-9]|[1-9][0-9]|[1-9][0-9]{2}|10[01][0-9]|102[0-4])\b</match>
       <name>constant.numeric.integer.sfz</name>
@@ -2416,8 +2416,8 @@
       <match>(?!(=)([0-9]|[1-9][0-9]|[1-9][0-9]{2}|10[01][0-9]|102[0-4])\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_0-1024>
-  <int_0-1200>
+  </integer_0-1024>
+  <integer_0-1200>
     <patterns>
       <match>(=)(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9{2}])\b</match>
       <captures>
@@ -2433,8 +2433,8 @@
       <match>(?!(=)(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2}])\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_0-1200>
-  <int_0-9600>
+  </integer_0-1200>
+  <integer_0-9600>
     <patterns>
       <match>(=)([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600)\b</match>
       <captures>
@@ -2450,8 +2450,8 @@
       <match>(?!(=)([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600)\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_0-9600>
-  <int_1-16>
+  </integer_0-9600>
+  <integer_1-16>
     <patterns>
       <match>(=)([1-9]|1[0-6])\b</match>
       <name>constant.numeric.integer.sfz</name>
@@ -2460,8 +2460,8 @@
       <match>(?!(=)([1-9]|1[0-6])\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_1-16>
-  <int_1-100>
+  </integer_1-16>
+  <integer_1-100>
     <patterns>
       <match>(=)(100|[1-9]|[1-9][0-9])\b</match>
       <name>constant.numeric.integer.sfz</name>
@@ -2470,8 +2470,8 @@
       <match>(?!(=)(100|[1-9]|[1-9][0-9])\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_1-100>
-  <int_1-1200>
+  </integer_1-100>
+  <integer_1-1200>
     <patterns>
       <match>(=)(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2})\b</match>
       <name>constant.numeric.integer.sfz</name>
@@ -2480,8 +2480,8 @@
       <match>(?!(=)(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2})\b)[^\s]*</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_1-1200>
-  <int_positive>
+  </integer_1-1200>
+  <integer_positive>
     <patterns>
       <match>(=)(\d+)\b</match>
       <captures>
@@ -2497,8 +2497,8 @@
       <match>((?!(\d+)).)*$</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_positive>
-  <int_positive_or_neg1>
+  </integer_positive>
+  <integer_positive_or_neg1>
     <patterns>
       <match>(=)(-1|\d+)\b</match>
       <captures>
@@ -2514,8 +2514,8 @@
       <match>((?!(-1|\d+)\b).)*$</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_positive_or_neg1>
-  <int_any>
+  </integer_positive_or_neg1>
+  <integer_any>
     <patterns>
       <match>(=)(-?\b\d+)\b</match>
       <captures>
@@ -2531,7 +2531,7 @@
       <match>((?!(-?\b\d+)).)*$</match>
       <name>invalid.sfz</name>
     </patterns>
-  </int_any>
+  </integer_any>
   <string_add-mult>
     <patterns>
       <match>(=)(add|mult)\b</match>
