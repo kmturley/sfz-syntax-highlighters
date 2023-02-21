@@ -11,7 +11,7 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
 
   // Remove all template patterns.
   Object.keys(tmLanguageTemplate.repository).map((key: string) => {
-    if (key === 'comment') return;
+    if (key === 'comment' || key.startsWith('integer') || key.startsWith('float') || key.startsWith('string')) return;
     tmLanguageTemplate.repository[key as keyof Repository] = {
       patterns: [],
     };
@@ -58,13 +58,15 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
       if (opcode.value?.type_name === 'string') {
         patterns.push(tmString(category, opcode));
       } else {
-        patterns.push(tmInteger(category, opcode));
+        patterns.push(tmInteger(tmLanguageTemplate.repository, category, opcode));
       }
     });
   });
 
   // Update pattern includes using map of sections.
   tmLanguageTemplate.patterns = opcodeMapIds.sort().map((opcodeMapId: string) => {
+    if (!tmLanguageTemplate.repository[opcodeMapId as keyof Repository])
+      console.log(`${opcodeMapId} not found in template`);
     return { include: `#${opcodeMapId}` };
   });
   tmLanguageTemplate.patterns.unshift({ include: '#comment' }, { include: '#headers' });
@@ -81,7 +83,7 @@ function tmCategoryId(category: Category): string {
   });
 }
 
-function tmInteger(category: Category, opcode: CategoryOpcode): PurplePattern {
+function tmInteger(repository: Repository, category: Category, opcode: CategoryOpcode): PurplePattern {
   const pattern: PurplePattern = {
     comment: tmComment(opcode),
     name: PurpleName.MetaOpcodeSfz,
@@ -93,7 +95,7 @@ function tmInteger(category: Category, opcode: CategoryOpcode): PurplePattern {
     },
     end: End.S,
   };
-  const patternId: string = tmPattern(opcode);
+  const patternId: string = tmPattern(repository, opcode);
   if (patternId.length > 0) {
     pattern.patterns = [
       {
@@ -144,17 +146,21 @@ function tmOpcodeId(category: Category, opcode: CategoryOpcode): string {
   return `${versionSlug}_${categorySlug}`;
 }
 
-function tmPattern(opcode: CategoryOpcode): string {
+function tmPattern(repository: Repository, opcode: CategoryOpcode): string {
+  const type: string = opcode.value?.type_name || 'integer';
+  let patternId: string = '';
   if (opcode.value?.options !== undefined) {
-    return `${opcode.value?.type_name}_${opcode.name}`;
+    patternId = `${type}_${opcode.name}`;
   }
   if (opcode.value?.min !== undefined && opcode.value?.max !== undefined) {
-    const ignoredMaxValues = [32, 100, 1024];
-    if (opcode.value?.min >= 0 && opcode.value?.max >= 0 && !ignoredMaxValues.includes(opcode.value?.max))
-      return `${opcode.value?.type_name}_positive`;
-    return `${opcode.value?.type_name}_${opcode.value?.min}-${opcode.value?.max}`;
+    patternId = `${type}_${opcode.value?.min}-${opcode.value?.max}`;
   }
-  return '';
+  if (patternId.length > 0 && !repository[patternId as keyof Repository]) {
+    console.log(`${patternId} not found in template`);
+    if (type === 'integer') patternId = 'integer_any';
+    else if (type === 'string') patternId = 'string_any_continuous';
+  }
+  return patternId;
 }
 
 function tmLanguageRegEx(opcode: CategoryOpcode): string {
