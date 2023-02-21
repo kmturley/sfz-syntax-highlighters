@@ -21,6 +21,7 @@ export interface Category {
 }
 
 export interface CategoryOpcode {
+  category?: string;
   name: string;
   version: Version;
   short_description: string;

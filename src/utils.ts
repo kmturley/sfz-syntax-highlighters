@@ -45,7 +45,11 @@ function findOpcodes(data: any): CategoryOpcode[] {
   } else if (typeof data === 'object') {
     for (const [k, v] of Object.entries(data)) {
       if (k === 'opcodes') {
-        opcodes = opcodes.concat(v);
+        const vOpcodes: CategoryOpcode[] = (v as CategoryOpcode[]).map((opcode: CategoryOpcode) => {
+          opcode.category = data.name;
+          return opcode;
+        });
+        opcodes = opcodes.concat(vOpcodes);
       } else {
         opcodes = opcodes.concat(findOpcodes(v));
       }

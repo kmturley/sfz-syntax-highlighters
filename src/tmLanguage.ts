@@ -76,8 +76,10 @@ async function tmLanguageConvert(path: string, headers: string[], syntaxFile: Sy
   fileSave(path, 'tmLanguage-modified.tmLanguage', jsToXml(tmLanguageTemplate));
 }
 
-function tmCategoryId(category: Category): string {
-  return slugify(category.name, {
+function tmCategoryId(category: Category, opcode?: CategoryOpcode): string {
+  let name: string = category.name;
+  if (opcode && opcode.category) name += `.${opcode.category}`;
+  return slugify(name, {
     lower: true,
     remove: /[^\w\s$*_+~.()'"!\-:@\/]+/g,
   });
@@ -90,7 +92,7 @@ function tmInteger(repository: Repository, category: Category, opcode: CategoryO
     begin: tmLanguageRegEx(opcode),
     beginCaptures: {
       1: {
-        name: `variable.language.${tmCategoryId(category)}.$1.sfz`,
+        name: `variable.language.${tmCategoryId(category, opcode)}.$1.sfz`,
       },
     },
     end: End.S,
@@ -113,7 +115,7 @@ function tmString(category: Category, opcode: CategoryOpcode): Sfz1SoundSourcePa
     begin: tmLanguageRegEx(opcode),
     beginCaptures: {
       1: {
-        name: `variable.language.${tmCategoryId(category)}.$1.sfz`,
+        name: `variable.language.${tmCategoryId(category, opcode)}.$1.sfz`,
       },
       2: {
         name: 'keyword.operator.assignment.sfz',
