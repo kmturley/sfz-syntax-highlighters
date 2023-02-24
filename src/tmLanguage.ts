@@ -159,6 +159,18 @@ function tmPattern(repository: Repository, opcode: CategoryOpcode): string {
   }
   if (patternId.length > 0 && !repository[patternId as keyof Repository]) {
     console.log(`${patternId} not found in template`);
+    if (type === 'integer') {
+      if (
+        opcode.value?.min !== undefined &&
+        opcode.value?.min >= 0 &&
+        opcode.value?.max !== undefined &&
+        opcode.value?.max >= 0
+      )
+        patternId = 'integer_positive';
+      else patternId = 'integer_any';
+    } else if (type === 'string') patternId = 'string_any_continuous';
+  }
+  if (patternId === '') {
     if (type === 'integer') patternId = 'integer_any';
     else if (type === 'string') patternId = 'string_any_continuous';
   }
