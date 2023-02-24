@@ -173,7 +173,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_positive_or_neg1"
+              "include": "#integer_positive_or_-1"
             }
           ]
         },
@@ -388,7 +388,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg8192-8192"
+              "include": "#integer_-8192-8192"
             }
           ]
         },
@@ -516,7 +516,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg1-127"
+              "include": "#integer_-1-127"
             }
           ]
         }
@@ -536,7 +536,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg100-100"
+              "include": "#float_-100-100"
             }
           ]
         },
@@ -552,7 +552,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg144-6"
+              "include": "#float_-144-6"
             }
           ]
         },
@@ -584,7 +584,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg96-12"
+              "include": "#float_-96-12"
             }
           ]
         },
@@ -632,7 +632,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg144-48"
+              "include": "#float_-144-48"
             }
           ]
         },
@@ -712,7 +712,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg9600-9600"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -760,7 +760,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg1200-1200"
+              "include": "#integer_-1200-1200"
             }
           ]
         },
@@ -792,7 +792,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg127-127"
+              "include": "#integer_-127-127"
             }
           ]
         },
@@ -808,7 +808,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg9600-9600"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -840,7 +840,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg9600-9600"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -920,7 +920,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg9600-9600"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -968,7 +968,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg30000-30000"
+              "include": "#float_-30000-30000"
             }
           ]
         },
@@ -1000,7 +1000,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg4-4"
+              "include": "#float_-4-4"
             }
           ]
         },
@@ -1016,7 +1016,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg96-24"
+              "include": "#float_-96-24"
             }
           ]
         }
@@ -1052,7 +1052,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg12000-12000"
+              "include": "#integer_-12000-12000"
             }
           ]
         },
@@ -1068,7 +1068,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg20-20"
+              "include": "#float_-20-20"
             }
           ]
         },
@@ -1084,7 +1084,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg1200-1200"
+              "include": "#integer_-1200-1200"
             }
           ]
         },
@@ -1100,7 +1100,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg200-200"
+              "include": "#float_-200-200"
             }
           ]
         },
@@ -1306,7 +1306,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg10-10"
+              "include": "#integer_-10-10"
             }
           ]
         },
@@ -1425,7 +1425,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg144-6"
+              "include": "#float_-144-6"
             }
           ]
         },
@@ -1457,7 +1457,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg100-100"
+              "include": "#float_-100-100"
             }
           ]
         },
@@ -1573,7 +1573,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg1-1"
+              "include": "#float_-1-1"
             }
           ]
         },
@@ -1589,7 +1589,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg10-10"
+              "include": "#float_-10-10"
             }
           ]
         },
@@ -1637,7 +1637,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg20-20"
+              "include": "#float_-20-20"
             }
           ]
         },
@@ -1789,7 +1789,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_neg10-10"
+              "include": "#integer_-10-10"
             }
           ]
         },
@@ -1821,7 +1821,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg10-10"
+              "include": "#float_-10-10"
             }
           ]
         }
@@ -1989,7 +1989,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg144-6"
+              "include": "#float_-144-6"
             }
           ]
         }
@@ -2009,7 +2009,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#float_neg10-10"
+              "include": "#float_-10-10"
             }
           ]
         },
@@ -2119,7 +2119,7 @@
         }
       ]
     },
-    "float_neg30000-30000": {
+    "float_-30000-30000": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)\\b(30000|([0-9]|[1-9][0-9]{1,3}|2[0-9]{4})(\\.\\d*)?)\\b)\\b",
@@ -2138,7 +2138,7 @@
         }
       ]
     },
-    "float_neg144-48": {
+    "float_-144-48": {
       "patterns": [
         {
           "match": "(=)(-(?<!\\.)(144|([1-9]|[1-8][0-9]|9[0-9]|1[0-4][0-3])(\\.\\d*)?)\\b|\\b(?<!\\.)(48|([0-9]|[1-3][0-9]|4[0-7])(\\.\\d*)?)\\b)",
@@ -2157,7 +2157,7 @@
         }
       ]
     },
-    "float_neg144-6": {
+    "float_-144-6": {
       "patterns": [
         {
           "match": "(=)(-(?<!\\.)(144|([1-9]|[1-8][0-9]|9[0-9]|1[0-4][0-3])(\\.\\d*)?)\\b|\\b(?<!\\.)(6|([0-5](\\.\\d*)?)\\b))",
@@ -2176,7 +2176,7 @@
         }
       ]
     },
-    "float_neg200-200": {
+    "float_-200-200": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)(200|([0-9]|[1-9][0-9]{1,2})(\\.\\d*)?))\\b",
@@ -2195,7 +2195,7 @@
         }
       ]
     },
-    "float_neg100-100": {
+    "float_-100-100": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)(100|([0-9]|[1-9][0-9])(\\.\\d*)?))\\b",
@@ -2214,7 +2214,7 @@
         }
       ]
     },
-    "float_neg96-12": {
+    "float_-96-12": {
       "patterns": [
         {
           "match": "(=)(-(?<!\\.)(96|([1-9]|[1-8][0-9]|9[0-5])(\\.\\d*)?)\\b|\\b(?<!\\.)(12|(([0-9]|1[01])(\\.\\d*)?)\\b))",
@@ -2233,7 +2233,7 @@
         }
       ]
     },
-    "float_neg96-24": {
+    "float_-96-24": {
       "patterns": [
         {
           "match": "(=)(-(?<!\\.)(96|([1-9]|[1-8][0-9]|9[0-5])(\\.\\d*)?)\\b|\\b(?<!\\.)(24|(([0-9]|1[0-9]|2[0-3])(\\.\\d*)?)\\b))",
@@ -2252,7 +2252,7 @@
         }
       ]
     },
-    "float_neg20-20": {
+    "float_-20-20": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)(20|(1?[0-9])(\\.\\d*)?))\\b",
@@ -2271,7 +2271,7 @@
         }
       ]
     },
-    "float_neg10-10": {
+    "float_-10-10": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)(10|([0-9])(\\.\\d*)?))\\b",
@@ -2290,7 +2290,7 @@
         }
       ]
     },
-    "float_neg4-4": {
+    "float_-4-4": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)(4|([0-3])(\\.\\d*)?))\\b",
@@ -2309,7 +2309,7 @@
         }
       ]
     },
-    "float_neg1-1": {
+    "float_-1-1": {
       "patterns": [
         {
           "match": "(=)((?:-?)(?<!\\.)(1|0(\\.\\d*)?))\\b",
@@ -2556,7 +2556,7 @@
         }
       ]
     },
-    "integer_neg12000-12000": {
+    "integer_-12000-12000": {
       "patterns": [
         {
           "match": "(=)(-?\\b(12000|[0-9]|[1-9][0-9]{1,3}|1[01][0-9]{3}))\\b",
@@ -2575,7 +2575,7 @@
         }
       ]
     },
-    "integer_neg9600-9600": {
+    "integer_-9600-9600": {
       "patterns": [
         {
           "match": "(=)(-?([0-9]|[1-9][0-9]{1,2}|[1-8][0-9]{3}|9[0-5][0-9]{2}|9600))\\b",
@@ -2594,7 +2594,7 @@
         }
       ]
     },
-    "integer_neg8192-8192": {
+    "integer_-8192-8192": {
       "patterns": [
         {
           "match": "(=)(-?([0-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-7][0-9]{3}|80[0-9]{2}|81[0-8][0-9]|819[0-2]))\\b",
@@ -2613,7 +2613,7 @@
         }
       ]
     },
-    "integer_neg1200-1200": {
+    "integer_-1200-1200": {
       "patterns": [
         {
           "match": "(=)(-?\\b(1200|[0-9]|[1-9][0-9]{1,2}|1[01][0-9]{2}))\\b",
@@ -2632,7 +2632,7 @@
         }
       ]
     },
-    "integer_neg100-100": {
+    "integer_-100-100": {
       "patterns": [
         {
           "match": "(=)(-?\\b(100|[0-9]|[1-9][0-9]))\\b",
@@ -2651,7 +2651,7 @@
         }
       ]
     },
-    "integer_neg10-10": {
+    "integer_-10-10": {
       "patterns": [
         {
           "match": "(=)(-?\\b(10|[0-9]))\\b",
@@ -2670,7 +2670,7 @@
         }
       ]
     },
-    "integer_neg1-127": {
+    "integer_-1-127": {
       "patterns": [
         {
           "match": "(=)(-1|[0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b",
@@ -2689,7 +2689,7 @@
         }
       ]
     },
-    "integer_neg127-127": {
+    "integer_-127-127": {
       "patterns": [
         {
           "match": "(=)(-?\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7]))\\b",
@@ -2704,6 +2704,63 @@
         },
         {
           "match": "(?!(=)(-?\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7]))\\b)[^\\s]*",
+          "name": "invalid.sfz"
+        }
+      ]
+    },
+    "integer_0-1": {
+      "patterns": [
+        {
+          "match": "(=)(0|1)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.assignment.sfz"
+            },
+            "2": {
+              "name": "constant.numeric.integer.sfz"
+            }
+          }
+        },
+        {
+          "match": "(?!(=)(0|1)\\b)[^\\s]*",
+          "name": "invalid.sfz"
+        }
+      ]
+    },
+    "integer_0-3": {
+      "patterns": [
+        {
+          "match": "(=)([0-3])\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.assignment.sfz"
+            },
+            "2": {
+              "name": "constant.numeric.integer.sfz"
+            }
+          }
+        },
+        {
+          "match": "(?!(=)([0-3])\\b)[^\\s]*",
+          "name": "invalid.sfz"
+        }
+      ]
+    },
+    "integer_0-100": {
+      "patterns": [
+        {
+          "match": "(=)([0-9]|[1-9][0-9]|100)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.assignment.sfz"
+            },
+            "2": {
+              "name": "constant.numeric.integer.sfz"
+            }
+          }
+        },
+        {
+          "match": "(?!(=)([0-9]|[1-9][0-9]|100)\\b)[^\\s]*",
           "name": "invalid.sfz"
         }
       ]
@@ -2796,6 +2853,25 @@
         }
       ]
     },
+    "integer_0-4294967296": {
+      "patterns": [
+        {
+          "match": "(=)[0-9]|[1-9][0-9]{1,8}|[1-3][0-9]{9}|4[01][0-9]{8}|42[0-8][0-9]{7}|429[0-3][0-9]{6}|4294[0-8][0-9]{5}|42949[0-5][0-9]{4}|429496[0-6][0-9]{3}|4294967[01][0-9]{2}|42949672[0-8][0-9]|429496729[0-6]\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.assignment.sfz"
+            },
+            "2": {
+              "name": "constant.numeric.integer.sfz"
+            }
+          }
+        },
+        {
+          "match": "(?!(=)[0-9]|[1-9][0-9]{1,8}|[1-3][0-9]{9}|4[01][0-9]{8}|42[0-8][0-9]{7}|429[0-3][0-9]{6}|4294[0-8][0-9]{5}|42949[0-5][0-9]{4}|429496[0-6][0-9]{3}|4294967[01][0-9]{2}|42949672[0-8][0-9]|429496729[0-6]\\b)[^\\s]*",
+          "name": "invalid.sfz"
+        }
+      ]
+    },
     "integer_1-16": {
       "patterns": [
         {
@@ -2816,6 +2892,18 @@
         },
         {
           "match": "(?!(=)(100|[1-9]|[1-9][0-9])\\b)[^\\s]*",
+          "name": "invalid.sfz"
+        }
+      ]
+    },
+    "integer_1-127": {
+      "patterns": [
+        {
+          "match": "(=)([1-9]|[1-9][0-9]|1[01][0-9]|12[0-7])\\b",
+          "name": "constant.numeric.integer.sfz"
+        },
+        {
+          "match": "(?!(=)([1-9]|[1-9][0-9]|1[01][0-9]|12[0-7])\\b)[^\\s]*",
           "name": "invalid.sfz"
         }
       ]
@@ -2851,7 +2939,7 @@
         }
       ]
     },
-    "integer_positive_or_neg1": {
+    "integer_positive_or_-1": {
       "patterns": [
         {
           "match": "(=)(-1|\\d+)\\b",
