@@ -3504,7 +3504,7 @@
     "sfz2_curves": {
       "patterns": [
         {
-          "comment": "opcodes: (vN): (-1 to 1)",
+          "comment": "opcodes: (vNNN): (-1 to 1)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(v(?:\\d{1,3})?)\\b",
           "beginCaptures": {
@@ -4068,7 +4068,7 @@
           ]
         },
         {
-          "comment": "opcodes: (global_tune): (-100 to 100 cents)",
+          "comment": "opcodes: (global_tune): (-9600 to 9600 cents)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(global_tune)\\b",
           "beginCaptures": {
@@ -4079,7 +4079,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_-100-100"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -4116,7 +4116,7 @@
           ]
         },
         {
-          "comment": "opcodes: (group_tune): (-100 to 100 cents)",
+          "comment": "opcodes: (group_tune): (-9600 to 9600 cents)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(group_tune)\\b",
           "beginCaptures": {
@@ -4127,7 +4127,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_-100-100"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -4164,7 +4164,7 @@
           ]
         },
         {
-          "comment": "opcodes: (master_tune): (-100 to 100 cents)",
+          "comment": "opcodes: (master_tune): (-9600 to 9600 cents)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(master_tune)\\b",
           "beginCaptures": {
@@ -4175,7 +4175,7 @@
           "end": "\\s|$",
           "patterns": [
             {
-              "include": "#integer_-100-100"
+              "include": "#integer_-9600-9600"
             }
           ]
         },
@@ -4275,7 +4275,7 @@
           ]
         },
         {
-          "comment": "opcodes: (position_veltrack)",
+          "comment": "opcodes: (position_veltrack): (-200 to 200)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(position_veltrack)\\b",
           "beginCaptures": {
@@ -4294,6 +4294,22 @@
           "comment": "opcodes: (resonance_random): (0 to 40 dB)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(resonance_random)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "variable.language.performance-parameters.filter.$1.sfz"
+            }
+          },
+          "end": "\\s|$",
+          "patterns": [
+            {
+              "include": "#float_0-40"
+            }
+          ]
+        },
+        {
+          "comment": "opcodes: (resonance2_random): (0 to 40 dB)",
+          "name": "meta.opcode.sfz",
+          "begin": "\\b(resonance2_random)\\b",
           "beginCaptures": {
             "1": {
               "name": "variable.language.performance-parameters.filter.$1.sfz"

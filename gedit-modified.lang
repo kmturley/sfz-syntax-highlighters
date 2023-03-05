@@ -643,6 +643,7 @@
       <keyword>resonance_random</keyword>
       <keyword>resonance_smoothcc\%{N}</keyword>
       <keyword>resonance_stepcc\%{N}</keyword>
+      <keyword>resonance2_random</keyword>
       <keyword>reverb_damp</keyword>
       <keyword>reverb_damp_oncc\%{N}</keyword>
       <keyword>reverb_dry</keyword>
