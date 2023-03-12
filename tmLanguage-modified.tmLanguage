@@ -2540,7 +2540,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_depth_lfoX)</comment>
+      <comment>opcodes: (egN_depth_lfoX): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eg(?:\d{1,3})?_depth_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
@@ -2549,9 +2549,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_any</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (egN_depthadd_lfoX)</comment>
@@ -2610,7 +2607,7 @@
       </patterns>
     </patterns>
     <patterns>
-      <comment>opcodes: (egN_freq_lfoX)</comment>
+      <comment>opcodes: (egN_freq_lfoX): (any float)</comment>
       <name>meta.opcode.sfz</name>
       <begin>\b(eg(?:\d{1,3})?_freq_lfo(?:\d{1,3})?)\b</begin>
       <beginCaptures>
@@ -2619,9 +2616,6 @@
         </1>
       </beginCaptures>
       <end>\s|$</end>
-      <patterns>
-        <include>#integer_any</include>
-      </patterns>
     </patterns>
     <patterns>
       <comment>opcodes: (egN_levelX): (-1 to 1)</comment>
@@ -3938,6 +3932,20 @@
       <end>\s|$</end>
       <patterns>
         <include>#integer_any</include>
+      </patterns>
+    </patterns>
+    <patterns>
+      <comment>opcodes: (egN_dynamic): (0 to 1)</comment>
+      <name>meta.opcode.sfz</name>
+      <begin>\b(eg(?:\d{1,3})?_dynamic)\b</begin>
+      <beginCaptures>
+        <1>
+          <name>variable.language.modulation.envelope-generators.$1.sfz</name>
+        </1>
+      </beginCaptures>
+      <end>\s|$</end>
+      <patterns>
+        <include>#integer_0-1</include>
       </patterns>
     </patterns>
     <patterns>

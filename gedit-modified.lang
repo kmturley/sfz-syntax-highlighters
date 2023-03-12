@@ -255,6 +255,7 @@
       <keyword>eg\%{N}_depthadd_lfo\%{N}</keyword>
       <keyword>eg\%{N}_driveshape</keyword>
       <keyword>eg\%{N}_driveshape_oncc\%{N}</keyword>
+      <keyword>eg\%{N}_dynamic</keyword>
       <keyword>eg\%{N}_eq\%{N}bw</keyword>
       <keyword>eg\%{N}_eq\%{N}bw_oncc\%{N}</keyword>
       <keyword>eg\%{N}_eq\%{N}freq</keyword>

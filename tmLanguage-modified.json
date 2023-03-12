@@ -2853,7 +2853,7 @@
           ]
         },
         {
-          "comment": "opcodes: (egN_depth_lfoX)",
+          "comment": "opcodes: (egN_depth_lfoX): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eg(?:\\d{1,3})?_depth_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
@@ -2861,12 +2861,7 @@
               "name": "variable.language.modulation.envelope-generators.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_any"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (egN_depthadd_lfoX)",
@@ -2933,7 +2928,7 @@
           ]
         },
         {
-          "comment": "opcodes: (egN_freq_lfoX)",
+          "comment": "opcodes: (egN_freq_lfoX): (any float)",
           "name": "meta.opcode.sfz",
           "begin": "\\b(eg(?:\\d{1,3})?_freq_lfo(?:\\d{1,3})?)\\b",
           "beginCaptures": {
@@ -2941,12 +2936,7 @@
               "name": "variable.language.modulation.envelope-generators.$1.sfz"
             }
           },
-          "end": "\\s|$",
-          "patterns": [
-            {
-              "include": "#integer_any"
-            }
-          ]
+          "end": "\\s|$"
         },
         {
           "comment": "opcodes: (egN_levelX): (-1 to 1)",
@@ -4420,6 +4410,22 @@
           "patterns": [
             {
               "include": "#integer_any"
+            }
+          ]
+        },
+        {
+          "comment": "opcodes: (egN_dynamic): (0 to 1)",
+          "name": "meta.opcode.sfz",
+          "begin": "\\b(eg(?:\\d{1,3})?_dynamic)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "variable.language.modulation.envelope-generators.$1.sfz"
+            }
+          },
+          "end": "\\s|$",
+          "patterns": [
+            {
+              "include": "#integer_0-1"
             }
           ]
         },
