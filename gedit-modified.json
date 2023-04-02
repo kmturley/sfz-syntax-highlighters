@@ -1991,6 +1991,12 @@
               "_text": "rt_decay"
             },
             {
+              "_text": "rt_decay\\%{N}"
+            },
+            {
+              "_text": "rt_decay\\%{N}_time"
+            },
+            {
               "_text": "sample"
             },
             {

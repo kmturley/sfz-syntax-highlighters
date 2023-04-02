@@ -4311,6 +4311,33 @@
               "include": "#float_0-40"
             }
           ]
+        },
+        {
+          "comment": "opcodes: (rt_decayN): (0 to 200 dB)",
+          "name": "meta.opcode.sfz",
+          "begin": "\\b(rt_decay(?:\\d{1,3})?)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "variable.language.performance-parameters.amplifier.$1.sfz"
+            }
+          },
+          "end": "\\s|$",
+          "patterns": [
+            {
+              "include": "#float_0-200"
+            }
+          ]
+        },
+        {
+          "comment": "opcodes: (rt_decayN_time): (any float)",
+          "name": "meta.opcode.sfz",
+          "begin": "\\b(rt_decay(?:\\d{1,3})?_time)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "variable.language.performance-parameters.amplifier.$1.sfz"
+            }
+          },
+          "end": "\\s|$"
         }
       ]
     },

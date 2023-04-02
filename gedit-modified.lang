@@ -664,6 +664,8 @@
       <keyword>reverse_locc\%{N}</keyword>
       <keyword>rt_dead</keyword>
       <keyword>rt_decay</keyword>
+      <keyword>rt_decay\%{N}</keyword>
+      <keyword>rt_decay\%{N}_time</keyword>
       <keyword>sample</keyword>
       <keyword>sample_fadeout</keyword>
       <keyword>sample_quality</keyword>
